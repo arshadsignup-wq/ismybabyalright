@@ -1,26 +1,424 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ==========================================================================
+   ismybabyalright.com — Design System
+   Warm, calming palette. Mobile-first. Low-light friendly.
+   No dark mode — always light/warm.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tailwind CSS 4 Theme — Custom Design Tokens
+   --------------------------------------------------------------------------
+   All custom properties defined here are available as Tailwind utilities.
+   e.g. --color-safe  ->  bg-safe, text-safe, border-safe, etc.
+   -------------------------------------------------------------------------- */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Fonts (mapped from next/font/google in layout.tsx) --- */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  /* --- Background Colors --- */
+  --color-background: #faf8f5;          /* warm off-white, easy on eyes */
+  --color-background-alt: #f3f0eb;      /* slightly darker warm surface */
+  --color-foreground: #3b3630;          /* warm dark brown — primary text */
+
+  /* --- Surface / Card Colors --- */
+  --color-card: #ffffff;                /* cards sit on the warm background */
+  --color-card-alt: #f7f5f1;           /* secondary card / nested surface */
+  --color-card-border: #e8e3db;        /* subtle warm border for cards */
+
+  /* --- Primary Palette (calming teal / blue-green) --- */
+  --color-primary: #2a8f8f;            /* main brand teal */
+  --color-primary-hover: #237777;      /* teal darkened for hover */
+  --color-primary-light: #e6f5f3;      /* teal tint for backgrounds */
+  --color-primary-foreground: #ffffff; /* text on primary buttons */
+
+  /* --- Secondary / Muted --- */
+  --color-muted: #8a8279;              /* muted warm gray for secondary text */
+  --color-muted-light: #b5aea5;        /* lighter muted for placeholders */
+  --color-border: #ddd8d0;             /* default borders */
+
+  /* --- Action Tier: Safe / On Track (green) --- */
+  --color-safe: #2e7d32;               /* WCAG AA on white — 4.8:1 */
+  --color-safe-light: #e8f5e9;         /* safe background tint */
+  --color-safe-border: #a5d6a7;        /* safe border accent */
+  --color-safe-foreground: #1b5e20;    /* dark green text on safe-light bg */
+
+  /* --- Action Tier: Monitor / Mention at Next Visit (amber) --- */
+  --color-monitor: #e6a100;            /* amber, visible but not alarming */
+  --color-monitor-light: #fff8e1;      /* monitor background tint */
+  --color-monitor-border: #ffe082;     /* monitor border accent */
+  --color-monitor-foreground: #7a5900; /* dark amber text — 5.2:1 on monitor-light */
+
+  /* --- Action Tier: Concern / Discuss with Doctor (soft red) --- */
+  --color-concern: #c62828;            /* soft but clear red */
+  --color-concern-light: #fce8e8;      /* concern background tint */
+  --color-concern-border: #ef9a9a;     /* concern border accent */
+  --color-concern-foreground: #8e0000; /* dark red text on concern-light bg */
+
+  /* --- Source Badge Colors (for citing CDC, WHO, AAP, etc.) --- */
+  --color-source-cdc: #1565c0;         /* CDC blue */
+  --color-source-who: #0277bd;         /* WHO blue */
+  --color-source-aap: #00695c;         /* AAP green-teal */
+  --color-source-generic: #546e7a;     /* generic source badge */
+  --color-source-foreground: #ffffff;  /* text on source badges */
+
+  /* --- Focus Ring --- */
+  --color-focus: #2a8f8f;              /* matches primary for consistency */
+
+  /* --- Spacing: Touch Targets --- */
+  --spacing-touch: 2.75rem;            /* 44px — minimum touch target */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* --------------------------------------------------------------------------
+   2. Base Styles
+   -------------------------------------------------------------------------- */
+
+html {
+  font-size: 100%;                     /* 16px base — respects user prefs */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: 1rem;                     /* 16px minimum */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Heading Hierarchy --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-foreground);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.875rem;                /* 30px */
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;                  /* 24px */
+  margin-bottom: 0.625rem;
+}
+
+h3 {
+  font-size: 1.25rem;                 /* 20px */
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;               /* 18px */
+  margin-bottom: 0.375rem;
+}
+
+/* Scale up headings slightly on larger screens */
+@media (min-width: 640px) {
+  h1 { font-size: 2.25rem; }          /* 36px */
+  h2 { font-size: 1.75rem; }          /* 28px */
+  h3 { font-size: 1.375rem; }         /* 22px */
+}
+
+/* --- Links --- */
+a {
+  color: var(--color-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* --- Focus Styles (accessibility) --- */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Touch Target Enforcement --- */
+button,
+a,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+summary {
+  min-height: var(--spacing-touch);
+  min-width: var(--spacing-touch);
+}
+
+/* Inputs and selects */
+input,
+select,
+textarea {
+  font-size: 1rem;                    /* prevents iOS zoom on focus */
+}
+
+/* --------------------------------------------------------------------------
+   3. Action Tier Utility Classes
+   --------------------------------------------------------------------------
+   Use these for milestone status cards, badges, alerts, etc.
+   -------------------------------------------------------------------------- */
+
+/* --- Safe / On Track --- */
+.tier-safe {
+  background-color: var(--color-safe-light);
+  border: 1.5px solid var(--color-safe-border);
+  color: var(--color-safe-foreground);
+  border-radius: 0.5rem;
+}
+
+.tier-safe-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: var(--color-safe);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  line-height: 1.4;
+}
+
+/* --- Monitor / Mention at Next Visit --- */
+.tier-monitor {
+  background-color: var(--color-monitor-light);
+  border: 1.5px solid var(--color-monitor-border);
+  color: var(--color-monitor-foreground);
+  border-radius: 0.5rem;
+}
+
+.tier-monitor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: var(--color-monitor);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  line-height: 1.4;
+}
+
+/* --- Concern / Discuss with Doctor --- */
+.tier-concern {
+  background-color: var(--color-concern-light);
+  border: 1.5px solid var(--color-concern-border);
+  color: var(--color-concern-foreground);
+  border-radius: 0.5rem;
+}
+
+.tier-concern-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: var(--color-concern);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  line-height: 1.4;
+}
+
+/* --- Source Badges --- */
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  color: var(--color-source-foreground);
+  background-color: var(--color-source-generic);
+}
+
+.source-badge-cdc {
+  background-color: var(--color-source-cdc);
+}
+
+.source-badge-who {
+  background-color: var(--color-source-who);
+}
+
+.source-badge-aap {
+  background-color: var(--color-source-aap);
+}
+
+/* --------------------------------------------------------------------------
+   4. Card Base
+   -------------------------------------------------------------------------- */
+
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card-alt {
+  background-color: var(--color-card-alt);
+  border: 1px solid var(--color-card-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Low-Light Friendly Styles
+   --------------------------------------------------------------------------
+   Slightly reduced brightness for 2am viewing.
+   Triggered by ambient light sensor or manual toggle.
+   Applied via data attribute: <html data-lowlight>
+   -------------------------------------------------------------------------- */
+
+[data-lowlight] {
+  --color-background: #f0ede8;
+  --color-background-alt: #e8e4de;
+  --color-card: #f5f2ed;
+  --color-card-alt: #ede9e3;
+  --color-foreground: #4a443d;
+}
+
+[data-lowlight] body {
+  filter: brightness(0.92) saturate(0.9);
+}
+
+/* Also respect reduced-motion for late-night browsing */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Print Stylesheet
+   --------------------------------------------------------------------------
+   Hides navigation, footer, and interactive elements.
+   Shows clean, readable output optimized for paper.
+   -------------------------------------------------------------------------- */
+
+@media print {
+  /* Hide non-essential elements */
+  nav,
+  footer,
+  header nav,
+  [data-print-hide],
+  .no-print,
+  button,
+  [role="navigation"],
+  [role="banner"] nav {
+    display: none !important;
+  }
+
+  /* Reset to clean print styles */
+  body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    font-size: 12pt;
+    line-height: 1.5;
+    filter: none !important;
+  }
+
+  /* Remove card shadows and borders for clean output */
+  .card,
+  .card-alt {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Make tier colors print-friendly (use borders, not backgrounds) */
+  .tier-safe,
+  .tier-monitor,
+  .tier-concern {
+    border-width: 2px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Links: show URLs */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* Don't show URLs for internal/anchor links */
+  a[href^="#"]::after,
+  a[href^="javascript"]::after,
+  nav a[href]::after {
+    content: none;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 1.5cm;
+  }
+
+  /* Headings: prevent orphans */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Smooth Scroll & Selection
+   -------------------------------------------------------------------------- */
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-foreground);
+}
+
+/* --------------------------------------------------------------------------
+   8. Accessibility: Skip Link
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
 }
