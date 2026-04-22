@@ -2,22 +2,30 @@ import Link from "next/link";
 
 interface EntryPath {
   title: string;
+  emoji: string;
   description: string;
   href: string;
+  accentColor: string;
+  accentBg: string;
+  accentBorder: string;
   icon: React.ReactNode;
 }
 
 const paths: EntryPath[] = [
   {
     title: "Check by Age",
+    emoji: "\ud83d\udcc5",
     description:
       "See what milestones to expect at each age, from 1 month to 3 years.",
     href: "/milestones",
+    accentColor: "text-primary",
+    accentBg: "bg-primary-light",
+    accentBorder: "border-l-primary",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -36,14 +44,18 @@ const paths: EntryPath[] = [
   },
   {
     title: "I Noticed Something",
+    emoji: "\ud83d\udd0d",
     description:
-      "Search for a specific concern — like not crawling, not talking, or not making eye contact.",
+      "Search for a specific concern \u2014 like not crawling, not talking, or not making eye contact.",
     href: "/concerns",
+    accentColor: "text-monitor-foreground",
+    accentBg: "bg-monitor-light",
+    accentBorder: "border-l-monitor",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -60,14 +72,18 @@ const paths: EntryPath[] = [
   },
   {
     title: "I Need Help",
+    emoji: "\u2764\ufe0f",
     description:
       "Find early intervention services, therapists, and support in your area.",
     href: "/resources/early-intervention",
+    accentColor: "text-concern-foreground",
+    accentBg: "bg-concern-light",
+    accentBorder: "border-l-concern",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -77,6 +93,34 @@ const paths: EntryPath[] = [
         aria-hidden="true"
       >
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Track Daily",
+    emoji: "\u2705",
+    description:
+      "Log feeds, sleep, diapers, and more \u2014 see patterns and share with your pediatrician.",
+    href: "/tracker",
+    accentColor: "text-safe-foreground",
+    accentBg: "bg-safe-light",
+    accentBorder: "border-l-safe",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="12" x2="16" y2="14" />
       </svg>
     ),
   },
@@ -96,45 +140,30 @@ export default function EntryPathCards() {
           How can we help?
         </h2>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {paths.map((path) => (
             <Link
               key={path.href}
               href={path.href}
-              className="card group flex flex-col items-start gap-3 no-underline transition-shadow hover:shadow-md focus-visible:ring-2 focus-visible:ring-primary"
+              className={`card group flex items-start gap-4 border-l-4 ${path.accentBorder} no-underline transition-all hover:shadow-md hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-primary`}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-light text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              {/* Icon with colored background */}
+              <div
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${path.accentBg} ${path.accentColor} transition-colors`}
+              >
                 {path.icon}
               </div>
 
-              <h3 className="text-foreground group-hover:text-primary transition-colors">
-                {path.title}
-              </h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="text-foreground group-hover:text-primary transition-colors text-base">
+                  <span aria-hidden="true">{path.emoji} </span>
+                  {path.title}
+                </h3>
 
-              <p className="text-sm leading-relaxed text-muted">
-                {path.description}
-              </p>
-
-              <span
-                className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary"
-                aria-hidden="true"
-              >
-                Learn more
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </span>
+                <p className="text-sm leading-relaxed text-muted">
+                  {path.description}
+                </p>
+              </div>
             </Link>
           ))}
         </div>
