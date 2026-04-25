@@ -1,100 +1,111 @@
 import Link from "next/link";
+import ConcernSearch from "./ConcernSearch";
 
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-24"
-      style={{
-        background:
-          "linear-gradient(to bottom, var(--color-primary-light), #fef5f0 55%, var(--color-background))",
-      }}
+      className="relative overflow-hidden"
       aria-labelledby="hero-heading"
+      style={{
+        background: "linear-gradient(135deg, #FFF0E6 0%, #FDE8F0 35%, #EDE5FB 65%, #E0F5F2 100%)",
+      }}
     >
-      {/* Animated floating decorative elements — respects prefers-reduced-motion via globals.css */}
-      <div
-        className="pointer-events-none absolute top-8 right-[10%] h-16 w-16 rounded-full bg-primary/8"
-        style={{ animation: "float 6s ease-in-out infinite" }}
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute top-24 left-[8%] h-10 w-10 rounded-full bg-[#f5c6a0]/30"
-        style={{ animation: "float-delayed 7s ease-in-out infinite 1s" }}
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute bottom-16 right-[15%] h-8 w-8 rounded-full bg-primary/6"
-        style={{ animation: "float-slow 8s ease-in-out infinite 0.5s" }}
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute bottom-24 left-[12%] h-12 w-12 rounded-full bg-[#f5c6a0]/20"
-        style={{ animation: "float 9s ease-in-out infinite 2s" }}
-        aria-hidden="true"
-      />
-
-      {/* CSS illustration: sleeping baby motif (moon + stars) */}
-      <div className="pointer-events-none mx-auto mb-8 flex items-center justify-center gap-3" aria-hidden="true">
-        {/* Star */}
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-primary/40" style={{ animation: "twinkle 3s ease-in-out infinite" }}>
-          <path d="M12 2l2.09 6.26L20.18 9l-4.91 3.82L16.54 19 12 15.77 7.46 19l1.27-6.18L3.82 9l6.09-.74L12 2z" fill="currentColor" />
-        </svg>
-        {/* Moon */}
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="text-primary/30">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
-        </svg>
-        {/* Star */}
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#f5c6a0]/60" style={{ animation: "twinkle 4s ease-in-out infinite 1s" }}>
-          <path d="M12 2l2.09 6.26L20.18 9l-4.91 3.82L16.54 19 12 15.77 7.46 19l1.27-6.18L3.82 9l6.09-.74L12 2z" fill="currentColor" />
-        </svg>
+      {/* Decorative gradient circles */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute top-[15%] left-[8%] h-24 w-24 rounded-full bg-[#38BDF8] opacity-[0.07] blur-2xl" />
+        <div className="absolute top-[55%] right-[10%] h-32 w-32 rounded-full bg-[#34D399] opacity-[0.07] blur-2xl" />
+        <div className="absolute bottom-[25%] left-[20%] h-20 w-20 rounded-full bg-[#F4A261] opacity-[0.06] blur-2xl" />
+        <div className="absolute top-[10%] right-[25%] h-16 w-16 rounded-full bg-[#A78BFA] opacity-[0.06] blur-2xl" />
       </div>
 
-      <div className="relative mx-auto max-w-2xl text-center">
-        <h1
-          id="hero-heading"
-          className="text-foreground leading-tight tracking-tight"
-        >
-          Is your baby developing{" "}
-          <span className="text-primary font-extrabold">on track</span>?
-        </h1>
+      <div className="relative mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20 lg:py-24">
+        <div className="flex flex-col items-center text-center">
+          {/* Badge */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 shadow-sm backdrop-blur-sm">
+            <span className="flex h-2.5 w-2.5 rounded-full bg-[#34D399]">
+              <span className="inline-flex h-full w-full animate-ping rounded-full bg-[#34D399] opacity-50" />
+            </span>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064E3B]">
+              Evidence-Based &middot; 100% Free
+            </span>
+          </div>
 
-        <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
-          Evidence-based milestone guidance from CDC, WHO, and AAP — no signup,
-          no judgment, just the information you need.
-        </p>
-
-        <p className="mx-auto mt-2 max-w-lg text-base leading-relaxed text-muted/80">
-          Most babies develop at their own pace. We&rsquo;ll help you know when
-          to celebrate and when to ask.
-        </p>
-
-        {/* Dual CTAs */}
-        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <Link
-            href="/milestones"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary-hover hover:shadow-lg no-underline"
+          <h1
+            id="hero-heading"
+            className="text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.75rem]"
           >
-            Check Milestones
-          </Link>
-          <Link
-            href="/concerns"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-xl border-2 border-primary bg-transparent px-6 py-3 text-base font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground no-underline"
-          >
-            I Have a Concern
-          </Link>
-        </div>
+            Is your baby{" "}
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: "linear-gradient(135deg, #F07167, #A78BFA, #38BDF8)",
+              }}
+            >
+              on track
+            </span>
+            ?
+            <span className="mt-3 block text-xl font-bold text-[#64748B] sm:text-2xl lg:text-3xl">
+              We&rsquo;ll help you find out.
+            </span>
+          </h1>
 
-        {/* Trust badges — elegant horizontal strip */}
-        <div className="mt-10 inline-flex items-center gap-2 rounded-full bg-card/70 px-5 py-2.5 shadow-sm backdrop-blur-sm">
-          <span className="text-xs font-medium text-muted">Based on guidelines from</span>
-          <span className="source-badge source-badge-cdc">CDC</span>
-          <span className="source-badge source-badge-who">WHO</span>
-          <span className="source-badge source-badge-aap">AAP</span>
-        </div>
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-[#64748B] sm:text-lg">
+            Milestone checklists, growth charts, symptom triage, and daily tracking  -  all based on{" "}
+            <strong className="text-[#1B2838]">CDC</strong>,{" "}
+            <strong className="text-[#1B2838]">WHO</strong>, and{" "}
+            <strong className="text-[#1B2838]">AAP</strong> guidelines.
+          </p>
 
-        {/* Privacy tagline */}
-        <p className="mt-4 text-sm text-muted-light">
-          Free forever. No signup. 100% private.
-        </p>
+          {/* Concern search bar */}
+          <div className="mt-8 w-full">
+            <ConcernSearch />
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
+            <Link
+              href="/milestones"
+              className="group inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full bg-[#F07167] px-10 py-4 text-lg font-extrabold text-white shadow-lg shadow-[#F07167]/30 transition-all duration-200 hover:bg-[#E85D52] hover:shadow-xl hover:shadow-[#F07167]/40 hover:-translate-y-1 no-underline"
+            >
+              Check Milestones
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
+            <Link
+              href="/concerns"
+              className="group inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full bg-white px-10 py-4 text-lg font-extrabold text-[#1B2838] shadow-lg shadow-black/5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 no-underline"
+            >
+              I Have a Concern
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#F07167]" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Trust strip */}
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="flex items-center gap-2">
+              <span className="source-badge source-badge-cdc">CDC</span>
+              <span className="source-badge source-badge-who">WHO</span>
+              <span className="source-badge source-badge-aap">AAP</span>
+              <span className="ml-1 text-xs font-semibold text-[#64748B]">guidelines</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-sm text-[#64748B]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#16A34A]" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span className="font-semibold">No signup &middot; No tracking &middot; 100% private</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom wave */}
+      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="block h-8 w-full sm:h-12" fill="var(--color-background)">
+          <path d="M0,60 L0,30 Q360,0 720,30 Q1080,60 1440,30 L1440,60 Z" />
+        </svg>
       </div>
     </section>
   );

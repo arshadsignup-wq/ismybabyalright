@@ -3,6 +3,7 @@ import type { ConcernPage } from '@/data/concerns/types';
 export const concern: ConcernPage = {
   slug: 'not-crawling',
   title: 'My Baby Isn\'t Crawling',
+  category: 'physical',
   searchTerms: [
     'baby not crawling',
     'when do babies crawl',
@@ -31,12 +32,12 @@ export const concern: ConcernPage = {
     {
       ageRange: '10-11 months',
       context:
-        'If your baby isn\'t crawling or using any other method to get around by 10 months, it\'s worth checking in with your pediatrician — not because crawling itself matters, but because some form of independent mobility by this age is a helpful sign. Many babies at this stage are more interested in pulling up to stand than crawling.',
+        'If your baby isn\'t crawling or using any other method to get around by 10 months, it\'s worth checking in with your pediatrician  -  not because crawling itself matters, but because some form of independent mobility by this age is a helpful sign. Many babies at this stage are more interested in pulling up to stand than crawling.',
     },
     {
       ageRange: '12-14 months',
       context:
-        'Some babies skip crawling and walk first, and that\'s genuinely fine. If your baby isn\'t crawling or walking or using any method to move independently, bring it up with your doctor. But if they\'re pulling up, cruising furniture, or starting to take steps, they\'ve simply chosen a different path — literally.',
+        'Some babies skip crawling and walk first, and that\'s genuinely fine. If your baby isn\'t crawling or walking or using any method to move independently, bring it up with your doctor. But if they\'re pulling up, cruising furniture, or starting to take steps, they\'ve simply chosen a different path  -  literally.',
     },
     {
       ageRange: '15+ months',
@@ -45,11 +46,11 @@ export const concern: ConcernPage = {
     },
   ],
   whenNormal: [
-    'Your baby is under 10 months and uses any method to get around — rolling, scooting, army crawling, or bum shuffling all count.',
+    'Your baby is under 10 months and uses any method to get around  -  rolling, scooting, army crawling, or bum shuffling all count.',
     'Your baby skips crawling entirely and goes straight to pulling up and cruising along furniture.',
-    'Your baby crawls in an unconventional way (backward, sideways, one-legged) — creative movers are still movers.',
-    'Your baby was premature — use adjusted age for milestones.',
-    'Your baby is more interested in standing and bouncing than getting on all fours — they may walk before they crawl, and that\'s okay.',
+    'Your baby crawls in an unconventional way (backward, sideways, one-legged)  -  creative movers are still movers.',
+    'Your baby was premature  -  use adjusted age for milestones.',
+    'Your baby is more interested in standing and bouncing than getting on all fours  -  they may walk before they crawl, and that\'s okay.',
   ],
   whenToMention: [
     'Your baby is over 10 months and doesn\'t use any method at all to move independently (no rolling, scooting, crawling, or pulling up).',
@@ -57,7 +58,7 @@ export const concern: ConcernPage = {
     'Your baby doesn\'t seem interested in reaching for toys or moving toward things they want.',
   ],
   whenToActNow: [
-    'Your baby has stopped moving or lost mobility they previously had — any regression in motor skills warrants prompt evaluation.',
+    'Your baby has stopped moving or lost mobility they previously had  -  any regression in motor skills warrants prompt evaluation.',
     'Your baby\'s legs seem stiff and cross when you hold them upright, or they consistently can\'t bear weight on their legs by 10-12 months.',
   ],
   relatedMilestones: [
@@ -72,13 +73,13 @@ export const concern: ConcernPage = {
     {
       org: 'CDC',
       citation:
-        'CDC Developmental Milestones — Crawling is not included as a milestone in the updated 2022 checklist',
+        'CDC Developmental Milestones  -  Crawling is not included as a milestone in the updated 2022 checklist',
       url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
     },
     {
       org: 'AAP',
       citation:
-        'American Academy of Pediatrics — Movement: 8 to 12 Months',
+        'American Academy of Pediatrics  -  Movement: 8 to 12 Months',
       url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Movement-8-to-12-Months.aspx',
     },
     {

@@ -1,7 +1,7 @@
 import type { GrowthData } from '@/data/growth/types';
 
 /**
- * WHO Child Growth Standards — Boys (0–36 months)
+ * WHO Child Growth Standards  -  Boys (0–36 months)
  *
  * Sources:
  *   • Weight-for-age: WHO Weight-for-age tables, boys, birth to 5 years (percentiles)

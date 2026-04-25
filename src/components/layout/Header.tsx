@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import MobileNav from "./MobileNav";
 
 export default function Header() {
@@ -74,43 +75,52 @@ export default function Header() {
             {/* Logo / site name */}
             <Link
               href="/"
-              className="flex flex-col justify-center min-h-[44px] no-underline"
+              className="flex items-center gap-2 min-h-[44px] no-underline"
             >
-              <span className="text-lg font-bold text-foreground tracking-tight leading-tight">
-                ismybabyalright
-              </span>
-              <span className="text-xs text-muted leading-tight hidden sm:block">
-                Evidence-based peace of mind
+              <Image
+                src="/logo.png"
+                alt="Is My Baby Alright logo"
+                width={36}
+                height={36}
+                className="rounded-full"
+              />
+              <span className="flex flex-col justify-center">
+                <span className="text-lg font-bold text-foreground tracking-tight leading-tight">
+                  ismybabyalright
+                </span>
+                <span className="text-xs text-muted leading-tight hidden sm:block">
+                  Evidence-based peace of mind
+                </span>
               </span>
             </Link>
 
-            {/* Desktop navigation — simplified to 4 items */}
+            {/* Desktop navigation  -  simplified to 4 items */}
             <nav
               className="hidden md:flex items-center gap-1"
               aria-label="Main navigation"
             >
               <Link
                 href="/milestones"
-                className="px-3 py-2 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-foreground hover:bg-primary-light hover:text-primary transition-colors no-underline"
+                className="px-3 py-2 min-h-[44px] flex items-center rounded-full text-sm font-semibold text-foreground hover:bg-primary-light hover:text-primary transition-colors no-underline"
               >
                 Milestones
               </Link>
 
               <Link
                 href="/concerns"
-                className="px-3 py-2 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-foreground hover:bg-primary-light hover:text-primary transition-colors no-underline"
+                className="px-3 py-2 min-h-[44px] flex items-center rounded-full text-sm font-semibold text-foreground hover:bg-primary-light hover:text-primary transition-colors no-underline"
               >
                 Concerns
               </Link>
 
-              {/* Tools dropdown — grouped with icons */}
+              {/* Tools dropdown  -  grouped with icons */}
               <div ref={toolsRef} className="relative">
                 <button
                   onClick={() => {
                     setToolsOpen(!toolsOpen);
                     setResourcesOpen(false);
                   }}
-                  className="px-3 py-2 min-h-[44px] flex items-center gap-1 rounded-lg text-sm font-medium text-foreground hover:bg-primary-light hover:text-primary transition-colors cursor-pointer"
+                  className="px-3 py-2 min-h-[44px] flex items-center gap-1 rounded-full text-sm font-semibold text-foreground hover:bg-primary-light hover:text-primary transition-colors cursor-pointer"
                   aria-expanded={toolsOpen}
                   aria-haspopup="true"
                   aria-controls="desktop-tools-menu"
@@ -121,11 +131,11 @@ export default function Header() {
                 {toolsOpen && (
                   <div
                     id="desktop-tools-menu"
-                    className="absolute top-full right-0 mt-1 w-64 bg-card border border-card-border rounded-xl shadow-lg py-2 z-50"
+                    className="absolute top-full right-0 mt-1 w-64 bg-card border border-card-border rounded-2xl shadow-lg py-2 z-50"
                     role="menu"
                   >
                     {/* Track & Log section */}
-                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-light">Track &amp; Log</div>
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Track &amp; Log</div>
                     <DropdownItem href="/tracker" icon={iconClock} label="Tracker" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/growth" icon={iconChart} label="Growth Chart" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/regression-log" icon={iconList} label="Regression Log" onClick={() => setToolsOpen(false)} />
@@ -133,29 +143,41 @@ export default function Header() {
                     <div className="border-t border-card-border my-1" />
 
                     {/* Health section */}
-                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-light">Health</div>
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Health</div>
                     <DropdownItem href="/triage" icon={iconActivity} label="Symptom Checker" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/vaccines" icon={iconShield} label="Vaccines" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/food" icon={iconCup} label="Food Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/sleep" icon={iconMoon} label="Sleep Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/feeding" icon={iconBottle} label="Feeding Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/doctor-visits" icon={iconClipboard} label="Doctor Visit Prep" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/teething" icon={iconTooth} label="Teething Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/poop-guide" icon={iconPoop} label="Poop Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tummy-time" icon={iconTummy} label="Tummy Time" onClick={() => setToolsOpen(false)} />
+
+                    <div className="border-t border-card-border my-1" />
+
+                    {/* Reference section */}
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
+                    <DropdownItem href="/growth-spurts" icon={iconChart} label="Growth Spurts" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/skin-guide" icon={iconSkin} label="Skin Guide" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
 
                     {/* Share section */}
-                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-light">Share</div>
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Share</div>
                     <DropdownItem href="/sharing" icon={iconShare} label="Share with Caregiver" onClick={() => setToolsOpen(false)} />
                   </div>
                 )}
               </div>
 
-              {/* Resources dropdown — grouped with icons */}
+              {/* Resources dropdown  -  grouped with icons */}
               <div ref={resourcesRef} className="relative">
                 <button
                   onClick={() => {
                     setResourcesOpen(!resourcesOpen);
                     setToolsOpen(false);
                   }}
-                  className="px-3 py-2 min-h-[44px] flex items-center gap-1 rounded-lg text-sm font-medium text-foreground hover:bg-primary-light hover:text-primary transition-colors cursor-pointer"
+                  className="px-3 py-2 min-h-[44px] flex items-center gap-1 rounded-full text-sm font-semibold text-foreground hover:bg-primary-light hover:text-primary transition-colors cursor-pointer"
                   aria-expanded={resourcesOpen}
                   aria-haspopup="true"
                   aria-controls="desktop-resources-menu"
@@ -166,11 +188,11 @@ export default function Header() {
                 {resourcesOpen && (
                   <div
                     id="desktop-resources-menu"
-                    className="absolute top-full right-0 mt-1 w-64 bg-card border border-card-border rounded-xl shadow-lg py-2 z-50"
+                    className="absolute top-full right-0 mt-1 w-64 bg-card border border-card-border rounded-2xl shadow-lg py-2 z-50"
                     role="menu"
                   >
                     {/* Support section */}
-                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-light">Support</div>
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Support</div>
                     <DropdownItem href="/mental-health" icon={iconHeart} label="Mental Health" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/mental-health/check-in" icon={iconSmile} label={`"Am I Okay?" Check-in`} onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/fairness" icon={iconScale} label="Fairness View" onClick={() => setResourcesOpen(false)} />
@@ -178,7 +200,7 @@ export default function Header() {
                     <div className="border-t border-card-border my-1" />
 
                     {/* Reference section */}
-                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-light">Reference</div>
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
                     <DropdownItem href="/checklists" icon={iconChecklist} label="Checklists" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/resources/early-intervention" icon={iconLifeBuoy} label="Early Intervention" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/resources/guides" icon={iconBook} label="Guides" onClick={() => setResourcesOpen(false)} />
@@ -291,4 +313,22 @@ const iconBook = (
 );
 const iconGear = (
   <svg {...iconProps}><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+);
+const iconClipboard = (
+  <svg {...iconProps}><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></svg>
+);
+const iconBottle = (
+  <svg {...iconProps}><path d="M10 2h4v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z" /><path d="M8.5 6h7l.5 2v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l.5-2z" /><line x1="8" y1="12" x2="16" y2="12" /><line x1="8" y1="16" x2="16" y2="16" /></svg>
+);
+const iconTooth = (
+  <svg {...iconProps}><path d="M12 2C9.5 2 7 4 7 7c0 2 .5 4 1 6s1.5 5 2 7c.2.7.5 1 1 1h2c.5 0 .8-.3 1-1 .5-2 1.5-5 2-7s1-4 1-6c0-3-2.5-5-5-5z" /></svg>
+);
+const iconPoop = (
+  <svg {...iconProps}><path d="M12 3c-1 2-3 3-3 5 0 1 .5 2 1 2.5C9 11 8 12 8 13.5c0 1 .5 2 1.5 2.5C8.5 16.5 7 18 7 19.5 7 21 8.5 22 10.5 22h3c2 0 3.5-1 3.5-2.5 0-1.5-1.5-3-2.5-3.5 1-.5 1.5-1.5 1.5-2.5 0-1.5-1-2.5-2-3 .5-.5 1-1.5 1-2.5 0-2-2-3-3-5z" /></svg>
+);
+const iconTummy = (
+  <svg {...iconProps}><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><circle cx="9" cy="10" r="1" /><circle cx="15" cy="10" r="1" /></svg>
+);
+const iconSkin = (
+  <svg {...iconProps}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M12 13v4" /><path d="M10 15h4" /></svg>
 );

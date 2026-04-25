@@ -29,13 +29,13 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
             org: 'WHO',
             citation:
-              'WHO Motor Development Study: Walking alone — upper limit of normal window is 17.6 months',
+              'WHO Motor Development Study: Walking alone  -  upper limit of normal window is 17.6 months',
             url: 'https://www.who.int/tools/child-growth-standards/standards/motor-development-milestones',
           },
         ],
@@ -47,7 +47,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your toddler tries to run, though it may look more like fast, stiff walking.',
         whatItLooksLike:
-          'Your child walks faster and faster until it turns into a kind of run — stiff-legged, arms out for balance, not very coordinated. They may fall when they try to stop. It is a run in their mind even if it looks like an enthusiastic toddle.',
+          'Your child walks faster and faster until it turns into a kind of run  -  stiff-legged, arms out for balance, not very coordinated. They may fall when they try to stop. It is a run in their mind even if it looks like an enthusiastic toddle.',
         typicalRange: {
           earlyMonths: 14,
           averageMonths: 17,
@@ -64,7 +64,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Motor Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Motor Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -93,7 +93,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Motor Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Motor Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -107,7 +107,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your toddler holds a crayon and scribbles on paper (or anything else they can reach).',
         whatItLooksLike:
-          'Your child grabs a crayon in their fist and makes back-and-forth marks on paper. The scribbles are random — big sweeping lines, dots, and zigzags. They may press hard or lightly and enjoy the process of making marks.',
+          'Your child grabs a crayon in their fist and makes back-and-forth marks on paper. The scribbles are random  -  big sweeping lines, dots, and zigzags. They may press hard or lightly and enjoy the process of making marks.',
         typicalRange: {
           earlyMonths: 13,
           averageMonths: 16,
@@ -115,7 +115,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 22,
         },
         whenNormal:
-          'Scribbling is great for developing hand control and creativity. Do not worry about what the scribbles look like — the important thing is that your child is making intentional marks with a tool.',
+          'Scribbling is great for developing hand control and creativity. Do not worry about what the scribbles look like  -  the important thing is that your child is making intentional marks with a tool.',
         whenToMention:
           'If your child shows no interest in crayons or markers and does not make any marks when given the chance by 20 months, mention it at your next visit.',
         whenToCallNow:
@@ -124,7 +124,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Fine Motor Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Fine Motor Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -144,7 +144,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 23,
         },
         whenNormal:
-          'Tower-building is improving quickly now. Your child is learning to control the release of each block and to place it carefully. Knocking the tower down is just as important — it teaches cause and effect.',
+          'Tower-building is improving quickly now. Your child is learning to control the release of each block and to place it carefully. Knocking the tower down is just as important  -  it teaches cause and effect.',
         whenToMention:
           'If your child cannot stack any blocks by 20-21 months, mention it at your next visit.',
         whenToCallNow:
@@ -153,7 +153,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Fine Motor Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Fine Motor Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -182,7 +182,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -204,7 +204,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 22,
         },
         whenNormal:
-          'There is huge variation in vocabulary size at 18 months. Some toddlers say 50 words, while others say 10 — both can be normal. The 18-month visit includes a developmental screening that will help assess whether your child\'s language is on track.',
+          'There is huge variation in vocabulary size at 18 months. Some toddlers say 50 words, while others say 10  -  both can be normal. The 18-month visit includes a developmental screening that will help assess whether your child\'s language is on track.',
         whenToMention:
           'If your child uses fewer than 5-6 words by 18 months, mention it at your well-child visit. Early intervention for language can be very effective.',
         whenToCallNow:
@@ -213,13 +213,13 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
             org: 'WHO',
             citation:
-              'WHO Child Development Guidelines — Language milestones at 18 months',
+              'WHO Child Development Guidelines  -  Language milestones at 18 months',
             url: 'https://www.who.int/tools/child-growth-standards',
           },
         ],
@@ -231,7 +231,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your toddler can point to a few body parts when you ask, like their nose, eyes, tummy, or toes.',
         whatItLooksLike:
-          'You ask "Where is your nose?" and your child points to their nose — or yours. They may know 2-5 body parts. They might also enjoy "head, shoulders, knees, and toes" games.',
+          'You ask "Where is your nose?" and your child points to their nose  -  or yours. They may know 2-5 body parts. They might also enjoy "head, shoulders, knees, and toes" games.',
         typicalRange: {
           earlyMonths: 14,
           averageMonths: 17,
@@ -248,7 +248,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Language Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Language Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -272,7 +272,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 24,
         },
         whenNormal:
-          'Toddler pronunciation is supposed to be imperfect. Simplifying words ("nana" for banana, "goggy" for doggy) is a normal part of language development and will improve with time. You do not need to correct them — just model the right pronunciation naturally.',
+          'Toddler pronunciation is supposed to be imperfect. Simplifying words ("nana" for banana, "goggy" for doggy) is a normal part of language development and will improve with time. You do not need to correct them  -  just model the right pronunciation naturally.',
         whenToMention:
           'If your child does not try to repeat or imitate words at all by 20-21 months, let your doctor know.',
         whenToCallNow:
@@ -281,7 +281,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Language Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Language Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -293,7 +293,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-18-parallel-play',
         name: 'Parallel Play',
         plainDescription:
-          'Your toddler plays near other children but not really with them — they play side by side, each doing their own thing.',
+          'Your toddler plays near other children but not really with them  -  they play side by side, each doing their own thing.',
         whatItLooksLike:
           'At a playgroup, your child sits next to another toddler. Both are playing with blocks, but they are building their own towers, not working together. They may watch each other and copy, but true cooperative play comes later.',
         typicalRange: {
@@ -305,14 +305,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Parallel play is completely appropriate at 18 months. Toddlers are not developmentally ready for true cooperative play yet. Playing beside another child, watching them, and occasionally imitating is exactly what they should be doing.',
         whenToMention:
-          'If your child shows no interest in other children at all — does not watch them, does not want to be near them — mention it at your next visit.',
+          'If your child shows no interest in other children at all  -  does not watch them, does not want to be near them  -  mention it at your next visit.',
         whenToCallNow:
           'If your child actively avoids all other people (both children and adults), does not make eye contact, and does not engage socially, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -326,7 +326,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-18-simple-pretend-play',
         name: 'Simple Pretend Play',
         plainDescription:
-          'Your toddler pretends during play — feeding a doll, making a stuffed animal "walk," or pretending to cook.',
+          'Your toddler pretends during play  -  feeding a doll, making a stuffed animal "walk," or pretending to cook.',
         whatItLooksLike:
           'Your child holds a toy phone to their ear and babbles, "feeds" a doll with a spoon, or puts a blanket over a teddy bear and says "night-night." These are early signs of imagination.',
         typicalRange: {
@@ -336,7 +336,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 24,
         },
         whenNormal:
-          'Pretend play at 18 months is simple and imitative — your child acts out things they have seen you do. More elaborate imaginary play develops over the next year or two.',
+          'Pretend play at 18 months is simple and imitative  -  your child acts out things they have seen you do. More elaborate imaginary play develops over the next year or two.',
         whenToMention:
           'If your child does not engage in any pretend play by 21-22 months, mention it at your next visit.',
         whenToCallNow:
@@ -345,7 +345,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional and Cognitive Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional and Cognitive Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -361,7 +361,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your toddler says "no," shakes their head, pushes things away, or resists things they do not want to do.',
         whatItLooksLike:
-          'Your child says "no!" when you try to put on their shoes, pushes away food they do not want, or shakes their head emphatically when you suggest something. They are asserting their will — loudly and frequently.',
+          'Your child says "no!" when you try to put on their shoes, pushes away food they do not want, or shakes their head emphatically when you suggest something. They are asserting their will  -  loudly and frequently.',
         typicalRange: {
           earlyMonths: 13,
           averageMonths: 16,
@@ -371,14 +371,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Saying "no" is a sign of healthy development, even though it can be exasperating. Your child is learning that they are a separate person with their own preferences. This is the beginning of independence.',
         whenToMention:
-          'If your child never expresses preferences or resistance — always going along with whatever happens without reacting — mention it at your next visit.',
+          'If your child never expresses preferences or resistance  -  always going along with whatever happens without reacting  -  mention it at your next visit.',
         whenToCallNow:
           'If your child is very passive, does not express wants or needs, and shows no reactions to what happens around them, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -390,7 +390,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-18-sorting-shapes',
         name: 'Sorting Shapes',
         plainDescription:
-          'Your toddler can put a round shape into a round hole on a shape sorter — they might not get all the shapes right, but they understand the idea.',
+          'Your toddler can put a round shape into a round hole on a shape sorter  -  they might not get all the shapes right, but they understand the idea.',
         whatItLooksLike:
           'Your child picks up a circle shape and tries different holes on a shape sorter until it fits. They may get the circle right but struggle with squares and triangles. They understand that different shapes go in different places.',
         typicalRange: {
@@ -409,7 +409,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -419,9 +419,9 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-18-pretend-with-objects',
         name: 'Using Objects as Something Else',
         plainDescription:
-          'Your toddler starts to use one object to represent another — like using a block as a phone or a banana as a pretend telephone.',
+          'Your toddler starts to use one object to represent another  -  like using a block as a phone or a banana as a pretend telephone.',
         whatItLooksLike:
-          'Your child holds a banana up to their ear and "talks" on it, or uses a block as a car and pushes it along saying "vroom." They are starting to understand that one thing can stand for another — the beginning of symbolic thinking.',
+          'Your child holds a banana up to their ear and "talks" on it, or uses a block as a car and pushes it along saying "vroom." They are starting to understand that one thing can stand for another  -  the beginning of symbolic thinking.',
         typicalRange: {
           earlyMonths: 15,
           averageMonths: 18,
@@ -438,7 +438,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -452,7 +452,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-18-knows-what-objects-are-for',
         name: 'Knowing What Everyday Objects Are For',
         plainDescription:
-          'Your toddler understands the purpose of familiar objects — a phone is for talking, a brush is for hair, a cup is for drinking.',
+          'Your toddler understands the purpose of familiar objects  -  a phone is for talking, a brush is for hair, a cup is for drinking.',
         whatItLooksLike:
           'Your child picks up a hairbrush and brushes their hair (or yours). They hold a cup to their mouth and pretend to drink. They put a hat on their head. They know what these objects do because they have watched you use them.',
         typicalRange: {
@@ -471,7 +471,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 18 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 18 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -524,5 +524,5 @@ export const checkpoint: AgeCheckpoint = {
     },
   ],
   notes:
-    'The 18-month well-child visit is one of the most important checkups in early childhood. The CDC and the American Academy of Pediatrics recommend formal developmental and autism screening at 18 months. This is not because something is likely wrong — it is because early identification leads to early support, and early support leads to the best outcomes. If your pediatrician does not bring up screening, it is okay to ask for it. At 18 months, your toddler is a whirlwind of energy, curiosity, and big feelings. Tantrums are normal. Saying "no" to everything is normal. Wanting to do things themselves is normal. Your child is becoming an independent person, and that process is messy and loud and wonderful. If you have concerns about your child\'s development, trust yourself. Parents notice things early, and early action is always better than waiting and worrying. Early intervention services are available in every state and are often free or low-cost — ask your pediatrician about your options.',
+    'The 18-month well-child visit is one of the most important checkups in early childhood. The CDC and the American Academy of Pediatrics recommend formal developmental and autism screening at 18 months. This is not because something is likely wrong  -  it is because early identification leads to early support, and early support leads to the best outcomes. If your pediatrician does not bring up screening, it is okay to ask for it. At 18 months, your toddler is a whirlwind of energy, curiosity, and big feelings. Tantrums are normal. Saying "no" to everything is normal. Wanting to do things themselves is normal. Your child is becoming an independent person, and that process is messy and loud and wonderful. If you have concerns about your child\'s development, trust yourself. Parents notice things early, and early action is always better than waiting and worrying. Early intervention services are available in every state and are often free or low-cost  -  ask your pediatrician about your options.',
 };

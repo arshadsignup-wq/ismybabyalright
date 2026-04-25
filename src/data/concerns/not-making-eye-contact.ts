@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'not-making-eye-contact',
   title: 'Not Making Eye Contact',
+  category: 'behavior',
   searchTerms: [
     'baby not making eye contact',
     'newborn won\'t look at me',

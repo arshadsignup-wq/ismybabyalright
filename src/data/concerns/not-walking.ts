@@ -3,6 +3,7 @@ import type { ConcernPage } from '@/data/concerns/types';
 export const concern: ConcernPage = {
   slug: 'not-walking',
   title: 'My Baby Isn\'t Walking',
+  category: 'physical',
   searchTerms: [
     'baby not walking',
     'when do babies walk',
@@ -16,7 +17,7 @@ export const concern: ConcernPage = {
     'baby won\'t take steps',
   ],
   quickAnswer:
-    'The normal range for first independent steps is huge — anywhere from 9 to 18 months, and all of it is considered typical development. Many parents feel pressure when they see other babies walking early, but a baby who walks at 15 months is just as healthy as one who walks at 10 months.',
+    'The normal range for first independent steps is huge  -  anywhere from 9 to 18 months, and all of it is considered typical development. Many parents feel pressure when they see other babies walking early, but a baby who walks at 15 months is just as healthy as one who walks at 10 months.',
   byAge: [
     {
       ageRange: '9-11 months',
@@ -26,7 +27,7 @@ export const concern: ConcernPage = {
     {
       ageRange: '12-14 months',
       context:
-        'Many babies take their first independent steps around 12 months, but just as many don\'t. If your baby is pulling up, cruising, and maybe standing independently for a few seconds, they\'re right on track. Walking is a skill that requires strength, balance, and — believe it or not — the courage to let go. Some babies are simply more cautious, and that\'s a personality trait, not a deficit.',
+        'Many babies take their first independent steps around 12 months, but just as many don\'t. If your baby is pulling up, cruising, and maybe standing independently for a few seconds, they\'re right on track. Walking is a skill that requires strength, balance, and  -  believe it or not  -  the courage to let go. Some babies are simply more cautious, and that\'s a personality trait, not a deficit.',
     },
     {
       ageRange: '15-17 months',
@@ -36,7 +37,7 @@ export const concern: ConcernPage = {
     {
       ageRange: '18 months',
       context:
-        'Eighteen months is the point where pediatricians typically want to evaluate a baby who isn\'t walking. This doesn\'t mean something is wrong — but an evaluation can help identify whether your baby needs any support. Early intervention for motor skills is very effective, and many children who start therapy at this age walk independently within weeks to months.',
+        'Eighteen months is the point where pediatricians typically want to evaluate a baby who isn\'t walking. This doesn\'t mean something is wrong  -  but an evaluation can help identify whether your baby needs any support. Early intervention for motor skills is very effective, and many children who start therapy at this age walk independently within weeks to months.',
     },
     {
       ageRange: '19+ months',
@@ -46,19 +47,19 @@ export const concern: ConcernPage = {
   ],
   whenNormal: [
     'Your baby is under 18 months and is pulling to stand, cruising furniture, or taking a few steps with hand support.',
-    'Your baby stands independently but seems nervous about letting go — cautious babies often walk later, and confidence builds with time.',
-    'Your baby was premature — use adjusted age, which can shift the walking timeline significantly.',
-    'Your baby has been focused on language or fine motor skills — some babies prioritize one area at a time.',
+    'Your baby stands independently but seems nervous about letting go  -  cautious babies often walk later, and confidence builds with time.',
+    'Your baby was premature  -  use adjusted age, which can shift the walking timeline significantly.',
+    'Your baby has been focused on language or fine motor skills  -  some babies prioritize one area at a time.',
     'Your baby walks while holding your hands or pushing a walker toy but won\'t walk independently yet.',
   ],
   whenToMention: [
-    'Your baby is 15-18 months and not yet taking independent steps — worth discussing at the next well visit.',
+    'Your baby is 15-18 months and not yet taking independent steps  -  worth discussing at the next well visit.',
     'Your baby only walks on their toes consistently and doesn\'t seem able to put their feet flat.',
     'Your baby falls frequently to one particular side, or their gait seems very asymmetric once they do start walking.',
     'Your baby doesn\'t seem interested in standing or bearing weight on their legs at all by 12 months.',
   ],
   whenToActNow: [
-    'Your baby was walking independently and has stopped — loss of motor skills requires prompt evaluation.',
+    'Your baby was walking independently and has stopped  -  loss of motor skills requires prompt evaluation.',
     'Your baby\'s legs seem stiff, scissored, or consistently turned inward, or one leg seems significantly weaker than the other.',
     'Your baby is over 18 months and not pulling to stand or showing any interest in upright mobility.',
   ],
@@ -73,19 +74,19 @@ export const concern: ConcernPage = {
     {
       org: 'CDC',
       citation:
-        'CDC Milestone Tracker — Important Milestones: Your Child By 18 Months',
+        'CDC Milestone Tracker  -  Important Milestones: Your Child By 18 Months',
       url: 'https://www.cdc.gov/ncbddd/actearly/milestones/milestones-18mo.html',
     },
     {
       org: 'AAP',
       citation:
-        'American Academy of Pediatrics — Movement Milestones: 8 to 12 Months and Beyond',
+        'American Academy of Pediatrics  -  Movement Milestones: 8 to 12 Months and Beyond',
       url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Movement-8-to-12-Months.aspx',
     },
     {
       org: 'WHO',
       citation:
-        'WHO Multicentre Growth Reference Study — Motor Development Milestones: Walking Alone achieved between 8.2 and 17.6 months across populations',
+        'WHO Multicentre Growth Reference Study  -  Motor Development Milestones: Walking Alone achieved between 8.2 and 17.6 months across populations',
       url: 'https://www.who.int/publications/i/item/WHO-TRS-2006-450',
     },
   ],

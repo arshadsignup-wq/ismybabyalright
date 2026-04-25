@@ -20,7 +20,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 5,
         },
         whenNormal:
-          'Most babies have steady head control by 3 to 4 months. You will notice they can sit in a supported position and look around freely. Tummy time has been building up to this — all those little push-ups paid off.',
+          'Most babies have steady head control by 3 to 4 months. You will notice they can sit in a supported position and look around freely. Tummy time has been building up to this  -  all those little push-ups paid off.',
         whenToMention:
           'If your baby\'s head still wobbles or flops when held upright by about 4 to 5 months, mention it to your pediatrician. They can assess muscle tone and neck strength.',
         whenToCallNow:
@@ -29,7 +29,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -64,7 +64,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -76,7 +76,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby might surprise you by rolling from their tummy onto their back during tummy time.',
         whatItLooksLike:
-          'While on their tummy, your baby may push up, shift their weight to one side, and topple over onto their back. It may look accidental at first. Some babies do it once and then not again for weeks — that is normal.',
+          'While on their tummy, your baby may push up, shift their weight to one side, and topple over onto their back. It may look accidental at first. Some babies do it once and then not again for weeks  -  that is normal.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4,
@@ -84,7 +84,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 7,
         },
         whenNormal:
-          'Rolling from tummy to back is usually the first direction babies learn to roll, because pushing up on their arms creates the momentum. Not all babies roll at 4 months — many do not roll consistently until 5 to 6 months. Both are normal.',
+          'Rolling from tummy to back is usually the first direction babies learn to roll, because pushing up on their arms creates the momentum. Not all babies roll at 4 months  -  many do not roll consistently until 5 to 6 months. Both are normal.',
         whenToMention:
           'If your baby shows no interest in rolling and cannot shift their weight to either side by about 6 months, bring it up with your pediatrician.',
         whenToCallNow:
@@ -93,7 +93,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -113,7 +113,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby extends their arm to reach for a toy they want, even if they cannot always grab it yet.',
         whatItLooksLike:
-          'When a toy is within reach, your baby extends one arm toward it, sometimes swatting at it. Their aim is improving but still not precise — they may bat the toy, knock it over, or sometimes grab it successfully.',
+          'When a toy is within reach, your baby extends one arm toward it, sometimes swatting at it. Their aim is improving but still not precise  -  they may bat the toy, knock it over, or sometimes grab it successfully.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4,
@@ -121,7 +121,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 6,
         },
         whenNormal:
-          'Reaching is an amazing coordination of vision, attention, and motor control. Your baby has to see the toy, want it, and coordinate their arm muscles to reach for it — that is a lot of brain work. Placing toys within arm\'s reach during play time encourages this skill.',
+          'Reaching is an amazing coordination of vision, attention, and motor control. Your baby has to see the toy, want it, and coordinate their arm muscles to reach for it  -  that is a lot of brain work. Placing toys within arm\'s reach during play time encourages this skill.',
         whenToMention:
           'If your baby does not reach for objects at all by about 5 months, let your pediatrician know.',
         whenToCallNow:
@@ -130,7 +130,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -142,7 +142,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby can wrap their fingers around a rattle or small toy and hold onto it.',
         whatItLooksLike:
-          'When you place a rattle in your baby\'s hand, they grip it and may wave it around or bring it to their mouth. They may shake it and discover it makes a sound. They will drop it after a while — that is normal.',
+          'When you place a rattle in your baby\'s hand, they grip it and may wave it around or bring it to their mouth. They may shake it and discover it makes a sound. They will drop it after a while  -  that is normal.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4,
@@ -150,7 +150,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 6,
         },
         whenNormal:
-          'Grasping and holding objects is a major fine motor milestone. At this age, your baby uses their whole hand (palmar grasp) rather than individual fingers. They will drop objects frequently — their release control is still developing.',
+          'Grasping and holding objects is a major fine motor milestone. At this age, your baby uses their whole hand (palmar grasp) rather than individual fingers. They will drop objects frequently  -  their release control is still developing.',
         whenToMention:
           'If your baby does not hold onto toys placed in their hand by about 5 months, or if they never seem to bring objects to their mouth, discuss it with your pediatrician.',
         whenToCallNow:
@@ -159,7 +159,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -169,7 +169,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'fm-4m-hands-to-mouth',
         name: 'Brings hands to mouth',
         plainDescription:
-          'Your baby reliably brings their hands — and everything they hold — to their mouth.',
+          'Your baby reliably brings their hands  -  and everything they hold  -  to their mouth.',
         whatItLooksLike:
           'Your baby frequently chews on their fingers, fist, or any toy they are holding. They explore textures and shapes with their mouth. You will find everything your baby holds ends up in their mouth.',
         typicalRange: {
@@ -179,7 +179,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 5.5,
         },
         whenNormal:
-          'Mouthing objects is a crucial way babies learn about the world — their mouth has more nerve endings than their fingers at this age. This is not a bad habit; it is healthy development. Just make sure objects are safe and clean.',
+          'Mouthing objects is a crucial way babies learn about the world  -  their mouth has more nerve endings than their fingers at this age. This is not a bad habit; it is healthy development. Just make sure objects are safe and clean.',
         whenToMention:
           'If your baby never brings their hands or objects to their mouth by about 5 months, let your pediatrician know.',
         whenToCallNow:
@@ -188,7 +188,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -198,7 +198,7 @@ export const checkpoint: AgeCheckpoint = {
     language: [
       {
         id: 'lang-4m-babbles',
-        name: 'Babbles with expression — copies sounds heard',
+        name: 'Babbles with expression  -  copies sounds heard',
         plainDescription:
           'Your baby experiments with sounds, stringing together vowels and sometimes consonant-like sounds like "ba" or "ga."',
         whatItLooksLike:
@@ -212,14 +212,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'This early babbling is your baby practicing the building blocks of language. They are experimenting with their voice, learning how their mouth and tongue make different sounds. Talking back to your baby encourages more babbling.',
         whenToMention:
-          'If your baby is not making any varied sounds beyond crying by about 6 months — no cooing, squealing, or babbling — mention it to your pediatrician.',
+          'If your baby is not making any varied sounds beyond crying by about 6 months  -  no cooing, squealing, or babbling  -  mention it to your pediatrician.',
         whenToCallNow:
           'If your baby was babbling and has suddenly gone silent, or if they do not respond to sounds at all, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -231,7 +231,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'When you make a sound, your baby tries to repeat it back to you.',
         whatItLooksLike:
-          'If you say "ooooh" to your baby, they may pause, study your face, and then try to make a similar sound back. It will not be a perfect copy — but the intention to imitate is what matters.',
+          'If you say "ooooh" to your baby, they may pause, study your face, and then try to make a similar sound back. It will not be a perfect copy  -  but the intention to imitate is what matters.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4.5,
@@ -243,12 +243,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby never seems to try to respond to your sounds by about 6 months, bring it up at your next visit.',
         whenToCallNow:
-          'If your baby is completely unresponsive to your voice — no looking, no sound attempts, no reaction at all — contact your pediatrician to discuss hearing and social development.',
+          'If your baby is completely unresponsive to your voice  -  no looking, no sound attempts, no reaction at all  -  contact your pediatrician to discuss hearing and social development.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -268,7 +268,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 5,
         },
         whenNormal:
-          'By this age, most parents have become fluent in their baby\'s cry language. Each baby is unique, though — some are louder, some are quieter. The variety of cries is what matters.',
+          'By this age, most parents have become fluent in their baby\'s cry language. Each baby is unique, though  -  some are louder, some are quieter. The variety of cries is what matters.',
         whenToMention:
           'If your baby\'s cry never varies or has an unusual quality, bring it up with your pediatrician.',
         whenToCallNow:
@@ -289,7 +289,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-4m-spontaneous-smile',
         name: 'Smiles spontaneously, especially at people',
         plainDescription:
-          'Your baby smiles freely and often — especially when they see familiar faces.',
+          'Your baby smiles freely and often  -  especially when they see familiar faces.',
         whatItLooksLike:
           'Your baby grins broadly when you walk into the room, when they see themselves in a mirror, or when a sibling makes a funny face. Their smile is clearly social and intentional. They may even laugh or squeal with delight.',
         typicalRange: {
@@ -308,7 +308,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -318,9 +318,9 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-4m-copies-expressions',
         name: 'Copies some facial expressions (smiling, frowning)',
         plainDescription:
-          'Your baby mirrors some of the facial expressions they see — if you smile, they smile; if you stick out your tongue, they may try to copy it.',
+          'Your baby mirrors some of the facial expressions they see  -  if you smile, they smile; if you stick out your tongue, they may try to copy it.',
         whatItLooksLike:
-          'When you make exaggerated facial expressions — a big smile, wide eyes, or mouth opening — your baby watches intently and may attempt to copy the expression. They might open their mouth wide when you do, or furrow their brow.',
+          'When you make exaggerated facial expressions  -  a big smile, wide eyes, or mouth opening  -  your baby watches intently and may attempt to copy the expression. They might open their mouth wide when you do, or furrow their brow.',
         typicalRange: {
           earlyMonths: 2,
           averageMonths: 3.5,
@@ -337,7 +337,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -357,7 +357,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 6,
         },
         whenNormal:
-          'This is a wonderful sign that your baby is developing social engagement. They understand cause and effect in social interactions — that their reactions can keep the fun going. Play is one of the most important things you can do with your baby.',
+          'This is a wonderful sign that your baby is developing social engagement. They understand cause and effect in social interactions  -  that their reactions can keep the fun going. Play is one of the most important things you can do with your baby.',
         whenToMention:
           'If your baby seems uninterested in social play and never shows excitement or disappointment during interactive games by about 6 months, let your pediatrician know.',
         whenToCallNow:
@@ -366,7 +366,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -378,7 +378,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-4m-reaches-one-hand',
         name: 'Uses eyes and hands together to reach for a toy',
         plainDescription:
-          'Your baby sees a toy, reaches for it, and can often grab it — their eyes and hands are working together.',
+          'Your baby sees a toy, reaches for it, and can often grab it  -  their eyes and hands are working together.',
         whatItLooksLike:
           'Your baby spots a toy, fixes their gaze on it, and reaches out with one or both hands to grab it. This is eye-hand coordination in action. They may need several attempts, but the intentional reaching is the milestone.',
         typicalRange: {
@@ -388,7 +388,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 6,
         },
         whenNormal:
-          'Eye-hand coordination is one of the most important cognitive-motor connections your baby develops. It requires their brain to process visual information and translate it into a motor command — an incredible feat of engineering for a tiny brain.',
+          'Eye-hand coordination is one of the most important cognitive-motor connections your baby develops. It requires their brain to process visual information and translate it into a motor command  -  an incredible feat of engineering for a tiny brain.',
         whenToMention:
           'If your baby does not seem to use their eyes to guide their reaching by about 5 to 6 months, mention it to your pediatrician.',
         whenToCallNow:
@@ -397,7 +397,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -426,7 +426,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -438,7 +438,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby can recognize you and other familiar people from across the room.',
         whatItLooksLike:
-          'When you walk into the room, your baby perks up, smiles, or kicks excitedly — even before you speak. They can distinguish familiar people from strangers and may show a clear preference for their primary caregivers.',
+          'When you walk into the room, your baby perks up, smiles, or kicks excitedly  -  even before you speak. They can distinguish familiar people from strangers and may show a clear preference for their primary caregivers.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4,
@@ -455,7 +455,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 4 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  4 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -477,7 +477,7 @@ export const checkpoint: AgeCheckpoint = {
     {
       description: 'Cannot hold head steady',
       action:
-        'Head control should be well-developed by 4 months. Discuss with your pediatrician — they may recommend a physical therapy evaluation.',
+        'Head control should be well-developed by 4 months. Discuss with your pediatrician  -  they may recommend a physical therapy evaluation.',
     },
     {
       description: 'Does not coo or make sounds',
@@ -501,5 +501,5 @@ export const checkpoint: AgeCheckpoint = {
     },
   ],
   notes:
-    'Four months is often described as the "golden age" of babyhood. Your baby is more alert, more social, and more interactive than ever. They are laughing, babbling, reaching for toys, and lighting up when they see you. This is also a time when you really start to feel like you are getting to know your baby\'s personality. Some babies are more active, some are more observational — there is no right way to be a baby. Sleep patterns may be starting to consolidate (though plenty of babies are still waking at night, and that is okay). If your baby was premature, remember to consider their adjusted age when looking at milestones. As always, talk to your pediatrician if anything concerns you — they are there to help and will never judge you for asking.',
+    'Four months is often described as the "golden age" of babyhood. Your baby is more alert, more social, and more interactive than ever. They are laughing, babbling, reaching for toys, and lighting up when they see you. This is also a time when you really start to feel like you are getting to know your baby\'s personality. Some babies are more active, some are more observational  -  there is no right way to be a baby. Sleep patterns may be starting to consolidate (though plenty of babies are still waking at night, and that is okay). If your baby was premature, remember to consider their adjusted age when looking at milestones. As always, talk to your pediatrician if anything concerns you  -  they are there to help and will never judge you for asking.',
 };

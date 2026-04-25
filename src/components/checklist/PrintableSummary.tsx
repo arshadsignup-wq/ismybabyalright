@@ -25,7 +25,7 @@ const responseLabels: Record<string, string> = {
 /**
  * Group milestones by their category for organized print output.
  * Since Milestone does not carry its own category, we accept the flat list
- * and group by response type instead — which is more useful on paper.
+ * and group by response type instead  -  which is more useful on paper.
  */
 function groupByResponse(
   milestones: Milestone[],

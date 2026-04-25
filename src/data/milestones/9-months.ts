@@ -12,7 +12,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby moves across the floor on hands and knees, or scoots on their bottom or belly. Any style of getting around counts.',
         whatItLooksLike:
-          'Baby gets up on hands and knees and rocks, then starts moving forward or backward. Some babies army-crawl on their belly or scoot on their bottom instead — all of these are normal.',
+          'Baby gets up on hands and knees and rocks, then starts moving forward or backward. Some babies army-crawl on their belly or scoot on their bottom instead  -  all of these are normal.',
         typicalRange: {
           earlyMonths: 6,
           averageMonths: 8,
@@ -20,16 +20,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 12,
         },
         whenNormal:
-          'Lots of babies are still figuring out crawling at 9 months. Some skip it entirely and go straight to pulling up or cruising — that is completely fine.',
+          'Lots of babies are still figuring out crawling at 9 months. Some skip it entirely and go straight to pulling up or cruising  -  that is completely fine.',
         whenToMention:
-          'If your baby is not moving around in any way by 10-11 months — not crawling, scooting, rolling, or creeping — mention it at your next well-child visit.',
+          'If your baby is not moving around in any way by 10-11 months  -  not crawling, scooting, rolling, or creeping  -  mention it at your next well-child visit.',
         whenToCallNow:
           'If your baby seems stiff or floppy in their legs, only uses one side of their body, or has lost movement skills they used to have, call your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -64,7 +64,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -99,7 +99,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -113,7 +113,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby is starting to pick up small things using their thumb and pointer finger, like a small piece of cereal or a puff.',
         whatItLooksLike:
-          'Instead of raking small items with their whole hand, baby starts using just their thumb and index finger to pick up small foods or objects. At 9 months this is often still developing — they may use a "raking" motion first.',
+          'Instead of raking small items with their whole hand, baby starts using just their thumb and index finger to pick up small foods or objects. At 9 months this is often still developing  -  they may use a "raking" motion first.',
         typicalRange: {
           earlyMonths: 7,
           averageMonths: 9,
@@ -121,7 +121,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 12,
         },
         whenNormal:
-          'The pincer grasp often starts rough and clumsy around 9 months and gets refined over the next few months. Your baby might still use their whole hand — that is okay.',
+          'The pincer grasp often starts rough and clumsy around 9 months and gets refined over the next few months. Your baby might still use their whole hand  -  that is okay.',
         whenToMention:
           'If your baby is not picking up small objects at all by 11-12 months, mention it at your next visit.',
         whenToCallNow:
@@ -130,7 +130,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -159,7 +159,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 6 and 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 6 and 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -181,14 +181,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Most babies love banging things together at this age. It is a great sign of developing coordination and cause-and-effect understanding.',
         whenToMention:
-          'If your baby shows little interest in exploring toys — not holding, banging, or mouthing them — bring it up at your next checkup.',
+          'If your baby shows little interest in exploring toys  -  not holding, banging, or mouthing them  -  bring it up at your next checkup.',
         whenToCallNow:
           'If your baby does not reach for or hold objects, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -202,7 +202,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby makes strings of sounds using consonants and vowels together, like "bababa," "mamama," or "dadada."',
         whatItLooksLike:
-          'Baby babbles in repeated syllables — "babababa" or "mamamama." They may not mean "mama" or "dada" yet, but they are practicing the sounds that will become real words. You might hear them babbling to themselves, to toys, or to you.',
+          'Baby babbles in repeated syllables  -  "babababa" or "mamamama." They may not mean "mama" or "dada" yet, but they are practicing the sounds that will become real words. You might hear them babbling to themselves, to toys, or to you.',
         typicalRange: {
           earlyMonths: 5,
           averageMonths: 7,
@@ -219,13 +219,13 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
             org: 'WHO',
             citation:
-              'WHO Child Development Guidelines — Language Development',
+              'WHO Child Development Guidelines  -  Language Development',
             url: 'https://www.who.int/tools/child-growth-standards',
           },
         ],
@@ -237,7 +237,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby looks at you or reacts when you say their name.',
         whatItLooksLike:
-          'When you say your baby\'s name, they turn to look at you or pause what they are doing. They may not respond every single time — especially if they are deeply focused on something — but they clearly recognize their name.',
+          'When you say your baby\'s name, they turn to look at you or pause what they are doing. They may not respond every single time  -  especially if they are deeply focused on something  -  but they clearly recognize their name.',
         typicalRange: {
           earlyMonths: 5,
           averageMonths: 7,
@@ -249,12 +249,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby rarely or never looks up when you say their name in a quiet room, bring it up at your next well-child visit.',
         whenToCallNow:
-          'If your baby does not respond to their name and also does not seem to react to sounds around them, contact your pediatrician — a hearing check may be helpful.',
+          'If your baby does not respond to their name and also does not seem to react to sounds around them, contact your pediatrician  -  a hearing check may be helpful.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -270,7 +270,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby pauses or reacts when you say "no," even if they do not always obey.',
         whatItLooksLike:
-          'When you say "no" firmly, baby may pause, look at you, or briefly stop what they are doing. They might then go right back to it — they understand the word but are not yet able to consistently stop themselves.',
+          'When you say "no" firmly, baby may pause, look at you, or briefly stop what they are doing. They might then go right back to it  -  they understand the word but are not yet able to consistently stop themselves.',
         typicalRange: {
           earlyMonths: 6,
           averageMonths: 8,
@@ -278,7 +278,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 12,
         },
         whenNormal:
-          'Understanding "no" does not mean obeying every time. At 9 months, it is enough that your baby shows some reaction — pausing, looking at you, or even smiling mischievously.',
+          'Understanding "no" does not mean obeying every time. At 9 months, it is enough that your baby shows some reaction  -  pausing, looking at you, or even smiling mischievously.',
         whenToMention:
           'If your baby shows no reaction at all to "no" or other familiar words by 10-11 months, let your doctor know.',
         whenToCallNow:
@@ -287,7 +287,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -315,14 +315,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Stranger anxiety is a healthy, normal sign that your baby knows the difference between familiar and unfamiliar people. It usually peaks around 9-12 months and gradually fades. It does not mean your baby is "spoiled" or that something is wrong.',
         whenToMention:
-          'If your baby shows no preference for you or familiar caregivers — seeming equally comfortable with anyone — mention it at a visit. Some social wariness is actually a good sign.',
+          'If your baby shows no preference for you or familiar caregivers  -  seeming equally comfortable with anyone  -  mention it at a visit. Some social wariness is actually a good sign.',
         whenToCallNow:
           'If your baby does not seem to recognize you at all or shows no attachment to any caregiver, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -342,7 +342,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 13,
         },
         whenNormal:
-          'Following a point is a big deal — it means your baby understands that you are trying to show them something. It develops gradually, and some babies take a few more months to get it consistently.',
+          'Following a point is a big deal  -  it means your baby understands that you are trying to show them something. It develops gradually, and some babies take a few more months to get it consistently.',
         whenToMention:
           'If your baby never follows your point or gaze by 12 months, mention it at your next visit.',
         whenToCallNow:
@@ -351,7 +351,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -384,7 +384,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -398,7 +398,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby knows that something still exists even when they cannot see it, and will look for hidden toys.',
         whatItLooksLike:
-          'You hide a toy under a blanket and your baby pulls the blanket off to find it. They know it did not just vanish — it is still there, just out of sight.',
+          'You hide a toy under a blanket and your baby pulls the blanket off to find it. They know it did not just vanish  -  it is still there, just out of sight.',
         typicalRange: {
           earlyMonths: 6,
           averageMonths: 8,
@@ -406,16 +406,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 12,
         },
         whenNormal:
-          'Finding hidden toys is a sign of growing memory and understanding. Your baby is learning that the world continues even when things are out of view — this is also why peekaboo is so exciting for them.',
+          'Finding hidden toys is a sign of growing memory and understanding. Your baby is learning that the world continues even when things are out of view  -  this is also why peekaboo is so exciting for them.',
         whenToMention:
           'If your baby does not look for a toy you hide right in front of them by 10-11 months, bring it up at your next visit.',
         whenToCallNow:
-          'If your baby shows no interest in objects at all — does not reach for, look at, or interact with toys — call your pediatrician.',
+          'If your baby shows no interest in objects at all  -  does not reach for, look at, or interact with toys  -  call your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -435,16 +435,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 12,
         },
         whenNormal:
-          'When your baby drops things over and over, it can feel frustrating, but it means their brain is working hard. They are learning that their actions have results — a huge cognitive step.',
+          'When your baby drops things over and over, it can feel frustrating, but it means their brain is working hard. They are learning that their actions have results  -  a huge cognitive step.',
         whenToMention:
-          'If your baby does not seem curious about how things work — never bangs, shakes, or explores toys — mention it at your next visit.',
+          'If your baby does not seem curious about how things work  -  never bangs, shakes, or explores toys  -  mention it at your next visit.',
         whenToCallNow:
           'If your baby is very passive, does not interact with objects, and does not respond to interesting sights or sounds, contact your doctor.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 9 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 9 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -462,7 +462,7 @@ export const checkpoint: AgeCheckpoint = {
       action: 'Call your pediatrician to discuss.',
     },
     {
-      description: 'Does not babble — no "mama," "baba," "dada" sounds',
+      description: 'Does not babble  -  no "mama," "baba," "dada" sounds',
       action: 'Call your pediatrician. A hearing evaluation may be recommended.',
     },
     {
@@ -486,5 +486,5 @@ export const checkpoint: AgeCheckpoint = {
     },
   ],
   notes:
-    'Every baby develops at their own pace, and there is a wide range of normal. At 9 months, your baby is going through enormous changes — learning to move, communicate, and understand the world. Some babies are early movers but late talkers, or vice versa. What matters most is that your baby is making steady progress over time, not that they hit every milestone on a specific date. If something feels off to you as a parent, trust your instincts and talk to your pediatrician. You know your baby best, and asking questions is always the right thing to do.',
+    'Every baby develops at their own pace, and there is a wide range of normal. At 9 months, your baby is going through enormous changes  -  learning to move, communicate, and understand the world. Some babies are early movers but late talkers, or vice versa. What matters most is that your baby is making steady progress over time, not that they hit every milestone on a specific date. If something feels off to you as a parent, trust your instincts and talk to your pediatrician. You know your baby best, and asking questions is always the right thing to do.',
 };

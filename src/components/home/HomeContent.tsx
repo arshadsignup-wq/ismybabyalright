@@ -3,12 +3,35 @@
 import { useProfile, useEvents } from "@/lib/useStorage";
 import { getAgeInMonthsFromDate } from "@/lib/tracker";
 import HeroSection from "./HeroSection";
-import AgeSelector from "./AgeSelector";
 import EntryPathCards from "./EntryPathCards";
 import GentleRedirect from "@/components/shared/GentleRedirect";
 import RightNowCard from "@/components/tracker/RightNowCard";
 import QuickTapGrid from "@/components/tracker/QuickTapGrid";
 import Link from "next/link";
+import { allConcerns } from "@/data/concerns";
+import type { ConcernCategory } from "@/data/concerns/types";
+
+const categoryColors: Record<ConcernCategory, string> = {
+  physical: "#38BDF8",
+  communication: "#A78BFA",
+  feeding: "#F4A261",
+  sleep: "#818CF8",
+  skin: "#F472B6",
+  digestive: "#34D399",
+  behavior: "#FBBF24",
+  medical: "#F07167",
+};
+
+const categoryLabels: Record<ConcernCategory, string> = {
+  physical: "Physical",
+  communication: "Speech",
+  feeding: "Feeding",
+  sleep: "Sleep",
+  skin: "Skin",
+  digestive: "Digestive",
+  behavior: "Behavior",
+  medical: "Medical",
+};
 
 /* ------------------------------------------------------------------ */
 /*  Returning-user quick-access cards                                  */
@@ -18,121 +41,69 @@ const quickLinks = [
   {
     label: "Milestones",
     href: "/milestones",
-    color: "text-primary",
-    bg: "bg-primary-light",
-    border: "border-primary/20",
+    bg: "#FEF6EC",
+    color: "#F4A261",
+    textColor: "#7A4D1E",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
+      <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
+        <path d="M24 4l5.5 11.2 12.3 1.8-8.9 8.7 2.1 12.3L24 31.7 12.9 38l2.1-12.3-8.9-8.7 12.3-1.8z" fill="#F4A261" />
       </svg>
     ),
   },
   {
     label: "Concerns",
     href: "/concerns",
-    color: "text-monitor-foreground",
-    bg: "bg-monitor-light",
-    border: "border-monitor/20",
+    bg: "#FEF0EE",
+    color: "#F07167",
+    textColor: "#9B2C2C",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F07167" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
       </svg>
     ),
   },
   {
     label: "Health",
     href: "/triage",
-    color: "text-safe-foreground",
-    bg: "bg-safe-light",
-    border: "border-safe/20",
+    bg: "#FFF1F5",
+    color: "#F472B6",
+    textColor: "#831843",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
+        <path d="M24 42S4 30 4 17a10 10 0 0 1 20 0 10 10 0 0 1 20 0c0 13-20 25-20 25z" fill="#F472B6" />
       </svg>
     ),
   },
   {
     label: "Food",
     href: "/food",
-    color: "text-[#c06000]",
-    bg: "bg-[#fff5eb]",
-    border: "border-[#c06000]/15",
+    bg: "#FEF6EC",
+    color: "#F4A261",
+    textColor: "#7A4D1E",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-        <line x1="6" y1="1" x2="6" y2="4" />
-        <line x1="10" y1="1" x2="10" y2="4" />
-        <line x1="14" y1="1" x2="14" y2="4" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4A261" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
       </svg>
     ),
   },
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Feature showcase items                                             */
+/*  Popular concerns for new-visitor preview                           */
 /* ------------------------------------------------------------------ */
 
-const features = [
-  {
-    title: "Daily Tracker",
-    description: "Log feeds, sleep, and diapers in seconds",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="12" x2="16" y2="14" />
-      </svg>
-    ),
-  },
-  {
-    title: "Symptom Checker",
-    description: "Triage concerns with call scripts for your doctor",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Food Guide",
-    description: "Allergen intro, prep by age, safe portions",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1="6" y1="1" x2="6" y2="4" /><line x1="10" y1="1" x2="10" y2="4" /><line x1="14" y1="1" x2="14" y2="4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Sleep Guide",
-    description: "Regressions, schedules, and age-based tips",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Growth Charts",
-    description: "WHO percentiles — weight, length, and head",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
-      </svg>
-    ),
-  },
-  {
-    title: "Mental Health",
-    description: "Mood check-in, partner support, and resources",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-    ),
-  },
+const popularSlugs = [
+  "not-walking",
+  "not-talking",
+  "not-crawling",
+  "not-rolling-over",
+  "not-responding-to-name",
+  "green-poop",
 ];
+
+const popularConcerns = popularSlugs
+  .map((slug) => allConcerns.find((c) => c.slug === slug))
+  .filter(Boolean);
 
 /* ------------------------------------------------------------------ */
 /*  Greeting helper                                                    */
@@ -161,10 +132,10 @@ export default function HomeContent() {
       <div className="mx-auto w-full max-w-lg px-4 py-6 sm:py-10 flex flex-col gap-5">
         {/* Greeting */}
         <div className="text-center">
-          <p className="text-lg font-semibold text-foreground">
+          <p className="text-lg font-bold text-foreground">
             {getGreeting()}, {profile.name}&rsquo;s parent
           </p>
-          <span className="mt-1 inline-block rounded-full bg-primary-light px-3 py-0.5 text-xs font-semibold text-primary">
+          <span className="mt-1 inline-block rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary">
             {ageMonths} {ageMonths === 1 ? "month" : "months"} old
           </span>
         </div>
@@ -183,18 +154,21 @@ export default function HomeContent() {
           onUpdate={updateEvent}
         />
 
-        {/* Quick-access cards with icons and colors */}
+        {/* Quick-access cards */}
         <div className="grid grid-cols-2 gap-3">
           {quickLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`card flex items-center gap-3 p-4 border ${item.border} hover:shadow-sm hover:-translate-y-0.5 transition-all no-underline`}
+              className="flex items-center gap-3 rounded-2xl border border-[#E8E2D9] bg-white p-4 shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 no-underline"
             >
-              <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${item.bg} ${item.color}`}>
+              <div
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
+                style={{ backgroundColor: item.bg }}
+              >
                 {item.icon}
               </div>
-              <span className="text-sm font-semibold text-foreground">
+              <span className="text-sm font-bold text-foreground">
                 {item.label}
               </span>
             </Link>
@@ -211,111 +185,104 @@ export default function HomeContent() {
     <>
       <HeroSection />
 
-      <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
-        <AgeSelector />
+      <div className="mx-auto w-full max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
+        <EntryPathCards />
 
-        <div className="mt-12">
-          <EntryPathCards />
-        </div>
-
-        {/* Feature Showcase */}
-        <section className="mt-16" aria-labelledby="features-heading">
-          <h2 id="features-heading" className="mb-2 text-center text-foreground">
-            Everything you need, completely free
+        {/* Popular Concerns  -  content preview */}
+        <section className="mt-20" aria-labelledby="popular-concerns-heading">
+          <h2
+            id="popular-concerns-heading"
+            className="mb-2 text-center text-2xl font-extrabold tracking-tight sm:text-3xl"
+          >
+            What parents are asking
           </h2>
-          <p className="mx-auto mb-8 max-w-lg text-center text-muted">
-            72 pages of tools, guides, and trackers — all evidence-based, all private.
+          <p className="mx-auto mb-10 max-w-md text-center text-muted">
+            Real answers to the most common worries  -  backed by pediatric guidelines.
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className="card hover-lift flex items-start gap-3"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-light text-primary">
-                  {f.icon}
-                </div>
-                <div>
-                  <h3 className="text-base text-foreground">{f.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted">
-                    {f.description}
+            {popularConcerns.map((c, i) => {
+              const color = categoryColors[c!.category];
+              return (
+                <Link
+                  key={c!.slug}
+                  href={`/concerns/${c!.slug}`}
+                  className="group relative flex flex-col gap-2 rounded-2xl border border-[#E8E2D9] bg-white p-5 no-underline transition-all duration-200 hover:shadow-lg hover:-translate-y-1 overflow-hidden animate-fade-in-up"
+                  style={{ animationDelay: `${i * 80}ms` }}
+                >
+                  {/* Category accent bar */}
+                  <div
+                    className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
+                    style={{ backgroundColor: color }}
+                  />
+                  <div className="flex items-center gap-2 mt-1">
+                    <span
+                      className="inline-block rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide"
+                      style={{ backgroundColor: `${color}15`, color }}
+                    >
+                      {categoryLabels[c!.category]}
+                    </span>
+                  </div>
+                  <h3 className="text-sm font-extrabold text-foreground group-hover:text-[#F07167] transition-colors sm:text-base">
+                    {c!.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-muted line-clamp-2 sm:text-sm">
+                    {c!.quickAnswer}
                   </p>
-                </div>
-              </div>
-            ))}
+                  <span className="mt-auto inline-flex items-center gap-1 text-xs font-bold text-[#F07167] opacity-70 transition-opacity duration-200 group-hover:opacity-100">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/concerns"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-primary-hover transition-colors"
+            >
+              See all {allConcerns.length}+ concerns
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </Link>
           </div>
         </section>
 
-        {/* Trust & Credibility */}
-        <section
-          className="mt-16 rounded-2xl bg-card-alt px-6 py-10"
-          aria-labelledby="trust-heading"
-        >
-          <h2 id="trust-heading" className="mb-8 text-center text-foreground">
-            Built on evidence, not opinions
-          </h2>
+        {/* Trust + Privacy */}
+        <div className="mt-20 rounded-[1.5rem] p-6 text-center sm:p-8" style={{ background: "linear-gradient(135deg, #E0F5F2, #EFF8FF, #F5F3FF)" }}>
+          <div className="flex flex-col items-center gap-5">
+            {/* Stats row */}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-bold text-foreground">
+              <span>{allConcerns.length}+ Concerns</span>
+              <span className="text-muted/40">&middot;</span>
+              <span>11 Triage Trees</span>
+              <span className="text-muted/40">&middot;</span>
+              <span>36 Milestones</span>
+              <span className="text-muted/40">&middot;</span>
+              <span>100% Free</span>
+            </div>
 
-          <div className="grid gap-6 sm:grid-cols-3">
-            <div className="text-center">
-              <span className="source-badge source-badge-cdc mb-3 inline-block">CDC</span>
-              <h3 className="text-base text-foreground">CDC Guidelines</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Age-specific milestones and &ldquo;act early&rdquo; concern signs from the Centers for Disease Control.
-              </p>
+            <div className="inline-flex items-center gap-2.5">
+              <span className="source-badge source-badge-cdc">CDC</span>
+              <span className="source-badge source-badge-who">WHO</span>
+              <span className="source-badge source-badge-aap">AAP</span>
             </div>
-            <div className="text-center">
-              <span className="source-badge source-badge-who mb-3 inline-block">WHO</span>
-              <h3 className="text-base text-foreground">WHO Standards</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                International growth standards and developmental windows from the World Health Organization.
-              </p>
-            </div>
-            <div className="text-center">
-              <span className="source-badge source-badge-aap mb-3 inline-block">AAP</span>
-              <h3 className="text-base text-foreground">AAP Recommendations</h3>
-              <p className="text-sm text-muted leading-relaxed">
-                Pediatric best practices for feeding, sleep, vaccines, and well-child visits.
-              </p>
+            <p className="text-sm font-bold text-foreground sm:text-base">
+              Built on evidence-based guidelines you can trust
+            </p>
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/60 px-4 py-2 text-sm font-semibold text-muted backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#16A34A]" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              No account &middot; No tracking &middot; No ads &middot; Data stays on device
             </div>
           </div>
-        </section>
-
-        {/* Privacy Promise */}
-        <section
-          className="mt-16 rounded-2xl px-6 py-10 text-center"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--color-primary-light), #f0faf9)",
-          }}
-          aria-labelledby="privacy-heading"
-        >
-          {/* Shield icon */}
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-          </div>
-
-          <h2 id="privacy-heading" className="text-foreground">
-            Your data stays on your device
-          </h2>
-
-          <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-muted">
-            <li className="flex items-center gap-2">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-safe-light text-safe text-xs" aria-hidden="true">&check;</span>
-              No account required
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-safe-light text-safe text-xs" aria-hidden="true">&check;</span>
-              No tracking or analytics
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-safe-light text-safe text-xs" aria-hidden="true">&check;</span>
-              No ads, ever
-            </li>
-          </ul>
-        </section>
+        </div>
 
         <GentleRedirect />
       </div>

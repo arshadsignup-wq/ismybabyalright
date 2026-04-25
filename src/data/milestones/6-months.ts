@@ -12,7 +12,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby can roll from their tummy to their back and from their back to their tummy.',
         whatItLooksLike:
-          'Your baby rolls confidently from front to back and is learning (or has learned) to roll from back to front as well. They may use rolling as a way to get around — you put them down in one spot and find them somewhere else.',
+          'Your baby rolls confidently from front to back and is learning (or has learned) to roll from back to front as well. They may use rolling as a way to get around  -  you put them down in one spot and find them somewhere else.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 5,
@@ -29,7 +29,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -47,7 +47,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby can sit on their own for a few seconds, or longer with some support.',
         whatItLooksLike:
-          'Your baby can sit on the floor with their hands planted in front of them for balance (tripod sitting), and may be starting to sit independently without using their hands. They might topple over after a few seconds — keep pillows around them.',
+          'Your baby can sit on the floor with their hands planted in front of them for balance (tripod sitting), and may be starting to sit independently without using their hands. They might topple over after a few seconds  -  keep pillows around them.',
         typicalRange: {
           earlyMonths: 4,
           averageMonths: 6,
@@ -64,7 +64,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -90,7 +90,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 8,
         },
         whenNormal:
-          'Weight-bearing on legs is a normal developmental step that does not cause bow legs or early walking problems — that is a myth. Letting your baby "stand" with support when they want to is great exercise for their leg muscles.',
+          'Weight-bearing on legs is a normal developmental step that does not cause bow legs or early walking problems  -  that is a myth. Letting your baby "stand" with support when they want to is great exercise for their leg muscles.',
         whenToMention:
           'If your baby\'s legs buckle every time you try to hold them in a standing position by about 7 to 8 months, mention it to your pediatrician.',
         whenToCallNow:
@@ -99,7 +99,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -119,7 +119,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 10,
         },
         whenNormal:
-          'Rocking on hands and knees is a pre-crawling behavior that not all babies do — some skip straight to crawling, scooting, or even cruising. There is no single "right" way to get mobile. Some perfectly healthy babies never crawl in the traditional sense.',
+          'Rocking on hands and knees is a pre-crawling behavior that not all babies do  -  some skip straight to crawling, scooting, or even cruising. There is no single "right" way to get mobile. Some perfectly healthy babies never crawl in the traditional sense.',
         whenToMention:
           'If your baby shows no interest in moving toward objects (rolling, scooting, or any movement) by about 9 months, let your pediatrician know.',
         whenToCallNow:
@@ -148,7 +148,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby uses their whole hand to sweep small objects toward themselves, like scooping up a piece of cereal.',
         whatItLooksLike:
-          'When a small object like a puff or piece of cereal is on a flat surface, your baby reaches for it and rakes it toward themselves using all their fingers at once. They may not be able to pick it up cleanly yet — that comes later with the pincer grasp.',
+          'When a small object like a puff or piece of cereal is on a flat surface, your baby reaches for it and rakes it toward themselves using all their fingers at once. They may not be able to pick it up cleanly yet  -  that comes later with the pincer grasp.',
         typicalRange: {
           earlyMonths: 5,
           averageMonths: 6,
@@ -160,7 +160,7 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby is not attempting to pick up small objects by about 7 to 8 months, let your pediatrician know.',
         whenToCallNow:
-          'If your baby cannot grasp objects at all — neither large nor small — contact your pediatrician for evaluation.',
+          'If your baby cannot grasp objects at all  -  neither large nor small  -  contact your pediatrician for evaluation.',
         sources: [
           {
             org: 'CDC',
@@ -194,7 +194,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -223,7 +223,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -237,7 +237,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby starts making consonant-vowel combinations like "ma," "da," "ba," and "ga."',
         whatItLooksLike:
-          'Your baby strings together consonant-vowel combos: "ba-ba-ba," "ma-ma-ma," "da-da-da." They may say these in long chains. Do not get too excited yet — at this stage, "mama" and "dada" are just fun sounds to make, not intentional words.',
+          'Your baby strings together consonant-vowel combos: "ba-ba-ba," "ma-ma-ma," "da-da-da." They may say these in long chains. Do not get too excited yet  -  at this stage, "mama" and "dada" are just fun sounds to make, not intentional words.',
         typicalRange: {
           earlyMonths: 4,
           averageMonths: 6,
@@ -245,7 +245,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 9,
         },
         whenNormal:
-          'Canonical babbling (consonant-vowel combinations) is a critical language milestone. It shows your baby\'s brain is learning to control the mouth, tongue, and voice together. Babies who hear more language tend to babble more — so keep talking, singing, and reading to your baby.',
+          'Canonical babbling (consonant-vowel combinations) is a critical language milestone. It shows your baby\'s brain is learning to control the mouth, tongue, and voice together. Babies who hear more language tend to babble more  -  so keep talking, singing, and reading to your baby.',
         whenToMention:
           'If your baby is still only making vowel sounds ("oooh," "aaah") and has not added any consonant sounds by about 8 to 9 months, let your pediatrician know. A hearing evaluation may be recommended.',
         whenToCallNow:
@@ -254,7 +254,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -274,7 +274,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 9,
         },
         whenNormal:
-          'Most babies start responding to their name between 5 and 7 months. At first, they may only respond when they are not distracted by something else. Consistently responding to their name — even when busy — comes a bit later.',
+          'Most babies start responding to their name between 5 and 7 months. At first, they may only respond when they are not distracted by something else. Consistently responding to their name  -  even when busy  -  comes a bit later.',
         whenToMention:
           'If your baby does not turn toward you when you say their name by about 9 months, mention it to your pediatrician. They may want to evaluate hearing and social development.',
         whenToCallNow:
@@ -283,7 +283,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -293,7 +293,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'lang-6m-responds-emotions',
         name: 'Responds to emotions in voices',
         plainDescription:
-          'Your baby reacts to the tone of your voice — they may look worried when you sound upset or smile when you sound happy.',
+          'Your baby reacts to the tone of your voice  -  they may look worried when you sound upset or smile when you sound happy.',
         whatItLooksLike:
           'When you speak in a happy, singsong voice, your baby smiles and seems excited. When you use a stern or worried tone, they may pause, look concerned, or even cry. They are reading the emotion in your voice before understanding the words.',
         typicalRange: {
@@ -307,12 +307,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby does not seem to respond differently to happy versus upset voices by about 8 months, let your pediatrician know.',
         whenToCallNow:
-          'If your baby seems completely unaware of voices and sounds — no response to tone, volume, or direction — contact your pediatrician for urgent hearing evaluation.',
+          'If your baby seems completely unaware of voices and sounds  -  no response to tone, volume, or direction  -  contact your pediatrician for urgent hearing evaluation.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -322,7 +322,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'lang-6m-makes-sounds-mirror',
         name: 'Makes sounds to get attention or express feelings',
         plainDescription:
-          'Your baby uses sounds — squeals, growls, raspberries, and shrieks — to get your attention or show how they feel.',
+          'Your baby uses sounds  -  squeals, growls, raspberries, and shrieks  -  to get your attention or show how they feel.',
         whatItLooksLike:
           'Your baby may squeal with delight, growl when frustrated, blow raspberries for fun, or shriek to get your attention from across the room. They are learning that their voice is a tool for communication, not just for crying.',
         typicalRange: {
@@ -332,7 +332,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 8,
         },
         whenNormal:
-          'This vocal experimentation is wonderful and sometimes loud. Your baby is discovering the range and power of their voice. Respond to these sounds as if they are trying to talk to you — because they are.',
+          'This vocal experimentation is wonderful and sometimes loud. Your baby is discovering the range and power of their voice. Respond to these sounds as if they are trying to talk to you  -  because they are.',
         whenToMention:
           'If your baby is very quiet and rarely makes sounds to express themselves by about 7 to 8 months, mention it to your pediatrician.',
         whenToCallNow:
@@ -341,7 +341,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -363,16 +363,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 10,
         },
         whenNormal:
-          'Stranger wariness is a healthy sign that your baby has formed strong attachments and can distinguish between people they know and people they do not. Not all babies show dramatic stranger anxiety — some are naturally more social. Both are normal.',
+          'Stranger wariness is a healthy sign that your baby has formed strong attachments and can distinguish between people they know and people they do not. Not all babies show dramatic stranger anxiety  -  some are naturally more social. Both are normal.',
         whenToMention:
           'If your baby does not seem to recognize familiar people or shows no preference for caregivers over strangers by about 9 months, let your pediatrician know.',
         whenToCallNow:
-          'If your baby seems completely indifferent to all people — no preference for anyone, no distress when separated from caregivers — mention it to your pediatrician at your earliest opportunity.',
+          'If your baby seems completely indifferent to all people  -  no preference for anyone, no distress when separated from caregivers  -  mention it to your pediatrician at your earliest opportunity.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -384,7 +384,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby is fascinated by their reflection and enjoys looking at themselves in a mirror.',
         whatItLooksLike:
-          'When you hold your baby in front of a mirror, they stare at their reflection, smile, reach for it, and may babble at it. They do not yet realize it is themselves — they just see an interesting, responsive "baby" who copies everything they do.',
+          'When you hold your baby in front of a mirror, they stare at their reflection, smile, reach for it, and may babble at it. They do not yet realize it is themselves  -  they just see an interesting, responsive "baby" who copies everything they do.',
         typicalRange: {
           earlyMonths: 4,
           averageMonths: 5.5,
@@ -396,12 +396,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby shows no interest in their reflection or in looking at faces in general by about 7 to 8 months, mention it to your pediatrician.',
         whenToCallNow:
-          'If your baby avoids looking at faces — both real and reflected — and also does not make eye contact, contact your pediatrician for evaluation.',
+          'If your baby avoids looking at faces  -  both real and reflected  -  and also does not make eye contact, contact your pediatrician for evaluation.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -411,9 +411,9 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-6m-laughs',
         name: 'Laughs out loud',
         plainDescription:
-          'Your baby laughs with a real, hearty laugh — not just smiles, but genuine laughter.',
+          'Your baby laughs with a real, hearty laugh  -  not just smiles, but genuine laughter.',
         whatItLooksLike:
-          'During playful interactions — peek-a-boo, tickling, silly sounds — your baby bursts into laughter. It is a full, belly laugh that is unmistakably different from cooing or squealing. It is one of the most joyful sounds you will ever hear.',
+          'During playful interactions  -  peek-a-boo, tickling, silly sounds  -  your baby bursts into laughter. It is a full, belly laugh that is unmistakably different from cooing or squealing. It is one of the most joyful sounds you will ever hear.',
         typicalRange: {
           earlyMonths: 3,
           averageMonths: 4.5,
@@ -421,7 +421,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 7,
         },
         whenNormal:
-          'Most babies laugh for the first time between 3 and 5 months. By 6 months, laughter should be a regular part of your baby\'s repertoire. Some babies are more giggly than others — personality plays a role here.',
+          'Most babies laugh for the first time between 3 and 5 months. By 6 months, laughter should be a regular part of your baby\'s repertoire. Some babies are more giggly than others  -  personality plays a role here.',
         whenToMention:
           'If your baby has never laughed by about 6 to 7 months, mention it to your pediatrician. It is worth checking hearing and social development.',
         whenToCallNow:
@@ -452,7 +452,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 8,
         },
         whenNormal:
-          'By 6 months, your baby should be actively curious about their environment. They are little scientists — testing, exploring, and learning about every object they encounter. Give them safe objects with different textures, weights, and sounds.',
+          'By 6 months, your baby should be actively curious about their environment. They are little scientists  -  testing, exploring, and learning about every object they encounter. Give them safe objects with different textures, weights, and sounds.',
         whenToMention:
           'If your baby seems uninterested in reaching for or exploring objects by about 7 to 8 months, mention it to your pediatrician.',
         whenToCallNow:
@@ -461,7 +461,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -471,7 +471,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-6m-mouths-explore',
         name: 'Brings things to mouth to explore',
         plainDescription:
-          'Your baby uses their mouth as a primary tool for learning about objects — everything gets tasted and chewed.',
+          'Your baby uses their mouth as a primary tool for learning about objects  -  everything gets tasted and chewed.',
         whatItLooksLike:
           'Your baby picks up a toy, immediately brings it to their mouth, and explores it with their lips, tongue, and gums. They are gathering information about texture, shape, temperature, and taste. This is serious scientific research, baby-style.',
         typicalRange: {
@@ -490,7 +490,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -500,7 +500,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-6m-cause-effect',
         name: 'Begins to understand cause and effect',
         plainDescription:
-          'Your baby is starting to figure out that their actions make things happen — shaking a rattle makes noise, dropping a toy makes you pick it up.',
+          'Your baby is starting to figure out that their actions make things happen  -  shaking a rattle makes noise, dropping a toy makes you pick it up.',
         whatItLooksLike:
           'Your baby shakes a rattle, hears the sound, pauses, and then shakes it again on purpose. They may drop a toy off their high chair, watch it fall, and look at you expectantly. When they push a button on a toy and it lights up, they do it again and again.',
         typicalRange: {
@@ -510,9 +510,9 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 9,
         },
         whenNormal:
-          'Understanding cause and effect is a fundamental cognitive milestone. Your baby is learning that they have the power to make things happen in the world — this is the beginning of problem-solving. The repetitive "drop the toy" game is them practicing this concept.',
+          'Understanding cause and effect is a fundamental cognitive milestone. Your baby is learning that they have the power to make things happen in the world  -  this is the beginning of problem-solving. The repetitive "drop the toy" game is them practicing this concept.',
         whenToMention:
-          'If your baby does not seem to notice the effects of their actions — never repeating an action that produced an interesting result — by about 8 to 9 months, let your pediatrician know.',
+          'If your baby does not seem to notice the effects of their actions  -  never repeating an action that produced an interesting result  -  by about 8 to 9 months, let your pediatrician know.',
         whenToCallNow:
           'If your baby seems completely disengaged from their environment, does not interact with toys at all, and does not respond to changes around them, contact your pediatrician.',
         sources: [
@@ -548,7 +548,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 6 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  6 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -590,9 +590,9 @@ export const checkpoint: AgeCheckpoint = {
     {
       description: 'Seems very stiff with tight muscles, or very floppy like a rag doll',
       action:
-        'Unusual muscle tone — either too high or too low — should be evaluated by your pediatrician. They may refer you to a neurologist or physical therapist.',
+        'Unusual muscle tone  -  either too high or too low  -  should be evaluated by your pediatrician. They may refer you to a neurologist or physical therapist.',
     },
   ],
   notes:
-    'Six months is a thrilling time. Your baby is becoming a little person with clear likes, dislikes, and a personality all their own. They are sitting up, reaching for everything, babbling with consonants, and laughing at your jokes. Many families start solid foods around this time, which is an exciting (and messy) new adventure. Your baby\'s brain is developing at an astonishing rate — they are forming connections that will support learning for years to come. Remember that developmental milestones describe a range, not a deadline. Some babies hit milestones early, others later, and the order can vary too. If your baby was born prematurely, use their adjusted age (age from their due date, not their birth date) when comparing to milestone charts. As always, you know your baby best. If something does not feel right, trust your instincts and talk to your pediatrician. Early intervention, when needed, can make a world of difference — and asking questions is always the right call.',
+    'Six months is a thrilling time. Your baby is becoming a little person with clear likes, dislikes, and a personality all their own. They are sitting up, reaching for everything, babbling with consonants, and laughing at your jokes. Many families start solid foods around this time, which is an exciting (and messy) new adventure. Your baby\'s brain is developing at an astonishing rate  -  they are forming connections that will support learning for years to come. Remember that developmental milestones describe a range, not a deadline. Some babies hit milestones early, others later, and the order can vary too. If your baby was born prematurely, use their adjusted age (age from their due date, not their birth date) when comparing to milestone charts. As always, you know your baby best. If something does not feel right, trust your instincts and talk to your pediatrician. Early intervention, when needed, can make a world of difference  -  and asking questions is always the right call.',
 };

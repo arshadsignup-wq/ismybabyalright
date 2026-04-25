@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'soft-spot-concerns',
   title: 'Soft Spot (Fontanelle) Concerns',
+  category: 'medical',
   searchTerms: [
     'baby soft spot',
     'fontanelle sunken',

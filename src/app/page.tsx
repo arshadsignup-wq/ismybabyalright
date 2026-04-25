@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import HeroSection from "@/components/home/HeroSection";
-import AgeSelector from "@/components/home/AgeSelector";
-import EntryPathCards from "@/components/home/EntryPathCards";
-import GentleRedirect from "@/components/shared/GentleRedirect";
+import HomeContent from "@/components/home/HomeContent";
 
 export const metadata: Metadata = {
   title: "Is My Baby Alright? | Evidence-Based Developmental Milestones",
+  description:
+    "Free evidence-based milestone checklists, 325+ concern guides, symptom triage tools, and daily trackers for your baby's first 3 years. CDC, WHO, and AAP sourced. No signup required.",
 };
 
 const jsonLd = {
@@ -24,17 +23,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HeroSection />
-
-      <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
-        <AgeSelector />
-
-        <div className="mt-12">
-          <EntryPathCards />
-        </div>
-
-        <GentleRedirect />
-      </div>
+      <HomeContent />
     </div>
   );
 }

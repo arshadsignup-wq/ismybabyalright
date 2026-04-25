@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'not-sitting-up',
   title: 'Not Sitting Up',
+  category: 'physical',
   searchTerms: [
     'baby not sitting up',
     'when do babies sit up on their own',

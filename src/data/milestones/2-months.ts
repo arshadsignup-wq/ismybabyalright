@@ -29,7 +29,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -59,12 +59,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby\'s movements still look mostly jerky and uncontrolled at 3 to 4 months, or if the movements seem very asymmetric (one side moves much more than the other), bring it up with your pediatrician.',
         whenToCallNow:
-          'If your baby has sudden jerking or shaking episodes that look rhythmic and repetitive — especially if their eyes roll or they become unresponsive during these episodes — seek medical attention right away, as these could be seizures.',
+          'If your baby has sudden jerking or shaking episodes that look rhythmic and repetitive  -  especially if their eyes roll or they become unresponsive during these episodes  -  seek medical attention right away, as these could be seizures.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -86,7 +86,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 4,
         },
         whenNormal:
-          'It is normal for fists to gradually relax over the first 2 to 3 months. Your baby does not need to have their hands open all the time — it is about the trend toward more openness.',
+          'It is normal for fists to gradually relax over the first 2 to 3 months. Your baby does not need to have their hands open all the time  -  it is about the trend toward more openness.',
         whenToMention:
           'If your baby\'s hands are still tightly fisted almost all the time at 3 months, especially with the thumbs tucked inside the fingers, mention it to your pediatrician.',
         whenToCallNow:
@@ -136,7 +136,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'lang-2m-coos',
         name: 'Begins to coo and make gurgling sounds',
         plainDescription:
-          'Your baby starts making soft, vowel-like sounds — "oooh," "aaah," and "goo" — especially when happy.',
+          'Your baby starts making soft, vowel-like sounds  -  "oooh," "aaah," and "goo"  -  especially when happy.',
         whatItLooksLike:
           'During quiet, alert moments, your baby may make soft, musical sounds like "ooo" and "aah." These sounds often come when they are looking at you or when you are talking to them. It can sound like the beginning of a conversation.',
         typicalRange: {
@@ -155,7 +155,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -179,12 +179,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby does not seem to react to sounds on one side, or never turns toward your voice by about 4 months, mention it to your pediatrician.',
         whenToCallNow:
-          'If your baby stops responding to sounds entirely — no turning, no startling, no stilling — contact your pediatrician for a hearing evaluation.',
+          'If your baby stops responding to sounds entirely  -  no turning, no startling, no stilling  -  contact your pediatrician for a hearing evaluation.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -204,7 +204,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 4,
         },
         whenNormal:
-          'Babies develop varied cries over the first couple of months. Do not worry if you cannot always tell them apart — many parents learn gradually, and some babies are harder to read than others.',
+          'Babies develop varied cries over the first couple of months. Do not worry if you cannot always tell them apart  -  many parents learn gradually, and some babies are harder to read than others.',
         whenToMention:
           'If your baby only has one type of cry that never varies, or if their cry sounds very unusual (extremely high-pitched, hoarse, or weak), mention it at your next visit.',
         whenToCallNow:
@@ -225,7 +225,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'se-2m-social-smile',
         name: 'Smiles at people (social smile)',
         plainDescription:
-          'Your baby smiles in response to your smile, voice, or face — not just from gas or reflexes.',
+          'Your baby smiles in response to your smile, voice, or face  -  not just from gas or reflexes.',
         whatItLooksLike:
           'When you smile at your baby and talk to them, they break into a wide, real smile that lights up their whole face and often reaches their eyes. This is different from the brief, sleep-related smiles you may have seen in the first weeks.',
         typicalRange: {
@@ -235,7 +235,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 4,
         },
         whenNormal:
-          'The social smile is one of the most exciting milestones of early infancy. It typically appears between 6 and 8 weeks. Some babies smile a little earlier, some a little later — both are fine. Your baby is telling you they recognize you and enjoy being with you.',
+          'The social smile is one of the most exciting milestones of early infancy. It typically appears between 6 and 8 weeks. Some babies smile a little earlier, some a little later  -  both are fine. Your baby is telling you they recognize you and enjoy being with you.',
         whenToMention:
           'If your baby has not smiled at you or other caregivers by about 3 months, let your pediatrician know. They can evaluate social development and rule out vision concerns.',
         whenToCallNow:
@@ -244,7 +244,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -264,7 +264,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 4,
         },
         whenNormal:
-          'Self-soothing is a skill that develops very gradually. At this age, your baby may only be able to calm themselves for a minute or two. They still need you for most of their soothing — that is completely normal and healthy.',
+          'Self-soothing is a skill that develops very gradually. At this age, your baby may only be able to calm themselves for a minute or two. They still need you for most of their soothing  -  that is completely normal and healthy.',
         whenToMention:
           'If your baby seems unable to bring their hands to their mouth at all by about 3 months, mention it to your pediatrician, as this involves both motor and self-regulation skills.',
         whenToCallNow:
@@ -273,7 +273,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -333,7 +333,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -345,7 +345,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby may fuss or cry when there is nothing interesting to look at or do for a while.',
         whatItLooksLike:
-          'After staring at the same thing for a while, your baby may start to fuss or look away. When you change what they are looking at — a new toy, a different position, or your face — they perk up and show interest again.',
+          'After staring at the same thing for a while, your baby may start to fuss or look away. When you change what they are looking at  -  a new toy, a different position, or your face  -  they perk up and show interest again.',
         typicalRange: {
           earlyMonths: 1.5,
           averageMonths: 2,
@@ -355,14 +355,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'This is actually a sign of healthy brain development. Your baby is learning to process their environment and is starting to want stimulation and variety. It means their brain is growing and demanding new input.',
         whenToMention:
-          'If your baby seems completely uninterested in their surroundings — never fussing for attention, never looking at new things with curiosity — mention it to your pediatrician.',
+          'If your baby seems completely uninterested in their surroundings  -  never fussing for attention, never looking at new things with curiosity  -  mention it to your pediatrician.',
         whenToCallNow:
-          'If your baby is extremely lethargic and shows no interest in anything — not feeding well, not looking around, not responding — contact your pediatrician right away.',
+          'If your baby is extremely lethargic and shows no interest in anything  -  not feeding well, not looking around, not responding  -  contact your pediatrician right away.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -374,7 +374,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby stares at faces with increasing interest and for longer periods.',
         whatItLooksLike:
-          'Your baby locks onto faces — yours, your partner\'s, siblings\' — and studies them intently. They may gaze at your face for 10 to 20 seconds or longer during quiet, alert moments.',
+          'Your baby locks onto faces  -  yours, your partner\'s, siblings\'  -  and studies them intently. They may gaze at your face for 10 to 20 seconds or longer during quiet, alert moments.',
         typicalRange: {
           earlyMonths: 0.5,
           averageMonths: 1.5,
@@ -382,7 +382,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 3.5,
         },
         whenNormal:
-          'Babies are born with a preference for faces, and this fascination only grows. By 2 months, your baby may stare at you with an intensity that feels like they are memorizing every detail of your face — because they are.',
+          'Babies are born with a preference for faces, and this fascination only grows. By 2 months, your baby may stare at you with an intensity that feels like they are memorizing every detail of your face  -  because they are.',
         whenToMention:
           'If your baby never shows interest in faces by about 3 months, let your pediatrician know so they can evaluate vision and early social development.',
         whenToCallNow:
@@ -391,7 +391,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." Milestone Checklist — 2 Months',
+              'CDC "Learn the Signs. Act Early." Milestone Checklist  -  2 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -427,5 +427,5 @@ export const checkpoint: AgeCheckpoint = {
     },
   ],
   notes:
-    'Two months is an age when your baby starts to become more social and interactive. The social smile is often the biggest milestone parents notice, and it is truly special — your baby is telling you they know you and are happy to see you. Brain development is happening at an incredible pace right now, with your baby forming more than a million neural connections every second. The best things you can do are talk to your baby, respond to their cues, give them tummy time, and let them study your face. Every baby has their own timeline, and there is a wide range of what is considered normal. If you have concerns, your pediatrician is your best resource — they want to hear from you.',
+    'Two months is an age when your baby starts to become more social and interactive. The social smile is often the biggest milestone parents notice, and it is truly special  -  your baby is telling you they know you and are happy to see you. Brain development is happening at an incredible pace right now, with your baby forming more than a million neural connections every second. The best things you can do are talk to your baby, respond to their cues, give them tummy time, and let them study your face. Every baby has their own timeline, and there is a wide range of what is considered normal. If you have concerns, your pediatrician is your best resource  -  they want to hear from you.',
 };

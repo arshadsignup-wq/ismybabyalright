@@ -133,7 +133,7 @@ export default function EPDSScreener() {
       </div>
 
       {/* ---------------------------------------------------------------- */}
-      {/*  Crisis Resources — Always Visible                                */}
+      {/*  Crisis Resources  -  Always Visible                                */}
       {/* ---------------------------------------------------------------- */}
       <CrisisResources />
 

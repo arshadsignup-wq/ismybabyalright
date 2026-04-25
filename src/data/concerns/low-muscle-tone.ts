@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'low-muscle-tone',
   title: 'Low Muscle Tone (Hypotonia)',
+  category: 'physical',
   searchTerms: [
     'baby feels floppy',
     'low muscle tone in babies',

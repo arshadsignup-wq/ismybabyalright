@@ -3,6 +3,7 @@ import type { ConcernPage } from '@/data/concerns/types';
 export const concern: ConcernPage = {
   slug: 'not-rolling-over',
   title: 'My Baby Isn\'t Rolling Over',
+  category: 'physical',
   searchTerms: [
     'baby not rolling over',
     'when do babies roll over',
@@ -16,7 +17,7 @@ export const concern: ConcernPage = {
     'baby not rolling back to tummy',
   ],
   quickAnswer:
-    'Most babies roll between 4 and 6 months, but some perfectly healthy babies don\'t roll until later — or skip rolling entirely. If your baby is engaging with you, bearing some weight on their arms during tummy time, and meeting other milestones, this is likely just their own timeline.',
+    'Most babies roll between 4 and 6 months, but some perfectly healthy babies don\'t roll until later  -  or skip rolling entirely. If your baby is engaging with you, bearing some weight on their arms during tummy time, and meeting other milestones, this is likely just their own timeline.',
   byAge: [
     {
       ageRange: '0-3 months',
@@ -26,12 +27,12 @@ export const concern: ConcernPage = {
     {
       ageRange: '4-5 months',
       context:
-        'This is when many babies start rolling, usually tummy to back first. But plenty of babies are still working on it, and that\'s completely fine. You might notice your baby rocking side to side or getting partway over — these are great signs they\'re building toward it.',
+        'This is when many babies start rolling, usually tummy to back first. But plenty of babies are still working on it, and that\'s completely fine. You might notice your baby rocking side to side or getting partway over  -  these are great signs they\'re building toward it.',
     },
     {
       ageRange: '6-7 months',
       context:
-        'Most babies are rolling both ways by now, but if yours isn\'t, it\'s worth a conversation with your pediatrician at the next visit — especially if they\'re also not sitting with support or seem to have low muscle tone. Many babies who are late rollers are simply more interested in other skills.',
+        'Most babies are rolling both ways by now, but if yours isn\'t, it\'s worth a conversation with your pediatrician at the next visit  -  especially if they\'re also not sitting with support or seem to have low muscle tone. Many babies who are late rollers are simply more interested in other skills.',
     },
     {
       ageRange: '8-9 months',
@@ -46,19 +47,19 @@ export const concern: ConcernPage = {
   ],
   whenNormal: [
     'Your baby is under 6 months and making progress with head control and tummy time, even if they haven\'t rolled yet.',
-    'Your baby rolls one direction but not the other — a preference for one side is very common and usually resolves on its own.',
-    'Your baby was premature — adjusted age is what matters for milestones, not calendar age.',
+    'Your baby rolls one direction but not the other  -  a preference for one side is very common and usually resolves on its own.',
+    'Your baby was premature  -  adjusted age is what matters for milestones, not calendar age.',
     'Your baby seems close to rolling (rocking, getting partway over) but hasn\'t fully done it yet.',
-    'Your baby skipped rolling but is sitting, scooting, or crawling — some babies just move on to the next thing.',
+    'Your baby skipped rolling but is sitting, scooting, or crawling  -  some babies just move on to the next thing.',
   ],
   whenToMention: [
     'Your baby is over 6 months and hasn\'t rolled in either direction, especially if they also have difficulty with tummy time or sitting.',
-    'Your baby seems stiff or very floppy when you hold them — this can affect rolling readiness.',
+    'Your baby seems stiff or very floppy when you hold them  -  this can affect rolling readiness.',
     'Your baby consistently favors one side of their body and seems unable (not just unwilling) to use the other side.',
     'Your baby was meeting milestones on track but seems to have stalled across several areas.',
   ],
   whenToActNow: [
-    'Your baby has lost the ability to roll after previously doing it consistently — any loss of a previously acquired skill warrants prompt evaluation.',
+    'Your baby has lost the ability to roll after previously doing it consistently  -  any loss of a previously acquired skill warrants prompt evaluation.',
     'Your baby seems unable to move one side of their body, or you notice a sudden change in their muscle tone or alertness.',
   ],
   relatedMilestones: [
@@ -72,13 +73,13 @@ export const concern: ConcernPage = {
     {
       org: 'CDC',
       citation:
-        'CDC Milestone Tracker — Important Milestones: Your Baby By Six Months',
+        'CDC Milestone Tracker  -  Important Milestones: Your Baby By Six Months',
       url: 'https://www.cdc.gov/ncbddd/actearly/milestones/milestones-6mo.html',
     },
     {
       org: 'AAP',
       citation:
-        'American Academy of Pediatrics — Movement Milestones: Birth to 1 Year',
+        'American Academy of Pediatrics  -  Movement Milestones: Birth to 1 Year',
       url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Movement-4-to-7-Months.aspx',
     },
     {

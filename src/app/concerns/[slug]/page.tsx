@@ -4,13 +4,40 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import QuickAnswer from "@/components/concerns/QuickAnswer";
 import AgeBreakdown from "@/components/concerns/AgeBreakdown";
 import ActionTiers from "@/components/concerns/ActionTiers";
+import RelatedConcerns from "@/components/concerns/RelatedConcerns";
+import InternalLinks from "@/components/concerns/InternalLinks";
 import SelfReferralBox from "@/components/shared/SelfReferralBox";
 import SourceBadge from "@/components/shared/SourceBadge";
 import { allConcerns, getConcernBySlug } from "@/data/concerns";
+import { getConcernMeta, getFAQSchema, getMedicalWebPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import { getInternalLinks } from "@/lib/concern-links";
+import type { ConcernCategory } from "@/data/concerns/types";
 
 interface ConcernPageProps {
   params: Promise<{ slug: string }>;
 }
+
+const categoryColors: Record<ConcernCategory, string> = {
+  physical: "#38BDF8",
+  communication: "#A78BFA",
+  feeding: "#F4A261",
+  sleep: "#818CF8",
+  skin: "#F472B6",
+  digestive: "#34D399",
+  behavior: "#FBBF24",
+  medical: "#F07167",
+};
+
+const categoryLabels: Record<ConcernCategory, string> = {
+  physical: "Physical Development",
+  communication: "Speech & Communication",
+  feeding: "Feeding & Eating",
+  sleep: "Sleep",
+  skin: "Skin & Rashes",
+  digestive: "Digestive",
+  behavior: "Behavior & Social",
+  medical: "Medical Conditions",
+};
 
 export async function generateStaticParams() {
   return allConcerns.map((concern) => ({
@@ -28,9 +55,19 @@ export async function generateMetadata({
     return { title: "Concern Not Found" };
   }
 
+  const meta = getConcernMeta(concern);
+
   return {
-    title: concern.title,
-    description: concern.quickAnswer,
+    title: meta.title,
+    description: meta.description,
+    alternates: {
+      canonical: `/concerns/${slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: meta.title,
+      description: meta.description,
+    },
   };
 }
 
@@ -42,26 +79,29 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
     notFound();
   }
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: concern.title,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: concern.quickAnswer,
-        },
-      },
-    ],
-  };
+  const faqSchema = getFAQSchema(concern);
+  const medicalSchema = getMedicalWebPageSchema(concern, `/concerns/${slug}`);
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Concerns", url: "/concerns" },
+    { name: concern.title },
+  ]);
+
+  const color = categoryColors[concern.category];
 
   return (
     <div>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Breadcrumbs
         items={[
@@ -71,6 +111,17 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
       />
 
       <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        {/* Category badge */}
+        <span
+          className="inline-block rounded-full px-3 py-1 text-xs font-bold mb-4"
+          style={{
+            backgroundColor: `${color}15`,
+            color: color,
+          }}
+        >
+          {categoryLabels[concern.category]}
+        </span>
+
         <h1>{concern.title}</h1>
 
         <QuickAnswer answer={concern.quickAnswer} />
@@ -107,6 +158,14 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
             </div>
           </section>
         )}
+
+        <InternalLinks links={getInternalLinks(concern)} />
+
+        <RelatedConcerns
+          currentSlug={concern.slug}
+          category={concern.category}
+          curatedSlugs={concern.relatedConcernSlugs}
+        />
       </div>
     </div>
   );

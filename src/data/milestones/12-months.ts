@@ -29,7 +29,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
@@ -64,7 +64,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -74,7 +74,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'gm-12-first-steps',
         name: 'First Steps (Emerging)',
         plainDescription:
-          'Your baby may take a few wobbly steps on their own, or they may not be there yet — both are normal at 12 months.',
+          'Your baby may take a few wobbly steps on their own, or they may not be there yet  -  both are normal at 12 months.',
         whatItLooksLike:
           'Baby lets go of the furniture and takes one or two unsteady steps before grabbing on again or sitting down. They might only do this occasionally. Many 12-month-olds are not doing this yet.',
         typicalRange: {
@@ -93,13 +93,13 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
             org: 'WHO',
             citation:
-              'WHO Motor Development Study: Walking alone — normal range 8.2 to 17.6 months',
+              'WHO Motor Development Study: Walking alone  -  normal range 8.2 to 17.6 months',
             url: 'https://www.who.int/tools/child-growth-standards/standards/motor-development-milestones',
           },
         ],
@@ -130,7 +130,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -154,12 +154,12 @@ export const checkpoint: AgeCheckpoint = {
         whenToMention:
           'If your baby is not interested in putting objects in containers or exploring how things fit by 13-14 months, mention it at your next visit.',
         whenToCallNow:
-          'If your baby does not interact with objects at all — never reaches, grasps, or explores toys — contact your doctor.',
+          'If your baby does not interact with objects at all  -  never reaches, grasps, or explores toys  -  contact your doctor.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -179,7 +179,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 16,
         },
         whenNormal:
-          'Pointing is one of the most important early communication milestones. It means your baby is deliberately trying to share their interest or make a request. Some babies point earlier and some later — both are fine.',
+          'Pointing is one of the most important early communication milestones. It means your baby is deliberately trying to share their interest or make a request. Some babies point earlier and some later  -  both are fine.',
         whenToMention:
           'If your baby is not pointing at all by 14-15 months, bring it up at your next appointment. This is an important one to track.',
         whenToCallNow:
@@ -188,7 +188,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -223,13 +223,13 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
           {
             org: 'WHO',
             citation:
-              'WHO Child Development Guidelines — Language milestones',
+              'WHO Child Development Guidelines  -  Language milestones',
             url: 'https://www.who.int/tools/child-growth-standards',
           },
         ],
@@ -251,14 +251,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Gestures are just as important as words at this age. A baby who waves, points, and reaches is communicating even if they are not saying many words yet.',
         whenToMention:
-          'If your baby does not use any gestures — no waving, pointing, reaching, or head-shaking — by 12-13 months, let your doctor know.',
+          'If your baby does not use any gestures  -  no waving, pointing, reaching, or head-shaking  -  by 12-13 months, let your doctor know.',
         whenToCallNow:
           'If your baby does not wave, point, or use any gestures, and also does not seem to understand your gestures, call your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -292,7 +292,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -318,16 +318,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 15,
         },
         whenNormal:
-          'Waving is a social gesture that shows your baby understands social routines. Some babies wave enthusiastically, and some give a subtle hand movement — both count.',
+          'Waving is a social gesture that shows your baby understands social routines. Some babies wave enthusiastically, and some give a subtle hand movement  -  both count.',
         whenToMention:
           'If your baby is not waving or using any social gestures by 13 months, mention it at your next visit.',
         whenToCallNow:
-          'If your baby does not use any gestures and does not seem to engage socially — no eye contact, no smiling at people, no interest in back-and-forth games — call your pediatrician.',
+          'If your baby does not use any gestures and does not seem to engage socially  -  no eye contact, no smiling at people, no interest in back-and-forth games  -  call your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Milestone Checklist, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Milestone Checklist, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -343,7 +343,7 @@ export const checkpoint: AgeCheckpoint = {
         plainDescription:
           'Your baby holds up a toy or object to show it to you, or hands you things.',
         whatItLooksLike:
-          'Baby picks up a toy, holds it out toward you, and looks at your face — they want you to see it too. They might hand you a book because they want you to read it, or offer you a bite of their food.',
+          'Baby picks up a toy, holds it out toward you, and looks at your face  -  they want you to see it too. They might hand you a book because they want you to read it, or offer you a bite of their food.',
         typicalRange: {
           earlyMonths: 9,
           averageMonths: 11,
@@ -351,7 +351,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 16,
         },
         whenNormal:
-          'Showing and giving objects is a way your baby shares their world with you. It is an early form of conversation — they are saying "look at this!" without words.',
+          'Showing and giving objects is a way your baby shares their world with you. It is an early form of conversation  -  they are saying "look at this!" without words.',
         whenToMention:
           'If your baby never holds up toys to show you or does not try to share experiences with you by 14 months, bring it up with your doctor.',
         whenToCallNow:
@@ -360,7 +360,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -384,16 +384,16 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 24,
         },
         whenNormal:
-          'Separation anxiety peaks around 10-18 months and then gradually lessens. It is a sign of a strong, healthy attachment to you. Your baby loves you so much that they protest when you leave — it is hard, but it is healthy.',
+          'Separation anxiety peaks around 10-18 months and then gradually lessens. It is a sign of a strong, healthy attachment to you. Your baby loves you so much that they protest when you leave  -  it is hard, but it is healthy.',
         whenToMention:
-          'If your baby shows no reaction at all when you leave — never looking for you or seeming to notice — mention it at your next visit.',
+          'If your baby shows no reaction at all when you leave  -  never looking for you or seeming to notice  -  mention it at your next visit.',
         whenToCallNow:
           'If your baby shows no attachment to any caregivers and seems equally indifferent to everyone, contact your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Social-Emotional Milestones, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Social-Emotional Milestones, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -417,14 +417,14 @@ export const checkpoint: AgeCheckpoint = {
         whenNormal:
           'Simple problem-solving shows that your baby is starting to think ahead and plan. This is a big cognitive leap. They are figuring out how to make things happen.',
         whenToMention:
-          'If your baby does not try different approaches to get something they want — just fusses without trying — by 13-14 months, bring it up at your next visit.',
+          'If your baby does not try different approaches to get something they want  -  just fusses without trying  -  by 13-14 months, bring it up at your next visit.',
         whenToCallNow:
           'If your baby seems very passive, does not explore their environment, and does not show curiosity about objects, call your pediatrician.',
         sources: [
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -434,7 +434,7 @@ export const checkpoint: AgeCheckpoint = {
         id: 'cog-12-explores-objects-differently',
         name: 'Exploring Objects in Different Ways',
         plainDescription:
-          'Your baby tries different things with objects — shaking, banging, throwing, dropping, and poking at them.',
+          'Your baby tries different things with objects  -  shaking, banging, throwing, dropping, and poking at them.',
         whatItLooksLike:
           'Instead of just mouthing everything, baby now shakes a rattle, bangs a spoon on the table, drops a ball and watches it bounce, pokes buttons, and turns things over to examine them.',
         typicalRange: {
@@ -453,7 +453,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -473,7 +473,7 @@ export const checkpoint: AgeCheckpoint = {
           concernThresholdMonths: 15,
         },
         whenNormal:
-          'Imitation is one of the most powerful ways babies learn. When your baby copies you, it shows they are paying attention, understanding actions, and able to reproduce them — all impressive cognitive skills.',
+          'Imitation is one of the most powerful ways babies learn. When your baby copies you, it shows they are paying attention, understanding actions, and able to reproduce them  -  all impressive cognitive skills.',
         whenToMention:
           'If your baby does not try to copy any of your actions or gestures by 13-14 months, bring it up at your next visit.',
         whenToCallNow:
@@ -482,7 +482,7 @@ export const checkpoint: AgeCheckpoint = {
           {
             org: 'CDC',
             citation:
-              'CDC "Learn the Signs. Act Early." — Cognitive Milestones, 12 Months',
+              'CDC "Learn the Signs. Act Early."  -  Cognitive Milestones, 12 Months',
             url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
           },
         ],
@@ -528,5 +528,5 @@ export const checkpoint: AgeCheckpoint = {
     },
   ],
   notes:
-    'Twelve months is a magical time — your baby is transforming from an infant into a toddler. But remember, the "first birthday" is not a deadline. Walking, talking, and other milestones all have wide normal ranges that extend well past 12 months. Some 12-month-olds are walking and saying a few words; others are still cruising and babbling. Both are perfectly normal. Focus on the overall trend: Is your baby learning new things, even if slowly? Are they curious and engaged? Those are the most important signs. And always remember — you are doing a great job. The fact that you care enough to check says everything.',
+    'Twelve months is a magical time  -  your baby is transforming from an infant into a toddler. But remember, the "first birthday" is not a deadline. Walking, talking, and other milestones all have wide normal ranges that extend well past 12 months. Some 12-month-olds are walking and saying a few words; others are still cruising and babbling. Both are perfectly normal. Focus on the overall trend: Is your baby learning new things, even if slowly? Are they curious and engaged? Those are the most important signs. And always remember  -  you are doing a great job. The fact that you care enough to check says everything.',
 };

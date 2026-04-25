@@ -173,7 +173,7 @@ export const stateContacts: StateEIContact[] = [
   {
     state: 'Maine',
     stateAbbr: 'ME',
-    programName: 'Child Development Services (CDS) — Early Intervention',
+    programName: 'Child Development Services (CDS)  -  Early Intervention',
     phone: '1-207-624-6600',
     website: 'https://www.maine.gov/doe/learning/cds',
     notes: 'Lead agency: Maine Department of Education.',
@@ -205,7 +205,7 @@ export const stateContacts: StateEIContact[] = [
   {
     state: 'Minnesota',
     stateAbbr: 'MN',
-    programName: 'Help Me Grow — Interagency Early Intervention',
+    programName: 'Help Me Grow  -  Interagency Early Intervention',
     phone: '1-866-693-4769',
     website: 'https://education.mn.gov/MDE/fam/elspedprog/intearlyint/',
     notes: 'Lead agency: Minnesota Department of Education.',
@@ -237,7 +237,7 @@ export const stateContacts: StateEIContact[] = [
   {
     state: 'Nebraska',
     stateAbbr: 'NE',
-    programName: 'Early Intervention Services — Planning Region Teams',
+    programName: 'Early Intervention Services  -  Planning Region Teams',
     phone: '1-888-806-6287',
     website: 'https://edn.ne.gov/',
     notes: 'Lead agency: Nebraska Department of Education. Referral through the Early Development Network.',

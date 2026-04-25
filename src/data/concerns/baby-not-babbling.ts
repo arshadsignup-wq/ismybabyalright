@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'baby-not-babbling',
   title: 'Baby Not Babbling',
+  category: 'communication',
   searchTerms: [
     'baby not babbling',
     'when do babies babble',

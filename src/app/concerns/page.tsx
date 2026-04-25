@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import ConcernsListing from "@/components/concerns/ConcernsListing";
 import { allConcerns } from "@/data/concerns";
 
 export const metadata: Metadata = {
-  title: "Common Concerns",
+  title: "325+ Common Baby Concerns | Evidence-Based Answers",
   description:
-    "Evidence-based answers to common baby development concerns. Learn when it's normal, when to mention it, and when to act now.",
+    "Evidence-based answers to over 325 common baby development concerns  -  from walking and talking to rashes, poop, sleep, and feeding. Know when it's normal, when to mention it, and when to act now.",
+  alternates: {
+    canonical: "/concerns",
+  },
 };
 
 export default function ConcernsPage() {
@@ -14,30 +17,25 @@ export default function ConcernsPage() {
     <div>
       <Breadcrumbs items={[{ label: "Concerns" }]} />
 
-      <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
-        <h1>Common Concerns</h1>
-        <p className="text-muted text-lg mb-8 max-w-2xl">
-          Quick, evidence-based answers to the questions parents search for at
-          2am. Each page tells you what&apos;s normal, what to watch, and when to
-          call your doctor.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {allConcerns.map((concern) => (
-            <Link
-              key={concern.slug}
-              href={`/concerns/${concern.slug}`}
-              className="card flex flex-col p-5 hover:border-primary hover:shadow-md transition-all no-underline group"
-            >
-              <h2 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                {concern.title}
-              </h2>
-              <p className="text-sm text-muted leading-relaxed line-clamp-3">
-                {concern.quickAnswer}
-              </p>
-            </Link>
-          ))}
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+        {/* Hero */}
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Common Baby Concerns
+          </h1>
+          <p className="mx-auto mt-3 max-w-2xl text-muted text-base sm:text-lg">
+            {allConcerns.length}+ evidence-based guides for the questions parents
+            search at 2am. Each tells you what&apos;s normal, what to watch, and
+            when to call your doctor.
+          </p>
+          <div className="mt-4 inline-flex items-center gap-2.5">
+            <span className="source-badge source-badge-cdc">CDC</span>
+            <span className="source-badge source-badge-who">WHO</span>
+            <span className="source-badge source-badge-aap">AAP</span>
+          </div>
         </div>
+
+        <ConcernsListing concerns={allConcerns} />
       </div>
     </div>
   );

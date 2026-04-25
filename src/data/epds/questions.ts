@@ -13,7 +13,7 @@ export interface EPDSQuestion {
  * British Journal of Psychiatry, 150, 782-786.
  *
  * This is a publicly available, validated screening instrument.
- * It is NOT a diagnostic tool — a high score indicates the need
+ * It is NOT a diagnostic tool  -  a high score indicates the need
  * for further clinical assessment, not a diagnosis.
  *
  * Scoring notes:

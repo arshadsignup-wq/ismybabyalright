@@ -31,6 +31,12 @@ const iconGear = (<svg {...ip}><circle cx="12" cy="12" r="3" /><path d="M19.4 15
 const iconHeart = (<svg {...ip}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>);
 const iconLifeBuoy = (<svg {...ip}><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="4.93" y1="4.93" x2="9.17" y2="9.17" /><line x1="14.83" y1="14.83" x2="19.07" y2="19.07" /><line x1="14.83" y1="9.17" x2="19.07" y2="4.93" /><line x1="4.93" y1="19.07" x2="9.17" y2="14.83" /></svg>);
 const iconBook = (<svg {...ip}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>);
+const iconClipboard = (<svg {...ip}><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></svg>);
+const iconBottle = (<svg {...ip}><path d="M10 2h4v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z" /><path d="M8.5 6h7l.5 2v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l.5-2z" /><line x1="8" y1="12" x2="16" y2="12" /><line x1="8" y1="16" x2="16" y2="16" /></svg>);
+const iconTooth = (<svg {...ip}><path d="M12 2C9.5 2 7 4 7 7c0 2 .5 4 1 6s1.5 5 2 7c.2.7.5 1 1 1h2c.5 0 .8-.3 1-1 .5-2 1.5-5 2-7s1-4 1-6c0-3-2.5-5-5-5z" /></svg>);
+const iconPoop = (<svg {...ip}><path d="M12 3c-1 2-3 3-3 5 0 1 .5 2 1 2.5C9 11 8 12 8 13.5c0 1 .5 2 1.5 2.5C8.5 16.5 7 18 7 19.5 7 21 8.5 22 10.5 22h3c2 0 3.5-1 3.5-2.5 0-1.5-1.5-3-2.5-3.5 1-.5 1.5-1.5 1.5-2.5 0-1.5-1-2.5-2-3 .5-.5 1-1.5 1-2.5 0-2-2-3-3-5z" /></svg>);
+const iconTummy = (<svg {...ip}><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><circle cx="9" cy="10" r="1" /><circle cx="15" cy="10" r="1" /></svg>);
+const iconSkin = (<svg {...ip}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M12 13v4" /><path d="M10 15h4" /></svg>);
 
 /* ------------------------------------------------------------------ */
 /*  "More" drawer link sections                                        */
@@ -43,13 +49,20 @@ const drawerSections = [
       { href: "/concerns", label: "Concerns", icon: iconSearch },
       { href: "/food", label: "Food Guide", icon: iconCup },
       { href: "/sleep", label: "Sleep Guide", icon: iconMoon },
+      { href: "/feeding", label: "Feeding Guide", icon: iconBottle },
       { href: "/vaccines", label: "Vaccines", icon: iconShield },
+      { href: "/doctor-visits", label: "Doctor Visit Prep", icon: iconClipboard },
+      { href: "/teething", label: "Teething Guide", icon: iconTooth },
+      { href: "/poop-guide", label: "Poop Guide", icon: iconPoop },
+      { href: "/tummy-time", label: "Tummy Time", icon: iconTummy },
     ],
   },
   {
     label: "Track",
     links: [
       { href: "/tools/growth", label: "Growth Chart", icon: iconChart },
+      { href: "/growth-spurts", label: "Growth Spurts", icon: iconChart },
+      { href: "/skin-guide", label: "Skin Guide", icon: iconSkin },
       { href: "/checklists", label: "Checklists", icon: iconChecklist },
       { href: "/sharing", label: "Share with Caregiver", icon: iconShare },
       { href: "/settings", label: "Settings", icon: iconGear },
@@ -95,7 +108,7 @@ export default function MobileNav() {
 
   return (
     <>
-      {/* Bottom tab bar — mobile only */}
+      {/* Bottom tab bar  -  mobile only */}
       <div className="bottom-tab-bar md:hidden" role="navigation" aria-label="Mobile navigation">
         <nav>
           <Link
@@ -166,7 +179,7 @@ export default function MobileNav() {
         </nav>
       </div>
 
-      {/* "More" drawer — slides up from bottom */}
+      {/* "More" drawer  -  slides up from bottom */}
       {drawerOpen && (
         <>
           {/* Backdrop */}
@@ -201,7 +214,7 @@ export default function MobileNav() {
             <nav className="px-5 pb-4" aria-label="Additional navigation">
               {drawerSections.map((section) => (
                 <div key={section.label} className="mb-4">
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted-light">
+                  <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted">
                     {section.label}
                   </div>
                   <ul className="flex flex-col gap-0.5">
@@ -210,7 +223,7 @@ export default function MobileNav() {
                         <Link
                           href={link.href}
                           onClick={() => setDrawerOpen(false)}
-                          className={`flex items-center gap-3 rounded-lg px-3 py-2.5 min-h-[44px] text-sm font-medium transition-colors no-underline ${
+                          className={`flex items-center gap-3 rounded-xl px-3 py-2.5 min-h-[44px] text-sm font-semibold transition-colors no-underline ${
                             isActive(link.href)
                               ? "bg-primary-light text-primary"
                               : "text-foreground hover:bg-primary-light hover:text-primary"

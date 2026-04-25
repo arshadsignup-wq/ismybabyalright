@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'flat-head',
   title: 'Flat Head (Positional Plagiocephaly)',
+  category: 'physical',
   searchTerms: [
     'baby has flat head',
     'flat spot on baby head',

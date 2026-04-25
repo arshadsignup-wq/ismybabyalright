@@ -1,126 +1,45 @@
 import Link from "next/link";
 
-interface EntryPath {
-  title: string;
-  emoji: string;
-  description: string;
-  href: string;
-  accentColor: string;
-  accentBg: string;
-  accentBorder: string;
-  icon: React.ReactNode;
-}
-
-const paths: EntryPath[] = [
+const paths = [
   {
-    title: "Check by Age",
-    emoji: "\ud83d\udcc5",
-    description:
-      "See what milestones to expect at each age, from 1 month to 3 years.",
+    title: "Check Milestones",
+    description: "See what to expect at each age, from 1 month to 3 years.",
     href: "/milestones",
-    accentColor: "text-primary",
-    accentBg: "bg-primary-light",
-    accentBorder: "border-l-primary",
+    bg: "#38BDF8",
+    bgHover: "#0EA5E9",
+    shadow: "rgba(56,189,248,0.35)",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-        <circle cx="12" cy="15" r="2" />
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+        <path d="M24 4l5.5 11.2 12.3 1.8-8.9 8.7 2.1 12.3L24 31.7 12.9 38l2.1-12.3-8.9-8.7 12.3-1.8z" fill="white" />
       </svg>
     ),
   },
   {
-    title: "I Noticed Something",
-    emoji: "\ud83d\udd0d",
-    description:
-      "Search for a specific concern \u2014 like not crawling, not talking, or not making eye contact.",
+    title: "I Have a Concern",
+    description: "Search for something specific  -  not crawling, feeding issues, rash.",
     href: "/concerns",
-    accentColor: "text-monitor-foreground",
-    accentBg: "bg-monitor-light",
-    accentBorder: "border-l-monitor",
+    bg: "#F07167",
+    bgHover: "#E85D52",
+    shadow: "rgba(240,113,103,0.35)",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-        <circle cx="11" cy="11" r="3" />
-      </svg>
-    ),
-  },
-  {
-    title: "I Need Help",
-    emoji: "\u2764\ufe0f",
-    description:
-      "Find early intervention services, therapists, and support in your area.",
-    href: "/resources/early-intervention",
-    accentColor: "text-concern-foreground",
-    accentBg: "bg-concern-light",
-    accentBorder: "border-l-concern",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+        <circle cx="20" cy="20" r="14" stroke="white" strokeWidth="3" fill="none" />
+        <line x1="30" y1="30" x2="42" y2="42" stroke="white" strokeWidth="3" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: "Track Daily",
-    emoji: "\u2705",
-    description:
-      "Log feeds, sleep, diapers, and more \u2014 see patterns and share with your pediatrician.",
+    description: "Log feeds, sleep, diapers  -  see patterns and share with your doctor.",
     href: "/tracker",
-    accentColor: "text-safe-foreground",
-    accentBg: "bg-safe-light",
-    accentBorder: "border-l-safe",
+    bg: "#34D399",
+    bgHover: "#22C55E",
+    shadow: "rgba(52,211,153,0.35)",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <line x1="12" y1="8" x2="12" y2="12" />
-        <line x1="12" y1="12" x2="16" y2="14" />
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="18" stroke="white" strokeWidth="3" fill="none" />
+        <line x1="24" y1="14" x2="24" y2="24" stroke="white" strokeWidth="3" strokeLinecap="round" />
+        <line x1="24" y1="24" x2="33" y2="28" stroke="white" strokeWidth="3" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -128,45 +47,50 @@ const paths: EntryPath[] = [
 
 export default function EntryPathCards() {
   return (
-    <section
-      className="px-5 py-10 sm:px-8"
-      aria-labelledby="entry-paths-heading"
-    >
-      <div className="mx-auto max-w-3xl">
-        <h2
-          id="entry-paths-heading"
-          className="mb-6 text-center text-foreground"
-        >
-          How can we help?
-        </h2>
+    <section aria-labelledby="entry-paths-heading">
+      <h2
+        id="entry-paths-heading"
+        className="mb-2 text-center text-2xl font-extrabold tracking-tight sm:text-3xl"
+      >
+        How can we help?
+      </h2>
+      <p className="mx-auto mb-8 max-w-md text-center text-muted">
+        Pick a starting point  -  you can always explore more later.
+      </p>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {paths.map((path) => (
-            <Link
-              key={path.href}
-              href={path.href}
-              className={`card group flex items-start gap-4 border-l-4 ${path.accentBorder} no-underline transition-all hover:shadow-md hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-primary`}
-            >
-              {/* Icon with colored background */}
-              <div
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${path.accentBg} ${path.accentColor} transition-colors`}
-              >
-                {path.icon}
-              </div>
+      <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
+        {paths.map((path) => (
+          <Link
+            key={path.href}
+            href={path.href}
+            className="group relative flex flex-col items-center gap-4 rounded-[1.5rem] p-7 text-center no-underline transition-all duration-300 hover:-translate-y-2 sm:p-8"
+            style={{
+              backgroundColor: path.bg,
+              boxShadow: `0 8px 24px ${path.shadow}`,
+            }}
+          >
+            {/* Icon */}
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:scale-110">
+              {path.icon}
+            </div>
 
-              <div className="flex flex-col gap-1">
-                <h3 className="text-foreground group-hover:text-primary transition-colors text-base">
-                  <span aria-hidden="true">{path.emoji} </span>
-                  {path.title}
-                </h3>
+            <h3 className="text-xl font-extrabold text-white">
+              {path.title}
+            </h3>
 
-                <p className="text-sm leading-relaxed text-muted">
-                  {path.description}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
+            <p className="text-sm leading-relaxed text-white/85">
+              {path.description}
+            </p>
+
+            {/* Arrow */}
+            <span className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-2 text-sm font-bold text-white opacity-70 transition-all duration-300 group-hover:opacity-100">
+              Get started
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+              </svg>
+            </span>
+          </Link>
+        ))}
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import type { GrowthData } from '@/data/growth/types';
 
 /**
- * WHO Child Growth Standards — Girls (0–36 months)
+ * WHO Child Growth Standards  -  Girls (0–36 months)
  *
  * Sources:
  *   • Weight-for-age: WHO Weight-for-age tables, girls, birth to 5 years (percentiles)

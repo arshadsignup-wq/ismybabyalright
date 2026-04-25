@@ -3,6 +3,7 @@ import type { ConcernPage } from './types';
 export const concern: ConcernPage = {
   slug: 'green-poop',
   title: 'Green Poop in Babies',
+  category: 'digestive',
   searchTerms: [
     'baby green poop',
     'why is my baby\'s poop green',
