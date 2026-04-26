@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return allTriageTrees.map((tree) => ({ slug: tree.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const tree = getTriageTree(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const tree = getTriageTree(slug);
   if (!tree) return {};
   return {
     title: `${tree.title}  -  Symptom Checker`,
@@ -16,12 +17,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function TriageSlugPage({
+export default async function TriageSlugPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const tree = getTriageTree(params.slug);
+  const { slug } = await params;
+  const tree = getTriageTree(slug);
   if (!tree) notFound();
 
   return (

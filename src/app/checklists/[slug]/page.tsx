@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return allChecklists.map((cl) => ({ slug: cl.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const checklist = getChecklist(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const checklist = getChecklist(slug);
   if (!checklist) return {};
   return {
     title: `${checklist.title} Checklist`,
@@ -16,12 +17,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function ChecklistSlugPage({
+export default async function ChecklistSlugPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const checklist = getChecklist(params.slug);
+  const { slug } = await params;
+  const checklist = getChecklist(slug);
   if (!checklist) notFound();
 
   return (
