@@ -89,7 +89,7 @@ export default function Header() {
                   ismybabyalright
                 </span>
                 <span className="text-xs text-muted leading-tight hidden sm:block">
-                  Evidence-based peace of mind
+                  Your baby's okay. Let's make sure.
                 </span>
               </span>
             </Link>
@@ -138,6 +138,7 @@ export default function Header() {
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Track &amp; Log</div>
                     <DropdownItem href="/tracker" icon={iconClock} label="Tracker" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/growth" icon={iconChart} label="Growth Chart" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/weight-for-length" icon={iconScale2} label="Weight-for-Length" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/regression-log" icon={iconList} label="Regression Log" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
@@ -153,6 +154,9 @@ export default function Header() {
                     <DropdownItem href="/teething" icon={iconTooth} label="Teething Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/poop-guide" icon={iconPoop} label="Poop Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tummy-time" icon={iconTummy} label="Tummy Time" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/emergency-info" icon={iconAlert} label="Emergency Info Vault" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/age-advice" icon={iconCalendar} label="Age-Based Advice" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/meal-planner" icon={iconUtensils} label="Meal Planner" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
 
@@ -201,6 +205,8 @@ export default function Header() {
 
                     {/* Reference section */}
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
+                    <DropdownItem href="/quiz/parenting-style" icon={iconBrain} label="Parenting Quiz" onClick={() => setResourcesOpen(false)} />
+                    <DropdownItem href="/baby-names" icon={iconStar} label="Baby Names" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/checklists" icon={iconChecklist} label="Checklists" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/resources/early-intervention" icon={iconLifeBuoy} label="Early Intervention" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/resources/guides" icon={iconBook} label="Guides" onClick={() => setResourcesOpen(false)} />
@@ -331,4 +337,22 @@ const iconTummy = (
 );
 const iconSkin = (
   <svg {...iconProps}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M12 13v4" /><path d="M10 15h4" /></svg>
+);
+const iconAlert = (
+  <svg {...iconProps}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+);
+const iconStar = (
+  <svg {...iconProps}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+);
+const iconScale2 = (
+  <svg {...iconProps}><path d="M12 3v18" /><path d="M5 6h14" /><path d="M2 12l3-6 3 6" /><path d="M16 12l3-6 3 6" /><path d="M2 12h6" /><path d="M16 12h6" /></svg>
+);
+const iconCalendar = (
+  <svg {...iconProps}><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+);
+const iconUtensils = (
+  <svg {...iconProps}><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" /></svg>
+);
+const iconBrain = (
+  <svg {...iconProps}><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5.5 4 7l3 3.5 3-3.5c2-1.5 4-4 4-7a7 7 0 0 0-7-7z" /><circle cx="12" cy="9" r="2" /></svg>
 );

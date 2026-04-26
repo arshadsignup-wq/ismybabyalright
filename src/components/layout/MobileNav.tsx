@@ -37,6 +37,12 @@ const iconTooth = (<svg {...ip}><path d="M12 2C9.5 2 7 4 7 7c0 2 .5 4 1 6s1.5 5 
 const iconPoop = (<svg {...ip}><path d="M12 3c-1 2-3 3-3 5 0 1 .5 2 1 2.5C9 11 8 12 8 13.5c0 1 .5 2 1.5 2.5C8.5 16.5 7 18 7 19.5 7 21 8.5 22 10.5 22h3c2 0 3.5-1 3.5-2.5 0-1.5-1.5-3-2.5-3.5 1-.5 1.5-1.5 1.5-2.5 0-1.5-1-2.5-2-3 .5-.5 1-1.5 1-2.5 0-2-2-3-3-5z" /></svg>);
 const iconTummy = (<svg {...ip}><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><circle cx="9" cy="10" r="1" /><circle cx="15" cy="10" r="1" /></svg>);
 const iconSkin = (<svg {...ip}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /><path d="M12 13v4" /><path d="M10 15h4" /></svg>);
+const iconAlert = (<svg {...ip}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>);
+const iconCalendar = (<svg {...ip}><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>);
+const iconUtensils = (<svg {...ip}><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" /></svg>);
+const iconBrain = (<svg {...ip}><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5.5 4 7l3 3.5 3-3.5c2-1.5 4-4 4-7a7 7 0 0 0-7-7z" /><circle cx="12" cy="9" r="2" /></svg>);
+const iconScale2 = (<svg {...ip}><path d="M12 3v18" /><path d="M5 6h14" /><path d="M2 12l3-6 3 6" /><path d="M16 12l3-6 3 6" /><path d="M2 12h6" /><path d="M16 12h6" /></svg>);
+const iconStar = (<svg {...ip}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>);
 
 /* ------------------------------------------------------------------ */
 /*  "More" drawer link sections                                        */
@@ -55,12 +61,16 @@ const drawerSections = [
       { href: "/teething", label: "Teething Guide", icon: iconTooth },
       { href: "/poop-guide", label: "Poop Guide", icon: iconPoop },
       { href: "/tummy-time", label: "Tummy Time", icon: iconTummy },
+      { href: "/emergency-info", label: "Emergency Info Vault", icon: iconAlert },
+      { href: "/age-advice", label: "Age-Based Advice", icon: iconCalendar },
+      { href: "/meal-planner", label: "Meal Planner", icon: iconUtensils },
     ],
   },
   {
     label: "Track",
     links: [
       { href: "/tools/growth", label: "Growth Chart", icon: iconChart },
+      { href: "/tools/weight-for-length", label: "Weight-for-Length", icon: iconScale2 },
       { href: "/growth-spurts", label: "Growth Spurts", icon: iconChart },
       { href: "/skin-guide", label: "Skin Guide", icon: iconSkin },
       { href: "/checklists", label: "Checklists", icon: iconChecklist },
@@ -72,6 +82,8 @@ const drawerSections = [
     label: "Support",
     links: [
       { href: "/mental-health", label: "Mental Health", icon: iconHeart },
+      { href: "/quiz/parenting-style", label: "Parenting Quiz", icon: iconBrain },
+      { href: "/baby-names", label: "Baby Names", icon: iconStar },
       { href: "/resources/early-intervention", label: "Early Intervention", icon: iconLifeBuoy },
       { href: "/resources/guides", label: "Guides", icon: iconBook },
     ],
