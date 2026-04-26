@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Milestones by Age",
   description:
     "Browse evidence-based developmental milestones by age, from 1 month to 36 months. Based on CDC, WHO, and AAP guidelines.",
+  alternates: {
+    canonical: "/milestones",
+  },
+  openGraph: {
+    title: "Developmental Milestones by Age | Is My Baby Alright?",
+    description:
+      "Evidence-based developmental milestones from 1 month to 36 months. Based on CDC, WHO, and AAP guidelines.",
+  },
 };
 
 export default function MilestonesPage() {

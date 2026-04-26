@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/skin-guide",
   },
+  openGraph: {
+    title: "Baby Skin Conditions Guide | Is My Baby Alright?",
+    description:
+      "Guide to common baby skin conditions including eczema, cradle cap, diaper rash, heat rash, and more.",
+  },
 };
 
 const faqJsonLd = {

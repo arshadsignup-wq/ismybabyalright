@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Age-Based Advice - What to Know at Every Age",
   description:
     "Select your baby's age to see personalized guidance on milestones, common concerns, food readiness, sleep needs, and upcoming vaccines. Evidence-based advice from 0 to 36 months.",
+  alternates: {
+    canonical: "/age-advice",
+  },
+  openGraph: {
+    title: "Age-Based Baby Advice | Is My Baby Alright?",
+    description:
+      "Personalized guidance on milestones, concerns, food, sleep, and vaccines from 0 to 36 months.",
+  },
 };
 
 const ageGroupLabels: Record<string, number[]> = {

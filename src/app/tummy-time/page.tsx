@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tummy-time",
   },
+  openGraph: {
+    title: "Tummy Time Guide by Age | Is My Baby Alright?",
+    description:
+      "Evidence-based tummy time guide from newborn to 6 months. Daily goals, positions, and troubleshooting tips.",
+  },
 };
 
 const faqItems = [

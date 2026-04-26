@@ -6,6 +6,7 @@ import RedFlagList from "@/components/milestones/RedFlagList";
 import AgeNavigation from "@/components/milestones/AgeNavigation";
 import GentleRedirect from "@/components/shared/GentleRedirect";
 import { allCheckpoints, getCheckpointById } from "@/data/milestones";
+import { getBreadcrumbSchema } from "@/lib/seo";
 
 interface MilestonePageProps {
   params: Promise<{ age: string }>;
@@ -30,6 +31,13 @@ export async function generateMetadata({
   return {
     title: `${checkpoint.label} Milestones`,
     description: `Developmental milestones for ${checkpoint.label}: gross motor, fine motor, language, social-emotional, and cognitive skills. Evidence-based guidance from CDC, WHO, and AAP.`,
+    alternates: {
+      canonical: `/milestones/${age}`,
+    },
+    openGraph: {
+      title: `${checkpoint.label} Milestones | Is My Baby Alright?`,
+      description: `Developmental milestones for ${checkpoint.label}: gross motor, fine motor, language, social-emotional, and cognitive skills.`,
+    },
   };
 }
 
@@ -40,6 +48,12 @@ export default async function MilestoneAgePage({ params }: MilestonePageProps) {
   if (!checkpoint) {
     notFound();
   }
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Milestones", url: "/milestones" },
+    { name: checkpoint.label },
+  ]);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -61,6 +75,10 @@ export default async function MilestoneAgePage({ params }: MilestonePageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Breadcrumbs
         items={[

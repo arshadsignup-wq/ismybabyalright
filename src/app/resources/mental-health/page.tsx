@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Mental Health Resources for Parents",
   description:
     "Postpartum depression screening, warmline numbers, and mental health resources for new parents. You deserve support.",
+  alternates: {
+    canonical: "/resources/mental-health",
+  },
+  openGraph: {
+    title: "Mental Health Resources for Parents | Is My Baby Alright?",
+    description:
+      "Postpartum depression screening, warmline numbers, and mental health resources for new parents.",
+  },
 };
 
 export default function MentalHealthPage() {

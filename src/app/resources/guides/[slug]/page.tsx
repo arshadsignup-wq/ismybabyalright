@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import SourceBadge from "@/components/shared/SourceBadge";
 import PrintButton from "@/components/shared/PrintButton";
 import { allGuides, getGuideBySlug } from "@/data/guides";
+import { getBreadcrumbSchema } from "@/lib/seo";
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
@@ -28,6 +29,13 @@ export async function generateMetadata({
   return {
     title: guide.title,
     description: guide.subtitle,
+    alternates: {
+      canonical: `/resources/guides/${slug}`,
+    },
+    openGraph: {
+      title: `${guide.title} | Is My Baby Alright?`,
+      description: guide.subtitle,
+    },
   };
 }
 
@@ -39,8 +47,18 @@ export default async function GuideSlugPage({ params }: GuidePageProps) {
     notFound();
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Guides", url: "/resources/guides" },
+    { name: guide.title },
+  ]);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Resources", href: "/resources/mental-health" },

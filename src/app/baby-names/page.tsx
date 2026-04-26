@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/baby-names",
   },
+  openGraph: {
+    title: "Baby Name Generator - 500+ Names | Is My Baby Alright?",
+    description:
+      "Browse 500+ baby names for boys, girls, and unisex options. Filter by origin, popularity, and meaning.",
+  },
 };
 
 export default function BabyNamesPage() {

@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Privacy Policy - ismybabyalright",
   description:
     "Privacy policy for ismybabyalright. All data stays on your device. No cookies, no analytics, no tracking.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Is My Baby Alright?",
+    description:
+      "All data stays on your device. No cookies, no analytics, no tracking.",
+  },
 };
 
 export default function PrivacyPage() {

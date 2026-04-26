@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "About Us - ismybabyalright",
   description:
     "About ismybabyalright. A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. No ads, no tracking, no data collection.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | Is My Baby Alright?",
+    description:
+      "A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. No ads, no tracking, no data collection.",
+  },
 };
 
 export default function AboutPage() {

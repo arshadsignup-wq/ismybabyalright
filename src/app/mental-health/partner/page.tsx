@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { mentalHealthTopics } from "@/data/mental-health/topics";
 import TopicCard from "@/components/mental-health/TopicCard";
+
+export const metadata: Metadata = {
+  title: "For Partners - Mental Health Resources",
+  description:
+    "Mental health resources for non-birthing parents and partners. Paternal depression, partner support, and relationship strain during the postpartum period.",
+  alternates: {
+    canonical: "/mental-health/partner",
+  },
+  openGraph: {
+    title: "For Partners | Is My Baby Alright?",
+    description:
+      "Mental health resources for non-birthing parents. Paternal depression, partner support, and relationship guidance.",
+  },
+};
 
 const partnerTopics = mentalHealthTopics.filter((t) =>
   ["paternal-depression", "partner-support", "relationship-strain"].includes(t.slug)

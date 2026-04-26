@@ -5,6 +5,14 @@ import { allTriageTrees } from "@/data/triage";
 export const metadata: Metadata = {
   title: "Symptom Checker",
   description: "Should I call the doctor? Free evidence-based triage tool for common baby symptoms.",
+  alternates: {
+    canonical: "/triage",
+  },
+  openGraph: {
+    title: "Baby Symptom Checker | Is My Baby Alright?",
+    description:
+      "Should I call the doctor? Free evidence-based triage tool for common baby symptoms.",
+  },
 };
 
 export default function TriagePage() {

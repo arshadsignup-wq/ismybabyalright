@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { allChecklists, getChecklist } from "@/data/checklists/checklists";
+import { getBreadcrumbSchema } from "@/lib/seo";
 import CrisisChecklist from "@/components/checklists/CrisisChecklist";
 import Link from "next/link";
 
@@ -14,6 +15,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${checklist.title} Checklist`,
     description: checklist.description,
+    alternates: {
+      canonical: `/checklists/${slug}`,
+    },
+    openGraph: {
+      title: `${checklist.title} Checklist | Is My Baby Alright?`,
+      description: checklist.description,
+    },
   };
 }
 
@@ -26,8 +34,18 @@ export default async function ChecklistSlugPage({
   const checklist = getChecklist(slug);
   if (!checklist) notFound();
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Checklists", url: "/checklists" },
+    { name: checklist.title },
+  ]);
+
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex items-center gap-3 mb-5">
         <Link
           href="/checklists"

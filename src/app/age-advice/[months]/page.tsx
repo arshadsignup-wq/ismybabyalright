@@ -32,6 +32,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `/age-advice/${months}`,
     },
+    openGraph: {
+      title: `${ageLabel} - Age-Based Advice | Is My Baby Alright?`,
+      description: `Everything you need to know when your baby is ${ageLabel.toLowerCase()}. Milestones, concerns, food, sleep, and vaccines.`,
+    },
   };
 }
 

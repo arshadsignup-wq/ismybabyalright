@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Regression Log",
   description:
     "Track and document developmental skill regression. Record lost skills with dates to share with your pediatrician or specialist.",
+  alternates: {
+    canonical: "/tools/regression-log",
+  },
+  openGraph: {
+    title: "Regression Log | Is My Baby Alright?",
+    description:
+      "Track and document developmental skill regression. Record lost skills with dates for your pediatrician.",
+  },
 };
 
 export default function RegressionLogPage() {

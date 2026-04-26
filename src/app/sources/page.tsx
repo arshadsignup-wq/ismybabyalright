@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Sources & References - ismybabyalright",
   description:
     "All medical sources and references used across ismybabyalright, including CDC, WHO, AAP, and NIH guidelines.",
+  alternates: {
+    canonical: "/sources",
+  },
+  openGraph: {
+    title: "Sources & References | Is My Baby Alright?",
+    description:
+      "All medical sources and references including CDC, WHO, AAP, and NIH guidelines.",
+  },
 };
 
 interface SourceEntry {

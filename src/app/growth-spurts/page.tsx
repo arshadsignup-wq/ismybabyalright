@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/growth-spurts",
   },
+  openGraph: {
+    title: "Baby Growth Spurts | Is My Baby Alright?",
+    description:
+      "When growth spurts happen, the signs, how long they last, and what to do. Evidence-based guide from 1 week to 9 months.",
+  },
 };
 
 const faqJsonLd = {

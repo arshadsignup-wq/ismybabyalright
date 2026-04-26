@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Growth Calculator",
   description:
     "Calculate your baby's weight and length percentiles using WHO growth standards. See where your child falls on the growth chart.",
+  alternates: {
+    canonical: "/tools/growth",
+  },
+  openGraph: {
+    title: "Baby Growth Calculator | Is My Baby Alright?",
+    description:
+      "Calculate weight and length percentiles using WHO growth standards.",
+  },
 };
 
 export default function GrowthPage() {

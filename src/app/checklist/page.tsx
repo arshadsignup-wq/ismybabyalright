@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Milestone Checklist",
   description:
     "Interactive developmental milestone checklist. Track your baby's progress across motor, language, social, and cognitive skills. Based on CDC and AAP guidelines.",
+  alternates: {
+    canonical: "/checklist",
+  },
+  openGraph: {
+    title: "Milestone Checklist | Is My Baby Alright?",
+    description:
+      "Interactive developmental milestone checklist for motor, language, social, and cognitive skills.",
+  },
 };
 
 export default function ChecklistPage() {

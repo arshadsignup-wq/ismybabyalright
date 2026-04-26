@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Weight-for-Length Calculator",
   description:
     "Calculate your baby's weight-for-length percentile using WHO growth standards. See where your child falls on the weight-for-length chart for children under 2 years.",
+  alternates: {
+    canonical: "/tools/weight-for-length",
+  },
+  openGraph: {
+    title: "Weight-for-Length Calculator | Is My Baby Alright?",
+    description:
+      "Calculate weight-for-length percentile using WHO growth standards for children under 2.",
+  },
 };
 
 export default function WeightForLengthPage() {

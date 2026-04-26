@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: "Adjusted Age Calculator",
   description:
     "Calculate your premature baby's adjusted (corrected) age for developmental milestones. Enter due date and birth date to see adjusted age.",
+  alternates: {
+    canonical: "/tools/adjusted-age",
+  },
+  openGraph: {
+    title: "Adjusted Age Calculator | Is My Baby Alright?",
+    description:
+      "Calculate your premature baby's adjusted age for developmental milestones.",
+  },
 };
 
 export default function AdjustedAgePage() {

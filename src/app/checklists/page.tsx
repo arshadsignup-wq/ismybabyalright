@@ -5,6 +5,14 @@ import { allChecklists } from "@/data/checklists/checklists";
 export const metadata: Metadata = {
   title: "Parenting Checklists",
   description: "Printable checklists for common parenting situations  -  first fever, leaving the house, blowouts, and more.",
+  alternates: {
+    canonical: "/checklists",
+  },
+  openGraph: {
+    title: "Parenting Checklists | Is My Baby Alright?",
+    description:
+      "Printable checklists for common parenting situations - first fever, leaving the house, blowouts, and more.",
+  },
 };
 
 export default function ChecklistsPage() {

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/concerns",
   },
+  openGraph: {
+    title: "325+ Common Baby Concerns | Is My Baby Alright?",
+    description:
+      "Evidence-based answers to over 325 common baby concerns. Know when it's normal, when to mention it, and when to act now.",
+  },
 };
 
 export default function ConcernsPage() {

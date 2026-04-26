@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Medical Disclaimer - ismybabyalright",
   description:
     "Medical disclaimer for ismybabyalright. This site is an informational resource based on CDC, WHO, and AAP guidelines - not a substitute for medical advice.",
+  alternates: {
+    canonical: "/disclaimer",
+  },
+  openGraph: {
+    title: "Medical Disclaimer | Is My Baby Alright?",
+    description:
+      "This site is an informational resource based on CDC, WHO, and AAP guidelines - not a substitute for medical advice.",
+  },
 };
 
 export default function DisclaimerPage() {

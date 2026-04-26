@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Guides  -  ismybabyalright",
   description:
     "Evidence-based condition guides for common childhood health topics.",
+  alternates: {
+    canonical: "/resources/guides",
+  },
+  openGraph: {
+    title: "Condition Guides | Is My Baby Alright?",
+    description:
+      "Evidence-based condition guides for common childhood health topics.",
+  },
 };
 
 export default function GuidesIndexPage() {

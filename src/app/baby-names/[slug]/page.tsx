@@ -57,6 +57,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `/baby-names/${slug}`,
     },
+    openGraph: {
+      title: `${name.name} - Baby Name Meaning & Origin | Is My Baby Alright?`,
+      description: `${name.name} is a ${name.gender === "unisex" ? "unisex" : name.gender === "boy" ? "boy's" : "girl's"} name of ${name.origin} origin meaning "${name.meaning}".`,
+    },
   };
 }
 

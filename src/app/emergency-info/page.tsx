@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/emergency-info",
   },
+  openGraph: {
+    title: "Emergency Info Vault | Is My Baby Alright?",
+    description:
+      "Store your baby's critical emergency information for quick access. Allergies, medications, and pediatrician contact.",
+  },
 };
 
 export default function EmergencyInfoPage() {
