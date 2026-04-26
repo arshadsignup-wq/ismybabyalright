@@ -72,6 +72,18 @@ export default function Footer() {
             >
               Privacy
             </Link>
+            <Link
+              href="/disclaimer"
+              className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
+            >
+              Disclaimer
+            </Link>
+            <Link
+              href="/about"
+              className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
+            >
+              About
+            </Link>
           </div>
         </div>
       </div>

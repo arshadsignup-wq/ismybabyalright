@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "BidsA_EC1A3629mdgk6uG63LaLx-q8smKdMj5ENShhg",
+  },
   openGraph: {
     type: "website",
     siteName: "Is My Baby Alright?",

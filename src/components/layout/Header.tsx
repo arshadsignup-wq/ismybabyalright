@@ -131,7 +131,7 @@ export default function Header() {
                 {toolsOpen && (
                   <div
                     id="desktop-tools-menu"
-                    className="absolute top-full right-0 mt-1 w-64 bg-card border border-card-border rounded-2xl shadow-lg py-2 z-50"
+                    className="absolute top-full right-0 mt-1 w-64 max-h-[calc(100vh-5rem)] overflow-y-auto bg-card border border-card-border rounded-2xl shadow-lg py-2 z-50"
                     role="menu"
                   >
                     {/* Track & Log section */}
