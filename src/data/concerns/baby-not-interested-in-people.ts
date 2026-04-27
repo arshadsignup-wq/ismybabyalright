@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-not-interested-in-people',
+  title: 'Baby Not Interested in People - Poor Social Engagement',
+  category: 'behavior',
+  searchTerms: ['baby not interested in people','baby doesn\'t look at faces','baby ignores people','baby not socially engaged','baby prefers objects over people','baby doesn\'t respond to name','baby not making eye contact','baby ignores parents','baby no joint attention','baby doesn\'t follow pointing','baby not socially responsive','baby doesn\'t notice people'],
+  quickAnswer: 'Babies are born social - from the first days of life, they prefer to look at faces over objects, respond to voices, and seek human connection. A baby who consistently prefers objects over people, does not look at faces, does not respond to their name by 12 months, and does not follow pointing or show things to others by 12-18 months may need a developmental evaluation. These social engagement skills are among the most important early developmental milestones and their absence is one of the earliest signs of autism spectrum disorder.',
+  byAge: [
+    { ageRange: '0-3 months', context: 'Even newborns prefer faces over objects and will turn toward a voice. By 2-3 months, your baby should be clearly interested in your face, making eye contact during feeding and care, and beginning to smile socially. They should turn toward voices and be soothed by being held. If your baby seems to look through you rather than at you, does not seem calmed by your presence, and does not make eye contact during feeding, mention this to your pediatrician.' },
+    { ageRange: '3-6 months', context: 'Babies should be increasingly social - smiling, laughing, cooing back when you talk, and showing excitement when they see familiar faces. They should respond differently to familiar people versus strangers. If your baby seems equally interested in (or uninterested in) everyone, does not seem to recognize familiar faces, and prefers staring at objects (especially spinning or light-reflecting objects) over engaging with people, discuss this with your doctor.' },
+    { ageRange: '6-12 months', context: 'This is a critical period for social development. By 9 months, babies should respond to their name, follow your pointing, and begin "joint attention" (looking at something you are looking at, then looking back at you). By 12 months, they should be pointing to show you things, bringing you objects, and seeking your attention. If your baby does not respond to their name by 12 months, does not follow pointing, and does not share interest by looking between you and an interesting object, request a developmental screening.' },
+    { ageRange: '12-24 months', context: 'Social engagement should be clearly established. Your toddler should point to things they want and things they find interesting (not just to request but to share). They should bring you things to show you, look to you for emotional reactions (social referencing), and imitate your actions. If these skills are absent by 18 months, the M-CHAT screening tool (which your pediatrician should administer at 18 and 24 months) can help identify whether further evaluation is needed.' },
+  ],
+  whenNormal: ['Your baby is more interested in objects during independent play but lights up and engages when you interact with them','Your baby takes a moment to respond to their name when focused on something else','Your baby is interested in people but shows it more subtly than some babies','Your older baby or toddler goes through brief periods of being more independent or object-focused'],
+  whenToMention: ['Your baby does not seem to recognize or respond differently to familiar people by 6 months','Your baby does not respond to their name by 12 months despite normal hearing','Your baby does not follow pointing or point to share interest by 12-15 months','Your toddler consistently prefers objects over people and does not seek social interaction'],
+  whenToActNow: ['Your baby has lost social skills they previously had - used to smile, coo, and engage but has stopped','Your baby seems completely unaware of people around them','Your baby shows no response to your voice, face, or touch - could indicate a sensory or neurological issue'],
+  relatedMilestones: ['social-emotional-regulation','language-receptive'],
+  showSelfReferral: true,
+  relatedConcernSlugs: ['early-signs-of-autism-baby','baby-flat-affect-no-expression','baby-too-quiet-never-cries'],
+  sources: [
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Signs and Symptoms of Autism Spectrum Disorder.', url: 'https://www.cdc.gov/ncbddd/autism/signs.html' },
+    { org: 'AAP', citation: 'Hyman SL, et al. Identification, Evaluation, and Management of Children With Autism Spectrum Disorder. Pediatrics. 2020.', url: 'https://publications.aap.org/pediatrics/article/145/1/e20193447/36917/Identification-Evaluation-and-Management-of' },
+    { org: 'NIH', citation: 'Jones W, Klin A. Attention to Eyes Is Present but in Decline in 2-6-Month-Old Infants Later Diagnosed with Autism. Nature. 2013.', url: 'https://pubmed.ncbi.nlm.nih.gov/24196715/' },
+  ],
+};

@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-eating-too-much',
+  title: 'Baby Eating Too Much - Overfeeding Concerns',
+  category: 'feeding',
+  searchTerms: ['baby eating too much','overfeeding baby','baby always hungry','baby wants to eat constantly','can you overfeed a breastfed baby','baby spits up from eating too much','formula overfeeding','baby drinking too much formula','baby eating large amounts','baby always wants bottle','baby never seems full','overfeeding newborn signs'],
+  quickAnswer: 'It is very difficult to overfeed a breastfed baby because they self-regulate intake at the breast. Formula-fed babies can be overfed if caregivers encourage them to finish bottles beyond their hunger cues. True overfeeding typically shows up as frequent large-volume spit-ups, excessive weight gain (consistently above their growth curve), and discomfort after feeds. Most "always hungry" babies are going through a growth spurt, cluster feeding, or using sucking for comfort rather than actually overeating.',
+  byAge: [
+    { ageRange: '0-3 months', context: 'Newborns feed frequently - 8-12 times per day for breastfed babies and every 2-4 hours for formula-fed babies. Cluster feeding (wanting to eat every 30-60 minutes for several hours) is normal, especially in the evenings and during growth spurts around 2-3 weeks, 6 weeks, and 3 months. Breastfed babies cannot be overfed at the breast. For bottle-fed babies, use paced bottle feeding - hold the bottle horizontally, pause frequently, and let the baby control the pace.' },
+    { ageRange: '3-6 months', context: 'Babies this age typically eat 24-32 oz of formula per day or nurse 6-8 times. If your baby consistently wants more than 32 oz of formula, talk to your pediatrician. Growth spurts around 4 months can cause temporary increases in hunger. Signs of appropriate intake include steady growth along their curve, 6+ wet diapers daily, and contentment between feeds. Some babies are comfort suckers - a pacifier between feeds can help if your baby seems to want to suck but is not actually hungry.' },
+    { ageRange: '6-12 months', context: 'As solids are introduced, breast milk or formula intake should gradually decrease. If your baby is eating large amounts of both solids and milk, they may be going through a growth spurt or just be a bigger baby. Follow your baby\'s hunger and fullness cues - turning away, closing mouth, losing interest in food. Never force-feed or use food as a distraction or reward. Babies who are allowed to self-regulate tend to develop healthier eating patterns long term.' },
+    { ageRange: '12-24 months', context: 'Toddler appetites are famously variable - they may eat enormous amounts one day and almost nothing the next. This is normal self-regulation. Concerns about overeating at this age are usually unfounded unless your child\'s weight is consistently accelerating across percentile lines. Serve appropriate portions (about one-quarter of adult portions), offer balanced meals and snacks, and let your toddler decide how much to eat. Division of responsibility: you decide what, when, and where - they decide how much.' },
+  ],
+  whenNormal: ['Your baby cluster feeds for several hours and then sleeps a long stretch - this is normal newborn behavior','Your baby wants to eat more frequently during a growth spurt (lasts 2-5 days)','Your baby is growing steadily along their own curve even if they eat what seems like a lot','Your toddler eats large meals some days and very little other days'],
+  whenToMention: ['Your formula-fed baby consistently wants more than 32 oz per day and is spitting up large amounts','Your baby\'s weight is rapidly crossing percentile lines upward on the growth chart','Your baby seems uncomfortable, gassy, or in pain after every feed from what seems like too much intake','You are unsure whether your baby is eating for hunger or comfort and need guidance on feeding cues'],
+  whenToActNow: ['Your baby is vomiting large amounts (not just spit-up) after every feed - projectile vomiting can indicate pyloric stenosis in young babies','Your baby is gaining weight so rapidly that your pediatrician has expressed concern about an underlying condition','Your baby seems constantly hungry and is not gaining weight despite large intake - this could indicate a malabsorption issue'],
+  relatedMilestones: ['feeding-solids-introduction'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['baby-vomiting-no-fever','toddler-wont-eat-vegetables','baby-not-eating-after-illness'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Amount and Schedule of Baby Formula Feedings. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Amount-and-Schedule-of-Formula-Feedings.aspx' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. How Much and How Often to Feed Infant Formula.', url: 'https://www.cdc.gov/nutrition/infantandtoddlernutrition/formula-feeding/how-much-how-often.html' },
+    { org: 'NIH', citation: 'Li R, et al. Do Infants Fed From Bottles Lack Self-regulation of Milk Intake Compared With Directly Breastfed Infants? Pediatrics. 2010.', url: 'https://pubmed.ncbi.nlm.nih.gov/20498177/' },
+  ],
+};

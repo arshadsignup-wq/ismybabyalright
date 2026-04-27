@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-running-away-in-public',
+  title: 'Toddler Running Away in Public - Bolting and Eloping',
+  category: 'behavior',
+  searchTerms: ['toddler running away in public','toddler bolting','toddler eloping','toddler runs into street','toddler won\'t hold hand','toddler runs off at store','toddler no sense of danger','toddler doesn\'t come when called','toddler wanders off','how to keep toddler from running away','toddler harness safe','toddler runs from parents'],
+  quickAnswer: 'Running away (bolting or eloping) is one of the most dangerous toddler behaviors and one of the most common. Toddlers run because they are impulsive, curious, excited, and have no real understanding of danger. The prefrontal cortex, which controls impulse and risk assessment, is barely functional at this age. Bolting is not defiance - it is a developmental limitation. Safety strategies include harnesses/backpack leashes, wrist links, clear rules, consistent practice, and understanding that constant vigilance is genuinely necessary with a runner.',
+  byAge: [
+    { ageRange: '12-18 months', context: 'New walkers are thrilled with their ability to move and have zero impulse control. They will walk or run toward anything interesting without any awareness of danger - cars, water, heights, strangers. Always hold hands in parking lots and near roads, or use a stroller, carrier, or harness. Toddler harnesses and backpack leashes are safe and endorsed by safety experts. Begin teaching "stop" and "come" as important safety words, practicing at home before relying on them in public.' },
+    { ageRange: '18-24 months', context: 'Bolting often peaks at this age as toddlers become faster and more confident. They may think running from you is a game, especially if you chase them while laughing or calling their name excitedly. Use a serious tone for safety situations: "STOP. Danger." Practice the "freeze game" at home - when you say "freeze," everyone stops moving. Make it fun during practice so the response becomes automatic. In high-risk environments (parking lots, near water, busy streets), physical containment (holding hands, stroller, harness) is essential.' },
+    { ageRange: '2-3 years', context: 'Your toddler is beginning to understand rules but impulse control is still very weak. They may understand "stay with mommy" but be unable to follow through when they see something exciting. Continue using physical safety measures in dangerous environments. Work on: practicing walking together on sidewalks, having them hold the stroller or cart, and using natural consequences ("You ran away, so now you ride in the stroller instead of walking"). Praise staying close enthusiastically.' },
+    { ageRange: '3-4 years', context: 'Most children improve significantly in their ability to stay close by age 3-4, but some children are persistent runners. If your child runs away in every setting, does not respond to their name when running, seems to have no awareness of danger, and cannot stop themselves even when they want to, discuss this with your pediatrician. Persistent bolting combined with lack of safety awareness can be associated with developmental differences that benefit from professional support. In the meantime, physical safety measures are not optional - they are essential.' },
+  ],
+  whenNormal: ['Your toddler runs because they are excited and you can redirect them','Your child bolts occasionally but responds to your voice and stops','Your toddler is learning to stay close and is improving with consistent practice','Running away is situational (at the park, in stores) rather than constant'],
+  whenToMention: ['Your child bolts every time you are in public regardless of setting or safety measures','Your child does not respond to their name or safety commands when running','Your child seems to have no awareness of danger (cars, water, heights) even at age 3+','Bolting is so frequent and dangerous that you avoid leaving the house'],
+  whenToActNow: ['Your child ran into a street or near water and was nearly injured','Your child bolted in a crowd and was lost - consider a GPS tracker for persistent runners','Your child\'s running away behavior is sudden, new, and seems compulsive rather than purposeful'],
+  relatedMilestones: ['social-emotional-regulation','gross-motor-walking'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['toddler-wont-listen-to-parents','toddler-aggressive-hitting-kicking','early-signs-of-autism-baby'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Pedestrian Safety. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Pedestrian-Safety.aspx' },
+    { org: 'NIH', citation: 'Anderson C, et al. Occurrence and Family Impact of Elopement in Children with Autism Spectrum Disorders. Pediatrics. 2012.', url: 'https://pubmed.ncbi.nlm.nih.gov/23008454/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Safety for Your Child: 1 to 2 Years. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/toddler/Pages/Safety-for-Your-Child-1-to-2-Years.aspx' },
+  ],
+};

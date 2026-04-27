@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-falls-asleep-only-in-car',
+  title: 'Baby Only Falls Asleep in the Car or While Moving',
+  category: 'sleep',
+  searchTerms: ['baby only sleeps in car','baby only falls asleep in car','baby needs motion to sleep','baby sleeps in stroller not crib','driving baby to sleep','baby needs car ride to sleep','baby only naps in car','motion dependent sleep baby','baby won\'t sleep without rocking','baby vibration to sleep','baby needs movement to fall asleep','breaking car sleep habit baby'],
+  quickAnswer: 'Many babies develop a strong preference for motion-based sleep because the rhythmic movement mimics the womb environment and activates the calming reflex. While using car rides or stroller walks occasionally is fine, relying on motion as the only way your baby will sleep can become unsustainable and creates a strong sleep association. Motion sleep is also lighter and less restorative than stationary sleep. The good news is that you can gradually transition your baby to sleeping in their crib by slowly reducing the motion component.',
+  byAge: [
+    { ageRange: '0-3 months', context: 'Newborns are biologically wired to sleep with motion - they spent 9 months in a moving environment. Using motion to help a newborn sleep is appropriate and not creating a "bad habit" at this age. Swings, car rides, stroller walks, and rocking are all reasonable tools. If you want to introduce crib sleep, try putting your baby down drowsy after some motion-based soothing. White noise (which mimics womb sounds) can help bridge the transition. Do not stress about this before 3-4 months.' },
+    { ageRange: '3-6 months', context: 'If your baby will only sleep with motion, this is the age to start gently transitioning. Begin by reducing the intensity of motion gradually - slow the rocking, turn down the swing speed, drive slower. Once your baby can fall asleep with minimal motion, practice putting them in the crib for one nap per day (usually the first nap of the day, which is easiest). A strong pre-sleep routine and white noise help cue sleep without motion.' },
+    { ageRange: '6-12 months', context: 'By this age, sleep associations are well-established, and motion-dependent sleep should be actively addressed if it is affecting the family. Your baby is developmentally ready to learn to fall asleep in a stationary crib. Cold turkey (stopping all motion sleep) or gradual approaches both work. If going gradual: spend a week doing less and less motion before the crib transfer. If your baby is old enough for sleep training methods, teaching independent sleep at bedtime first will often fix nap issues too.' },
+    { ageRange: '12-24 months', context: 'Toddlers who have relied on motion for sleep for over a year will have a stronger habit to break, but it is still very doable. The key is consistency - decide on your approach and stick with it for at least 5-7 days. Many families find that a strong bedtime routine, a dark room, white noise, and a comfort object can replace the need for motion. If your toddler falls asleep in the car, transfer them to bed rather than letting them complete the nap in the car seat.' },
+  ],
+  whenNormal: ['Your newborn under 3 months falls asleep best with motion - this is biologically normal','Your baby occasionally needs a car ride or stroller walk to nap on a difficult day','Your baby used to need motion but is gradually accepting crib sleep with practice','Your baby falls asleep with motion but also sometimes falls asleep in the crib'],
+  whenToMention: ['Your baby over 6 months will not sleep at all without motion and it is affecting family functioning','You are driving your baby around for every nap and every bedtime and it is unsustainable','Your baby seems unable to relax or settle without motion and is distressed in a still environment','You have tried transitioning to crib sleep for 2+ weeks with no improvement'],
+  whenToActNow: ['You are so tired from driving your baby to sleep that you are at risk of drowsy driving','Your baby is sleeping primarily in the car seat and you are concerned about positional asphyxiation','You feel desperate or overwhelmed by the sleep situation - reach out to your pediatrician for support and referrals'],
+  relatedMilestones: ['sleep-consolidation','self-soothing'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['baby-cries-when-put-down-to-sleep','baby-sleeping-in-car-seat-danger','baby-sleep-training-when-to-start'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Getting Your Baby to Sleep. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Getting-Your-Baby-to-Sleep.aspx' },
+    { org: 'NIH', citation: 'Mindell JA, et al. Behavioral Treatment of Bedtime Problems and Night Wakings. Sleep. 2006.', url: 'https://pubmed.ncbi.nlm.nih.gov/17162993/' },
+    { org: 'AAP', citation: 'Moon RY, et al. Sleep-Related Infant Deaths: Updated 2022 Recommendations. Pediatrics. 2022.', url: 'https://publications.aap.org/pediatrics/article/150/1/e2022057990/188304/Sleep-Related-Infant-Deaths-Updated-2022' },
+  ],
+};

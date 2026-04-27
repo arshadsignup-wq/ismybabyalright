@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-wont-wear-shoes',
+  title: 'Toddler Won\'t Wear Shoes - Sensory or Preference?',
+  category: 'physical',
+  searchTerms: ['toddler won\'t wear shoes','toddler hates shoes','toddler takes off shoes','toddler refuses shoes','toddler sensory shoes','toddler barefoot all time','toddler screams when put shoes on','baby won\'t keep shoes on','toddler shoe refusal','toddler sensory issue shoes','toddler only wants bare feet','is barefoot good for toddlers'],
+  quickAnswer: 'Many toddlers resist wearing shoes, and the good news is that barefoot is actually the healthiest option for developing feet. Pediatric orthopedists agree that going barefoot (when safe) strengthens foot muscles, improves balance, and promotes natural gait development. If your toddler refuses shoes, it may be because shoes feel restrictive, uncomfortable, or they prefer the sensory feedback of bare feet - all reasonable preferences. However, if shoe refusal is part of a broader pattern of sensory sensitivities (refusal of certain clothing textures, tags, socks), a sensory processing evaluation may be helpful.',
+  byAge: [
+    { ageRange: '6-12 months', context: 'Pre-walkers do not need shoes at all. Barefoot is best for developing feet. Socks with grippers or soft-soled booties are sufficient for warmth. If you put shoes on a pre-walking baby, they will likely pull them off because shoes interfere with the sensory feedback their feet use to learn balance and movement. Resist the urge to buy structured shoes before your baby is walking outdoors. The best "shoe" for a pre-walker is no shoe at all.' },
+    { ageRange: '12-18 months', context: 'New walkers benefit from barefoot time on safe surfaces. When shoes are needed (outdoors, rough surfaces), choose flexible, lightweight shoes with a thin sole that allows the foot to feel the ground. Rigid, structured shoes can actually hinder natural foot development. If your toddler resists shoes, try: letting them pick their shoes, putting shoes on after getting outside, using shoes that open wide for easy on/off, and choosing shoes without seams that might irritate. Sock refusal is also common and is a sensory preference.' },
+    { ageRange: '18-24 months', context: 'Shoe refusal is very common at this age because toddlers are asserting independence ("I do it myself!") AND genuinely prefer the sensory freedom of bare feet. This is not a behavioral problem. Respect the preference when possible (barefoot indoors, at parks on safe grass). When shoes are non-negotiable (hot pavement, cold weather, stores), keep it matter-of-fact: "We need shoes outside. Which ones?" If your toddler has extreme reactions to all shoes regardless of style, consider whether they also react to other clothing textures.' },
+    { ageRange: '2-3 years', context: 'Most toddlers become more cooperative with shoes as they realize shoes allow them to do fun things (run on playground, ride bikes, play in certain areas). If your child at 2-3 still has extreme distress about shoes AND also refuses socks, certain clothing textures, tags, or seams, this pattern of sensory sensitivity may benefit from an occupational therapy evaluation. Sensory processing differences are common and very treatable. If it is purely a preference for bare feet with no broader sensory pattern, it is normal and healthy.' },
+  ],
+  whenNormal: ['Your toddler pulls off shoes because they prefer the feeling of bare feet - a healthy sensory preference','Your toddler resists shoes as part of general independence-seeking behavior','Your child wears shoes when motivated (playground, puddle jumping) but prefers barefoot at home','Shoe refusal is the only sensory concern and your child tolerates clothing, socks, and different textures fine'],
+  whenToMention: ['Shoe refusal is accompanied by distress over other clothing textures, tags, socks, or seams','Your child has extreme meltdowns about shoes that seem disproportionate to the situation','Your child walks differently or seems in pain when wearing shoes','Shoe refusal is preventing your child from participating in necessary activities'],
+  whenToActNow: ['Your child is walking abnormally with or without shoes - toe walking, limping, or pain','Your child\'s feet appear unusual - very flat, very arched, or toes overlapping','You notice swelling, redness, or deformity in your child\'s feet'],
+  relatedMilestones: ['gross-motor-walking'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['toddler-obsessive-repetitive-behavior','toddler-constant-meltdowns','toddler-wont-listen-to-parents'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Shoes for Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Shoes-for-Children.aspx' },
+    { org: 'NIH', citation: 'Hollander K, et al. Growing-Up (Habitually) Barefoot Influences the Development of Foot and Arch Morphology. Scientific Reports. 2017.', url: 'https://pubmed.ncbi.nlm.nih.gov/28747771/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Flat Feet and Fallen Arches. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/orthopedic/Pages/Flat-Feet-Fallen-Arches.aspx' },
+  ],
+};

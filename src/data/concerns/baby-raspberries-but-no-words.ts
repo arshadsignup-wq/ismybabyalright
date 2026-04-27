@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-raspberries-but-no-words',
+  title: 'Baby Blowing Raspberries But Not Saying Words',
+  category: 'communication',
+  searchTerms: ['baby raspberries but no words','baby blowing raspberries no talking','baby only makes raspberry sounds','baby not talking just blowing raspberries','baby raspberries instead of babbling','baby making spitting sounds','baby no words just sounds','baby raspberry phase','is baby raspberry blowing normal','baby only blows raspberries 10 months','baby babbling regression to raspberries','baby oral motor exploration'],
+  quickAnswer: 'Blowing raspberries is a positive developmental sign that typically appears around 4-6 months. It shows your baby is experimenting with oral motor control - learning to use their lips, tongue, and breath in coordinated ways. This is actually a precursor to speech. Babies often go through phases of intense raspberry-blowing because it is fun and feels interesting. If your baby is blowing raspberries, making eye contact, and engaged socially, their communication development is on track. Babbling with consonants (ba, da, ma) should begin emerging by 6-9 months.',
+  byAge: [
+    { ageRange: '3-6 months', context: 'Raspberry blowing typically starts around 4-6 months and is a milestone to celebrate. Your baby is learning to control their mouth, lips, and airflow - skills they will need for producing speech sounds later. Babies at this age also coo, squeal, laugh, and make vowel sounds. Raspberry blowing does not replace these sounds - it adds to the repertoire. If your baby is blowing raspberries AND cooing/making vowel sounds, they are right on track. The raspberry phase usually peaks and fades within a few weeks to months.' },
+    { ageRange: '6-9 months', context: 'By this age, babbling with consonant sounds should be emerging alongside any remaining raspberry-blowing. You should start hearing "ba-ba," "da-da," "ma-ma" (without meaning at first). If your baby is only blowing raspberries and has not started any consonant babbling by 9 months, mention it at your next well-visit. Hearing should also be evaluated, as babies need to hear speech sounds clearly to reproduce them. Continue talking to your baby constantly - narrate your day, read books, and respond to all their sounds.' },
+    { ageRange: '9-12 months', context: 'By 9-12 months, babbling should be well-established with varied consonant-vowel combinations and jargon (babble that sounds like speech with intonation patterns). If your baby at 10-12 months is still primarily blowing raspberries without much consonant babbling, a hearing evaluation and speech screening are recommended. Some babies focus intensely on one sound pattern before moving on, so this may be a temporary fixation that resolves on its own.' },
+    { ageRange: '12-18 months', context: 'First words should be appearing alongside babbling. If your toddler at 12 months has no words and limited babbling (still primarily making raspberries or other non-speech sounds), do not wait - request a hearing test and speech evaluation. Early intervention for speech and language delays is most effective when started before 18 months. Even if the outcome is simply reassurance that your child is a late bloomer, the evaluation provides valuable information.' },
+  ],
+  whenNormal: ['Your baby is 4-7 months and going through an intense raspberry-blowing phase - this is a healthy milestone','Your baby blows raspberries AND makes other sounds like cooing, squealing, and vowel sounds','The raspberry phase is gradually being replaced by consonant babbling','Your baby is socially engaged - makes eye contact, smiles, and responds to your voice despite the raspberry obsession'],
+  whenToMention: ['Your baby at 9 months has not started any consonant babbling (ba, da, ma sounds)','Raspberry blowing is the only sound your baby makes with no variety of other vocalizations','Your baby over 10 months does not seem to respond to their name or turn toward sounds','You are concerned that speech development seems stalled'],
+  whenToActNow: ['Your baby has stopped making sounds they previously made (vocal regression)','Your baby over 12 months has no consonant babbling and no words','Your baby does not respond to sounds at all alongside limited vocalizations'],
+  relatedMilestones: ['language-expressive','language-receptive'],
+  showSelfReferral: true,
+  relatedConcernSlugs: ['toddler-nonverbal-at-2','toddler-making-up-words','baby-not-responding-to-music'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Language Development: 1 to 12 Months. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Language-Development-1-to-12-Months.aspx' },
+    { org: 'ASHA', citation: 'American Speech-Language-Hearing Association. How Does Your Child Hear and Talk?', url: 'https://www.asha.org/public/speech/development/' },
+    { org: 'NIH', citation: 'National Institute on Deafness and Other Communication Disorders. Speech and Language Developmental Milestones.', url: 'https://www.nidcd.nih.gov/health/speech-and-language' },
+  ],
+};

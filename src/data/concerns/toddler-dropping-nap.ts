@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-dropping-nap',
+  title: 'When Do Toddlers Drop Their Nap?',
+  category: 'sleep',
+  searchTerms: ['toddler dropping nap','when do toddlers stop napping','toddler refusing nap','2 to 1 nap transition','toddler nap resistance','toddler fighting nap','when to drop afternoon nap','toddler nap schedule','toddler won\'t nap anymore','nap transition toddler','signs toddler ready to drop nap','toddler skipping nap but cranky'],
+  quickAnswer: 'Most toddlers transition from two naps to one between 12-18 months, and most drop their final nap between ages 3-5, with the average being around 3.5 years. Signs your toddler is ready to drop a nap include consistently taking 30+ minutes to fall asleep, not seeming tired at nap time, and naps interfering with bedtime. However, many toddlers go through phases of nap resistance that do not mean they are truly ready to drop the nap. If your toddler is cranky, melting down, or falling asleep in the car on non-nap days, they still need the nap.',
+  byAge: [
+    { ageRange: '12-15 months', context: 'Some toddlers begin refusing one of their two naps around 12 months, but most are not truly ready for one nap until 14-18 months. The 12-month sleep regression and walking excitement can mimic nap readiness. If your toddler is cranky by late afternoon on one-nap days, they are not ready. Keep offering two naps for at least 2 weeks after initial refusal before deciding to transition. When ready, move to one midday nap around 12-1 PM and temporarily move bedtime 30 minutes earlier.' },
+    { ageRange: '15-24 months', context: 'This is the most common period for the 2-to-1 nap transition. The single nap typically shifts to midday (12-2 PM) and lasts 1.5-3 hours. During the transition, your toddler may alternate between needing one and two naps - this is normal and can last several weeks. On one-nap days, offer an earlier bedtime to prevent overtiredness. A consistent routine helps signal nap time. If your toddler is in daycare, the transition often happens around 12-15 months to match the classroom schedule.' },
+    { ageRange: '2-3 years', context: 'Most 2-year-olds still need their afternoon nap. If your toddler is suddenly refusing the nap, it may be a phase of independence rather than true readiness to drop it. Try quiet time in the crib or room for 60-90 minutes even if they do not sleep. Signs they truly still need the nap: melting down by 4-5 PM, falling asleep in the car or stroller, being excessively cranky, or having early morning wakings. Keep the nap until it consistently prevents them from falling asleep at a reasonable bedtime.' },
+    { ageRange: '3-5 years', context: 'The average age to fully drop the nap is around 3.5 years, but the range is wide - some children drop it at 3 and others still nap at 5. Signs they are ready: they do not seem tired at nap time, they take 30+ minutes to fall asleep, the nap pushes bedtime very late, and they function well without it. When dropping the nap, replace it with daily "quiet time" (books, puzzles in their room) and move bedtime 30-60 minutes earlier. Expect occasional nap days when they are sick, had a big day, or are going through a growth spurt.' },
+  ],
+  whenNormal: ['Your toddler goes through a week or two of nap refusal and then goes back to napping - this is a phase, not readiness','Your child naps some days and not others during a transition period','Your toddler takes shorter naps than they used to as they get closer to dropping the nap','Your child drops the nap around age 3-4 and is happy and well-rested with quiet time and an earlier bedtime'],
+  whenToMention: ['Your toddler under 2 is refusing all naps and is extremely overtired and difficult to manage','Dropping the nap has led to nighttime sleep problems including frequent waking or early morning rising','Your child is falling asleep at inappropriate times (in the high chair, during play) suggesting they are not getting enough total sleep','You are unsure whether your child still needs a nap and need guidance on their total sleep needs'],
+  whenToActNow: ['Your child is excessively sleepy during the day and falling asleep in unusual situations - this could indicate a sleep disorder or medical issue','Your child snores loudly, gasps, or stops breathing during sleep alongside daytime sleepiness','Sudden excessive sleepiness in a previously well-rested child could indicate illness or medication effects'],
+  relatedMilestones: ['sleep-consolidation'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['toddler-bedtime-battles','sleep-regression-12-months','baby-not-sleeping-enough'],
+  sources: [
+    { org: 'NIH', citation: 'Weissbluth M. Naps in Children: 6 Months-7 Years. Sleep. 1995.', url: 'https://pubmed.ncbi.nlm.nih.gov/8552929/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Healthy Sleep Habits: How Many Hours Does Your Child Need? HealthyChildren.org.', url: 'https://www.healthychildren.org/English/healthy-living/sleep/Pages/Healthy-Sleep-Habits-How-Many-Hours-Does-Your-Child-Need.aspx' },
+    { org: 'NIH', citation: 'Thorpe K, et al. Napping, Development and Health from 0 to 5 Years. Scientific Reports. 2015.', url: 'https://pubmed.ncbi.nlm.nih.gov/26515750/' },
+  ],
+};

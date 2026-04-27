@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-flat-affect-no-expression',
+  title: 'Baby Flat Affect - Limited Facial Expressions or Emotions',
+  category: 'behavior',
+  searchTerms: ['baby flat affect','baby no expression','baby doesn\'t smile','baby limited facial expressions','baby emotionless','baby doesn\'t show emotions','baby blank stare','baby not expressive','baby no social smile','baby doesn\'t react emotionally','baby unresponsive face','baby lack of facial expression'],
+  quickAnswer: 'Babies should show a range of facial expressions from early infancy. A social smile (smiling in response to a face or voice) typically appears by 6-8 weeks. By 3-4 months, most babies are expressive - smiling, laughing, frowning, and showing surprise. A baby who consistently shows limited facial expressions, rarely smiles, and does not seem to react emotionally to their environment should be evaluated. While some babies are naturally more serious or observant, persistent flat affect can be an early sign of developmental differences, sensory issues, or, rarely, medical conditions.',
+  byAge: [
+    { ageRange: '0-2 months', context: 'Newborns have limited facial expressions in the first few weeks - they may look serious or sleepy most of the time. This is normal. The social smile is the first major emotional milestone and appears around 6-8 weeks. If your baby has not smiled at you by 2 months, mention it at your next well-visit. Some premature babies smile later based on their adjusted age. Brief periods of alertness with eye contact and visual tracking of faces are the earliest signs of social engagement.' },
+    { ageRange: '2-4 months', context: 'By 2-3 months, your baby should be smiling socially, cooing, and beginning to show excitement (kicking legs, waving arms). By 4 months, most babies laugh and show a range of expressions. If your baby rarely smiles, does not react to your face or voice, and seems emotionally flat, this is worth discussing with your pediatrician. Rule out hearing or vision issues, which can limit a baby\'s ability to respond to social cues. Some medications can also affect alertness and expression.' },
+    { ageRange: '4-12 months', context: 'Babies should be increasingly expressive - showing joy, frustration, surprise, fear (stranger anxiety), and sadness. They should respond to your emotional expressions (looking worried when you sound worried, smiling when you smile). A baby who remains flat, does not show stranger anxiety by 9-12 months, and does not react to social games like peek-a-boo should be evaluated for developmental differences. This can be an early indicator of autism spectrum disorder, though there are many other possible explanations.' },
+    { ageRange: '12-24 months', context: 'Toddlers should be very expressive - showing a wide range of emotions, pointing to share interest, and beginning to show empathy (looking concerned when another child cries). If your toddler\'s emotional range remains flat, they do not share enjoyment with you (not pointing, showing, or looking to you for reactions), and they seem disconnected from the emotional world around them, a developmental evaluation is recommended. Early intervention for social-emotional development can be very effective.' },
+  ],
+  whenNormal: ['Your baby is naturally more observant and serious but does smile and show a range of expressions','Your baby is less animated than other babies you see but still responds to your face, voice, and games','Expression varies with mood - your baby may seem flat when tired but is animated when well-rested and alert','Your baby has a more subtle expression style but clearly shows recognition and joy with familiar people'],
+  whenToMention: ['Your baby has not smiled socially by 3 months','Your baby rarely shows any emotional reaction to faces, voices, or games','Your baby does not seem to respond differently to familiar people versus strangers','Your toddler does not share enjoyment - does not point to show you things or look to you for reactions'],
+  whenToActNow: ['Sudden loss of facial expressions in a previously expressive baby - could indicate a neurological issue','Your baby is limp, flat, and unresponsive - this is a medical emergency','Your baby had a normal social smile that disappeared - this regression needs immediate evaluation'],
+  relatedMilestones: ['social-emotional-regulation','language-receptive'],
+  showSelfReferral: true,
+  relatedConcernSlugs: ['baby-too-quiet-never-cries','baby-not-interested-in-people','early-signs-of-autism-baby'],
+  sources: [
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Important Milestones: Your Baby by 2 Months.', url: 'https://www.cdc.gov/ncbddd/actearly/milestones/milestones-2mo.html' },
+    { org: 'AAP', citation: 'Zwaigenbaum L, et al. Early Screening of Autism Spectrum Disorder. Pediatrics. 2015.', url: 'https://pubmed.ncbi.nlm.nih.gov/26430168/' },
+    { org: 'NIH', citation: 'Ozonoff S, et al. A Prospective Study of the Emergence of Early Behavioral Signs of Autism. Journal of the American Academy of Child and Adolescent Psychiatry. 2010.', url: 'https://pubmed.ncbi.nlm.nih.gov/20172617/' },
+  ],
+};

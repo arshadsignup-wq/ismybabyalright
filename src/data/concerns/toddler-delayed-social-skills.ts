@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-delayed-social-skills',
+  title: 'Toddler Delayed Social Skills - Not Interacting with Other Kids',
+  category: 'behavior',
+  searchTerms: ['toddler delayed social skills','toddler not playing with other kids','toddler not interested in children','toddler parallel play','toddler no social interaction','toddler doesn\'t play with peers','toddler loner','toddler social development delay','toddler won\'t interact with other kids','toddler ignores other children','when do toddlers play together','toddler social milestones'],
+  quickAnswer: 'True cooperative play (playing with other children) does not typically develop until age 3-4. Toddlers under 3 primarily engage in parallel play - playing alongside other children but not with them. This is a normal developmental stage, not a social delay. Your 2-year-old ignoring other children at the playground while playing in the sand next to them is completely age-appropriate. Social concerns are more about whether your child notices and responds to people (adults and children), not whether they play cooperatively with peers.',
+  byAge: [
+    { ageRange: '12-18 months', context: 'At this age, toddlers are interested in other children but mainly through observation. They may watch other kids, imitate their actions, or approach them, but sustained interaction is not expected. Social connection at this age is primarily with caregivers. Your toddler should be seeking your attention, sharing interest by pointing at things, bringing you objects to show you, and looking to you for reactions (social referencing). These caregiver-directed social behaviors are more important than peer interaction at this stage.' },
+    { ageRange: '18-24 months', context: 'Parallel play dominates - your toddler plays near other children and may briefly imitate them or take their toys. Brief interactions like chasing, laughing together, or handing toys back and forth are emerging. Your child should be interested in other children even if they do not play directly with them. If your toddler seems completely unaware of or uninterested in other children, peers, and even adults beyond primary caregivers, this is worth discussing with your pediatrician.' },
+    { ageRange: '2-3 years', context: 'Associative play begins - your child plays alongside others with some interaction (trading toys, copying actions) but without shared goals. Simple turn-taking games emerge. Some children are naturally more social and some are more independent - temperament plays a large role. A shy child who warms up slowly but eventually engages is different from a child who consistently ignores all people. Social skills develop with practice, so regular exposure to other children (playgroups, parks, daycare) helps.' },
+    { ageRange: '3-4 years', context: 'True cooperative play develops - your child can play a shared game with roles, rules, and a common goal ("you be the doctor, I\'ll be the patient"). If your child at 3-4 cannot engage in any cooperative play, does not have interest in other children, prefers to always play alone, and struggles with basic social reciprocity (sharing, turn-taking, conversation), a developmental evaluation may be helpful. Some children are introverted and prefer quieter play - this is personality, not a delay - as long as they can interact when they choose to.' },
+  ],
+  whenNormal: ['Your toddler under 3 plays alongside other children rather than with them (parallel play)','Your child is shy and takes time to warm up in new social settings','Your toddler prefers one or two familiar children over large group play','Your child interacts well with adults and familiar people but is less interested in unfamiliar children'],
+  whenToMention: ['Your child over 2 seems completely unaware of or uninterested in other children','Your child does not engage in any form of parallel or associative play by age 2.5','Your child has no interest in social games (peek-a-boo, chase, simple pretend play)','Other children consistently avoid playing with your child due to behavioral issues'],
+  whenToActNow: ['Your child has lost social skills they previously had (regression)','Your child shows no interest in any people - adults or children','Social difficulties are accompanied by lack of eye contact, no pointing or gesturing, and no pretend play by age 2'],
+  relatedMilestones: ['social-emotional-regulation'],
+  showSelfReferral: true,
+  relatedConcernSlugs: ['early-signs-of-autism-baby','toddler-extreme-shyness','baby-not-interested-in-people'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Social Development in Preschoolers. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/preschool/Pages/Social-Development-in-Preschoolers.aspx' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Child Development Milestones.', url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html' },
+    { org: 'Zero to Three', citation: 'Zero to Three. Making Friends: How Children Learn Social Skills.', url: 'https://www.zerotothree.org/resource/making-friends/' },
+  ],
+};

@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-strong-smelling-urine',
+  title: 'Baby Strong Smelling Urine - Causes and When to Worry',
+  category: 'digestive',
+  searchTerms: ['baby strong smelling urine','baby urine smells bad','toddler smelly urine','baby urine smells like ammonia','baby concentrated urine','baby dark yellow urine','baby urine smell changed','baby urine smells fishy','toddler urine smells strong','baby dehydrated urine smell','baby UTI signs urine smell','baby urine smells different'],
+  quickAnswer: 'Strong-smelling urine in babies is usually caused by concentrated urine from mild dehydration, certain foods in the diet, or ammonia buildup in a diaper that has been on for a while. Breast milk-fed babies typically have nearly odorless urine, while formula-fed babies may have slightly more noticeable urine odor. If your baby\'s urine suddenly develops a strong, unusual, or foul smell alongside other symptoms like fever, fussiness, or changes in urination patterns, it could indicate a urinary tract infection (UTI) and should be evaluated.',
+  byAge: [
+    { ageRange: '0-6 months', context: 'Newborn and young baby urine is usually very dilute and nearly odorless, especially in breastfed babies. A strong ammonia smell from the diaper is often from the diaper sitting for too long rather than the urine itself - urea in urine converts to ammonia over time. If your baby\'s urine seems concentrated (dark yellow) and strong-smelling, they may need more frequent feeds. In hot weather or during illness, dehydration can concentrate the urine. Ensure adequate feeding and check for at least 6 wet diapers per day.' },
+    { ageRange: '6-12 months', context: 'As solids are introduced, urine odor can change. Asparagus, garlic, and certain vitamins can make urine smell different. Formula-fed babies tend to have stronger-smelling urine than breastfed babies. If your baby has started solid foods and the urine smell changed, this is likely dietary. UTIs are more common than many parents realize in babies - if strong-smelling urine is accompanied by fever (especially unexplained fever), irritability, or changes in urination patterns, your pediatrician can do a simple urine test.' },
+    { ageRange: '12-24 months', context: 'Toddlers who are mobile and active may not drink enough fluids, leading to concentrated, strong-smelling urine. Encourage regular water intake throughout the day. Certain foods strongly affect urine odor. A persistent fishy or foul odor that does not improve with increased fluid intake should be evaluated, as it could indicate a UTI. Girls are more prone to UTIs than boys after infancy. Bubble baths and fragranced products can cause urethral irritation and should be avoided.' },
+    { ageRange: '2-3 years', context: 'During potty training, you may notice your child\'s urine smell for the first time because they are using the toilet instead of a diaper. Concentrated urine from not drinking enough is the most common cause of strong smell. Encourage fluids, especially water. Very sweet-smelling urine is worth mentioning to your pediatrician, as it can rarely indicate a metabolic condition. If your child has recurrent UTIs with strong-smelling urine, your pediatrician may recommend further evaluation of the urinary tract.' },
+  ],
+  whenNormal: ['Strong smell from a diaper that has been on for several hours - ammonia builds up over time','Urine smell changes after starting new foods','Darker, more concentrated urine on hot days or when your baby drinks less','Temporary change during illness that resolves when your baby recovers and rehydrates'],
+  whenToMention: ['Persistently strong or foul-smelling urine despite adequate hydration','Strong-smelling urine with fever, especially unexplained fever','Your baby seems to be in pain or cries during urination','Changes in urination frequency - going much more or much less than usual'],
+  whenToActNow: ['Foul-smelling urine with high fever, vomiting, and your baby looks very unwell - possible kidney infection','No wet diapers for 6+ hours with concentrated dark urine - dehydration','Sweet or unusual chemical smell to urine with lethargy or vomiting - possible metabolic condition'],
+  relatedMilestones: [],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['baby-not-pooping-for-a-week','toddler-not-potty-trained-by-3','baby-vomiting-no-fever'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Urinary Tract Infections in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/genitourinary-tract/Pages/Detecting-Urinary-Tract-Infections.aspx' },
+    { org: 'NIH', citation: 'National Institute of Diabetes and Digestive and Kidney Diseases. Urinary Tract Infections in Children.', url: 'https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-infections-in-children' },
+    { org: 'AAP', citation: 'Subcommittee on Urinary Tract Infection. Reaffirmation of AAP Clinical Practice Guideline: UTI in Febrile Infants. Pediatrics. 2016.', url: 'https://publications.aap.org/pediatrics/article/138/6/e20163026/60458/Reaffirmation-of-AAP-Clinical-Practice-Guideline' },
+  ],
+};

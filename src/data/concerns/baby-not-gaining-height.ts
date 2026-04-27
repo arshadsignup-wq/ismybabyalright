@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-not-gaining-height',
+  title: 'Baby Not Growing Taller - Short Stature Concerns',
+  category: 'physical',
+  searchTerms: ['baby not gaining height','baby short for age','toddler not growing taller','short stature baby','baby height percentile low','baby length not increasing','growth hormone deficiency baby','baby below height percentile','toddler growth slowing','constitutional growth delay','baby height concerns','when to worry short baby'],
+  quickAnswer: 'Height (length) is primarily determined by genetics - if parents are shorter, their child will likely be shorter. A baby who is consistently at a low height percentile but follows their own curve is most likely genetically small. Concern arises when a child\'s length drops across percentile lines or when length is significantly lower than what would be expected based on parental heights. Growth hormone deficiency, thyroid issues, and certain genetic conditions can affect height, but these are uncommon. Most short children are simply constitutionally short or have constitutional growth delay (late bloomers).',
+  byAge: [
+    { ageRange: '0-12 months', context: 'Babies grow about 10 inches in the first year. Length at birth is more related to the uterine environment than genetics. By 12-24 months, babies typically "settle" into their genetically programmed growth channel. A baby born long (because of gestational diabetes, for example) who then drops to a lower percentile may simply be finding their genetic track. Length measurement in babies can be imprecise, so a single low measurement may be measurement error. Track the trend over multiple visits.' },
+    { ageRange: '12-24 months', context: 'Toddlers grow about 4-5 inches per year. By 18-24 months, most children have settled into the growth curve they will roughly follow through childhood. If your toddler is short but growing steadily along their curve, their weight is proportional to their height, and they are meeting all developmental milestones, they are likely constitutionally short. "Constitutional growth delay" (being a late bloomer who grows slower early but catches up during puberty) is a common pattern, especially if a parent was also a late bloomer.' },
+    { ageRange: '2-3 years', context: 'Growth rate is about 2-3 inches per year. After age 2, your child\'s growth should roughly track along the same percentile line. Dropping across percentile lines at this age is more concerning than simply being on a low percentile. Your pediatrician can calculate "mid-parental height" (predicted height based on parents\' heights) to see if your child is growing proportionally to genetic potential. If height is significantly below what would be expected for their genetic background, bloodwork may be recommended.' },
+    { ageRange: '3+ years', context: 'If your child\'s growth rate has slowed significantly (less than 2 inches per year) or they are falling further behind peers, your pediatrician may evaluate for: thyroid function, growth hormone levels, celiac disease (which can affect growth even without obvious digestive symptoms), chronic conditions, and genetic factors. Bone age X-ray can help determine if your child\'s growth plates suggest more growth to come (delayed bone age = more time to grow). Most short children do not have a treatable condition but evaluation provides peace of mind.' },
+  ],
+  whenNormal: ['Your child has always been on a lower height percentile and parents are also shorter than average','Your child dropped from a higher birth length to a lower percentile by 18-24 months and then tracked steadily','Your child\'s weight and height are proportional (both at similar percentiles)','One parent was a "late bloomer" and your child shows a similar pattern'],
+  whenToMention: ['Your child\'s height has dropped across one or more percentile lines','Your child is growing less than 2 inches per year after age 2','Your child\'s height percentile is much lower than what you would expect based on parental heights','Your child\'s height and weight percentiles are very different (very short but not underweight, or vice versa)'],
+  whenToActNow: ['Your child has stopped growing in height entirely','Short stature combined with other symptoms - fatigue, constipation, cold intolerance (possible thyroid issue)','Growth has slowed dramatically alongside other developmental concerns'],
+  relatedMilestones: [],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['baby-growing-too-slow','baby-growing-too-fast','toddler-nutritional-deficiency-signs'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Growth Charts and Short Stature. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/Glands-Growth-Disorders/Pages/Growth-Charts.aspx' },
+    { org: 'NIH', citation: 'National Institute of Child Health and Human Development. Short Stature.', url: 'https://www.nichd.nih.gov/' },
+    { org: 'AAP', citation: 'Rogol AD, Hayden GF. Etiologies and Early Diagnosis of Short Stature and Growth Failure in Children and Adolescents. Journal of Pediatrics. 2014.', url: 'https://pubmed.ncbi.nlm.nih.gov/24953724/' },
+  ],
+};

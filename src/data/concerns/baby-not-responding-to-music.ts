@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-not-responding-to-music',
+  title: 'Baby Not Responding to Music or Sounds',
+  category: 'communication',
+  searchTerms: ['baby not responding to music','baby doesn\'t react to sounds','baby ignores music','baby not startling to loud noise','baby hearing concern','baby doesn\'t turn to sounds','baby not responding to voice','baby hearing test','newborn hearing screening failed','baby doesn\'t dance to music','baby not responding to name','baby ignores loud noises'],
+  quickAnswer: 'Babies should respond to sounds from birth - startling to loud noises, calming to soothing voices, and turning toward sounds by 4-6 months. If your baby does not respond to music, voices, or loud sounds, the most important step is a hearing evaluation. About 1-3 per 1,000 babies are born with hearing loss, and early identification (by 3 months) and intervention (by 6 months) leads to significantly better language outcomes. Even if your baby passed the newborn hearing screening, hearing loss can develop later.',
+  byAge: [
+    { ageRange: '0-3 months', context: 'Newborns should startle or blink in response to loud sounds, quiet when they hear a familiar voice, and seem to listen when spoken to. They may not visibly respond to quieter sounds or music yet. If your newborn does not startle to any loud sounds, does not seem calmed by your voice, or failed the newborn hearing screening, follow up with a diagnostic audiological evaluation (ABR test). Even mild hearing loss can affect language development if not addressed early.' },
+    { ageRange: '3-6 months', context: 'By 4-6 months, your baby should be turning their head toward sounds, responding to your voice (especially their name), enjoying music with visible reactions (smiling, kicking legs, moving arms), and babbling with vowel sounds. If your baby does not turn toward sounds, does not seem to notice when you enter the room speaking, and is not babbling, request a hearing evaluation. Otitis media with effusion (fluid from ear infections) can cause temporary hearing reduction that may go unnoticed.' },
+    { ageRange: '6-12 months', context: 'Babies should respond to their name by 9 months, babble with consonant sounds (ba-ba, da-da), respond differently to happy versus angry tones of voice, and show interest in music (bouncing, swaying, vocalizing along). If your baby seems to respond to some sounds but not others, they may have hearing loss in specific frequencies. If your baby was babbling and stopped, or never started consonant babbling by 10 months, a hearing test is essential. Do not wait for the next well-visit if you are concerned about hearing.' },
+    { ageRange: '12-24 months', context: 'Your toddler should respond to their name, follow simple directions, dance or move to music, and be developing words. If your toddler does not respond to music, seems to hear sometimes but not others, needs the TV very loud, or is not developing words, hearing should be evaluated even if previous tests were normal. Progressive or fluctuating hearing loss can occur. Some children with autism respond differently to sounds - they may be hypersensitive to some sounds and seem to ignore others, despite having normal hearing.' },
+  ],
+  whenNormal: ['Your baby responds to some sounds but is focused and ignoring others - selective attention is normal','Your baby prefers certain types of music and responds more to those','Your baby startles to loud sounds but does not visibly react to softer background music','Your toddler responds to their name but not consistently when deeply focused on play'],
+  whenToMention: ['Your baby does not consistently turn toward sounds by 6 months','Your baby is not babbling with consonant sounds by 10 months','Your toddler responds to their name only sometimes or needs to be called multiple times','Your child passed the newborn hearing screening but you have concerns about their hearing now'],
+  whenToActNow: ['Your newborn failed the hearing screening and has not had follow-up testing','Your baby seems to hear no sounds at all - does not startle, turn, or respond to voices','Your child was hearing and responding normally and has suddenly stopped responding to sounds','Your child had meningitis, a high fever, or a head injury and now seems to hear less well'],
+  relatedMilestones: ['language-receptive','language-expressive'],
+  showSelfReferral: true,
+  relatedConcernSlugs: ['toddler-nonverbal-at-2','toddler-speech-regression-after-ear-infection','early-signs-of-autism-baby'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Hearing Assessment in Infants and Children. Pediatrics. 2003.', url: 'https://publications.aap.org/pediatrics/article/111/2/436/28511/Year-2003-Position-Statement-Early-Hearing' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Hearing Loss in Children.', url: 'https://www.cdc.gov/ncbddd/hearingloss/facts.html' },
+    { org: 'NIH', citation: 'National Institute on Deafness and Other Communication Disorders. Your Baby\'s Hearing and Communicative Development Checklist.', url: 'https://www.nidcd.nih.gov/health/your-babys-hearing-and-communicative-development-checklist' },
+  ],
+};

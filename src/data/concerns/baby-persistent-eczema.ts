@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-persistent-eczema',
+  title: 'Baby Persistent Eczema That Won\'t Go Away',
+  category: 'skin',
+  searchTerms: ['baby eczema won\'t go away','baby persistent eczema','baby severe eczema','baby eczema treatment not working','toddler chronic eczema','baby eczema keeps coming back','baby eczema flare up','baby eczema infected','baby eczema bleeding','baby scratching eczema','baby eczema and food allergy','when to see dermatologist for baby eczema'],
+  quickAnswer: 'Eczema (atopic dermatitis) affects about 13% of children and is the most common chronic skin condition in babies. Persistent eczema that does not respond to basic moisturizing needs a step-up in treatment - usually a prescribed topical steroid, consistent daily skincare routine, trigger identification, and sometimes allergy evaluation. Eczema is a chronic condition that waxes and wanes, so the goal is management (fewer and milder flares) rather than a permanent cure. Most children outgrow eczema by school age, but some do not.',
+  byAge: [
+    { ageRange: '0-6 months', context: 'Eczema typically appears first on the cheeks and scalp of babies around 2-6 months. At this age, the rash is often red, oozy, and crusty. The foundation of treatment is aggressive moisturizing - apply a thick, fragrance-free cream or ointment (Vanicream, CeraVe, Aquaphor) at least twice daily and after every bath. Bathe daily in lukewarm water for 5-10 minutes with a gentle cleanser, then apply moisturizer within 3 minutes ("soak and seal" method). If this is not controlling the eczema, your pediatrician should prescribe a topical steroid.' },
+    { ageRange: '6-12 months', context: 'Eczema at this age often spreads to the arms, legs, and trunk, typically affecting the outer surfaces and creases of joints. Moderate-to-severe eczema in babies under 12 months is associated with a higher risk of food allergies, and the AAP recommends early allergen introduction (especially peanuts and eggs) for babies with severe eczema. Topical steroids are safe when used as directed - undertreating eczema causes more harm than appropriate steroid use. Apply steroid cream to active flares and moisturizer everywhere.' },
+    { ageRange: '12-24 months', context: 'The pattern of eczema may shift to the classic toddler distribution - inner elbows, behind knees, wrists, and ankles. Triggers to identify include: dry air, heat, sweating, rough fabrics (wool), fragranced products, pet dander, dust mites, and certain foods. Keep nails very short to prevent scratching damage. Cotton clothing is best. For persistent eczema that is not controlled by moisturizer and mild steroid, your pediatrician may refer you to a dermatologist who can prescribe stronger treatments.' },
+    { ageRange: '2-3 years', context: 'By this age, you should have a clear management plan with your pediatrician. If eczema is not well-controlled, ask about: stepping up steroid potency, trying a non-steroidal prescription like tacrolimus or pimecrolimus, wet wrap therapy for severe flares, and allergy testing to identify triggers. About 50% of children with eczema will see significant improvement by age 5. Infected eczema (honey-colored crusting, increased redness, oozing, fever) needs antibiotic treatment.' },
+  ],
+  whenNormal: ['Your baby has mild eczema that flares occasionally but responds to moisturizer and mild steroid cream','Eczema waxes and wanes with seasons, illness, or teething - this is the natural pattern','Your child\'s eczema is well-controlled with a consistent skincare routine and occasional topical steroid use'],
+  whenToMention: ['Eczema is not improving with over-the-counter hydrocortisone cream and regular moisturizing','The eczema is covering large areas of the body or affecting your baby\'s sleep or mood','You are using topical steroids more than 2 weeks continuously and the eczema keeps returning','You suspect food allergies are triggering the eczema and want testing'],
+  whenToActNow: ['Eczema patches have become oozy, crusty with yellow or honey-colored discharge, or have pus - signs of bacterial infection','Your baby has eczema and develops clusters of painful small blisters - could be eczema herpeticum (herpes infection of eczema) which is a medical emergency','Your baby is miserable, unable to sleep, and scratching until bleeding despite treatment'],
+  relatedMilestones: [],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['baby-rash-wont-go-away','baby-rash-in-skin-folds','allergen-introduction-timing'],
+  sources: [
+    { org: 'AAP', citation: 'Eichenfield LF, et al. Guidelines of Care for Atopic Dermatitis. Journal of the American Academy of Dermatology. 2014.', url: 'https://pubmed.ncbi.nlm.nih.gov/24813302/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Eczema in Babies and Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/skin/Pages/Eczema.aspx' },
+    { org: 'NIH', citation: 'National Institute of Allergy and Infectious Diseases. Eczema (Atopic Dermatitis).', url: 'https://www.niaid.nih.gov/diseases-conditions/eczema-atopic-dermatitis' },
+  ],
+};

@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-wont-listen-to-parents',
+  title: 'Toddler Won\'t Listen to Parents - Defiant Behavior',
+  category: 'behavior',
+  searchTerms: ['toddler won\'t listen','toddler defiant','toddler ignores instructions','toddler oppositional','toddler says no to everything','toddler refuses everything','toddler doesn\'t follow directions','2 year old defiant','3 year old defiant','toddler strong willed','toddler disobedient','how to discipline toddler who won\'t listen'],
+  quickAnswer: 'Toddler defiance is not only normal - it is a sign of healthy development. When your toddler says "no," ignores your instructions, and does the opposite of what you ask, they are developing autonomy, independence, and a sense of self. Their prefrontal cortex (responsible for impulse control and decision-making) is far too immature to consistently override their desires. Approximately 50-80% of toddler interactions involve some form of non-compliance. This is not a parenting failure - it is a developmental stage.',
+  byAge: [
+    { ageRange: '12-18 months', context: 'Early defiance looks like ignoring requests, doing something you just said "no" to, and testing limits repeatedly. Your toddler is not being malicious - they are learning cause and effect ("what happens when I do this?") and asserting their emerging independence. At this age, they may genuinely not understand your instruction, or they may understand but be unable to override the impulse to do what they want. Use physical redirection more than verbal instructions: move them away from danger rather than saying "don\'t touch."' },
+    { ageRange: '18-24 months', context: 'The word "no" becomes your toddler\'s favorite word. They may say "no" to everything - even things they want. This is their way of practicing autonomy. Reduce the number of direct commands and instead offer limited choices: "Do you want the red cup or blue cup?" instead of "Use this cup." Save firm commands for safety issues and pick your battles carefully. When you give an instruction, follow through calmly every time - consistency is more important than any particular discipline technique.' },
+    { ageRange: '2-3 years', context: 'Peak defiance age. Your toddler has strong opinions, limited frustration tolerance, and newly discovered negotiation skills ("but whyyy?"). Effective strategies: give warnings before transitions ("two more minutes, then we leave"), get on their level and make eye contact before giving instructions, keep instructions simple (one step at a time), and use when-then statements ("when you put on shoes, then we can go outside"). Avoid empty threats, lengthy explanations, and asking questions when you mean to give directives ("Can you put on your shoes?" - they will say no).' },
+    { ageRange: '3-4 years', context: 'Defiance should be gradually decreasing as your child develops better understanding, communication, and some impulse control. They should be able to follow two-step directions and comply with known rules most of the time (even if grudgingly). If your child over 3 is defiant in all settings, cannot follow any instructions, is getting worse rather than better, or is defiant to the point that it interferes with daycare/preschool functioning, talk to your pediatrician about whether evaluation for oppositional defiant patterns is appropriate.' },
+  ],
+  whenNormal: ['Your toddler says "no" frequently but can be redirected or cooperates with help','Your child listens sometimes and ignores sometimes - inconsistency is the norm','Defiance is worse when your child is tired, hungry, or overstimulated','Your toddler cooperates with familiar routines more easily than novel requests'],
+  whenToMention: ['Your child over 3 defies almost every request and cannot cooperate in any setting','Defiance is causing problems at daycare or preventing normal activities','Your child becomes aggressive (hitting, kicking, biting) when you enforce limits','You feel unable to manage your child\'s behavior and need guidance on effective strategies'],
+  whenToActNow: ['Your child\'s defiance puts them in dangerous situations they cannot be redirected from','You find yourself losing control or using harsh physical discipline in response to defiance','Your child\'s behavior has suddenly and dramatically changed from cooperative to defiant'],
+  relatedMilestones: ['social-emotional-regulation','language-receptive'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['toddler-constant-meltdowns','toddler-aggressive-hitting-kicking','toddler-running-away-in-public'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Discipline: What Works and What Doesn\'t. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/Disciplining-Your-Child.aspx' },
+    { org: 'Zero to Three', citation: 'Zero to Three. Toddlers and Self-Control: A Survival Guide for Parents.', url: 'https://www.zerotothree.org/resource/toddlers-and-self-control/' },
+    { org: 'NIH', citation: 'Kochanska G, et al. Effortful Control in Early Childhood: Continuity and Change. Developmental Psychology. 2000.', url: 'https://pubmed.ncbi.nlm.nih.gov/10749079/' },
+  ],
+};

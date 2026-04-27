@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'toddler-separation-anxiety-extreme',
+  title: 'Extreme Separation Anxiety in Toddlers',
+  category: 'behavior',
+  searchTerms: ['toddler separation anxiety','extreme separation anxiety toddler','toddler screams when I leave','toddler won\'t let me leave','toddler cries at daycare drop off','separation anxiety 18 months','separation anxiety 2 year old','toddler only wants mom','toddler clingy separation anxiety','toddler panic when parent leaves','toddler can\'t be without mom','separation anxiety disorder toddler'],
+  quickAnswer: 'Separation anxiety is a normal developmental milestone that peaks around 12-18 months and again around 2 years. Most toddlers protest when a parent leaves - crying, clinging, and calling for you. This shows healthy attachment. Normal separation anxiety resolves within 5-15 minutes of your departure (even though your toddler may scream when you walk out). Extreme separation anxiety that prevents functioning - refusing to be with any other caregiver, not stopping crying for hours, physical symptoms like vomiting - may indicate separation anxiety beyond the typical range.',
+  byAge: [
+    { ageRange: '6-12 months', context: 'Separation anxiety typically begins around 8-9 months as your baby develops object permanence - they now understand you exist when you leave but cannot yet understand that you will come back. Your baby may cry when you leave the room, cling when handed to someone else, and protest at daycare drop-off. This is a positive sign of healthy attachment. Keep departures brief and consistent: say goodbye cheerfully, leave confidently, and return when you said you would. Avoid sneaking out, which increases anxiety.' },
+    { ageRange: '12-18 months', context: 'Peak separation anxiety. Your toddler may scream at daycare drop-off, refuse babysitters, or follow you around the house crying. Goodbyes are hard, but lingering makes it worse. Develop a goodbye ritual (hug, kiss, wave) and keep it consistent and brief. Most toddlers stop crying within 5-15 minutes of your departure - ask the daycare to send you updates. If your toddler genuinely cannot be consoled and cries for the entire time you are gone, discuss strategies with your pediatrician.' },
+    { ageRange: '18-24 months', context: 'A second wave of separation anxiety may occur. Your toddler now understands you are choosing to leave, which can feel like rejection to them. Practice separations with short trips (leave for 10 minutes, return cheerfully). Give your toddler a comfort object that "holds your love" while you are away. Read books about parents leaving and coming back. Never use leaving as a threat ("If you don\'t behave, I\'m leaving"). Always return when you say you will.' },
+    { ageRange: '2-3 years', context: 'Separation anxiety should be improving as your child gains understanding that you always come back. If your child over 2.5 still cannot be left with any other caregiver, has extreme prolonged distress at every separation, has developed physical symptoms (stomach aches, vomiting) around separations, or is unable to attend daycare or activities, consider evaluation for separation anxiety disorder. This is treatable with gradual exposure and, in some cases, play therapy. Early intervention is very effective.' },
+  ],
+  whenNormal: ['Your toddler cries at drop-off but calms down within 15 minutes and has fun the rest of the day','Your child is clingier during developmental milestones, illness, or changes in routine','Your toddler prefers you but can be comforted by and enjoy time with other trusted caregivers','Separation anxiety is gradually improving over weeks to months'],
+  whenToMention: ['Your child cannot be consoled by any other caregiver and cries for hours when you leave','Separation anxiety is getting worse over time rather than improving','Your child develops physical symptoms (vomiting, headaches, stomach aches) around separations','Separation anxiety prevents your child from attending daycare, activities, or being with other family members'],
+  whenToActNow: ['Your child is having panic-like reactions to separation - hyperventilating, going rigid, vomiting','You are unable to leave your child with anyone and it is significantly affecting your mental health and functioning','Sudden extreme separation anxiety in a previously comfortable child - could indicate a traumatic experience'],
+  relatedMilestones: ['social-emotional-regulation'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['toddler-extreme-shyness','toddler-constant-meltdowns','toddler-regression-after-illness'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Separation Anxiety in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/toddler/Pages/Soothing-Your-Childs-Separation-Anxiety.aspx' },
+    { org: 'NIH', citation: 'Ehrenreich JT, et al. Separation Anxiety Disorder in Youth. Child and Adolescent Psychiatric Clinics. 2008.', url: 'https://pubmed.ncbi.nlm.nih.gov/18295146/' },
+    { org: 'Zero to Three', citation: 'Zero to Three. Separation Anxiety in Infants and Toddlers.', url: 'https://www.zerotothree.org/resource/separation-anxiety/' },
+  ],
+};

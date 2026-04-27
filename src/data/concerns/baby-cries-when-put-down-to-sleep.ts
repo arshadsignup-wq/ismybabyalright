@@ -1,0 +1,26 @@
+import type { ConcernPage } from './types';
+
+export const concern: ConcernPage = {
+  slug: 'baby-cries-when-put-down-to-sleep',
+  title: 'Baby Cries Every Time You Put Them Down to Sleep',
+  category: 'sleep',
+  searchTerms: ['baby cries when put down to sleep','baby screams when put in crib','baby won\'t sleep unless held','baby cries as soon as put down','baby hates crib','baby only sleeps on me','baby wakes up when put down','how to put baby down without crying','baby screams at bedtime','baby won\'t sleep alone','put down drowsy but awake doesn\'t work','baby cries in crib'],
+  quickAnswer: 'Many babies cry when placed in the crib because they have learned to associate falling asleep with being held, rocked, nursed, or bounced. This is called a sleep association, and while it is not harmful, it means your baby needs that same condition to fall back asleep each time they wake during the night. Gradually teaching your baby to fall asleep in their sleep space - at whatever pace works for your family - is the foundation of independent sleep. This does not mean you are doing anything wrong; you are meeting a developmental need while gently building a new skill.',
+  byAge: [
+    { ageRange: '0-3 months', context: 'Newborns are biologically designed to want closeness, and holding them to sleep is not creating a bad habit - it is meeting a genuine need. The "fourth trimester" concept recognizes that young babies need significant physical comfort. At this age, do whatever helps your baby and you sleep safely. You can start gently practicing putting baby down drowsy but awake occasionally, but do not stress if it does not work yet.' },
+    { ageRange: '3-6 months', context: 'This is when sleep associations become more established. If your baby requires being held, rocked, or nursed to sleep every time, they will need that same support at each nighttime wake-up (which occur naturally 4-6 times per night). You can begin practicing the "put down drowsy but awake" approach more consistently. Start with bedtime, which is the easiest sleep period, and work on naps later.' },
+    { ageRange: '6-12 months', context: 'By 6 months, most babies can learn to fall asleep in their crib with practice and support. If your baby has been held to sleep for every nap and bedtime, the transition will take time. Gradual approaches include: staying in the room with your hand on baby, slowly moving further away over days; or doing your usual routine but placing baby in the crib before they are fully asleep and comforting them there.' },
+    { ageRange: '12-24 months', context: 'Toddlers who have always been held to sleep can still learn to fall asleep independently, but the process may take longer due to their stronger will and habits. Separation anxiety around 12-18 months can make this harder. Predictable routines, a comfort object (if over 12 months), and gradual changes work better than sudden shifts with toddlers. Consider a brief check-in schedule to reassure your toddler while teaching the new skill.' },
+  ],
+  whenNormal: ['Your newborn under 3 months needs to be held to fall asleep - this is biologically normal','Your baby protests briefly when placed in the crib but settles within 5-10 minutes','Your baby has gradually learned to fall asleep in the crib with decreasing amounts of support','The crying at put-down is clearly protest (angry, loud) rather than pain (shrill, inconsolable)'],
+  whenToMention: ['Your baby is over 6 months and you are unable to put them down without prolonged intense crying despite weeks of consistent effort','Sleep deprivation from contact sleeping is affecting your health, mood, or ability to function','Your baby seems to be in pain when placed flat, which could indicate reflux or ear infection','You are concerned about your own risk of falling asleep while holding your baby in an unsafe position'],
+  whenToActNow: ['You find yourself falling asleep while holding your baby on a couch, recliner, or in bed with unsafe conditions - these are the highest risk situations for infant sleep deaths','Your baby\'s crying seems to indicate pain rather than protest - arching, pulling at ears, or inconsolable despite being held','You are experiencing thoughts of harming yourself or your baby due to exhaustion - call your doctor or 988 Suicide and Crisis Lifeline immediately'],
+  relatedMilestones: ['sleep-consolidation','self-soothing'],
+  showSelfReferral: false,
+  relatedConcernSlugs: ['only-contact-napping','baby-only-sleeps-being-held','baby-sleep-associations'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Getting Your Baby to Sleep. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Getting-Your-Baby-to-Sleep.aspx' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. How to Keep Your Sleeping Baby Safe. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx' },
+    { org: 'NIH', citation: 'Mindell JA, et al. A Nightly Bedtime Routine: Impact on Sleep in Young Children. Sleep. 2015.', url: 'https://pubmed.ncbi.nlm.nih.gov/25325483/' },
+  ],
+};
