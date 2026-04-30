@@ -2,6 +2,7 @@ import type { ConcernPage, ConcernCategory } from './types';
 
 import { concern as abdominalDistensionBaby } from './abdominal-distension-baby';
 import { concern as abnormalHeadShape } from './abnormal-head-shape';
+import { concern as accentVsSpeechDisorderToddler } from './accent-vs-speech-disorder-toddler';
 import { concern as aggressiveTowardPets } from './aggressive-toward-pets';
 import { concern as allergenIntroductionTiming } from './allergen-introduction-timing';
 import { concern as amblyopiaSigns } from './amblyopia-signs';
@@ -13,43 +14,81 @@ import { concern as aspirationDuringFeeding } from './aspiration-during-feeding'
 import { concern as asymmetricMovement } from './asymmetric-movement';
 import { concern as attachmentConcerns } from './attachment-concerns';
 import { concern as babyAcne } from './baby-acne';
+import { concern as babyAllergicReactionMedicine } from './baby-allergic-reaction-medicine';
 import { concern as babyAllergicReactionToFood } from './baby-allergic-reaction-to-food';
+import { concern as babyAllergicToPetDander } from './baby-allergic-to-pet-dander';
+import { concern as babyAnimalBite } from './baby-animal-bite';
 import { concern as babyAntibioticSideEffects } from './baby-antibiotic-side-effects';
+import { concern as babyArchingAndCryingDuringFeeding } from './baby-arching-and-crying-during-feeding';
 import { concern as babyArchingBack } from './baby-arching-back';
+import { concern as babyBeeWaspSting } from './baby-bee-wasp-sting';
 import { concern as babyBitingNippleWhileNursing } from './baby-biting-nipple-while-nursing';
 import { concern as babyBlisterOnLipFromNursing } from './baby-blister-on-lip-from-nursing';
 import { concern as babyBlistersOnSkin } from './baby-blisters-on-skin';
+import { concern as babyBlueLipsWhenCold } from './baby-blue-lips-when-cold';
 import { concern as babyBodyOdor } from './baby-body-odor';
 import { concern as babyBornWithTeeth } from './baby-born-with-teeth';
+import { concern as babyBottleRotCavities } from './baby-bottle-rot-cavities';
 import { concern as babyBreathingFast } from './baby-breathing-fast';
+import { concern as babyBrokenBoneFractureSigns } from './baby-broken-bone-fracture-signs';
 import { concern as babyBruisesEasily } from './baby-bruises-easily';
+import { concern as babyBruiseThatWontGoAway } from './baby-bruise-that-wont-go-away';
+import { concern as babyBurnTreatment } from './baby-burn-treatment';
+import { concern as babyCarseatSafetyAfterAccident } from './baby-carseat-safety-after-accident';
 import { concern as babyCatnapping30Minutes } from './baby-catnapping-30-minutes';
 import { concern as babyChinRashFromDrool } from './baby-chin-rash-from-drool';
 import { concern as babyChokingOnFood } from './baby-choking-on-food';
+import { concern as babyChokingOnLiquids } from './baby-choking-on-liquids';
 import { concern as babyChokingVsGaggingDifference } from './baby-choking-vs-gagging-difference';
 import { concern as babyCircumcisionCare } from './baby-circumcision-care';
 import { concern as babyClenchingFistsAfter3Months } from './baby-clenching-fists-after-3-months';
+import { concern as babyCloggedMilkDuct } from './baby-clogged-milk-duct';
 import { concern as babyColdHandsAndFeet } from './baby-cold-hands-and-feet';
+import { concern as babyColdVsFluDifference } from './baby-cold-vs-flu-difference';
 import { concern as babyColdWhenToWorry } from './baby-cold-when-to-worry';
+import { concern as babyConcussionSigns } from './baby-concussion-signs';
+import { concern as babyConjunctivitisViralVsBacterial } from './baby-conjunctivitis-viral-vs-bacterial';
 import { concern as babyCoughingALot } from './baby-coughing-a-lot';
 import { concern as babyCoughingAtNight } from './baby-coughing-at-night';
 import { concern as babyCoughingWhileFeeding } from './baby-coughing-while-feeding';
+import { concern as babyCovidSymptoms } from './baby-covid-symptoms';
+import { concern as babyCoxsackieVirus } from './baby-coxsackie-virus';
 import { concern as babyCriesWhenPutDownToSleep } from './baby-cries-when-put-down-to-sleep';
 import { concern as babyCurlingToes } from './baby-curling-toes';
+import { concern as babyCutBleedingWound } from './baby-cut-bleeding-wound';
 import { concern as babyDarkCirclesUnderEyes } from './baby-dark-circles-under-eyes';
+import { concern as babyDaycareIllnessFrequency } from './baby-daycare-illness-frequency';
+import { concern as babyDaylightSavingTimeSleep } from './baby-daylight-saving-time-sleep';
+import { concern as babyDelayedToothEruption } from './baby-delayed-tooth-eruption';
+import { concern as babyDentalInjuryChippedTooth } from './baby-dental-injury-chipped-tooth';
+import { concern as babyDislocatedElbowNursemaids } from './baby-dislocated-elbow-nursemaids';
+import { concern as babyDryCrackedSkinHands } from './baby-dry-cracked-skin-hands';
 import { concern as babyDryPatchesOnCheeks } from './baby-dry-patches-on-cheeks';
 import { concern as babyDryScalpFlakes } from './baby-dry-scalp-flakes';
+import { concern as babyEarInfectionVsTeething } from './baby-ear-infection-vs-teething';
+import { concern as babyEarPulling } from './baby-ear-pulling';
+import { concern as babyEarWaxBuildup } from './baby-ear-wax-buildup';
 import { concern as babyEatingNonFoodPica } from './baby-eating-non-food-pica';
 import { concern as babyEatingTooMuch } from './baby-eating-too-much';
+import { concern as babyEczemaVsDrySkin } from './baby-eczema-vs-dry-skin';
+import { concern as babyEggAllergySigns } from './baby-egg-allergy-signs';
+import { concern as babyElectricalShock } from './baby-electrical-shock';
+import { concern as babyExcessiveBurping } from './baby-excessive-burping';
 import { concern as babyExcessiveCryingNoReason } from './baby-excessive-crying-no-reason';
 import { concern as babyExcessiveGasAfterSolids } from './baby-excessive-gas-after-solids';
+import { concern as babyEyeDischargeYellowGreen } from './baby-eye-discharge-yellow-green';
 import { concern as babyFallingAsleepWhileNursing } from './baby-falling-asleep-while-nursing';
 import { concern as babyFallsAsleepOnlyInCar } from './baby-falls-asleep-only-in-car';
 import { concern as babyFavoringOneLeg } from './baby-favoring-one-leg';
+import { concern as babyFeedingTooFast } from './baby-feeding-too-fast';
+import { concern as babyFellDownStairs } from './baby-fell-down-stairs';
 import { concern as babyFellOffBed } from './baby-fell-off-bed';
 import { concern as babyFightingSleep } from './baby-fighting-sleep';
+import { concern as babyFirstAidKitEssentials } from './baby-first-aid-kit-essentials';
 import { concern as babyFlatAffectNoExpression } from './baby-flat-affect-no-expression';
 import { concern as babyFluSymptoms } from './baby-flu-symptoms';
+import { concern as babyForeignObjectInEar } from './baby-foreign-object-in-ear';
+import { concern as babyForeignObjectInNose } from './baby-foreign-object-in-nose';
 import { concern as babyGaggingOnTextures } from './baby-gagging-on-textures';
 import { concern as babyGrindingTeeth } from './baby-grinding-teeth';
 import { concern as babyGrindingTeethSleep } from './baby-grinding-teeth-sleep';
@@ -57,26 +96,39 @@ import { concern as babyGrowingTooFast } from './baby-growing-too-fast';
 import { concern as babyGrowingTooSlow } from './baby-growing-too-slow';
 import { concern as babyGulpingAir } from './baby-gulping-air';
 import { concern as babyHairNotGrowing } from './baby-hair-not-growing';
+import { concern as babyHairTourniquet } from './baby-hair-tourniquet';
 import { concern as babyHandFlapping } from './baby-hand-flapping';
+import { concern as babyHandFootMouthContagiousPeriod } from './baby-hand-foot-mouth-contagious-period';
+import { concern as babyHeadTiltToOneSide } from './baby-head-tilt-to-one-side';
 import { concern as babyHeartMurmur } from './baby-heart-murmur';
 import { concern as babyHiccups } from './baby-hiccups';
+import { concern as babyHickeyLikeMarkOnSkin } from './baby-hickey-like-mark-on-skin';
+import { concern as babyHighFeverOver104 } from './baby-high-fever-over-104';
 import { concern as babyHighPitchedScream } from './baby-high-pitched-scream';
 import { concern as babyHitHeadWhenToWorry } from './baby-hit-head-when-to-worry';
 import { concern as babyHoldingFoodInMouth } from './baby-holding-food-in-mouth';
+import { concern as babyHoneyExposure } from './baby-honey-exposure';
+import { concern as babyIbuprofenDosingSafety } from './baby-ibuprofen-dosing-safety';
 import { concern as babyIngrownToenail } from './baby-ingrown-toenail';
 import { concern as babyJerkyMovements } from './baby-jerky-movements';
 import { concern as babyLactoseIntoleranceSigns } from './baby-lactose-intolerance-signs';
 import { concern as babyLactoseOverload } from './baby-lactose-overload';
+import { concern as babyLedWeaningSafety } from './baby-led-weaning-safety';
 import { concern as babyLegsShakingWhenStanding } from './baby-legs-shaking-when-standing';
+import { concern as babyLiceTreatment } from './baby-lice-treatment';
 import { concern as babyLimping } from './baby-limping';
 import { concern as babyLosingWords } from './baby-losing-words';
 import { concern as babyLumpOnHeadAfterBirth } from './baby-lump-on-head-after-birth';
 import { concern as babyMoaningInSleep } from './baby-moaning-in-sleep';
+import { concern as babyMoldExposureSymptoms } from './baby-mold-exposure-symptoms';
+import { concern as babyMonitorSafety } from './baby-monitor-safety';
 import { concern as babyMouthBreathing } from './baby-mouth-breathing';
 import { concern as babyNailPeeling } from './baby-nail-peeling';
 import { concern as babyNappingTooMuch } from './baby-napping-too-much';
+import { concern as babyNearDrowning } from './baby-near-drowning';
 import { concern as babyNeedsRockingToSleep } from './baby-needs-rocking-to-sleep';
 import { concern as babyNonFebrileSeizure } from './baby-non-febrile-seizure';
+import { concern as babyNosebleed } from './baby-nosebleed';
 import { concern as babyNotBabbling } from './baby-not-babbling';
 import { concern as babyNotBearingWeightOnArms } from './baby-not-bearing-weight-on-arms';
 import { concern as babyNotBringingHandsToMidline } from './baby-not-bringing-hands-to-midline';
@@ -95,64 +147,99 @@ import { concern as babyNotPlayingIndependently } from './baby-not-playing-indep
 import { concern as babyNotPlayingWithToys } from './baby-not-playing-with-toys';
 import { concern as babyNotPoopingForAWeek } from './baby-not-pooping-for-a-week';
 import { concern as babyNotPushingUpOnTummy } from './baby-not-pushing-up-on-tummy';
+import { concern as babyNotRespondingToFacialExpressions } from './baby-not-responding-to-facial-expressions';
 import { concern as babyNotRespondingToMusic } from './baby-not-responding-to-music';
 import { concern as babyNotRespondingToOwnNameConsistently } from './baby-not-responding-to-own-name-consistently';
 import { concern as babyNotSelfFeeding } from './baby-not-self-feeding';
+import { concern as babyNotShowingAffection } from './baby-not-showing-affection';
 import { concern as babyNotSittingIndependently } from './baby-not-sitting-independently';
 import { concern as babyNotSleepingEnough } from './baby-not-sleeping-enough';
 import { concern as babyNotStackingBlocks } from './baby-not-stacking-blocks';
+import { concern as babyNotTakingTurnsInConversation } from './baby-not-taking-turns-in-conversation';
+import { concern as babyNotTrackingObjectsWithEyes } from './baby-not-tracking-objects-with-eyes';
 import { concern as babyNotTurningToSounds } from './baby-not-turning-to-sounds';
+import { concern as babyNotUsingOneArm } from './baby-not-using-one-arm';
 import { concern as babyOnlySleepsBeingHeld } from './baby-only-sleeps-being-held';
+import { concern as babyPeanutAllergySigns } from './baby-peanut-allergy-signs';
 import { concern as babyPersistentEczema } from './baby-persistent-eczema';
 import { concern as babyPinkEye } from './baby-pink-eye';
+import { concern as babyPinworms } from './baby-pinworms';
 import { concern as babyPoisoningSigns } from './baby-poisoning-signs';
 import { concern as babyPoopColorChangesWithSolids } from './baby-poop-color-changes-with-solids';
 import { concern as babyPreferringOneParent } from './baby-preferring-one-parent';
 import { concern as babyQuietNotVocalizing } from './baby-quiet-not-vocalizing';
+import { concern as babyRaisedBumpsOnSkin } from './baby-raised-bumps-on-skin';
 import { concern as babyRashAfterSwimming } from './baby-rash-after-swimming';
 import { concern as babyRashAroundMouth } from './baby-rash-around-mouth';
 import { concern as babyRashInSkinFolds } from './baby-rash-in-skin-folds';
 import { concern as babyRashWontGoAway } from './baby-rash-wont-go-away';
 import { concern as babyRaspberriesButNoWords } from './baby-raspberries-but-no-words';
+import { concern as babyRectalBleeding } from './baby-rectal-bleeding';
 import { concern as babyRedBirthmarkGrowing } from './baby-red-birthmark-growing';
 import { concern as babyRedRingRash } from './baby-red-ring-rash';
 import { concern as babyRefusingOneBreast } from './baby-refusing-one-breast';
 import { concern as babyRefusingSippyCup } from './baby-refusing-sippy-cup';
+import { concern as babyRefusingWater } from './baby-refusing-water';
+import { concern as babyRegressionAfterStartingDaycare } from './baby-regression-after-starting-daycare';
 import { concern as babyRollingOntoStomachSleep } from './baby-rolling-onto-stomach-sleep';
 import { concern as babyScalpCradleCapPersistent } from './baby-scalp-cradle-cap-persistent';
 import { concern as babyScratchMarksOnFace } from './baby-scratch-marks-on-face';
 import { concern as babyScreamingInSleep } from './baby-screaming-in-sleep';
+import { concern as babySeasonalAllergies } from './baby-seasonal-allergies';
 import { concern as babySeparationAnxietyAtDaycare } from './baby-separation-anxiety-at-daycare';
 import { concern as babyShakingHeadSideToSide } from './baby-shaking-head-side-to-side';
+import { concern as babySkinInfectionStaph } from './baby-skin-infection-staph';
 import { concern as babySkinRashAfterNewFood } from './baby-skin-rash-after-new-food';
 import { concern as babySleepAssociations } from './baby-sleep-associations';
 import { concern as babySleepingFaceDown } from './baby-sleeping-face-down';
 import { concern as babySleepingInCarSeatDanger } from './baby-sleeping-in-car-seat-danger';
 import { concern as babySleepingMouthOpen } from './baby-sleeping-mouth-open';
+import { concern as babySleepingOnIncline } from './baby-sleeping-on-incline';
+import { concern as babySleepRegression24Months } from './baby-sleep-regression-24-months';
 import { concern as babySleepScheduleDisruptedByTravel } from './baby-sleep-schedule-disrupted-by-travel';
 import { concern as babySleepTrainingWhenToStart } from './baby-sleep-training-when-to-start';
 import { concern as babySneezingALot } from './baby-sneezing-a-lot';
 import { concern as babySpittingOutSolids } from './baby-spitting-out-solids';
+import { concern as babyStartingSolidsWhenReady } from './baby-starting-solids-when-ready';
 import { concern as babyStartledEasily } from './baby-startled-easily';
+import { concern as babyStomachGurglingLoud } from './baby-stomach-gurgling-loud';
 import { concern as babyStrainingButSoftPoop } from './baby-straining-but-soft-poop';
 import { concern as babyStrangerAnxietyExtreme } from './baby-stranger-anxiety-extreme';
+import { concern as babyStrepThroat } from './baby-strep-throat';
 import { concern as babyStrongSmellingUrine } from './baby-strong-smelling-urine';
 import { concern as babySunburnPrevention } from './baby-sunburn-prevention';
+import { concern as babySunscreenWhenToUse } from './baby-sunscreen-when-to-use';
 import { concern as babySupplementingWithFormula } from './baby-supplementing-with-formula';
 import { concern as babySwallowedBattery } from './baby-swallowed-battery';
+import { concern as babySwallowedMagnet } from './baby-swallowed-magnet';
+import { concern as babySwallowedSomethingDangerous } from './baby-swallowed-something-dangerous';
 import { concern as babySweatingALot } from './baby-sweating-a-lot';
 import { concern as babySweatingDuringSleep } from './baby-sweating-during-sleep';
+import { concern as babySwollenEye } from './baby-swollen-eye';
+import { concern as babySwollenFingerToe } from './baby-swollen-finger-toe';
+import { concern as babyTeethDiscoloredGray } from './baby-teeth-discolored-gray';
+import { concern as babyTeethingFeverMyth } from './baby-teething-fever-myth';
+import { concern as babyTickBite } from './baby-tick-bite';
+import { concern as babyTongueColorChanges } from './baby-tongue-color-changes';
 import { concern as babyTooQuietNeverCries } from './baby-too-quiet-never-cries';
+import { concern as babyTravelAltitudeEars } from './baby-travel-altitude-ears';
 import { concern as babyTremors } from './baby-tremors';
 import { concern as babyTwitchingInSleep } from './baby-twitching-in-sleep';
+import { concern as babyUnevenCrawling } from './baby-uneven-crawling';
+import { concern as babyVitaminSupplementOverdose } from './baby-vitamin-supplement-overdose';
+import { concern as babyVomitingAfterCrying } from './baby-vomiting-after-crying';
+import { concern as babyVomitingAtNightOnly } from './baby-vomiting-at-night-only';
 import { concern as babyVomitingBile } from './baby-vomiting-bile';
 import { concern as babyVomitingNoFever } from './baby-vomiting-no-fever';
 import { concern as babyWakingAt5am } from './baby-waking-at-5am';
 import { concern as babyWakingEveryHour } from './baby-waking-every-hour';
 import { concern as babyWaterWhenToIntroduce } from './baby-water-when-to-introduce';
+import { concern as babyWhitePatchesOnSkin } from './baby-white-patches-on-skin';
 import { concern as babyWhiteTongue } from './baby-white-tongue';
 import { concern as babyWontSleepInCrib } from './baby-wont-sleep-in-crib';
 import { concern as babyWontSwallow } from './baby-wont-swallow';
+import { concern as bassinetVsCribSafety } from './bassinet-vs-crib-safety';
+import { concern as bedwettingEnuresisToddler } from './bedwetting-enuresis-toddler';
 import { concern as bilingualSpeechDelay } from './bilingual-speech-delay';
 import { concern as birthmarks } from './birthmarks';
 import { concern as biting } from './biting';
@@ -170,18 +257,23 @@ import { concern as breastfeedingToFormulaTransition } from './breastfeeding-to-
 import { concern as breathHoldingSpells } from './breath-holding-spells';
 import { concern as bronchiolitisBaby } from './bronchiolitis-baby';
 import { concern as cafeAuLaitSpots } from './cafe-au-lait-spots';
+import { concern as cellulitisBaby } from './cellulitis-baby';
+import { concern as chickenPoxBaby } from './chicken-pox-baby';
 import { concern as childNotAskingWhyQuestions } from './child-not-asking-why-questions';
 import { concern as childNotFollowingDirections } from './child-not-following-directions';
 import { concern as childNotTellingSimpleStories } from './child-not-telling-simple-stories';
 import { concern as childNotUsingPastTense } from './child-not-using-past-tense';
 import { concern as chronicCongestion } from './chronic-congestion';
 import { concern as circadianRhythmBaby } from './circadian-rhythm-baby';
+import { concern as cleftLipPalateBaby } from './cleft-lip-palate-baby';
 import { concern as clubfootBaby } from './clubfoot-baby';
 import { concern as clusterFeedingNewborn } from './cluster-feeding-newborn';
 import { concern as colic } from './colic';
 import { concern as colicVsGas } from './colic-vs-gas';
 import { concern as confusionalArousals } from './confusional-arousals';
 import { concern as constipation } from './constipation';
+import { concern as constipationFromMedicationBaby } from './constipation-from-medication-baby';
+import { concern as contactDermatitisBaby } from './contact-dermatitis-baby';
 import { concern as cosleepingSafety } from './cosleeping-safety';
 import { concern as cosleepingToCribTransition } from './cosleeping-to-crib-transition';
 import { concern as cowsMilkTransitionIssues } from './cows-milk-transition-issues';
@@ -209,6 +301,7 @@ import { concern as diaperRashNotClearing } from './diaper-rash-not-clearing';
 import { concern as diarrhea } from './diarrhea';
 import { concern as difficultyUsingUtensils } from './difficulty-using-utensils';
 import { concern as difficultyWithConsonants } from './difficulty-with-consonants';
+import { concern as dreamFeeds } from './dream-feeds';
 import { concern as drinkingTooMuchMilk } from './drinking-too-much-milk';
 import { concern as droolingWhileTalking } from './drooling-while-talking';
 import { concern as droppingFromTwoNapsToOne } from './dropping-from-two-naps-to-one';
@@ -220,7 +313,9 @@ import { concern as earlySignsOfAutismBaby } from './early-signs-of-autism-baby'
 import { concern as echolalia } from './echolalia';
 import { concern as eczema } from './eczema';
 import { concern as eczemaFlareTriggers } from './eczema-flare-triggers';
+import { concern as engorgementReliefBreastfeeding } from './engorgement-relief-breastfeeding';
 import { concern as enlargedHead } from './enlarged-head';
+import { concern as epiglottitisWarningSigns } from './epiglottitis-warning-signs';
 import { concern as erythemaToxicum } from './erythema-toxicum';
 import { concern as excessiveDrooling } from './excessive-drooling';
 import { concern as excessiveGasBaby } from './excessive-gas-baby';
@@ -267,7 +362,9 @@ import { concern as headSweatingDuringSleep } from './head-sweating-during-sleep
 import { concern as hearingLossSignsBaby } from './hearing-loss-signs-baby';
 import { concern as heatRash } from './heat-rash';
 import { concern as hemangiomaGrowing } from './hemangioma-growing';
+import { concern as henochSchonleinPurpuraBaby } from './henoch-schonlein-purpura-baby';
 import { concern as herniaBulgingWhenCrying } from './hernia-bulging-when-crying';
+import { concern as herpeticGingivostomatitisBaby } from './herpetic-gingivostomatitis-baby';
 import { concern as hiccupsWontStop } from './hiccups-wont-stop';
 import { concern as highChokingRiskFoodsBaby } from './high-choking-risk-foods-baby';
 import { concern as highNeedsBaby } from './high-needs-baby';
@@ -293,6 +390,7 @@ import { concern as knockKnees } from './knock-knees';
 import { concern as labialAdhesion } from './labial-adhesion';
 import { concern as lateTalker } from './late-talker';
 import { concern as lateTeething } from './late-teething';
+import { concern as leadExposureBaby } from './lead-exposure-baby';
 import { concern as legTremorsBaby } from './leg-tremors-baby';
 import { concern as limitedVocabulary } from './limited-vocabulary';
 import { concern as liningUpToys } from './lining-up-toys';
@@ -301,6 +399,7 @@ import { concern as lowMilkSupplySigns } from './low-milk-supply-signs';
 import { concern as lowMuscleTone } from './low-muscle-tone';
 import { concern as lowMuscleToneArms } from './low-muscle-tone-arms';
 import { concern as lowTemperatureBaby } from './low-temperature-baby';
+import { concern as mastitisWarningSigns } from './mastitis-warning-signs';
 import { concern as meningitisSignsBaby } from './meningitis-signs-baby';
 import { concern as microcephalySigns } from './microcephaly-signs';
 import { concern as miliaBaby } from './milia-baby';
@@ -313,6 +412,7 @@ import { concern as mucusInStool } from './mucus-in-stool';
 import { concern as muscleSpasmsBaby } from './muscle-spasms-baby';
 import { concern as nasalSpeech } from './nasal-speech';
 import { concern as newbornDayNightConfusion } from './newborn-day-night-confusion';
+import { concern as newbornFeverUnder3Months } from './newborn-fever-under-3-months';
 import { concern as newbornSleepingTooMuch } from './newborn-sleeping-too-much';
 import { concern as nightTerrors } from './night-terrors';
 import { concern as noJointAttention } from './no-joint-attention';
@@ -367,9 +467,11 @@ import { concern as overstimulationSigns } from './overstimulation-signs';
 import { concern as oversupplySymptoms } from './oversupply-symptoms';
 import { concern as overtiredBabySigns } from './overtired-baby-signs';
 import { concern as overtiredBabyWontSleep } from './overtired-baby-wont-sleep';
+import { concern as pacedBottleFeedingConcerns } from './paced-bottle-feeding-concerns';
 import { concern as painfulBreastfeeding } from './painful-breastfeeding';
 import { concern as pallorBaby } from './pallor-baby';
 import { concern as parallelPlayConcerns } from './parallel-play-concerns';
+import { concern as pectusDeformityBaby } from './pectus-deformity-baby';
 import { concern as peelingSkinNewborn } from './peeling-skin-newborn';
 import { concern as perioralDermatitisBaby } from './perioral-dermatitis-baby';
 import { concern as persistentFeverBaby } from './persistent-fever-baby';
@@ -379,6 +481,7 @@ import { concern as phimosisBaby } from './phimosis-baby';
 import { concern as pickyEating } from './picky-eating';
 import { concern as pigeonToed } from './pigeon-toed';
 import { concern as pneumoniaSignsBaby } from './pneumonia-signs-baby';
+import { concern as polydactylyExtraFingersToes } from './polydactyly-extra-fingers-toes';
 import { concern as poopWithholdingToddler } from './poop-withholding-toddler';
 import { concern as poorBalanceToddler } from './poor-balance-toddler';
 import { concern as poorHandEyeCoordination } from './poor-hand-eye-coordination';
@@ -391,9 +494,11 @@ import { concern as postVaccineRash } from './post-vaccine-rash';
 import { concern as pottyTrainingRefusal } from './potty-training-refusal';
 import { concern as pottyTrainingRegression } from './potty-training-regression';
 import { concern as preauricularPit } from './preauricular-pit';
+import { concern as prematureBabyAdjustedAgeMilestones } from './premature-baby-adjusted-age-milestones';
 import { concern as probioticsForBaby } from './probiotics-for-baby';
 import { concern as projectileVomitingBaby } from './projectile-vomiting-baby';
 import { concern as pronounReversal } from './pronoun-reversal';
+import { concern as psoriasisBaby } from './psoriasis-baby';
 import { concern as ptosisDroopingEyelid } from './ptosis-drooping-eyelid';
 import { concern as pumpingOutputConcerns } from './pumping-output-concerns';
 import { concern as pyloricStenosis } from './pyloric-stenosis';
@@ -412,6 +517,8 @@ import { concern as roseolaRash } from './roseola-rash';
 import { concern as rotavirusSigns } from './rotavirus-signs';
 import { concern as rsvBaby } from './rsv-baby';
 import { concern as sacralDimple } from './sacral-dimple';
+import { concern as scabiesBaby } from './scabies-baby';
+import { concern as scarletFeverBaby } from './scarlet-fever-baby';
 import { concern as scootingInsteadOfCrawling } from './scooting-instead-of-crawling';
 import { concern as sebaceousCystBaby } from './sebaceous-cyst-baby';
 import { concern as selectiveMutism } from './selective-mutism';
@@ -429,6 +536,7 @@ import { concern as sleepRegression12Months } from './sleep-regression-12-months
 import { concern as sleepRegression18Months } from './sleep-regression-18-months';
 import { concern as sleepRegression4Months } from './sleep-regression-4-months';
 import { concern as sleepRegression8Months } from './sleep-regression-8-months';
+import { concern as sleepSafeEnvironmentChecklist } from './sleep-safe-environment-checklist';
 import { concern as sleepTalkingToddler } from './sleep-talking-toddler';
 import { concern as sleepwalkingToddler } from './sleepwalking-toddler';
 import { concern as slowWeightGainBreastfedBaby } from './slow-weight-gain-breastfed-baby';
@@ -436,9 +544,11 @@ import { concern as snoring } from './snoring';
 import { concern as softSpotConcerns } from './soft-spot-concerns';
 import { concern as speechArticulationDisorder } from './speech-articulation-disorder';
 import { concern as speechDelay } from './speech-delay';
+import { concern as spinaBifidaSignsBaby } from './spina-bifida-signs-baby';
 import { concern as spinningInCircles } from './spinning-in-circles';
 import { concern as spittingUp } from './spitting-up';
 import { concern as spitUpVsVomit } from './spit-up-vs-vomit';
+import { concern as stevensJohnsonSyndromeSigns } from './stevens-johnson-syndrome-signs';
 import { concern as stiffBabyHypertonia } from './stiff-baby-hypertonia';
 import { concern as strabismusIntermittent } from './strabismus-intermittent';
 import { concern as strainingToPoop } from './straining-to-poop';
@@ -456,7 +566,9 @@ import { concern as tippyToeStanding } from './tippy-toe-standing';
 import { concern as toddlerAbdominalPain } from './toddler-abdominal-pain';
 import { concern as toddlerAfraidOfDark } from './toddler-afraid-of-dark';
 import { concern as toddlerAfraidOfPotty } from './toddler-afraid-of-potty';
+import { concern as toddlerAggressiveAtDaycare } from './toddler-aggressive-at-daycare';
 import { concern as toddlerAggressiveHittingKicking } from './toddler-aggressive-hitting-kicking';
+import { concern as toddlerBadBreath } from './toddler-bad-breath';
 import { concern as toddlerBedtimeBattles } from './toddler-bedtime-battles';
 import { concern as toddlerBedtimeStalling } from './toddler-bedtime-stalling';
 import { concern as toddlerBitingAtDaycare } from './toddler-biting-at-daycare';
@@ -466,16 +578,23 @@ import { concern as toddlerClimbingOutOfCrib } from './toddler-climbing-out-of-c
 import { concern as toddlerConstantMeltdowns } from './toddler-constant-meltdowns';
 import { concern as toddlerConstipationFromDairy } from './toddler-constipation-from-dairy';
 import { concern as toddlerControllingBehavior } from './toddler-controlling-behavior';
+import { concern as toddlerDelayedPottyAwareness } from './toddler-delayed-potty-awareness';
 import { concern as toddlerDelayedSocialSkills } from './toddler-delayed-social-skills';
 import { concern as toddlerDestroyingThings } from './toddler-destroying-things';
+import { concern as toddlerDrinkingTooMuchWater } from './toddler-drinking-too-much-water';
 import { concern as toddlerDroppingBeginningSounds } from './toddler-dropping-beginning-sounds';
 import { concern as toddlerDroppingNap } from './toddler-dropping-nap';
 import { concern as toddlerDryCrackedLips } from './toddler-dry-cracked-lips';
+import { concern as toddlerEatingTooMuchSalt } from './toddler-eating-too-much-salt';
+import { concern as toddlerEatingTooMuchSugar } from './toddler-eating-too-much-sugar';
+import { concern as toddlerEmotionalDysregulation } from './toddler-emotional-dysregulation';
 import { concern as toddlerExtremeShyness } from './toddler-extreme-shyness';
 import { concern as toddlerFearOfDogsAnimals } from './toddler-fear-of-dogs-animals';
 import { concern as toddlerFoodJag } from './toddler-food-jag';
+import { concern as toddlerGenitalSelfStimulation } from './toddler-genital-self-stimulation';
 import { concern as toddlerGrindingTeethWhileAwake } from './toddler-grinding-teeth-while-awake';
 import { concern as toddlerHairTwirling } from './toddler-hair-twirling';
+import { concern as toddlerHittingOwnHead } from './toddler-hitting-own-head';
 import { concern as toddlerHittingParents } from './toddler-hitting-parents';
 import { concern as toddlerHoldingPoop } from './toddler-holding-poop';
 import { concern as toddlerJealousOfNewBaby } from './toddler-jealous-of-new-baby';
@@ -485,18 +604,25 @@ import { concern as toddlerLying } from './toddler-lying';
 import { concern as toddlerMakingUpWords } from './toddler-making-up-words';
 import { concern as toddlerMeltdownsOverTransitions } from './toddler-meltdowns-over-transitions';
 import { concern as toddlerMixingUpPronounsHeShe } from './toddler-mixing-up-pronouns-he-she';
+import { concern as toddlerNappingTooLateInDay } from './toddler-napping-too-late-in-day';
 import { concern as toddlerNightTimeFears } from './toddler-night-time-fears';
 import { concern as toddlerNonverbalAt2 } from './toddler-nonverbal-at-2';
+import { concern as toddlerNotAnsweringQuestions } from './toddler-not-answering-questions';
 import { concern as toddlerNotClimbingStairs } from './toddler-not-climbing-stairs';
 import { concern as toddlerNotEatingEnough } from './toddler-not-eating-enough';
 import { concern as toddlerNotJumping } from './toddler-not-jumping';
 import { concern as toddlerNotNamingColors } from './toddler-not-naming-colors';
+import { concern as toddlerNotPlayingWithOtherKids } from './toddler-not-playing-with-other-kids';
 import { concern as toddlerNotPottyTrainedBy3 } from './toddler-not-potty-trained-by-3';
 import { concern as toddlerNotSingingAlong } from './toddler-not-singing-along';
+import { concern as toddlerNotTalkingAtDaycare } from './toddler-not-talking-at-daycare';
 import { concern as toddlerNotUsingPronouns } from './toddler-not-using-pronouns';
+import { concern as toddlerNotUsingThreeWordSentences } from './toddler-not-using-three-word-sentences';
 import { concern as toddlerNotUsingTwoWordPhrases } from './toddler-not-using-two-word-phrases';
 import { concern as toddlerNutritionalDeficiencySigns } from './toddler-nutritional-deficiency-signs';
+import { concern as toddlerObsessedWithOneTopic } from './toddler-obsessed-with-one-topic';
 import { concern as toddlerObsessiveRepetitiveBehavior } from './toddler-obsessive-repetitive-behavior';
+import { concern as toddlerOnlyCommunicatingByCrying } from './toddler-only-communicating-by-crying';
 import { concern as toddlerOnlyDrinkingMilk } from './toddler-only-drinking-milk';
 import { concern as toddlerOnlyEatingOneFood } from './toddler-only-eating-one-food';
 import { concern as toddlerOnlySayingFewWords } from './toddler-only-saying-few-words';
@@ -505,6 +631,7 @@ import { concern as toddlerPushingOtherChildren } from './toddler-pushing-other-
 import { concern as toddlerRefusingNap } from './toddler-refusing-nap';
 import { concern as toddlerRefusingToShare } from './toddler-refusing-to-share';
 import { concern as toddlerRegressionAfterIllness } from './toddler-regression-after-illness';
+import { concern as toddlerRegressionAfterMove } from './toddler-regression-after-move';
 import { concern as toddlerRepeatingQuestionsBack } from './toddler-repeating-questions-back';
 import { concern as toddlerRunningAwayInPublic } from './toddler-running-away-in-public';
 import { concern as toddlerRunningAwkwardly } from './toddler-running-awkwardly';
@@ -517,6 +644,7 @@ import { concern as toddlerStillBreastfeeding } from './toddler-still-breastfeed
 import { concern as toddlerStillUsingBottle } from './toddler-still-using-bottle';
 import { concern as toddlerStomachBugRecovery } from './toddler-stomach-bug-recovery';
 import { concern as toddlerSwallowedObject } from './toddler-swallowed-object';
+import { concern as toddlerTakingOffClothesDiaper } from './toddler-taking-off-clothes-diaper';
 import { concern as toddlerTalkingButNotCommunicating } from './toddler-talking-but-not-communicating';
 import { concern as toddlerThrowingToys } from './toddler-throwing-toys';
 import { concern as toddlerThumbSucking } from './toddler-thumb-sucking';
@@ -551,6 +679,7 @@ import { concern as weaningOffBreastfeeding } from './weaning-off-breastfeeding'
 import { concern as wheezing } from './wheezing';
 import { concern as whitePoop } from './white-poop';
 import { concern as wontSleepWithoutNursing } from './wont-sleep-without-nursing';
+import { concern as wordRetrievalDifficultyToddler } from './word-retrieval-difficulty-toddler';
 import { concern as wSitting } from './w-sitting';
 import { concern as yeastDiaperRash } from './yeast-diaper-rash';
 import { concern as yellowWateryPoop } from './yellow-watery-poop';
@@ -558,6 +687,7 @@ import { concern as yellowWateryPoop } from './yellow-watery-poop';
 export const allConcerns: ConcernPage[] = [
   abdominalDistensionBaby,
   abnormalHeadShape,
+  accentVsSpeechDisorderToddler,
   aggressiveTowardPets,
   allergenIntroductionTiming,
   amblyopiaSigns,
@@ -569,43 +699,81 @@ export const allConcerns: ConcernPage[] = [
   asymmetricMovement,
   attachmentConcerns,
   babyAcne,
+  babyAllergicReactionMedicine,
   babyAllergicReactionToFood,
+  babyAllergicToPetDander,
+  babyAnimalBite,
   babyAntibioticSideEffects,
+  babyArchingAndCryingDuringFeeding,
   babyArchingBack,
+  babyBeeWaspSting,
   babyBitingNippleWhileNursing,
   babyBlisterOnLipFromNursing,
   babyBlistersOnSkin,
+  babyBlueLipsWhenCold,
   babyBodyOdor,
   babyBornWithTeeth,
+  babyBottleRotCavities,
   babyBreathingFast,
+  babyBrokenBoneFractureSigns,
   babyBruisesEasily,
+  babyBruiseThatWontGoAway,
+  babyBurnTreatment,
+  babyCarseatSafetyAfterAccident,
   babyCatnapping30Minutes,
   babyChinRashFromDrool,
   babyChokingOnFood,
+  babyChokingOnLiquids,
   babyChokingVsGaggingDifference,
   babyCircumcisionCare,
   babyClenchingFistsAfter3Months,
+  babyCloggedMilkDuct,
   babyColdHandsAndFeet,
+  babyColdVsFluDifference,
   babyColdWhenToWorry,
+  babyConcussionSigns,
+  babyConjunctivitisViralVsBacterial,
   babyCoughingALot,
   babyCoughingAtNight,
   babyCoughingWhileFeeding,
+  babyCovidSymptoms,
+  babyCoxsackieVirus,
   babyCriesWhenPutDownToSleep,
   babyCurlingToes,
+  babyCutBleedingWound,
   babyDarkCirclesUnderEyes,
+  babyDaycareIllnessFrequency,
+  babyDaylightSavingTimeSleep,
+  babyDelayedToothEruption,
+  babyDentalInjuryChippedTooth,
+  babyDislocatedElbowNursemaids,
+  babyDryCrackedSkinHands,
   babyDryPatchesOnCheeks,
   babyDryScalpFlakes,
+  babyEarInfectionVsTeething,
+  babyEarPulling,
+  babyEarWaxBuildup,
   babyEatingNonFoodPica,
   babyEatingTooMuch,
+  babyEczemaVsDrySkin,
+  babyEggAllergySigns,
+  babyElectricalShock,
+  babyExcessiveBurping,
   babyExcessiveCryingNoReason,
   babyExcessiveGasAfterSolids,
+  babyEyeDischargeYellowGreen,
   babyFallingAsleepWhileNursing,
   babyFallsAsleepOnlyInCar,
   babyFavoringOneLeg,
+  babyFeedingTooFast,
+  babyFellDownStairs,
   babyFellOffBed,
   babyFightingSleep,
+  babyFirstAidKitEssentials,
   babyFlatAffectNoExpression,
   babyFluSymptoms,
+  babyForeignObjectInEar,
+  babyForeignObjectInNose,
   babyGaggingOnTextures,
   babyGrindingTeeth,
   babyGrindingTeethSleep,
@@ -613,26 +781,39 @@ export const allConcerns: ConcernPage[] = [
   babyGrowingTooSlow,
   babyGulpingAir,
   babyHairNotGrowing,
+  babyHairTourniquet,
   babyHandFlapping,
+  babyHandFootMouthContagiousPeriod,
+  babyHeadTiltToOneSide,
   babyHeartMurmur,
   babyHiccups,
+  babyHickeyLikeMarkOnSkin,
+  babyHighFeverOver104,
   babyHighPitchedScream,
   babyHitHeadWhenToWorry,
   babyHoldingFoodInMouth,
+  babyHoneyExposure,
+  babyIbuprofenDosingSafety,
   babyIngrownToenail,
   babyJerkyMovements,
   babyLactoseIntoleranceSigns,
   babyLactoseOverload,
+  babyLedWeaningSafety,
   babyLegsShakingWhenStanding,
+  babyLiceTreatment,
   babyLimping,
   babyLosingWords,
   babyLumpOnHeadAfterBirth,
   babyMoaningInSleep,
+  babyMoldExposureSymptoms,
+  babyMonitorSafety,
   babyMouthBreathing,
   babyNailPeeling,
   babyNappingTooMuch,
+  babyNearDrowning,
   babyNeedsRockingToSleep,
   babyNonFebrileSeizure,
+  babyNosebleed,
   babyNotBabbling,
   babyNotBearingWeightOnArms,
   babyNotBringingHandsToMidline,
@@ -651,64 +832,99 @@ export const allConcerns: ConcernPage[] = [
   babyNotPlayingWithToys,
   babyNotPoopingForAWeek,
   babyNotPushingUpOnTummy,
+  babyNotRespondingToFacialExpressions,
   babyNotRespondingToMusic,
   babyNotRespondingToOwnNameConsistently,
   babyNotSelfFeeding,
+  babyNotShowingAffection,
   babyNotSittingIndependently,
   babyNotSleepingEnough,
   babyNotStackingBlocks,
+  babyNotTakingTurnsInConversation,
+  babyNotTrackingObjectsWithEyes,
   babyNotTurningToSounds,
+  babyNotUsingOneArm,
   babyOnlySleepsBeingHeld,
+  babyPeanutAllergySigns,
   babyPersistentEczema,
   babyPinkEye,
+  babyPinworms,
   babyPoisoningSigns,
   babyPoopColorChangesWithSolids,
   babyPreferringOneParent,
   babyQuietNotVocalizing,
+  babyRaisedBumpsOnSkin,
   babyRashAfterSwimming,
   babyRashAroundMouth,
   babyRashInSkinFolds,
   babyRashWontGoAway,
   babyRaspberriesButNoWords,
+  babyRectalBleeding,
   babyRedBirthmarkGrowing,
   babyRedRingRash,
   babyRefusingOneBreast,
   babyRefusingSippyCup,
+  babyRefusingWater,
+  babyRegressionAfterStartingDaycare,
   babyRollingOntoStomachSleep,
   babyScalpCradleCapPersistent,
   babyScratchMarksOnFace,
   babyScreamingInSleep,
+  babySeasonalAllergies,
   babySeparationAnxietyAtDaycare,
   babyShakingHeadSideToSide,
+  babySkinInfectionStaph,
   babySkinRashAfterNewFood,
   babySleepAssociations,
   babySleepingFaceDown,
   babySleepingInCarSeatDanger,
   babySleepingMouthOpen,
+  babySleepingOnIncline,
+  babySleepRegression24Months,
   babySleepScheduleDisruptedByTravel,
   babySleepTrainingWhenToStart,
   babySneezingALot,
   babySpittingOutSolids,
+  babyStartingSolidsWhenReady,
   babyStartledEasily,
+  babyStomachGurglingLoud,
   babyStrainingButSoftPoop,
   babyStrangerAnxietyExtreme,
+  babyStrepThroat,
   babyStrongSmellingUrine,
   babySunburnPrevention,
+  babySunscreenWhenToUse,
   babySupplementingWithFormula,
   babySwallowedBattery,
+  babySwallowedMagnet,
+  babySwallowedSomethingDangerous,
   babySweatingALot,
   babySweatingDuringSleep,
+  babySwollenEye,
+  babySwollenFingerToe,
+  babyTeethDiscoloredGray,
+  babyTeethingFeverMyth,
+  babyTickBite,
+  babyTongueColorChanges,
   babyTooQuietNeverCries,
+  babyTravelAltitudeEars,
   babyTremors,
   babyTwitchingInSleep,
+  babyUnevenCrawling,
+  babyVitaminSupplementOverdose,
+  babyVomitingAfterCrying,
+  babyVomitingAtNightOnly,
   babyVomitingBile,
   babyVomitingNoFever,
   babyWakingAt5am,
   babyWakingEveryHour,
   babyWaterWhenToIntroduce,
+  babyWhitePatchesOnSkin,
   babyWhiteTongue,
   babyWontSleepInCrib,
   babyWontSwallow,
+  bassinetVsCribSafety,
+  bedwettingEnuresisToddler,
   bilingualSpeechDelay,
   birthmarks,
   biting,
@@ -726,18 +942,23 @@ export const allConcerns: ConcernPage[] = [
   breathHoldingSpells,
   bronchiolitisBaby,
   cafeAuLaitSpots,
+  cellulitisBaby,
+  chickenPoxBaby,
   childNotAskingWhyQuestions,
   childNotFollowingDirections,
   childNotTellingSimpleStories,
   childNotUsingPastTense,
   chronicCongestion,
   circadianRhythmBaby,
+  cleftLipPalateBaby,
   clubfootBaby,
   clusterFeedingNewborn,
   colic,
   colicVsGas,
   confusionalArousals,
   constipation,
+  constipationFromMedicationBaby,
+  contactDermatitisBaby,
   cosleepingSafety,
   cosleepingToCribTransition,
   cowsMilkTransitionIssues,
@@ -765,6 +986,7 @@ export const allConcerns: ConcernPage[] = [
   diarrhea,
   difficultyUsingUtensils,
   difficultyWithConsonants,
+  dreamFeeds,
   drinkingTooMuchMilk,
   droolingWhileTalking,
   droppingFromTwoNapsToOne,
@@ -776,7 +998,9 @@ export const allConcerns: ConcernPage[] = [
   echolalia,
   eczema,
   eczemaFlareTriggers,
+  engorgementReliefBreastfeeding,
   enlargedHead,
+  epiglottitisWarningSigns,
   erythemaToxicum,
   excessiveDrooling,
   excessiveGasBaby,
@@ -823,7 +1047,9 @@ export const allConcerns: ConcernPage[] = [
   hearingLossSignsBaby,
   heatRash,
   hemangiomaGrowing,
+  henochSchonleinPurpuraBaby,
   herniaBulgingWhenCrying,
+  herpeticGingivostomatitisBaby,
   hiccupsWontStop,
   highChokingRiskFoodsBaby,
   highNeedsBaby,
@@ -849,6 +1075,7 @@ export const allConcerns: ConcernPage[] = [
   labialAdhesion,
   lateTalker,
   lateTeething,
+  leadExposureBaby,
   legTremorsBaby,
   limitedVocabulary,
   liningUpToys,
@@ -857,6 +1084,7 @@ export const allConcerns: ConcernPage[] = [
   lowMuscleTone,
   lowMuscleToneArms,
   lowTemperatureBaby,
+  mastitisWarningSigns,
   meningitisSignsBaby,
   microcephalySigns,
   miliaBaby,
@@ -869,6 +1097,7 @@ export const allConcerns: ConcernPage[] = [
   muscleSpasmsBaby,
   nasalSpeech,
   newbornDayNightConfusion,
+  newbornFeverUnder3Months,
   newbornSleepingTooMuch,
   nightTerrors,
   noJointAttention,
@@ -923,9 +1152,11 @@ export const allConcerns: ConcernPage[] = [
   oversupplySymptoms,
   overtiredBabySigns,
   overtiredBabyWontSleep,
+  pacedBottleFeedingConcerns,
   painfulBreastfeeding,
   pallorBaby,
   parallelPlayConcerns,
+  pectusDeformityBaby,
   peelingSkinNewborn,
   perioralDermatitisBaby,
   persistentFeverBaby,
@@ -935,6 +1166,7 @@ export const allConcerns: ConcernPage[] = [
   pickyEating,
   pigeonToed,
   pneumoniaSignsBaby,
+  polydactylyExtraFingersToes,
   poopWithholdingToddler,
   poorBalanceToddler,
   poorHandEyeCoordination,
@@ -947,9 +1179,11 @@ export const allConcerns: ConcernPage[] = [
   pottyTrainingRefusal,
   pottyTrainingRegression,
   preauricularPit,
+  prematureBabyAdjustedAgeMilestones,
   probioticsForBaby,
   projectileVomitingBaby,
   pronounReversal,
+  psoriasisBaby,
   ptosisDroopingEyelid,
   pumpingOutputConcerns,
   pyloricStenosis,
@@ -968,6 +1202,8 @@ export const allConcerns: ConcernPage[] = [
   rotavirusSigns,
   rsvBaby,
   sacralDimple,
+  scabiesBaby,
+  scarletFeverBaby,
   scootingInsteadOfCrawling,
   sebaceousCystBaby,
   selectiveMutism,
@@ -985,6 +1221,7 @@ export const allConcerns: ConcernPage[] = [
   sleepRegression18Months,
   sleepRegression4Months,
   sleepRegression8Months,
+  sleepSafeEnvironmentChecklist,
   sleepTalkingToddler,
   sleepwalkingToddler,
   slowWeightGainBreastfedBaby,
@@ -992,9 +1229,11 @@ export const allConcerns: ConcernPage[] = [
   softSpotConcerns,
   speechArticulationDisorder,
   speechDelay,
+  spinaBifidaSignsBaby,
   spinningInCircles,
   spittingUp,
   spitUpVsVomit,
+  stevensJohnsonSyndromeSigns,
   stiffBabyHypertonia,
   strabismusIntermittent,
   strainingToPoop,
@@ -1012,7 +1251,9 @@ export const allConcerns: ConcernPage[] = [
   toddlerAbdominalPain,
   toddlerAfraidOfDark,
   toddlerAfraidOfPotty,
+  toddlerAggressiveAtDaycare,
   toddlerAggressiveHittingKicking,
+  toddlerBadBreath,
   toddlerBedtimeBattles,
   toddlerBedtimeStalling,
   toddlerBitingAtDaycare,
@@ -1022,16 +1263,23 @@ export const allConcerns: ConcernPage[] = [
   toddlerConstantMeltdowns,
   toddlerConstipationFromDairy,
   toddlerControllingBehavior,
+  toddlerDelayedPottyAwareness,
   toddlerDelayedSocialSkills,
   toddlerDestroyingThings,
+  toddlerDrinkingTooMuchWater,
   toddlerDroppingBeginningSounds,
   toddlerDroppingNap,
   toddlerDryCrackedLips,
+  toddlerEatingTooMuchSalt,
+  toddlerEatingTooMuchSugar,
+  toddlerEmotionalDysregulation,
   toddlerExtremeShyness,
   toddlerFearOfDogsAnimals,
   toddlerFoodJag,
+  toddlerGenitalSelfStimulation,
   toddlerGrindingTeethWhileAwake,
   toddlerHairTwirling,
+  toddlerHittingOwnHead,
   toddlerHittingParents,
   toddlerHoldingPoop,
   toddlerJealousOfNewBaby,
@@ -1041,18 +1289,25 @@ export const allConcerns: ConcernPage[] = [
   toddlerMakingUpWords,
   toddlerMeltdownsOverTransitions,
   toddlerMixingUpPronounsHeShe,
+  toddlerNappingTooLateInDay,
   toddlerNightTimeFears,
   toddlerNonverbalAt2,
+  toddlerNotAnsweringQuestions,
   toddlerNotClimbingStairs,
   toddlerNotEatingEnough,
   toddlerNotJumping,
   toddlerNotNamingColors,
+  toddlerNotPlayingWithOtherKids,
   toddlerNotPottyTrainedBy3,
   toddlerNotSingingAlong,
+  toddlerNotTalkingAtDaycare,
   toddlerNotUsingPronouns,
+  toddlerNotUsingThreeWordSentences,
   toddlerNotUsingTwoWordPhrases,
   toddlerNutritionalDeficiencySigns,
+  toddlerObsessedWithOneTopic,
   toddlerObsessiveRepetitiveBehavior,
+  toddlerOnlyCommunicatingByCrying,
   toddlerOnlyDrinkingMilk,
   toddlerOnlyEatingOneFood,
   toddlerOnlySayingFewWords,
@@ -1061,6 +1316,7 @@ export const allConcerns: ConcernPage[] = [
   toddlerRefusingNap,
   toddlerRefusingToShare,
   toddlerRegressionAfterIllness,
+  toddlerRegressionAfterMove,
   toddlerRepeatingQuestionsBack,
   toddlerRunningAwayInPublic,
   toddlerRunningAwkwardly,
@@ -1073,6 +1329,7 @@ export const allConcerns: ConcernPage[] = [
   toddlerStillUsingBottle,
   toddlerStomachBugRecovery,
   toddlerSwallowedObject,
+  toddlerTakingOffClothesDiaper,
   toddlerTalkingButNotCommunicating,
   toddlerThrowingToys,
   toddlerThumbSucking,
@@ -1107,6 +1364,7 @@ export const allConcerns: ConcernPage[] = [
   wheezing,
   whitePoop,
   wontSleepWithoutNursing,
+  wordRetrievalDifficultyToddler,
   wSitting,
   yeastDiaperRash,
   yellowWateryPoop,
