@@ -16,6 +16,11 @@ export const concern: ConcernPage = {
     'breastfed baby weight gain chart',
     'supplementing breastfed baby for weight',
     'breastfed baby skinny',
+    'how much should breastfed baby gain per week',
+    'breastfed baby weight loss after birth',
+    'breastfed baby not regaining birth weight',
+    'weighted feed breastfeeding',
+    'signs baby not getting enough breast milk',
   ],
   quickAnswer:
     'Weight gain patterns vary among babies, and breastfed babies often grow differently than formula-fed babies - they tend to gain more quickly in the first three months and then more slowly from three to twelve months. This is normal and is reflected in the WHO growth charts. However, if your baby is consistently gaining less than expected or has dropped significantly on their growth curve, it is important to work with your pediatrician and possibly a lactation consultant to identify the cause and ensure your baby is getting enough milk.',
@@ -61,6 +66,16 @@ export const concern: ConcernPage = {
   whenToActNow: [
     'Your newborn has lost more than 10 percent of birth weight or has not regained birth weight by two weeks',
     'Your baby is lethargic, has fewer than six wet diapers per day, or shows signs of dehydration such as sunken fontanelle, dry mouth, or dark urine',
+  ],
+  relatedConcernSlugs: [
+    'failure-to-thrive-signs',
+    'low-milk-supply-signs',
+    'baby-not-drinking-enough-milk',
+    'supplementing-with-formula',
+    'foremilk-hindmilk-imbalance',
+    'refusing-breast',
+    'clusterfeeding-newborn',
+    'pumping-output-concerns',
   ],
   relatedMilestones: [
     'feeding',

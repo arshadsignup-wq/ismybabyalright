@@ -15,6 +15,12 @@ export const concern: ConcernPage = {
     'baby growth faltering',
     'baby dropped percentiles',
     'baby not thriving',
+    'why is my baby not gaining weight',
+    'baby not gaining weight after 6 months',
+    'baby not growing after starting solids',
+    'baby weight gain chart by month',
+    'how much weight should baby gain per week',
+    'baby dropping percentiles on growth chart',
   ],
   quickAnswer:
     'Failure to thrive, now often called growth faltering, means a baby is not gaining weight or growing as expected. It is important to know that babies naturally shift percentiles in their first two years, and being on a lower percentile is not the same as failure to thrive. True growth faltering involves crossing two or more major percentile lines downward and usually requires medical evaluation to determine the cause.',
@@ -54,6 +60,17 @@ export const concern: ConcernPage = {
   whenToActNow: [
     'Your baby is losing weight, appears listless or excessively sleepy, and is difficult to wake for feeds',
     'Your baby has signs of dehydration such as no tears when crying, sunken fontanelle, very few wet diapers, or dry cracked lips',
+  ],
+  relatedConcernSlugs: [
+    'slow-weight-gain-breastfed-baby',
+    'baby-not-drinking-enough-milk',
+    'baby-not-interested-in-food',
+    'low-milk-supply-signs',
+    'picky-eating',
+    'reflux',
+    'milk-protein-allergy',
+    'formula-intolerance-signs',
+    'iron-deficiency-from-milk',
   ],
   relatedMilestones: [
     'feeding',
