@@ -40,11 +40,32 @@ export default async function TriageSlugPage({
     { name: tree.title },
   ]);
 
+  const medicalSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: `${tree.title} - Baby Symptom Checker`,
+    description: tree.description,
+    url: `https://www.ismybabyalright.com/triage/${slug}`,
+    about: {
+      "@type": "MedicalCondition",
+      name: tree.title,
+    },
+    audience: {
+      "@type": "PeopleAudience",
+      audienceType: "Parents",
+    },
+    lastReviewed: new Date().toISOString().split("T")[0],
+  };
+
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalSchema) }}
       />
       <div className="flex items-center gap-3 mb-5">
         <Link

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { breastfeedingTopics } from "@/data/feeding/breastfeeding";
 import {
   pumpingSchedules,
@@ -561,10 +562,13 @@ export default function FeedingPage() {
           </p>
         </div>
 
+        {/* Related Guides */}
+        <RelatedGuides currentPath="/feeding" />
+
         {/* ----------------------------------------------------------------
             Sources
         ---------------------------------------------------------------- */}
-        <footer className="border-t border-border pt-6 pb-8">
+        <footer className="border-t border-border pt-6 pb-8 mt-8">
           <h2 className="text-sm font-bold text-foreground mb-3">Sources</h2>
           <ul className="space-y-1.5 text-xs text-muted leading-relaxed">
             <li>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { useProfile } from "@/lib/useStorage";
 import { getAgeInMonthsFromDate } from "@/lib/tracker";
 import { sleepGuidance, regressions, getGuidanceForAge } from "@/data/sleep/guidance";
@@ -80,6 +81,9 @@ export default function SleepPage() {
         </p>
         <p className="text-xs text-muted mt-2">Source: AAP Safe Sleep Guidelines</p>
       </div>
+
+      {/* Related Guides */}
+      <RelatedGuides currentPath="/sleep" />
     </div>
   );
 }

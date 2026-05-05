@@ -1,26 +1,42 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { allConcerns } from "@/data/concerns";
 
+// Lightweight search index - only the fields needed for search
+const searchIndex = allConcerns.map((c) => ({
+  slug: c.slug,
+  title: c.title,
+  titleLower: c.title.toLowerCase(),
+  searchTerms: c.searchTerms.map((t) => t.toLowerCase()),
+  quickAnswer: c.quickAnswer,
+}));
+
 export default function ConcernSearch() {
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const results = query.trim().length >= 2
-    ? allConcerns
-        .filter((c) => {
-          const q = query.toLowerCase();
-          return (
-            c.title.toLowerCase().includes(q) ||
-            c.searchTerms.some((t) => t.toLowerCase().includes(q))
-          );
-        })
-        .slice(0, 5)
-    : [];
+  // Debounce search input by 150ms
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query), 150);
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  const results = useMemo(() => {
+    const q = debouncedQuery.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return searchIndex
+      .filter(
+        (c) =>
+          c.titleLower.includes(q) ||
+          c.searchTerms.some((t) => t.includes(q))
+      )
+      .slice(0, 5);
+  }, [debouncedQuery]);
 
   // Close dropdown on outside click
   useEffect(() => {

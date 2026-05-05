@@ -117,12 +117,18 @@ export default function AboutPage() {
         </Section>
       </div>
 
-      <div className="mt-10 pt-6 border-t border-border">
+      <div className="mt-10 pt-6 border-t border-border flex items-center justify-between">
         <Link
           href="/"
           className="text-sm text-primary font-semibold hover:underline"
         >
           Back to Home
+        </Link>
+        <Link
+          href="/sources"
+          className="text-sm text-primary font-semibold hover:underline"
+        >
+          View All Sources &amp; References
         </Link>
       </div>
     </main>

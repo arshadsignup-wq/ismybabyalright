@@ -16,13 +16,13 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ismybabyalright.com"),
+  metadataBase: new URL("https://www.ismybabyalright.com"),
   title: {
     default: "Is My Baby Alright? | Evidence-Based Baby Development Guide",
     template: "%s | Is My Baby Alright?",
   },
   description:
-    "Free, evidence-based baby milestone tracker and developmental resource. 325+ concern guides, triage tools, and trackers based on CDC, WHO, and AAP guidelines.",
+    "Free, evidence-based baby milestone tracker and developmental resource. 680+ concern guides, triage tools, and trackers based on CDC, WHO, and AAP guidelines.",
   alternates: {
     canonical: "/",
   },
@@ -50,22 +50,17 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Is My Baby Alright?",
-  url: "https://ismybabyalright.com",
+  url: "https://www.ismybabyalright.com",
   description:
-    "Free, evidence-based baby milestone tracker and developmental resource. 325+ concern guides based on CDC, WHO, and AAP guidelines.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://ismybabyalright.com/concerns/{search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
+    "Free, evidence-based baby milestone tracker and developmental resource. 680+ concern guides based on CDC, WHO, and AAP guidelines.",
 };
 
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Is My Baby Alright?",
-  url: "https://ismybabyalright.com",
-  logo: "https://ismybabyalright.com/logo.png",
+  url: "https://www.ismybabyalright.com",
+  logo: "https://www.ismybabyalright.com/logo.png",
   description:
     "Free, evidence-based baby developmental milestone tracker and parenting resource. Based on CDC, WHO, and AAP guidelines.",
 };

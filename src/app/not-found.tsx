@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import ConcernSearch from "@/components/home/ConcernSearch";
 
 export default function NotFound() {
   return (
@@ -7,10 +10,16 @@ export default function NotFound() {
       <h2 className="text-xl font-semibold text-foreground mb-4">
         Page Not Found
       </h2>
-      <p className="text-muted mb-8 max-w-md mx-auto">
-        We couldn&apos;t find the page you&apos;re looking for. Here are some
-        helpful places to start:
+      <p className="text-muted mb-6 max-w-md mx-auto">
+        We couldn&apos;t find the page you&apos;re looking for.
       </p>
+
+      <div className="max-w-md mx-auto mb-8">
+        <p className="text-sm font-medium text-foreground mb-3">
+          Search for what you need:
+        </p>
+        <ConcernSearch />
+      </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link

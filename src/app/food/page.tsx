@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { useProfile } from "@/lib/useStorage";
 import { getAgeInMonthsFromDate } from "@/lib/tracker";
 import FoodSearch from "@/components/food/FoodSearch";
@@ -57,7 +58,10 @@ export default function FoodPage() {
         <ChokingEducation />
       </section>
 
-      <p className="text-xs text-muted text-center leading-relaxed pb-4">
+      {/* Related Guides */}
+      <RelatedGuides currentPath="/food" />
+
+      <p className="text-xs text-muted text-center leading-relaxed pb-4 mt-6">
         Based on AAP and WHO feeding guidelines. This is educational content,
         not medical advice. Discuss your baby&apos;s readiness with your pediatrician.
         All data stays on your device.

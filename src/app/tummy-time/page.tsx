@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { tummyTimeByAge, troubleshooting, benefits } from "@/data/tummy-time/data";
 
 export const metadata: Metadata = {
@@ -399,8 +400,11 @@ export default function TummyTimePage() {
           </div>
         </section>
 
+        {/* Related Guides */}
+        <RelatedGuides currentPath="/tummy-time" />
+
         {/* Disclaimer */}
-        <p className="text-xs text-muted text-center leading-relaxed pb-4">
+        <p className="text-xs text-muted text-center leading-relaxed pb-4 mt-8">
           This guide is based on AAP and WHO recommendations. It is educational
           content, not medical advice. Every baby is different  -  discuss your
           baby&apos;s development with your pediatrician. If your baby was

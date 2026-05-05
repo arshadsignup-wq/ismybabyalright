@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { teeth, symptoms, safeRemedies, unsafeRemedies, myths } from "@/data/teething/data";
 
 export const metadata: Metadata = {
@@ -500,10 +501,13 @@ export default function TeethingPage() {
           </div>
         </section>
 
+        {/* Related Guides */}
+        <RelatedGuides currentPath="/teething" />
+
         {/* ----------------------------------------------------------------
             Disclaimer
         ---------------------------------------------------------------- */}
-        <p className="text-xs text-muted text-center leading-relaxed pb-6">
+        <p className="text-xs text-muted text-center leading-relaxed pb-6 mt-8">
           This guide is for educational purposes only and is not a substitute for
           professional medical or dental advice. Always consult your pediatrician or
           pediatric dentist with specific concerns about your baby&apos;s teeth and

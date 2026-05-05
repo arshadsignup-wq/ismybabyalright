@@ -2,7 +2,7 @@ import type { TriageTree } from "./types";
 
 export const vomitingTriage: TriageTree = {
   slug: "vomiting",
-  title: "Vomiting & Diarrhea",
+  title: "Vomiting",
   description: "Should I worry about vomiting or diarrhea?",
   icon: "🤢",
   startNodeId: "age",

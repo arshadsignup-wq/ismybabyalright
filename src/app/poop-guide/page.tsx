@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { poopColors, poopTextures, poopByAge } from "@/data/poop/data";
 
 export const metadata: Metadata = {
@@ -597,8 +598,11 @@ export default function PoopGuidePage() {
           </div>
         </section>
 
+        {/* Related Guides */}
+        <RelatedGuides currentPath="/poop-guide" />
+
         {/* Disclaimer */}
-        <p className="text-xs text-muted text-center leading-relaxed pb-6">
+        <p className="text-xs text-muted text-center leading-relaxed pb-6 mt-8">
           Based on AAP, CDC, and NASPGHAN guidelines. This is educational
           content, not medical advice. When in doubt, always contact your
           pediatrician. No photos are used in this guide -- only color swatches.

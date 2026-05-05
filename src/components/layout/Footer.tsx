@@ -51,6 +51,17 @@ export default function Footer() {
                 741741
               </a>
             </p>
+            <p>
+              <span className="font-medium text-foreground">
+                Suicide &amp; Crisis Lifeline:
+              </span>{" "}
+              <a
+                href="tel:988"
+                className="font-semibold text-primary underline"
+              >
+                988
+              </a>
+            </p>
           </div>
         </div>
 

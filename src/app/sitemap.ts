@@ -4,8 +4,9 @@ import { allConcerns } from "@/data/concerns";
 import { allGuides } from "@/data/guides";
 import { allChecklists } from "@/data/checklists/checklists";
 import { allTriageTrees } from "@/data/triage";
+import { allNames } from "@/data/baby-names/names";
 
-const BASE_URL = "https://ismybabyalright.com";
+const BASE_URL = "https://www.ismybabyalright.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -41,6 +42,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/doctor-visits`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/growth-spurts`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/skin-guide`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/age-advice`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/baby-names`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/disclaimer`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE_URL}/emergency-info`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/meal-planner`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE_URL}/quiz/parenting-style`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/sources`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/tools/weight-for-length`, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const milestoneRoutes: MetadataRoute.Sitemap = allCheckpoints.map((cp) => ({
@@ -73,5 +84,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...milestoneRoutes, ...concernRoutes, ...guideRoutes, ...checklistRoutes, ...triageRoutes];
+  const babyNameRoutes: MetadataRoute.Sitemap = allNames.map((n) => ({
+    url: `${BASE_URL}/baby-names/${n.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+
+  const ageAdviceRoutes: MetadataRoute.Sitemap = Array.from({ length: 37 }, (_, i) => ({
+    url: `${BASE_URL}/age-advice/${i}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...milestoneRoutes, ...concernRoutes, ...guideRoutes, ...checklistRoutes, ...triageRoutes, ...babyNameRoutes, ...ageAdviceRoutes];
 }

@@ -1,6 +1,6 @@
 import type { ConcernPage } from '@/data/concerns/types';
 
-const SITE_URL = 'https://ismybabyalright.com';
+const SITE_URL = 'https://www.ismybabyalright.com';
 const SITE_NAME = 'Is My Baby Alright?';
 
 export function getCanonicalUrl(path: string): string {

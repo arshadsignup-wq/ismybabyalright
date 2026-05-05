@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import RelatedGuides from "@/components/guides/RelatedGuides";
 import { wellVisits } from "@/data/doctor-visits/data";
 
 export const metadata: Metadata = {
@@ -340,6 +341,11 @@ export default function DoctorVisitsPage() {
               </article>
             ))}
           </div>
+        </div>
+
+        {/* Related Guides */}
+        <div className="mt-8">
+          <RelatedGuides currentPath="/doctor-visits" />
         </div>
 
         {/* Sources footer */}

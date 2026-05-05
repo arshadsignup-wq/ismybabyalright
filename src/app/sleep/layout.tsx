@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Baby Sleep Guide by Age",
+  title: "Baby Sleep Guide - Age-Based Sleep Needs & Regressions",
   description:
-    "Evidence-based baby sleep guide with age-specific schedules, wake windows, and regression explanations. Based on AAP safe sleep guidelines.",
+    "Evidence-based baby sleep guide covering 8 age ranges from newborn to 3 years. Sleep regressions, wake windows, safe sleep guidelines, and schedules. Based on AAP guidelines.",
   alternates: {
     canonical: "/sleep",
   },
