@@ -155,6 +155,7 @@ export default function Header() {
                     <DropdownItem href="/poop-guide" icon={iconPoop} label="Poop Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tummy-time" icon={iconTummy} label="Tummy Time" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/emergency-info" icon={iconAlert} label="Emergency Info Vault" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/medicine-dosage" icon={iconPill} label="Medicine Dosage" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/age-advice" icon={iconCalendar} label="Age-Based Advice" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/meal-planner" icon={iconUtensils} label="Meal Planner" onClick={() => setToolsOpen(false)} />
 
@@ -355,4 +356,7 @@ const iconUtensils = (
 );
 const iconBrain = (
   <svg {...iconProps}><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5.5 4 7l3 3.5 3-3.5c2-1.5 4-4 4-7a7 7 0 0 0-7-7z" /><circle cx="12" cy="9" r="2" /></svg>
+);
+const iconPill = (
+  <svg {...iconProps}><path d="M10.5 1.5l-8 8a4.95 4.95 0 0 0 7 7l8-8a4.95 4.95 0 0 0-7-7z" /><line x1="8.5" y1="8.5" x2="15.5" y2="15.5" /></svg>
 );

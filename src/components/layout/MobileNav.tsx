@@ -43,6 +43,7 @@ const iconUtensils = (<svg {...ip}><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2
 const iconBrain = (<svg {...ip}><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5.5 4 7l3 3.5 3-3.5c2-1.5 4-4 4-7a7 7 0 0 0-7-7z" /><circle cx="12" cy="9" r="2" /></svg>);
 const iconScale2 = (<svg {...ip}><path d="M12 3v18" /><path d="M5 6h14" /><path d="M2 12l3-6 3 6" /><path d="M16 12l3-6 3 6" /><path d="M2 12h6" /><path d="M16 12h6" /></svg>);
 const iconStar = (<svg {...ip}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>);
+const iconPill = (<svg {...ip}><path d="M10.5 1.5l-8 8a4.95 4.95 0 0 0 7 7l8-8a4.95 4.95 0 0 0-7-7z" /><line x1="8.5" y1="8.5" x2="15.5" y2="15.5" /></svg>);
 
 /* ------------------------------------------------------------------ */
 /*  "More" drawer link sections                                        */
@@ -62,6 +63,7 @@ const drawerSections = [
       { href: "/poop-guide", label: "Poop Guide", icon: iconPoop },
       { href: "/tummy-time", label: "Tummy Time", icon: iconTummy },
       { href: "/emergency-info", label: "Emergency Info Vault", icon: iconAlert },
+      { href: "/tools/medicine-dosage", label: "Medicine Dosage", icon: iconPill },
       { href: "/age-advice", label: "Age-Based Advice", icon: iconCalendar },
       { href: "/meal-planner", label: "Meal Planner", icon: iconUtensils },
     ],

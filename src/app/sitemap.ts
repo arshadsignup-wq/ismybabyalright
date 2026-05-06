@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/quiz/parenting-style`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/sources`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/tools/weight-for-length`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/medicine-dosage`, changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const milestoneRoutes: MetadataRoute.Sitemap = allCheckpoints.map((cp) => ({
