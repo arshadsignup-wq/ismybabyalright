@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vaccine Tracker and CDC Schedule",
+  title: "Baby Vaccine Tracker & CDC Immunization Schedule",
   description:
-    "Track your baby's vaccinations against the CDC recommended schedule. Log doses, see what's due next, and keep a record for your pediatrician.",
+    "Track your baby's vaccinations against the CDC recommended immunization schedule. Log doses, see what's due next, and keep a printable record for your pediatrician.",
   alternates: {
     canonical: "/vaccines",
   },
   openGraph: {
-    title: "Baby Vaccine Tracker | Is My Baby Alright?",
+    title: "Baby Vaccine Tracker & CDC Immunization Schedule | Is My Baby Alright?",
     description:
-      "Track vaccinations against the CDC schedule. Log doses and see what's due next.",
+      "Track your baby's vaccinations against the CDC recommended immunization schedule. Log doses, see what's due next, and keep a printable record for your pediatrician.",
   },
 };
 

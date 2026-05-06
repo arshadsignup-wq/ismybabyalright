@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import DosageCalculator from "@/components/tools/DosageCalculator";
 
@@ -98,6 +99,41 @@ export default function MedicineDosagePage() {
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
         <DosageCalculator />
+
+        <section className="mt-12 border-t border-[#E8E2D9] pt-8">
+          <h2 className="text-lg font-bold text-foreground mb-4">
+            Related Concerns
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <Link
+              href="/concerns/persistent-fever-baby"
+              className="card p-4 no-underline hover:border-primary transition-colors"
+            >
+              <span className="text-sm font-bold text-foreground">Persistent Fever in Babies</span>
+              <p className="text-xs text-muted mt-1">
+                When to worry, how to treat, and when to call the doctor.
+              </p>
+            </Link>
+            <Link
+              href="/concerns/baby-teething-fever-myth"
+              className="card p-4 no-underline hover:border-primary transition-colors"
+            >
+              <span className="text-sm font-bold text-foreground">Teething & Fever</span>
+              <p className="text-xs text-muted mt-1">
+                Does teething really cause fever? What to know and when to medicate.
+              </p>
+            </Link>
+            <Link
+              href="/concerns/ear-infections"
+              className="card p-4 no-underline hover:border-primary transition-colors"
+            >
+              <span className="text-sm font-bold text-foreground">Ear Infections</span>
+              <p className="text-xs text-muted mt-1">
+                Signs, treatment options, and when antibiotics are needed.
+              </p>
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );

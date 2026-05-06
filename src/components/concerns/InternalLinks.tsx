@@ -68,6 +68,16 @@ const iconMap: Record<InternalLink['icon'], React.ReactNode> = {
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
   ),
+  medicine: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-6 9h9" />
+    </svg>
+  ),
+  vaccine: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 3l-2 2m0 0l-4 4m4-4l2 2m-6 2l-4.5 4.5a2.12 2.12 0 0 0 3 3L16 12m-4 4l2 2m-6 2H4v-4l9.5-9.5" />
+    </svg>
+  ),
 };
 
 export default function InternalLinks({ links }: { links: InternalLink[] }) {

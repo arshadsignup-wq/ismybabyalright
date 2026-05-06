@@ -3,13 +3,14 @@ import type { ConcernPage, ConcernCategory } from '@/data/concerns/types';
 export interface InternalLink {
   label: string;
   href: string;
-  icon: 'milestone' | 'food' | 'sleep' | 'skin' | 'triage' | 'teething' | 'poop' | 'doctor' | 'feeding' | 'tummy' | 'growth' | 'tracker' | 'intervention';
+  icon: 'milestone' | 'food' | 'sleep' | 'skin' | 'triage' | 'teething' | 'poop' | 'doctor' | 'feeding' | 'tummy' | 'growth' | 'tracker' | 'intervention' | 'medicine' | 'vaccine';
 }
 
 const categoryLinks: Partial<Record<ConcernCategory, InternalLink[]>> = {
   feeding: [
     { label: 'Food Introduction Guide', href: '/food', icon: 'food' },
     { label: 'Feeding & Pumping Guide', href: '/feeding', icon: 'feeding' },
+    { label: 'Baby Meal Planner', href: '/meal-planner', icon: 'food' },
   ],
   sleep: [
     { label: 'Sleep Guide by Age', href: '/sleep', icon: 'sleep' },
@@ -100,9 +101,24 @@ export function getInternalLinks(concern: ConcernPage): InternalLink[] {
     add({ label: 'Tummy Time Guide', href: '/tummy-time', icon: 'tummy' });
   }
 
-  // Growth for size/weight concerns
+  // Medicine/dosage for fever, pain, medication keywords
+  if (
+    text.includes('tylenol') || text.includes('fever') || text.includes('pain') ||
+    text.includes('medicine') || text.includes('medication') ||
+    text.includes('acetaminophen') || text.includes('ibuprofen') || text.includes('motrin')
+  ) {
+    add({ label: 'Medicine Dosage Calculator', href: '/tools/medicine-dosage', icon: 'medicine' });
+  }
+
+  // Vaccine keywords
+  if (text.includes('vaccine') || text.includes('immuniz') || text.includes('shot')) {
+    add({ label: 'Vaccine Tracker', href: '/vaccines', icon: 'vaccine' });
+  }
+
+  // Growth for size/weight concerns — link to both growth spurts and calculator
   if (text.includes('growth') || text.includes('weight') || text.includes('height') || text.includes('size') || text.includes('thrive')) {
     add({ label: 'Growth Spurts Timeline', href: '/growth-spurts', icon: 'growth' });
+    add({ label: 'Growth Percentile Calculator', href: '/tools/growth', icon: 'growth' });
   }
 
   // Daily tracker for ongoing monitoring concerns

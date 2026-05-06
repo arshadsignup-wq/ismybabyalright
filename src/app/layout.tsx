@@ -65,6 +65,45 @@ const orgJsonLd = {
     "Free, evidence-based baby developmental milestone tracker and parenting resource. Based on CDC, WHO, and AAP guidelines.",
 };
 
+const siteNavJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  name: [
+    "Milestones",
+    "Concerns",
+    "Symptom Checker",
+    "Growth Calculator",
+    "Baby Tracker",
+    "Vaccine Tracker",
+    "Medicine Dosage",
+    "Food Guide",
+    "Sleep Guide",
+    "Feeding Guide",
+    "Meal Planner",
+    "Teething Guide",
+    "Tummy Time",
+    "Mental Health",
+    "Baby Names",
+  ],
+  url: [
+    "https://www.ismybabyalright.com/milestones",
+    "https://www.ismybabyalright.com/concerns",
+    "https://www.ismybabyalright.com/triage",
+    "https://www.ismybabyalright.com/tools/growth",
+    "https://www.ismybabyalright.com/tracker",
+    "https://www.ismybabyalright.com/vaccines",
+    "https://www.ismybabyalright.com/tools/medicine-dosage",
+    "https://www.ismybabyalright.com/food",
+    "https://www.ismybabyalright.com/sleep",
+    "https://www.ismybabyalright.com/feeding",
+    "https://www.ismybabyalright.com/meal-planner",
+    "https://www.ismybabyalright.com/teething",
+    "https://www.ismybabyalright.com/tummy-time",
+    "https://www.ismybabyalright.com/mental-health",
+    "https://www.ismybabyalright.com/baby-names",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,6 +125,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavJsonLd) }}
         />
         <script
           async

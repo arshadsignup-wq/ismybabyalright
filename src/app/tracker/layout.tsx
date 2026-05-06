@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Baby Tracker",
+  title: "Baby Tracker: Feeds, Sleep, Diapers & Temperature Log",
   description:
-    "Track feeds, sleep, diapers, temperature, and medications. Export reports for your pediatrician. All data stays on your device.",
+    "Free baby tracker for feeds, sleep, diapers, temperature, and medications. Export reports for your pediatrician. Private — all data stays on your device.",
   alternates: {
     canonical: "/tracker",
   },
   openGraph: {
-    title: "Baby Tracker | Is My Baby Alright?",
+    title: "Baby Tracker: Feeds, Sleep, Diapers & Temperature Log | Is My Baby Alright?",
     description:
-      "Track feeds, sleep, diapers, temperature, and medications. Export reports for your pediatrician.",
+      "Free baby tracker for feeds, sleep, diapers, temperature, and medications. Export reports for your pediatrician. Private — all data stays on your device.",
   },
 };
 

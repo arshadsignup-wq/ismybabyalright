@@ -3,16 +3,16 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import WFLCalculator from "@/components/growth/WFLCalculator";
 
 export const metadata: Metadata = {
-  title: "Weight-for-Length Calculator",
+  title: "Baby Weight-for-Length Percentile Calculator (WHO Charts)",
   description:
-    "Calculate your baby's weight-for-length percentile using WHO growth standards. See where your child falls on the weight-for-length chart for children under 2 years.",
+    "Calculate your baby's weight-for-length percentile using WHO growth charts. Check if your child's weight is proportional to their length — for boys and girls under 2 years.",
   alternates: {
     canonical: "/tools/weight-for-length",
   },
   openGraph: {
-    title: "Weight-for-Length Calculator | Is My Baby Alright?",
+    title: "Baby Weight-for-Length Percentile Calculator (WHO Charts) | Is My Baby Alright?",
     description:
-      "Calculate weight-for-length percentile using WHO growth standards for children under 2.",
+      "Calculate your baby's weight-for-length percentile using WHO growth charts. For boys and girls under 2 years.",
   },
 };
 
