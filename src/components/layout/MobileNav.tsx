@@ -44,6 +44,11 @@ const iconBrain = (<svg {...ip}><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5.5 4 7l3 3.5
 const iconScale2 = (<svg {...ip}><path d="M12 3v18" /><path d="M5 6h14" /><path d="M2 12l3-6 3 6" /><path d="M16 12l3-6 3 6" /><path d="M2 12h6" /><path d="M16 12h6" /></svg>);
 const iconStar = (<svg {...ip}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>);
 const iconPill = (<svg {...ip}><path d="M10.5 1.5l-8 8a4.95 4.95 0 0 0 7 7l8-8a4.95 4.95 0 0 0-7-7z" /><line x1="8.5" y1="8.5" x2="15.5" y2="15.5" /></svg>);
+const iconDiaper = (<svg {...ip}><ellipse cx="12" cy="14" rx="8" ry="6" /><path d="M4 14V8c0-3.3 3.6-6 8-6s8 2.7 8 6v6" /></svg>);
+const iconFirstAid = (<svg {...ip}><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>);
+const iconCarSeat = (<svg {...ip}><path d="M5 17h14" /><path d="M7 17V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v10" /><path d="M9 17v2h6v-2" /><path d="M10 10h4" /></svg>);
+const iconRuler = (<svg {...ip}><path d="M21 3L3 21" /><path d="M6 18l2-2" /><path d="M10 14l2-2" /><path d="M14 10l2-2" /><path d="M18 6l2-2" /></svg>);
+const iconWallet = (<svg {...ip}><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 10h20" /><circle cx="17" cy="14" r="1.5" /></svg>);
 
 /* ------------------------------------------------------------------ */
 /*  "More" drawer link sections                                        */
@@ -56,7 +61,12 @@ const drawerSections = [
       { href: "/concerns", label: "Concerns", icon: iconSearch },
       { href: "/food", label: "Food Guide", icon: iconCup },
       { href: "/sleep", label: "Sleep Guide", icon: iconMoon },
+      { href: "/tools/sleep-schedule", label: "Sleep Schedule", icon: iconMoon },
       { href: "/feeding", label: "Feeding Guide", icon: iconBottle },
+      { href: "/tools/feeding-amount", label: "Feeding Amount", icon: iconBottle },
+      { href: "/first-aid", label: "First Aid & CPR", icon: iconFirstAid },
+      { href: "/tools/car-seat", label: "Car Seat Guide", icon: iconCarSeat },
+      { href: "/tools/childcare-cost", label: "Childcare Costs", icon: iconWallet },
       { href: "/vaccines", label: "Vaccines", icon: iconShield },
       { href: "/doctor-visits", label: "Doctor Visit Prep", icon: iconClipboard },
       { href: "/teething", label: "Teething Guide", icon: iconTooth },
@@ -73,6 +83,9 @@ const drawerSections = [
     links: [
       { href: "/tools/growth", label: "Growth Chart", icon: iconChart },
       { href: "/tools/weight-for-length", label: "Weight-for-Length", icon: iconScale2 },
+      { href: "/tracker/diaper", label: "Diaper Tracker", icon: iconDiaper },
+      { href: "/tools/diaper-size", label: "Diaper Size Guide", icon: iconDiaper },
+      { href: "/tools/height-predictor", label: "Height Predictor", icon: iconRuler },
       { href: "/growth-spurts", label: "Growth Spurts", icon: iconChart },
       { href: "/skin-guide", label: "Skin Guide", icon: iconSkin },
       { href: "/checklists", label: "Checklists", icon: iconChecklist },
@@ -85,6 +98,7 @@ const drawerSections = [
     links: [
       { href: "/mental-health", label: "Mental Health", icon: iconHeart },
       { href: "/quiz/parenting-style", label: "Parenting Quiz", icon: iconBrain },
+      { href: "/quiz/potty-training", label: "Potty Training Quiz", icon: iconBrain },
       { href: "/baby-names", label: "Baby Names", icon: iconStar },
       { href: "/resources/early-intervention", label: "Early Intervention", icon: iconLifeBuoy },
       { href: "/resources/guides", label: "Guides", icon: iconBook },

@@ -137,6 +137,7 @@ export default function Header() {
                     {/* Track & Log section */}
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Track &amp; Log</div>
                     <DropdownItem href="/tracker" icon={iconClock} label="Tracker" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tracker/diaper" icon={iconDiaper} label="Diaper Tracker" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/growth" icon={iconChart} label="Growth Chart" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/weight-for-length" icon={iconScale2} label="Weight-for-Length" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/regression-log" icon={iconList} label="Regression Log" onClick={() => setToolsOpen(false)} />
@@ -149,7 +150,11 @@ export default function Header() {
                     <DropdownItem href="/vaccines" icon={iconShield} label="Vaccines" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/food" icon={iconCup} label="Food Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/sleep" icon={iconMoon} label="Sleep Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/sleep-schedule" icon={iconMoon} label="Sleep Schedule" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/feeding" icon={iconBottle} label="Feeding Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/feeding-amount" icon={iconBottle} label="Feeding Amount" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/first-aid" icon={iconFirstAid} label="First Aid & CPR" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/car-seat" icon={iconCarSeat} label="Car Seat Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/doctor-visits" icon={iconClipboard} label="Doctor Visit Prep" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/teething" icon={iconTooth} label="Teething Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/poop-guide" icon={iconPoop} label="Poop Guide" onClick={() => setToolsOpen(false)} />
@@ -165,6 +170,9 @@ export default function Header() {
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
                     <DropdownItem href="/growth-spurts" icon={iconChart} label="Growth Spurts" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/skin-guide" icon={iconSkin} label="Skin Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/height-predictor" icon={iconRuler} label="Height Predictor" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/diaper-size" icon={iconDiaper} label="Diaper Size Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/childcare-cost" icon={iconWallet} label="Childcare Costs" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
 
@@ -207,6 +215,7 @@ export default function Header() {
                     {/* Reference section */}
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
                     <DropdownItem href="/quiz/parenting-style" icon={iconBrain} label="Parenting Quiz" onClick={() => setResourcesOpen(false)} />
+                    <DropdownItem href="/quiz/potty-training" icon={iconBrain} label="Potty Training Quiz" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/baby-names" icon={iconStar} label="Baby Names" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/checklists" icon={iconChecklist} label="Checklists" onClick={() => setResourcesOpen(false)} />
                     <DropdownItem href="/resources/early-intervention" icon={iconLifeBuoy} label="Early Intervention" onClick={() => setResourcesOpen(false)} />
@@ -359,4 +368,19 @@ const iconBrain = (
 );
 const iconPill = (
   <svg {...iconProps}><path d="M10.5 1.5l-8 8a4.95 4.95 0 0 0 7 7l8-8a4.95 4.95 0 0 0-7-7z" /><line x1="8.5" y1="8.5" x2="15.5" y2="15.5" /></svg>
+);
+const iconDiaper = (
+  <svg {...iconProps}><ellipse cx="12" cy="14" rx="8" ry="6" /><path d="M4 14V8c0-3.3 3.6-6 8-6s8 2.7 8 6v6" /></svg>
+);
+const iconFirstAid = (
+  <svg {...iconProps}><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+);
+const iconCarSeat = (
+  <svg {...iconProps}><path d="M5 17h14" /><path d="M7 17V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v10" /><path d="M9 17v2h6v-2" /><path d="M10 10h4" /></svg>
+);
+const iconRuler = (
+  <svg {...iconProps}><path d="M21 3L3 21" /><path d="M6 18l2-2" /><path d="M10 14l2-2" /><path d="M14 10l2-2" /><path d="M18 6l2-2" /></svg>
+);
+const iconWallet = (
+  <svg {...iconProps}><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 10h20" /><circle cx="17" cy="14" r="1.5" /></svg>
 );

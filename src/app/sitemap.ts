@@ -53,6 +53,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/sources`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/tools/weight-for-length`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/tools/medicine-dosage`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/sleep-schedule`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/feeding-amount`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tracker/diaper`, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${BASE_URL}/first-aid`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/tools/height-predictor`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/quiz/potty-training`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/tools/diaper-size`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/car-seat`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/childcare-cost`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/resources/guides`, changeFrequency: "monthly", priority: 0.7 },
   ];
 

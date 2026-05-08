@@ -66,6 +66,12 @@ export default function TrackerPage() {
         >
           Sleep Log
         </Link>
+        <Link
+          href="/tracker/diaper"
+          className="flex-1 text-center px-3 py-2.5 rounded-lg bg-card border border-card-border text-primary font-medium hover:bg-primary-light transition-colors"
+        >
+          Diaper Log
+        </Link>
       </div>
 
       {/* Share with caregiver */}
