@@ -1,6 +1,9 @@
 import type { BabyName } from './types';
+import { extraBoyNames } from './names-boys-extra';
+import { extraGirlNames } from './names-girls-extra';
+import { extraUnisexNames } from './names-unisex-extra';
 
-export const allNames: BabyName[] = [
+const baseNames: BabyName[] = [
   // ===== BOY NAMES (200+) =====
   { slug: "liam", name: "Liam", gender: "boy", origin: "Irish", meaning: "Strong-willed warrior and protector", popularity: "trending", tags: ["strong", "modern"] },
   { slug: "noah", name: "Noah", gender: "boy", origin: "Hebrew", meaning: "Rest and comfort", popularity: "trending", tags: ["gentle", "spiritual"] },
@@ -518,6 +521,13 @@ export const allNames: BabyName[] = [
   { slug: "lior", name: "Lior", gender: "unisex", origin: "Hebrew", meaning: "My light, I have light", popularity: "unique", tags: ["spiritual", "gentle"] },
   { slug: "arin", name: "Arin", gender: "unisex", origin: "Hebrew", meaning: "Enlightened, mountain of strength", popularity: "unique", tags: ["spiritual", "strong"] },
   { slug: "remi", name: "Remi", gender: "unisex", origin: "French", meaning: "Oarsman, from Rheims", popularity: "rising", tags: ["gentle", "modern"] },
+];
+
+export const allNames: BabyName[] = [
+  ...baseNames,
+  ...extraBoyNames,
+  ...extraGirlNames,
+  ...extraUnisexNames,
 ];
 
 export function getNameBySlug(slug: string): BabyName | undefined {

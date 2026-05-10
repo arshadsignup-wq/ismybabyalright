@@ -166,6 +166,18 @@ export default function Header() {
 
                     <div className="border-t border-card-border my-1" />
 
+                    {/* Pregnancy section */}
+                    <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Pregnancy</div>
+                    <DropdownItem href="/tools/due-date" icon={iconCalendar} label="Due Date Calculator" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/ovulation" icon={iconCalendar} label="Ovulation Calculator" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/contraction-timer" icon={iconClock} label="Contraction Timer" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/kick-counter" icon={iconActivity} label="Kick Counter" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/gender-predictor" icon={iconStar} label="Gender Predictor" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/pumping-schedule" icon={iconBottle} label="Pumping Schedule" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/breast-milk-storage" icon={iconBottle} label="Milk Storage Guide" onClick={() => setToolsOpen(false)} />
+
+                    <div className="border-t border-card-border my-1" />
+
                     {/* Reference section */}
                     <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted">Reference</div>
                     <DropdownItem href="/growth-spurts" icon={iconChart} label="Growth Spurts" onClick={() => setToolsOpen(false)} />
@@ -173,6 +185,12 @@ export default function Header() {
                     <DropdownItem href="/tools/height-predictor" icon={iconRuler} label="Height Predictor" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/diaper-size" icon={iconDiaper} label="Diaper Size Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/childcare-cost" icon={iconWallet} label="Childcare Costs" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/eye-color" icon={iconStar} label="Eye Color Predictor" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/bmi" icon={iconChart} label="BMI Calculator" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/wonder-weeks" icon={iconBrain} label="Wonder Weeks" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/screen-time" icon={iconAlert} label="Screen Time Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/baby-proofing" icon={iconChecklist} label="Baby-Proofing" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/name-generator" icon={iconStar} label="Name Generator" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
 

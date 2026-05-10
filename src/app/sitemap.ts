@@ -63,6 +63,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/car-seat`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/tools/childcare-cost`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/resources/guides`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/due-date`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/tools/ovulation`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/contraction-timer`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/eye-color`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/gender-predictor`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/bmi`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/wonder-weeks`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/breast-milk-storage`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/screen-time`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/baby-proofing`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/kick-counter`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/pumping-schedule`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tools/name-generator`, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const milestoneRoutes: MetadataRoute.Sitemap = allCheckpoints.map((cp) => ({
