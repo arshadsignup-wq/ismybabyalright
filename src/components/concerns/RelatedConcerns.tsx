@@ -11,6 +11,7 @@ const categoryColors: Record<ConcernCategory, string> = {
   digestive: '#34D399',
   behavior: '#FBBF24',
   medical: '#F07167',
+  maternal: '#E879A0',
 };
 
 const categoryLabels: Record<ConcernCategory, string> = {
@@ -22,6 +23,7 @@ const categoryLabels: Record<ConcernCategory, string> = {
   digestive: 'Digestive',
   behavior: 'Behavior',
   medical: 'Medical',
+  maternal: 'Maternal',
 };
 
 export default function RelatedConcerns({

@@ -166,4 +166,105 @@ export const mentalHealthTopics: MentalHealthTopic[] = [
       "Learn the signs of postpartum depression and anxiety at postpartum.net",
     ],
   },
+  {
+    slug: "return-to-work-guilt",
+    title: "Return-to-Work Guilt",
+    emoji: "💼",
+    summary: "Feeling guilty about going back to work after baby.",
+    content: [
+      "The decision to return to work  -  whether by choice or financial necessity  -  comes with a wave of guilt that can feel suffocating. Leaving your baby with someone else, missing milestones, pumping in a supply closet  -  none of it feels natural at first.",
+      "This guilt affects all genders, not just mothers. Any parent who bonds with their child and then has to hand them off to someone else five days a week knows this ache. It doesn't matter if you love your job or desperately need the paycheck  -  the guilt finds a way in.",
+      "Here's what the research actually shows: children of working parents thrive. They develop strong social skills, independence, and adaptability. Decades of studies confirm that what matters most is the quality of your time together, not the quantity.",
+      "Returning to work because of financial necessity doesn't make you less of a parent. Providing for your family IS parenting. You are modeling resilience, responsibility, and dedication  -  and your child will understand that one day.",
+    ],
+    normalizeMessage:
+      "The majority of parents return to work within the first year, and their children do just as well as those with stay-at-home parents. You are not failing your child.",
+    whenToSeekHelp: [
+      "You can't stop crying at work or on your commute",
+      "You're unable to concentrate or complete tasks because of guilt or worry",
+      "You dread every morning and feel physically sick about leaving your baby",
+      "You're having persistent thoughts that your baby won't bond with you",
+    ],
+    resources: [
+      "PSI Warmline: 1-800-944-4773 (call or text)",
+      "Consider therapy with a perinatal mental health specialist who understands the return-to-work transition",
+      "Working parent support groups (many employers offer EAP programs with free sessions)",
+    ],
+  },
+  {
+    slug: "mom-guilt",
+    title: "Mom Guilt",
+    emoji: "❤️‍🩹",
+    summary: "The constant feeling that you're not doing enough.",
+    content: [
+      "Mom guilt is the persistent, nagging feeling that no matter what you do, it's not enough. Formula instead of breast? Guilt. Screen time so you can shower? Guilt. Choosing to rest instead of playing? Guilt. It's relentless and it's everywhere.",
+      "Social media has turned this into an epidemic. Curated images of 'perfect' mothers with spotless homes, organic meals, and sensory bins make it look like everyone else has figured it out. They haven't. You're comparing your behind-the-scenes to their highlight reel.",
+      "Society has built impossible standards for mothers  -  be endlessly patient, always present, professionally accomplished, physically recovered, romantically available, and grateful every second. No human being can meet all of these demands simultaneously.",
+      "Guilt is not evidence of failure. In fact, the very fact that you worry about being a good mother is strong evidence that you are one. Bad parents don't lose sleep over whether they're doing enough.",
+    ],
+    normalizeMessage:
+      "Nearly every mother experiences guilt  -  it's one of the most universal parts of motherhood. It's a sign that you care deeply, not a sign that you're failing.",
+    whenToSeekHelp: [
+      "The guilt is constant and overwhelming, not just occasional pangs",
+      "You're unable to make any parenting decision without spiraling into self-doubt",
+      "You've stopped taking care of yourself entirely because you feel you don't deserve it",
+      "You feel like your child would be better off with a different mother",
+    ],
+    resources: [
+      "PSI Warmline: 1-800-944-4773 (call or text)",
+      "Therapy (CBT is particularly effective for guilt-based thought patterns)",
+      "Motherhood support groups  -  hearing other moms say the same things out loud can be life-changing",
+    ],
+  },
+  {
+    slug: "cultural-pressure",
+    title: "Cultural Pressure and Unsolicited Advice",
+    emoji: "🗣️",
+    summary:
+      "Navigating conflicting advice from family, culture, and the internet.",
+    content: [
+      "Every culture, every generation, and every corner of the internet has strong opinions about how you should raise your child. Your mother-in-law says one thing, your pediatrician says another, and a parenting influencer with a million followers says something completely different.",
+      "This conflicting advice can make you feel like you're failing no matter which path you choose. Grandparents may insist on practices that were standard 30 years ago but are no longer recommended. Cultural traditions may clash with current medical guidance. And the internet  -  the internet has an opinion on everything.",
+      "Setting boundaries with well-meaning family members is one of the hardest parts of new parenthood. You can respect your elders and your cultural heritage while still making your own informed decisions. These things are not mutually exclusive.",
+      "You are the expert on your child. You are with them every day. You know their cries, their cues, their temperament. No blog post, no grandmother, and no stranger in the grocery store knows your baby better than you do.",
+    ],
+    normalizeMessage:
+      "Every generation has had different parenting advice, and every new parent has had to navigate conflicting opinions. Trust yourself  -  you know your child best.",
+    whenToSeekHelp: [
+      "Family pressure is causing serious conflict in your relationship with your partner",
+      "You feel paralyzed and unable to make any parenting decision on your own",
+      "Cultural expectations are contributing to anxiety or depression symptoms",
+      "You feel you've lost your voice entirely and are parenting to please others rather than your child",
+    ],
+    resources: [
+      "Therapy (especially culturally sensitive therapists who understand family dynamics)",
+      "PSI Warmline: 1-800-944-4773 (call or text)",
+      "Books and communities focused on navigating intergenerational parenting differences",
+    ],
+  },
+  {
+    slug: "loneliness-isolation",
+    title: "Loneliness and Isolation",
+    emoji: "🥀",
+    summary: "Feeling alone even when you're never actually alone.",
+    content: [
+      "There is a cruel paradox at the heart of early parenthood: you are never physically alone  -  there is literally a human attached to you most of the day  -  and yet you have never felt more isolated in your life.",
+      "The loss of adult connection hits hard. Conversations get interrupted. Plans get canceled. Friends without kids drift away because your worlds no longer overlap. Even when you do see people, you're so exhausted that you can barely hold a conversation.",
+      "Leaving the house with a newborn can feel like planning a military operation  -  the diaper bag, the timing around feeds, the fear of a public meltdown. So you stay home. And then you stay home again. And the walls start closing in.",
+      "Social media makes this worse, not better. Scrolling through other people's social lives while you sit alone on the couch at 2 AM with a feeding baby deepens the loneliness rather than relieving it. Real connection  -  even a short text exchange with someone who gets it  -  is worth more than an hour of scrolling.",
+    ],
+    normalizeMessage:
+      "Loneliness is one of the most commonly reported feelings among new parents. You are not the only one sitting alone wondering if anyone remembers you exist.",
+    whenToSeekHelp: [
+      "You've gone days without speaking to another adult besides your partner",
+      "You feel invisible or like no one would notice if you disappeared",
+      "Isolation is leading to persistent sadness, hopelessness, or emotional numbness",
+      "You've completely withdrawn from all relationships and have no desire to reconnect",
+    ],
+    resources: [
+      "PSI Warmline: 1-800-944-4773 (call or text)  -  sometimes just hearing another voice helps",
+      "Local new-parent groups (check your hospital, library, or community center)",
+      "Online communities for new parents (Postpartum Support International has virtual support groups at postpartum.net)",
+    ],
+  },
 ];

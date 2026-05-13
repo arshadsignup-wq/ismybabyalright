@@ -65,6 +65,7 @@ export const concern: ConcernPage = {
     'social-emotional-communicates-needs',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'ASHA',

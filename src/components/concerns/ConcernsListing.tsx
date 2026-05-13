@@ -17,6 +17,7 @@ const categories: { key: ConcernCategory | "all"; label: string; color: string; 
   { key: "digestive", label: "Digestive", color: "#34D399", textColor: "#047857" },
   { key: "behavior", label: "Behavior", color: "#FBBF24", textColor: "#A16207" },
   { key: "medical", label: "Medical", color: "#F07167", textColor: "#B91C1C" },
+  { key: "maternal", label: "Maternal", color: "#E879A0", textColor: "#9D174D" },
 ];
 
 const categoryColors: Record<ConcernCategory, string> = {
@@ -28,6 +29,7 @@ const categoryColors: Record<ConcernCategory, string> = {
   digestive: "#34D399",
   behavior: "#FBBF24",
   medical: "#F07167",
+  maternal: "#E879A0",
 };
 
 const categoryLabels: Record<ConcernCategory, string> = {
@@ -39,6 +41,7 @@ const categoryLabels: Record<ConcernCategory, string> = {
   digestive: "Digestive",
   behavior: "Behavior",
   medical: "Medical",
+  maternal: "Maternal",
 };
 
 export default function ConcernsListing({ concerns }: { concerns: ConcernPage[] }) {

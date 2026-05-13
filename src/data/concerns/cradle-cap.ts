@@ -58,6 +58,7 @@ export const concern: ConcernPage = {
   ],
   relatedMilestones: [],
   showSelfReferral: false,
+  popular: true,
   sources: [
     {
       org: 'AAP',

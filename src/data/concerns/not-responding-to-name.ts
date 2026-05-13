@@ -69,6 +69,7 @@ export const concern: ConcernPage = {
     'social-emotional-eye-contact',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'CDC',

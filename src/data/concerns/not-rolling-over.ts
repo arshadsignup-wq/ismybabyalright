@@ -69,6 +69,7 @@ export const concern: ConcernPage = {
     'gross-motor-tummy-time',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'CDC',

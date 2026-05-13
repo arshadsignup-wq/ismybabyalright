@@ -21,6 +21,9 @@ const categoryLinks: Partial<Record<ConcernCategory, InternalLink[]>> = {
   digestive: [
     { label: 'Poop Color Guide', href: '/poop-guide', icon: 'poop' },
   ],
+  maternal: [
+    { label: 'Feeding & Pumping Guide', href: '/feeding', icon: 'feeding' },
+  ],
 };
 
 const triageKeywords: Record<string, { label: string; href: string }> = {

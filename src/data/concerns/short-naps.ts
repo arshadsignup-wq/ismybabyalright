@@ -62,6 +62,7 @@ export const concern: ConcernPage = {
     'circadian-rhythm-development',
   ],
   showSelfReferral: false,
+  popular: true,
   sources: [
     {
       org: 'AAP',

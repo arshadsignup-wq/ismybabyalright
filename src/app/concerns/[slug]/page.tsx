@@ -6,6 +6,8 @@ import AgeBreakdown from "@/components/concerns/AgeBreakdown";
 import ActionTiers from "@/components/concerns/ActionTiers";
 import RelatedConcerns from "@/components/concerns/RelatedConcerns";
 import InternalLinks from "@/components/concerns/InternalLinks";
+import ReassuranceBanner from "@/components/concerns/ReassuranceBanner";
+import SupportiveClosing from "@/components/concerns/SupportiveClosing";
 import SelfReferralBox from "@/components/shared/SelfReferralBox";
 import SourceBadge from "@/components/shared/SourceBadge";
 import { allConcerns, getConcernBySlug } from "@/data/concerns";
@@ -26,6 +28,7 @@ const categoryColors: Record<ConcernCategory, string> = {
   digestive: "#34D399",
   behavior: "#FBBF24",
   medical: "#F07167",
+  maternal: "#E879A0",
 };
 
 const categoryLabels: Record<ConcernCategory, string> = {
@@ -37,6 +40,7 @@ const categoryLabels: Record<ConcernCategory, string> = {
   digestive: "Digestive",
   behavior: "Behavior & Social",
   medical: "Medical Conditions",
+  maternal: "Maternal Health",
 };
 
 export async function generateStaticParams() {
@@ -126,6 +130,8 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
 
         <QuickAnswer answer={concern.quickAnswer} />
 
+        <ReassuranceBanner slug={concern.slug} popular={concern.popular} />
+
         <section className="mt-10" aria-labelledby="age-breakdown-heading">
           <h2 id="age-breakdown-heading">By Age</h2>
           <AgeBreakdown byAge={concern.byAge} />
@@ -160,6 +166,8 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
         )}
 
         <InternalLinks links={getInternalLinks(concern)} />
+
+        <SupportiveClosing />
 
         <RelatedConcerns
           currentSlug={concern.slug}

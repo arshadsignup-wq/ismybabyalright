@@ -10,6 +10,8 @@ import QuickTapGrid from "@/components/tracker/QuickTapGrid";
 import Link from "next/link";
 import { allConcerns } from "@/data/concerns";
 import type { ConcernCategory } from "@/data/concerns/types";
+import AgeEncouragement from "./AgeEncouragement";
+import AgeRelevantContent from "./AgeRelevantContent";
 
 const categoryColors: Record<ConcernCategory, string> = {
   physical: "#38BDF8",
@@ -20,6 +22,7 @@ const categoryColors: Record<ConcernCategory, string> = {
   digestive: "#34D399",
   behavior: "#FBBF24",
   medical: "#F07167",
+  maternal: "#E879A0",
 };
 
 const categoryLabels: Record<ConcernCategory, string> = {
@@ -31,6 +34,7 @@ const categoryLabels: Record<ConcernCategory, string> = {
   digestive: "Digestive",
   behavior: "Behavior",
   medical: "Medical",
+  maternal: "Maternal",
 };
 
 /* ------------------------------------------------------------------ */
@@ -140,6 +144,8 @@ export default function HomeContent() {
           </span>
         </div>
 
+        <AgeEncouragement ageMonths={ageMonths} />
+
         <RightNowCard
           events={events}
           babyName={profile.name}
@@ -153,6 +159,8 @@ export default function HomeContent() {
           onLog={addEvent}
           onUpdate={updateEvent}
         />
+
+        <AgeRelevantContent ageMonths={ageMonths} />
 
         {/* Quick-access cards */}
         <div className="grid grid-cols-2 gap-3">
@@ -273,7 +281,10 @@ export default function HomeContent() {
               <span className="source-badge source-badge-aap">AAP</span>
             </div>
             <p className="text-sm font-bold text-foreground sm:text-base">
-              Built on evidence-based guidelines you can trust
+              Built by parents, backed by pediatric guidelines
+            </p>
+            <p className="max-w-sm text-sm italic text-muted leading-relaxed">
+              &ldquo;I searched for answers at 2 a.m. and finally found a site that made me feel like I wasn&rsquo;t alone.&rdquo;
             </p>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/60 px-4 py-2 text-sm font-semibold text-muted backdrop-blur-sm">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#16A34A]" aria-hidden="true">

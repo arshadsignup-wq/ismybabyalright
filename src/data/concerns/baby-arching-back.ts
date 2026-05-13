@@ -63,6 +63,7 @@ export const concern: ConcernPage = {
     'social-emotional-regulation',
   ],
   showSelfReferral: false,
+  popular: true,
   sources: [
     {
       org: 'AAP',

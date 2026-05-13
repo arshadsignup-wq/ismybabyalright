@@ -1,4 +1,4 @@
-export type ConcernCategory = 'physical' | 'communication' | 'feeding' | 'sleep' | 'skin' | 'digestive' | 'behavior' | 'medical';
+export type ConcernCategory = 'physical' | 'communication' | 'feeding' | 'sleep' | 'skin' | 'digestive' | 'behavior' | 'medical' | 'maternal';
 
 export interface ConcernPage {
   slug: string;
@@ -13,5 +13,6 @@ export interface ConcernPage {
   relatedMilestones: string[];
   showSelfReferral: boolean;
   relatedConcernSlugs?: string[];
+  popular?: boolean;
   sources: { org: string; citation: string; url: string }[];
 }

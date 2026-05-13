@@ -239,11 +239,203 @@ const developmentalRegression: ConditionGuide = {
   ],
 };
 
+const breastfeedingTroubleshooting: ConditionGuide = {
+  slug: 'breastfeeding-troubleshooting',
+  title: 'Breastfeeding Troubleshooting Guide',
+  subtitle:
+    'Common breastfeeding challenges and how to work through them',
+  whatHappened:
+    'Breastfeeding is often described as "natural," but that does not mean it comes naturally to every mother and baby. Many families encounter significant challenges in the early days and weeks, and these struggles are incredibly common  -  you are not alone, and you are not doing anything wrong. Common breastfeeding problems include difficulty with latch (the way the baby attaches to the breast), concerns about milk supply (whether you are making enough), nipple pain or damage, engorgement (when breasts become overly full, hard, and painful), clogged milk ducts (a firm, tender lump in the breast caused by a blocked duct), mastitis (an infection of the breast tissue that causes flu-like symptoms, redness, and pain), and thrush (a yeast infection that can affect both the nipple and the baby\'s mouth). Each of these issues is common, well-understood, and  -  with the right support  -  almost always resolvable. The fact that breastfeeding is hard does not mean it is not working or that you should give up. It means you deserve help.',
+  keyFacts: [
+    'In a major study, 92% of new mothers reported at least one breastfeeding concern by the third day postpartum. Early difficulties are the norm, not the exception.',
+    'Most breastfeeding problems are solvable with proper support. A trained lactation consultant (IBCLC) can identify and correct latch issues, often in a single visit.',
+    'Perceived low milk supply is the most commonly cited reason for stopping breastfeeding, but true insufficient supply is rare. Most mothers produce enough milk when feeding frequency and latch are optimized.',
+    'Nipple pain in the first week is common as tissues adjust, but pain that persists beyond the first 1-2 weeks, or pain that is severe, cracking, or bleeding, usually indicates a latch problem or other treatable condition.',
+    'Mastitis affects approximately 10-20% of breastfeeding mothers, most commonly in the first 6 weeks. Prompt treatment with continued breastfeeding (or pumping) and, when needed, antibiotics leads to full recovery.',
+    'Thrush can pass back and forth between the mother\'s nipple and the baby\'s mouth, so both must be treated simultaneously for the infection to resolve.',
+    'The World Health Organization recommends exclusive breastfeeding for the first 6 months, with continued breastfeeding alongside complementary foods up to 2 years or beyond. Any amount of breastfeeding provides benefits.',
+  ],
+  whatToExpect: [
+    'A lactation consultant (IBCLC) will observe a full feeding, assess your baby\'s latch, check for tongue-tie or other oral restrictions, and help you find positioning that works. Many problems improve dramatically after one or two sessions.',
+    'If supply is a concern, your provider may recommend a weighted feed (weighing the baby before and after nursing) to measure exactly how much milk the baby is transferring. This replaces guesswork with data.',
+    'Improvement timelines vary by issue: latch corrections can show results immediately, supply concerns typically improve within 3-7 days of increased feeding frequency, and mastitis symptoms usually resolve within 48-72 hours of treatment.',
+    'Your pediatrician will monitor your baby\'s weight gain closely  -  this is the most reliable indicator that breastfeeding is going well. Expect frequent weight checks in the first few weeks.',
+    'You may be advised to supplement temporarily (with pumped milk or formula) while working on the underlying issue. Supplementing is a tool, not a failure  -  it keeps your baby fed while you get support.',
+  ],
+  whenToWorry: [
+    'If you develop a fever over 101F (38.3C), a red and hot area on the breast, or flu-like symptoms (body aches, chills), you may have mastitis. Contact your doctor or midwife within 24 hours  -  antibiotics may be needed.',
+    'If your baby is not producing at least 6 wet diapers per day by day 5, or if urine appears dark or concentrated, contact your pediatrician the same day  -  this may indicate insufficient milk intake.',
+    'If your baby has lost more than 10% of birth weight by day 3-5, or has not returned to birth weight by 2 weeks of age, seek immediate support from your pediatrician and a lactation consultant.',
+    'If you see blood in your baby\'s stool (not related to cracked nipples), or if your baby is lethargic and difficult to wake for feedings, seek medical attention the same day.',
+    'If you experience persistent pain (sharp, shooting, or burning) during and between feedings that is not improving, this may indicate thrush, vasospasm, or a latch issue that needs professional evaluation.',
+    'If you feel overwhelmed, hopeless, or that breastfeeding is affecting your mental health, tell your provider. Your wellbeing matters as much as the feeding method, and there is no shame in exploring all options.',
+  ],
+  actionPlan: [
+    'Find an International Board Certified Lactation Consultant (IBCLC) as early as possible  -  ideally before you leave the hospital, or within the first week postpartum. Many insurance plans cover lactation support.',
+    'For latch issues: ensure your baby opens wide before latching, aim the nipple toward the roof of the baby\'s mouth, and bring the baby to the breast (not the breast to the baby). Pain beyond a brief initial tug is a sign the latch needs adjustment.',
+    'For supply concerns: nurse frequently (8-12 times per 24 hours in the newborn period), offer both breasts at each feeding, ensure effective milk removal, and avoid unnecessary supplementation unless medically indicated, as supply is driven by demand.',
+    'For engorgement: apply warm compresses or take a warm shower before feeding to help milk flow, hand-express just enough to soften the areola so the baby can latch, and apply cold compresses between feedings to reduce swelling.',
+    'For clogged ducts: continue nursing frequently, positioning the baby\'s chin toward the clog if possible, gently massage the area during feeding, and apply warm compresses before nursing. Most clogs resolve within 24-48 hours.',
+    'For mastitis: do not stop breastfeeding or pumping  -  continued milk removal is essential. Rest, stay hydrated, and contact your provider about antibiotics if symptoms do not improve within 12-24 hours or if you develop a fever.',
+    'For thrush: see your provider for antifungal treatment for both you and your baby. Wash anything that touches the breast or baby\'s mouth in hot water. Thrush often takes 1-2 weeks of consistent treatment to fully resolve.',
+    'Join a breastfeeding support group (La Leche League, hospital-sponsored groups, or online communities). Peer support from other nursing mothers is a powerful resource during challenging times.',
+  ],
+  sources: [
+    {
+      org: 'La Leche League International',
+      citation:
+        'Breastfeeding Info: Common Breastfeeding Challenges. La Leche League International.',
+      url: 'https://www.llli.org/breastfeeding-info/',
+    },
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Meek JY, Noble L; Section on Breastfeeding. Policy statement: Breastfeeding and the use of human milk. Pediatrics. 2022;150(1):e2022057988.',
+      url: 'https://publications.aap.org/pediatrics/article/150/1/e2022057988/188347',
+    },
+    {
+      org: 'World Health Organization',
+      citation:
+        'Breastfeeding. World Health Organization Nutrition Topics.',
+      url: 'https://www.who.int/health-topics/breastfeeding',
+    },
+  ],
+};
+
+const prematureBabyGuide: ConditionGuide = {
+  slug: 'premature-baby-guide',
+  title: 'Premature Baby: A Comprehensive Guide',
+  subtitle:
+    'Understanding your preemie\'s unique needs and development timeline',
+  whatHappened:
+    'Your baby was born premature, meaning before 37 weeks of gestation. A full-term pregnancy lasts about 40 weeks, and babies born early miss important developmental time in the womb. Prematurity ranges from late preterm (34-36 weeks) to very preterm (28-32 weeks) to extremely preterm (before 28 weeks). The earlier a baby is born, the more support they may need. Many premature babies spend time in the Neonatal Intensive Care Unit (NICU), which can be an overwhelming experience for families. One of the most important concepts to understand is "corrected age" (also called "adjusted age")  -  this is your baby\'s age calculated from their original due date, not their birth date. For example, a baby born 2 months early who is now 6 months old has a corrected age of 4 months. Doctors use corrected age to assess development until your child is about 2-3 years old. Premature babies follow their own timeline, and most catch up to their full-term peers  -  it just takes a little longer.',
+  keyFacts: [
+    'Approximately 1 in 10 babies in the United States is born prematurely. You are part of a large community of families who have navigated this experience.',
+    'Corrected age (adjusted age) is the standard used to track your preemie\'s developmental milestones. A baby born at 32 weeks is expected to reach milestones about 2 months later than a full-term baby of the same birth date.',
+    'Survival rates for premature babies have improved dramatically. Babies born at 28 weeks or later have greater than 90% survival rates in modern NICUs.',
+    'Late preterm babies (34-36 weeks) are the largest group of preemies and, while they often look healthy, they face higher risks for feeding difficulties, jaundice, temperature regulation problems, and readmission than full-term babies.',
+    'Premature babies are at higher risk for certain health issues including respiratory problems, feeding difficulties, infections, anemia, and vision or hearing concerns. Most of these are manageable with proper follow-up care.',
+    'The brain undergoes significant development in the final weeks of pregnancy. Premature babies may need extra support and monitoring for cognitive, motor, and behavioral development throughout early childhood.',
+    'Kangaroo care (skin-to-skin contact) has been shown to improve outcomes for premature babies, including better weight gain, more stable heart rate and breathing, and stronger parent-infant bonding.',
+  ],
+  whatToExpect: [
+    'The NICU experience varies greatly depending on how early your baby was born. Stays can range from a few days (for late preterm babies) to several months (for very early preemies). Your baby will need to meet specific milestones before discharge, including maintaining body temperature, feeding adequately, and having stable breathing.',
+    'After discharge, your baby will have more frequent pediatric visits than a full-term baby. Expect close monitoring of growth (using preemie-specific growth charts initially), development, hearing, and vision.',
+    'Your pediatrician will likely refer you to an early intervention program and/or a neonatal follow-up clinic. These programs provide developmental assessments and therapies (physical, occupational, speech) at no or low cost.',
+    'Feeding a premature baby can be challenging. Some preemies need fortified breast milk or specialized preterm formula. Breastfeeding may take longer to establish because the suck-swallow-breathe coordination matures later in preemies.',
+    'RSV (respiratory syncytial virus) poses a greater risk to premature babies. Your doctor may recommend palivizumab (Synagis) injections during RSV season and will advise you on precautions to reduce infection exposure.',
+  ],
+  whenToWorry: [
+    'If your baby has episodes of apnea (pauses in breathing lasting more than 20 seconds) or turns blue around the lips or face, call 911 immediately.',
+    'If your baby is not feeding well after discharge  -  taking less than expected, falling asleep during every feeding, or showing signs of dehydration (fewer than 6 wet diapers per day, dry mouth, sunken fontanelle)  -  contact your pediatrician the same day.',
+    'If your baby develops a fever (rectal temperature of 100.4F/38C or higher) in the first few months after discharge, seek immediate medical attention. Premature babies have immature immune systems and infections can escalate quickly.',
+    'If your baby is not meeting developmental milestones even when using corrected age  -  for example, not tracking objects with eyes by 3 months corrected, not reaching for toys by 5 months corrected, or not babbling by 9 months corrected  -  bring this up with your pediatrician.',
+    'If your baby shows signs of respiratory distress (fast breathing, grunting, flaring nostrils, retractions where the skin pulls in between the ribs), seek medical attention immediately.',
+    'If you notice your baby\'s eyes are not tracking together, one eye turns in or out, or you have any concerns about vision, request a referral to a pediatric ophthalmologist.',
+  ],
+  actionPlan: [
+    'Learn about corrected age and use it as your frame of reference for developmental milestones. Share this concept with family members and caregivers so everyone has realistic expectations.',
+    'Practice kangaroo care (skin-to-skin contact) as much as possible, both in the NICU and after discharge. This benefits your baby\'s growth, temperature regulation, and your bonding.',
+    'Establish care with a pediatrician experienced with premature babies before discharge. Bring your NICU discharge summary to the first visit  -  it contains critical information about your baby\'s history and ongoing needs.',
+    'Enroll in your state\'s Early Intervention program. You do not need to wait for a problem to appear  -  premature birth alone qualifies your baby for evaluation in most states, and early support produces better outcomes.',
+    'Create a safe sleep environment following AAP guidelines. Premature babies are at higher risk for SIDS. Always place your baby on their back to sleep, on a firm flat surface, with no loose bedding, toys, or bumpers.',
+    'Protect your baby from infections during the first RSV season. Limit visitors, ask everyone to wash hands before holding the baby, avoid crowded indoor spaces, and keep your baby away from anyone who is sick.',
+    'Keep all follow-up appointments, including ophthalmology, audiology, and developmental assessments. Some issues related to prematurity (such as retinopathy of prematurity or hearing loss) are treatable when caught early.',
+    'Connect with other preemie parents through organizations like the March of Dimes NICU Family Support or local parent groups. The NICU and post-discharge journey is emotionally intense, and peer support makes a real difference.',
+  ],
+  sources: [
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Pediatric Care Online: Preterm Infant. In: Bright Futures: Guidelines for Health Supervision of Infants, Children, and Adolescents. 4th ed. American Academy of Pediatrics; 2017.',
+      url: 'https://publications.aap.org/pediatriccare',
+    },
+    {
+      org: 'March of Dimes',
+      citation:
+        'Premature Babies: Complications and Care. March of Dimes Pregnancy and Baby Health Education Center.',
+      url: 'https://www.marchofdimes.org/find-support/topics/birth/premature-babies',
+    },
+    {
+      org: 'National Institutes of Health',
+      citation:
+        'Preterm Labor and Birth: Overview. Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD).',
+      url: 'https://www.nichd.nih.gov/health/topics/preterm',
+    },
+  ],
+};
+
+const developmentalAssessmentGuide: ConditionGuide = {
+  slug: 'developmental-assessment-guide',
+  title: 'Understanding Developmental Assessment',
+  subtitle:
+    'What to expect when your child is referred for developmental evaluation',
+  whatHappened:
+    'Your child has been referred for a developmental assessment, and this can feel worrying. It is important to understand that a referral is not a diagnosis  -  it is simply a closer look to understand how your child is developing and whether they could benefit from support. Developmental assessments are used when there is a question about whether a child is meeting expected milestones in areas like communication, motor skills, social interaction, cognition, or self-help skills. Referrals can come from a pediatrician, a teacher, a childcare provider, or even from your own concerns as a parent. The evaluation process is thorough and collaborative: a team of specialists observes your child, asks you detailed questions, and uses standardized tools to understand your child\'s strengths and areas where they may need help. The goal is not to label your child, but to create a clear picture of where they are right now and to connect your family with services and therapies that can make a meaningful difference  -  the earlier, the better.',
+  keyFacts: [
+    'A referral for developmental evaluation is not a diagnosis. It is a tool to gather more information about your child\'s development and determine whether support would be beneficial.',
+    'Approximately 1 in 6 children (about 17%) in the United States has a developmental disability. Many more have developmental concerns that benefit from early support even without a formal diagnosis.',
+    'Early intervention works. Research consistently shows that children who receive developmental support early  -  before age 3 when possible  -  have significantly better outcomes in language, cognition, and adaptive behavior than those who start later.',
+    'Developmental assessments evaluate multiple domains: gross motor (walking, jumping), fine motor (grasping, drawing), speech and language (understanding and using words), cognitive (problem-solving, learning), social-emotional (interaction, regulation), and adaptive (self-care skills).',
+    'The evaluation team may include a developmental pediatrician, psychologist, speech-language pathologist, occupational therapist, physical therapist, and/or social worker, depending on the concerns.',
+    'Under the Individuals with Disabilities Education Act (IDEA), children from birth to age 3 are entitled to a free evaluation through the Early Intervention program, and children ages 3 and older can be evaluated through their local school district  -  at no cost to families.',
+    'Parents are essential members of the evaluation team. Your observations about your child\'s behavior at home, their history, and your concerns are critical data that no test can replace.',
+  ],
+  whatToExpect: [
+    'The evaluation typically takes 1-3 hours, sometimes split across multiple sessions. Your child will be observed during play, asked to complete age-appropriate tasks, and assessed using standardized developmental tools. You will be asked detailed questions about your child\'s history, behavior, and daily routines.',
+    'After the evaluation, the team will share their findings with you, explain what the results mean, and outline recommendations. This may include a specific diagnosis, a description of developmental concerns without a formal diagnosis, or reassurance that your child is developing within the expected range.',
+    'If your child qualifies for services, you will work with the team to create an Individualized Family Service Plan (IFSP for children under 3) or an Individualized Education Program (IEP for children 3 and older). These plans outline specific goals and the therapies or supports your child will receive.',
+    'Common therapies include speech-language therapy, occupational therapy, physical therapy, developmental therapy, and behavioral support. Services for children under 3 are often delivered in your home or childcare setting.',
+    'The evaluation process can feel emotional. It is normal to feel anxious, defensive, relieved, or all of these at once. Many parents report that getting answers  -  even difficult ones  -  is better than the uncertainty of not knowing.',
+  ],
+  whenToWorry: [
+    'If your child is not babbling by 12 months, not using any single words by 16 months, not using 2-word phrases by 24 months, or has lost any language skills at any age, request a developmental evaluation promptly.',
+    'If your child is not walking independently by 18 months or shows significant asymmetry in movement (using one side of the body much more than the other), discuss this with your pediatrician and request a motor evaluation.',
+    'If your child does not respond to their name consistently by 12 months, avoids eye contact, does not point or wave by 12 months, or shows limited interest in other children by 24 months, these are signs that warrant a developmental and/or autism-specific evaluation.',
+    'If your child\'s preschool or daycare raises concerns about behavior, learning, or social interaction, take these observations seriously. Teachers see your child in a peer context that reveals patterns you may not see at home.',
+    'If you have been told to "wait and see" but your gut tells you something is off, trust your instincts. You have the right to request an evaluation at any time, and there is no harm in evaluating early  -  only harm in waiting too long.',
+    'If your child has already been evaluated and is receiving services, but you feel progress has stalled or new concerns have emerged, request a re-evaluation. Children\'s needs change over time, and their support plan should evolve accordingly.',
+  ],
+  actionPlan: [
+    'Contact your state\'s Early Intervention program (for children under 3) or your local school district\'s special education department (for children 3 and older) to request a free developmental evaluation. You do not need a doctor\'s referral for this  -  any parent can request an evaluation directly.',
+    'Prepare for the evaluation by writing down your concerns, your child\'s developmental history (when they first smiled, sat, crawled, walked, said words), any family history of developmental conditions, and questions you want answered.',
+    'Bring a list of your child\'s current medications, any previous evaluations or therapy reports, and videos of behaviors that concern you (these are invaluable when the behavior may not occur during the evaluation visit).',
+    'During the evaluation, answer honestly and completely. Do not downplay your concerns or your child\'s difficulties. The evaluation is most useful when the team has the full picture.',
+    'After receiving results, ask the team to explain anything you do not understand. Key questions include: "What are my child\'s strengths?", "What areas need support?", "What specific services do you recommend and why?", and "What can I do at home to help?"',
+    'If your child qualifies for services, start them as soon as possible. Research is clear that earlier intervention leads to better outcomes. Do not wait to see if your child "grows out of it."',
+    'Keep organized records of all evaluations, therapy reports, and communication with providers. A binder or digital folder will serve you well as you navigate the system and advocate for your child over time.',
+    'Remember that you are your child\'s best advocate. Learn about your rights under IDEA, connect with your local Parent Training and Information Center (PTI), and do not hesitate to ask questions or push for the services your child needs.',
+  ],
+  sources: [
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Lipkin PH, Macias MM; Council on Children with Disabilities, Section on Developmental and Behavioral Pediatrics. Promoting optimal development: Identifying infants and young children with developmental disorders through developmental surveillance and screening. Pediatrics. 2020;145(1):e20193449.',
+      url: 'https://publications.aap.org/pediatrics/article/145/1/e20193449/36971',
+    },
+    {
+      org: 'Centers for Disease Control and Prevention',
+      citation:
+        'Learn the Signs. Act Early. Developmental Monitoring and Screening.',
+      url: 'https://www.cdc.gov/ncbddd/actearly/index.html',
+    },
+    {
+      org: 'U.S. Department of Education',
+      citation:
+        'Individuals with Disabilities Education Act (IDEA): Early Intervention Program for Infants and Toddlers with Disabilities.',
+      url: 'https://sites.ed.gov/idea/about-idea/',
+    },
+  ],
+};
+
 export const allGuides: ConditionGuide[] = [
   febrileSeizures,
   plagiocephaly,
   failureToThrive,
   developmentalRegression,
+  breastfeedingTroubleshooting,
+  prematureBabyGuide,
+  developmentalAssessmentGuide,
 ];
 
 export function getGuideBySlug(slug: string): ConditionGuide | undefined {

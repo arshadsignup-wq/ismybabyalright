@@ -88,6 +88,7 @@ export const concern: ConcernPage = {
     'gross-motor-walking',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'CDC',

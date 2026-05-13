@@ -68,6 +68,7 @@ export const concern: ConcernPage = {
     'starting-solids',
   ],
   showSelfReferral: false,
+  popular: true,
   sources: [
     {
       org: 'AAP',

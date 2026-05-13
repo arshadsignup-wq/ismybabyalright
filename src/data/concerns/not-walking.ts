@@ -90,6 +90,7 @@ export const concern: ConcernPage = {
     'gross-motor-standing',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'CDC',

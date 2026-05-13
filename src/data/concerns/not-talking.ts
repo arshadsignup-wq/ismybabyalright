@@ -94,6 +94,7 @@ export const concern: ConcernPage = {
     'language-receptive',
   ],
   showSelfReferral: true,
+  popular: true,
   sources: [
     {
       org: 'CDC',
