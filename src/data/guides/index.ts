@@ -254,6 +254,13 @@ const breastfeedingTroubleshooting: ConditionGuide = {
     'Mastitis affects approximately 10-20% of breastfeeding mothers, most commonly in the first 6 weeks. Prompt treatment with continued breastfeeding (or pumping) and, when needed, antibiotics leads to full recovery.',
     'Thrush can pass back and forth between the mother\'s nipple and the baby\'s mouth, so both must be treated simultaneously for the infection to resolve.',
     'The World Health Organization recommends exclusive breastfeeding for the first 6 months, with continued breastfeeding alongside complementary foods up to 2 years or beyond. Any amount of breastfeeding provides benefits.',
+    'Tongue-tie (ankyloglossia) affects approximately 4-11% of newborns and can significantly impair latch and milk transfer. A simple frenotomy procedure can often resolve feeding difficulties within days.',
+    'Nipple shields are a temporary bridge tool, not a long-term solution. They can help babies with latch difficulties, flat or inverted nipples, or premature babies who need a firmer target. Work with an IBCLC to wean off the shield when the baby is ready.',
+    'Exclusively pumping (EPing) is a valid feeding choice. Many mothers exclusively pump and provide breast milk by bottle due to latch issues, NICU stays, returning to work, or personal preference. EP mothers need the same support and recognition as direct-nursing mothers.',
+    'Combination feeding (breast milk + formula) is more common than many parents realize. Any amount of breast milk provides immunological benefits. Combo feeding can reduce pressure on the nursing parent while maintaining a breastfeeding relationship.',
+    'Raynaud\'s phenomenon of the nipple (vasospasm) causes sharp, burning pain and visible blanching (turning white) of the nipple, often triggered by cold. It is frequently misdiagnosed as thrush. Treatment includes keeping nipples warm, avoiding caffeine and nicotine, and in some cases, prescription nifedipine.',
+    'A breast abscess is a rare but serious complication that can develop from untreated or undertreated mastitis. Signs include a firm, painful, worsening lump that does not respond to antibiotics within 48-72 hours, along with persistent fever. An abscess requires drainage by a healthcare provider.',
+    'Cow\'s milk protein allergy in breastfed babies occurs in about 0.5-1% of exclusively breastfed infants. Signs include blood or mucus in stool, excessive fussiness, eczema, or vomiting. An elimination diet (removing dairy from the mother\'s diet for 2-4 weeks) is the diagnostic and therapeutic approach.',
   ],
   whatToExpect: [
     'A lactation consultant (IBCLC) will observe a full feeding, assess your baby\'s latch, check for tongue-tie or other oral restrictions, and help you find positioning that works. Many problems improve dramatically after one or two sessions.',
@@ -261,6 +268,10 @@ const breastfeedingTroubleshooting: ConditionGuide = {
     'Improvement timelines vary by issue: latch corrections can show results immediately, supply concerns typically improve within 3-7 days of increased feeding frequency, and mastitis symptoms usually resolve within 48-72 hours of treatment.',
     'Your pediatrician will monitor your baby\'s weight gain closely  -  this is the most reliable indicator that breastfeeding is going well. Expect frequent weight checks in the first few weeks.',
     'You may be advised to supplement temporarily (with pumped milk or formula) while working on the underlying issue. Supplementing is a tool, not a failure  -  it keeps your baby fed while you get support.',
+    'If tongue-tie is suspected, your provider may refer you to a pediatric ENT or dentist experienced in frenotomy. The procedure is quick (under a minute), and many babies latch better immediately afterward, though some need follow-up exercises and continued lactation support.',
+    'Power pumping (pumping 20 minutes, resting 10, pumping 10, resting 10, pumping 10  -  for one hour total) mimics cluster feeding and can help boost supply. Do this once per day for 3-7 days while maintaining your regular pumping or nursing schedule.',
+    'If you are returning to work, begin building a freezer stash 2-3 weeks before your return by pumping once daily after a morning feeding. You need roughly 1-1.5 ounces per hour of separation. Talk to your employer about pumping breaks  -  federal law (PUMP Act) requires reasonable break time and a private space.',
+    'Weaning is a personal decision with no single "right" timeline. Gradual weaning (dropping one feeding every few days) is easier on both parent and baby than abrupt weaning. If you experience engorgement during weaning, express just enough to relieve pressure. Watch for signs of plugged ducts or mastitis.',
   ],
   whenToWorry: [
     'If you develop a fever over 101F (38.3C), a red and hot area on the breast, or flu-like symptoms (body aches, chills), you may have mastitis. Contact your doctor or midwife within 24 hours  -  antibiotics may be needed.',
@@ -269,6 +280,9 @@ const breastfeedingTroubleshooting: ConditionGuide = {
     'If you see blood in your baby\'s stool (not related to cracked nipples), or if your baby is lethargic and difficult to wake for feedings, seek medical attention the same day.',
     'If you experience persistent pain (sharp, shooting, or burning) during and between feedings that is not improving, this may indicate thrush, vasospasm, or a latch issue that needs professional evaluation.',
     'If you feel overwhelmed, hopeless, or that breastfeeding is affecting your mental health, tell your provider. Your wellbeing matters as much as the feeding method, and there is no shame in exploring all options.',
+    'If your nipples turn white after feeding and you experience sharp, burning pain that lasts minutes to hours, you may have vasospasm (Raynaud\'s of the nipple). Apply dry warmth immediately after feeding (warm compress, wool breast pads) and see your provider  -  this is treatable.',
+    'If a red, swollen, painful area on the breast does not improve with 48-72 hours of antibiotics, or if you feel a fluctuant (squishy) mass, contact your provider urgently  -  this may be a breast abscess requiring drainage.',
+    'If your breastfed baby has persistent eczema, blood-streaked or mucousy stools, or extreme fussiness that does not improve with standard comfort measures, discuss cow\'s milk protein allergy with your pediatrician. An elimination diet trial under medical guidance can confirm the diagnosis.',
   ],
   actionPlan: [
     'Find an International Board Certified Lactation Consultant (IBCLC) as early as possible  -  ideally before you leave the hospital, or within the first week postpartum. Many insurance plans cover lactation support.',
@@ -279,6 +293,10 @@ const breastfeedingTroubleshooting: ConditionGuide = {
     'For mastitis: do not stop breastfeeding or pumping  -  continued milk removal is essential. Rest, stay hydrated, and contact your provider about antibiotics if symptoms do not improve within 12-24 hours or if you develop a fever.',
     'For thrush: see your provider for antifungal treatment for both you and your baby. Wash anything that touches the breast or baby\'s mouth in hot water. Thrush often takes 1-2 weeks of consistent treatment to fully resolve.',
     'Join a breastfeeding support group (La Leche League, hospital-sponsored groups, or online communities). Peer support from other nursing mothers is a powerful resource during challenging times.',
+    'If tongue-tie is suspected, ask your lactation consultant or pediatrician for a referral to a provider experienced in diagnosing and treating tongue-tie. After a frenotomy, perform the recommended stretching exercises to prevent reattachment, and follow up with your IBCLC to optimize latch.',
+    'For exclusively pumping: establish a pumping schedule that mimics a newborn\'s feeding pattern (8-10 times per 24 hours initially), invest in a hospital-grade or wearable pump, use hands-on pumping (massage + compression) to maximize output, and gradually reduce to 5-6 sessions per day once supply is established (usually around 12 weeks).',
+    'For returning to work: practice with bottles 2-3 weeks before your start date (some breastfed babies need time to accept a bottle), pack pump parts and a cooler bag the night before, and request a pumping schedule that matches your baby\'s feeding times. Pump for 15-20 minutes per session or until 2 minutes after milk stops flowing.',
+    'For weaning: if you experience sadness or mood changes during weaning, know that this is common and related to hormonal shifts (particularly dropping oxytocin and prolactin levels). If feelings are intense or persistent, talk to your provider  -  you are not being dramatic, and support is available.',
   ],
   sources: [
     {
@@ -428,6 +446,250 @@ const developmentalAssessmentGuide: ConditionGuide = {
   ],
 };
 
+const postpartumRecovery: ConditionGuide = {
+  slug: 'postpartum-recovery',
+  title: 'Postpartum Recovery Guide',
+  subtitle:
+    'What to expect in the weeks after birth  -  your body, your healing, your timeline',
+  whatHappened:
+    'You have just given birth, and your body is beginning one of the most significant physical recoveries it will ever undergo. Whether you had a vaginal birth or a cesarean section, the postpartum period (often called the "fourth trimester") involves healing from birth, dramatic hormonal shifts, adjustment to breastfeeding or bottle-feeding, sleep deprivation, and emotional changes that range from joy to tearfulness and everything in between. This period typically lasts 6-8 weeks but can extend much longer  -  full physical and emotional recovery takes most women 6-12 months. The postpartum experience is profoundly underserved in our healthcare system: you may have a single 6-week checkup and then be considered "recovered." In reality, your body has undergone pregnancy and childbirth  -  an athletic-level event  -  and deserves the same care, patience, and attention you would give any major recovery.',
+  keyFacts: [
+    'Lochia (postpartum bleeding) is normal and lasts 2-6 weeks. It starts as heavy, bright red bleeding and gradually transitions to pink, then brown, then yellowish-white discharge. Heavy bleeding that soaks a pad in an hour or passes clots larger than a golf ball warrants a call to your provider.',
+    'Uterine involution (the uterus shrinking back to pre-pregnancy size) takes about 6 weeks. You may feel cramping ("afterpains") during breastfeeding as oxytocin triggers uterine contractions. These are typically stronger with second and subsequent babies.',
+    'Perineal healing after vaginal birth takes 1-3 weeks for minor tears (1st-2nd degree) and 4-6 weeks for more significant tears (3rd-4th degree). Pain, swelling, and discomfort when sitting are normal during this period.',
+    'C-section recovery involves healing from major abdominal surgery. The incision takes 6-8 weeks to heal on the surface, but the underlying tissue and fascia can take 3-6 months to fully recover. Avoid lifting anything heavier than your baby for the first 6 weeks.',
+    'Hormonal shifts after birth are dramatic: estrogen and progesterone drop precipitously within 24-48 hours of delivery, while prolactin rises (especially if breastfeeding). These shifts contribute to mood swings, night sweats, hair loss (typically starting around 3-4 months postpartum), and skin changes.',
+    'The "baby blues" affect up to 80% of new mothers and typically appear 2-5 days postpartum, lasting up to 2 weeks. Symptoms include tearfulness, mood swings, irritability, and anxiety. If symptoms persist beyond 2 weeks or worsen, this may be postpartum depression or anxiety, which affects 1 in 7 mothers and is treatable.',
+    'Pelvic floor recovery is often overlooked. Pregnancy and vaginal delivery can weaken pelvic floor muscles, leading to urinary leakage, pelvic pressure, or pain during intercourse. These symptoms are common but not inevitable or permanent  -  pelvic floor physical therapy is highly effective.',
+  ],
+  whatToExpect: [
+    'Week 1-2: The heaviest physical recovery. Lochia is at its heaviest, perineal or incision pain is most intense, uterine cramping is strongest, and fatigue is overwhelming. Focus on rest, nutrition, hydration, and newborn care  -  nothing else.',
+    'Week 3-4: Lochia lightens and transitions color. Perineal pain decreases. C-section incision begins to itch (a sign of healing). Energy may improve slightly, but do not overdo it  -  this is when many women push too hard and experience setbacks.',
+    'Week 5-6: Most women have their 6-week postpartum checkup. Your provider will check your incision or perineal healing, discuss contraception, screen for postpartum depression, and may clear you for exercise and sexual activity. Speak up about any ongoing symptoms  -  this appointment is short, so come prepared.',
+    'Month 2-3: Hair may begin shedding (postpartum hair loss peaks around 3-4 months and resolves by 6-12 months). Hormones continue to stabilize. If breastfeeding, supply is typically well-established. Night sweats usually resolve.',
+    'Month 4-6+: Physical recovery continues. Abdominal muscles may still feel separated (diastasis recti). Pelvic floor function continues to improve, especially with targeted exercises. Emotionally, most women feel increasingly like themselves, though the adjustment to parenthood is ongoing.',
+  ],
+  whenToWorry: [
+    'Soaking a maxi pad in one hour or less, or passing blood clots larger than a golf ball, may indicate postpartum hemorrhage. Call your provider or go to the emergency room immediately.',
+    'Fever over 100.4F (38C) in the first few weeks postpartum may signal an infection (uterine, wound, or breast). Contact your provider the same day.',
+    'Redness, swelling, increasing pain, or foul-smelling discharge from a C-section incision or perineal tear site may indicate wound infection. Contact your provider within 24 hours.',
+    'Severe headache that does not respond to medication, vision changes, upper abdominal pain, or significant swelling in the face or hands could be signs of postpartum preeclampsia, which can occur up to 6 weeks after delivery. Go to the emergency room.',
+    'Chest pain, difficulty breathing, or leg swelling (especially one-sided calf pain) may indicate a blood clot (pulmonary embolism or deep vein thrombosis). This is a medical emergency  -  call 911.',
+    'Persistent feelings of hopelessness, inability to bond with your baby, intrusive thoughts about harming yourself or your baby, or intense anxiety or panic attacks are signs of postpartum depression or postpartum anxiety. Contact your provider or call the PSI Warmline at 1-800-944-4773. You deserve help, and treatment works.',
+  ],
+  actionPlan: [
+    'Prepare your recovery station before delivery: stock peri bottles, witch hazel pads (Tucks), ice packs, stool softeners, large pads, comfortable underwear, and easy-to-eat nutritious snacks. For C-section, add a belly binder/abdominal support band and a step stool for getting in and out of bed.',
+    'Prioritize rest above all else in the first 2 weeks. Accept help with cooking, cleaning, and older children. Sleep when the baby sleeps is cliched but remains sound medical advice. Sleep deprivation worsens pain perception, slows healing, and increases the risk of postpartum mood disorders.',
+    'Eat nutrient-dense foods to support healing: protein (eggs, chicken, legumes, nuts) for tissue repair, iron-rich foods (red meat, spinach, fortified cereals) to replenish blood loss, fiber and fluids to prevent constipation (a common and painful postpartum issue), and calcium for bone health.',
+    'For perineal care: use a peri bottle with warm water during and after urination, apply witch hazel pads or ice packs for swelling, take sitz baths 2-3 times daily for comfort, and take stool softeners as recommended to avoid straining.',
+    'For C-section care: keep the incision clean and dry, wear loose clothing, support the incision with a pillow when coughing or laughing, avoid stairs when possible in the first 1-2 weeks, and do not drive until you can perform an emergency stop without pain (usually 2-4 weeks).',
+    'Begin gentle pelvic floor exercises (Kegels) as soon as you feel comfortable, typically a few days after vaginal birth or after catheter removal for C-section. If you experience urinary leakage or pelvic pressure that does not improve by 6 weeks, ask for a referral to a pelvic floor physical therapist.',
+    'Attend your 6-week postpartum checkup and come prepared with a written list of questions and symptoms. Do not minimize your experience. Key topics to discuss: mood (be honest about how you are feeling), pelvic floor function, pain, contraception, and clearance for physical activity.',
+    'Monitor your emotional health. Mood swings and tearfulness in the first 2 weeks are normal ("baby blues"), but symptoms that persist beyond 2 weeks, worsen, or interfere with daily function may indicate postpartum depression or anxiety. Screening tools like the Edinburgh Postnatal Depression Scale can help you self-assess. Treatment (therapy, medication, or both) is safe and effective, including for breastfeeding mothers.',
+  ],
+  sources: [
+    {
+      org: 'American College of Obstetricians and Gynecologists',
+      citation:
+        'ACOG Committee Opinion No. 736: Optimizing Postpartum Care. Obstetrics & Gynecology. 2018;131(5):e140-e150.',
+      url: 'https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care',
+    },
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Postpartum Care of the Mother. HealthyChildren.org.',
+      url: 'https://www.healthychildren.org/English/ages-stages/prenatal/delivery-beyond/Pages/Recovering-From-Delivery.aspx',
+    },
+    {
+      org: 'World Health Organization',
+      citation:
+        'WHO Recommendations on Postnatal Care of the Mother and Newborn. WHO; 2013.',
+      url: 'https://www.who.int/publications/i/item/9789241506649',
+    },
+  ],
+};
+
+const choosingAPediatrician: ConditionGuide = {
+  slug: 'choosing-a-pediatrician',
+  title: 'Choosing a Pediatrician',
+  subtitle:
+    'How to find the right doctor for your child  -  and what to bring to the first visit',
+  whatHappened:
+    'Choosing a pediatrician is one of the most important decisions you will make as a new or expecting parent. This person will be your partner in your child\'s health for years  -  they will guide you through illnesses, developmental concerns, behavioral questions, and the countless "is this normal?" moments of early parenthood. The ideal time to start looking is during the third trimester of pregnancy (around 28-34 weeks), but it is never too late. Many parents feel pressure to make the "perfect" choice, but the reality is that a good pediatrician is one you trust, can communicate with openly, and who takes your concerns seriously. If the fit is not right, you can always switch  -  your child\'s medical records can be transferred to any provider.',
+  keyFacts: [
+    'The American Academy of Pediatrics recommends that parents choose a pediatrician before the baby is born. Most pediatric practices offer free prenatal interviews or meet-and-greet visits.',
+    'Board certification matters. A board-certified pediatrician has completed medical school, a 3-year pediatric residency, and passed a rigorous examination by the American Board of Pediatrics. You can verify board certification at certificationmatters.org.',
+    'Practice size affects your experience. Solo practitioners offer continuity (you always see the same doctor), while group practices offer greater availability (someone is always on call) and diverse expertise. Neither is inherently better  -  it depends on your priorities.',
+    'Office logistics matter more than you might expect. Consider location (you will go frequently in the first year  -  at least 6 well-child visits), office hours (do they offer early morning, evening, or weekend sick visits?), after-hours coverage (phone nurse line? urgent care partnership?), and wait times.',
+    'Communication style is critical. You need a pediatrician who listens without rushing, explains clearly, welcomes your questions, and does not make you feel judged. Trust your gut  -  if you feel dismissed or talked down to during the prenatal visit, that will not improve.',
+    'Insurance compatibility is practical but important. Confirm that the practice accepts your insurance plan, understand copay amounts for well-child vs. sick visits, and ask about billing practices for phone consultations or after-hours advice.',
+  ],
+  whatToExpect: [
+    'A prenatal interview typically lasts 15-30 minutes. You may meet with the pediatrician, a nurse, or an office manager. Use this time to assess the office environment, ask your key questions, and gauge whether you feel comfortable.',
+    'In the first year, your baby will have approximately 6-7 well-child visits (at birth, 1 month, 2 months, 4 months, 6 months, 9 months, and 12 months). These visits include growth measurements, developmental screening, vaccinations, and time for your questions.',
+    'A good pediatrician will proactively screen for postpartum depression in parents during early well-child visits. This reflects current AAP guidelines and signals a practice that cares about the whole family.',
+    'You should expect your pediatrician to be accessible  -  not just during office visits but also via phone nurse lines for after-hours questions. Ask about their policy for urgent concerns that arise outside of business hours.',
+    'If you ever feel that the relationship is not working  -  you feel dismissed, your concerns are not taken seriously, or the practice logistics are causing stress  -  it is perfectly acceptable to switch. Your child\'s records will be transferred, and no explanation is required.',
+  ],
+  whenToWorry: [
+    'If your pediatrician consistently dismisses your concerns with "don\'t worry about it" without explanation, especially regarding developmental milestones or behavioral changes, seek a second opinion. Parents\' instincts are clinically valuable.',
+    'If the office is chronically difficult to reach for urgent concerns (long hold times, no call-back system, no after-hours coverage), this is a safety issue  -  consider whether the practice can meet your family\'s needs.',
+    'If you feel pressured to make medical decisions without adequate information or time to consider, this is a red flag. A good pediatrician explains the evidence, answers your questions, and respects your role as a decision-maker.',
+    'If your pediatrician does not follow current AAP guidelines on key issues (developmental screening at 9, 18, and 30 months; autism-specific screening at 18 and 24 months; standard vaccine schedule), ask why and consider whether their approach aligns with evidence-based care.',
+  ],
+  actionPlan: [
+    'Start your search at 28-34 weeks of pregnancy. Ask friends, family, your OB/midwife, and local parenting groups for recommendations. Check your insurance provider directory, hospital affiliations, and online reviews (take extreme reviews with a grain of salt).',
+    'Schedule prenatal interviews with 2-3 practices. Most offer these at no charge. Bring a list of questions and pay attention to how the staff treats you, the cleanliness and organization of the office, and the waiting room environment.',
+    'Key questions to ask during the prenatal visit: What are your office hours and after-hours policies? How quickly can we get a sick visit appointment? What is your approach to breastfeeding support? What is your vaccination philosophy? How do you handle developmental concerns? What hospital are you affiliated with?',
+    'Evaluate practical factors: Is the office within a reasonable distance (you will be going frequently while sleep-deprived with a newborn)? Is parking accessible? Is the waiting area separated for sick and well children? Do they offer telehealth visits?',
+    'Confirm insurance and billing: Call your insurance company to verify the practice is in-network. Ask the office about copays, billing for phone consultations, and any fees for forms or records.',
+    'Prepare for the first newborn visit (usually 2-5 days after hospital discharge): Bring your hospital discharge summary, insurance cards, a list of questions that came up since delivery, your baby\'s feeding and diaper log, and a record of medications you are taking if breastfeeding.',
+    'Give the relationship a fair trial. It takes a few visits to develop rapport. If after 3-4 visits you still do not feel comfortable, trust that feeling and look for a new provider. Your child deserves a healthcare partner you trust.',
+  ],
+  sources: [
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Finding a Pediatrician. HealthyChildren.org.',
+      url: 'https://www.healthychildren.org/English/tips-tools/find-pediatrician/Pages/default.aspx',
+    },
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Palpalicka D. AAP Schedule of Well-Child Care Visits. HealthyChildren.org.',
+      url: 'https://www.healthychildren.org/English/family-life/health-management/Pages/Well-Child-Care-A-Check-Up-for-Success.aspx',
+    },
+    {
+      org: 'American Board of Pediatrics',
+      citation:
+        'Is Your Child\'s Doctor Board Certified? Certification Matters.',
+      url: 'https://www.certificationmatters.org/',
+    },
+  ],
+};
+
+const siblingPreparation: ConditionGuide = {
+  slug: 'sibling-preparation',
+  title: 'Preparing Your Child for a New Sibling',
+  subtitle:
+    'Age-specific strategies for before, during, and after the new baby arrives',
+  whatHappened:
+    'A new baby is joining your family, and your older child\'s world is about to change in ways they cannot fully understand yet. This is exciting, but it is also genuinely disruptive to a young child\'s sense of security. Their experience of being the center of your attention is shifting, and how you handle this transition matters. The good news: sibling relationships are among the most enduring and influential relationships in a person\'s life, and there is a great deal you can do to set the stage for a positive bond. Children\'s reactions to a new sibling vary widely based on age, temperament, and preparation. Toddlers (1-2 years) may not understand the concept at all. Preschoolers (3-4 years) may be excited but also jealous. School-age children (5+) may have complex feelings. All reactions are normal, and regression (in toileting, sleep, or behavior) is common and temporary.',
+  keyFacts: [
+    'Toddlers (12-24 months) have limited understanding of what "a new baby" means. They cannot project into the future or understand that the baby is permanent. Focus on maintaining routines and providing extra physical affection rather than detailed explanations.',
+    'Preschoolers (2-4 years) are the age group most likely to struggle with a new sibling. They are old enough to understand that attention is being shared but too young to regulate the big emotions this triggers. Jealousy, regression, and acting out are developmentally normal responses.',
+    'School-age children (5+ years) can understand the concept and may be genuinely excited to help. However, they may also feel displaced, worry about their role in the family, or resent the disruption to their routine. Their feelings deserve validation even when they seem disproportionate.',
+    'Regression is the most common behavioral response to a new sibling. A potty-trained child may have accidents, a good sleeper may start waking at night, a child who eats independently may want to be fed. This is temporary and is not a sign that something is wrong  -  it is a normal response to stress.',
+    'The timing of telling your child depends on their age. For toddlers, wait until late pregnancy when the belly is visible and the arrival is imminent. For preschoolers, the second trimester is often appropriate. For school-age children, tell them early enough that they do not hear it from someone else.',
+    'Research from the Gottman Institute shows that the first-born child\'s adjustment to a sibling is significantly influenced by the quality of the parent-child relationship before the baby arrives, not just what happens after. Investing in your relationship with your older child now is the best preparation.',
+  ],
+  whatToExpect: [
+    'During pregnancy: Your child may be curious, excited, indifferent, or a mix of all three. Read age-appropriate books about new siblings, involve them in preparations (choosing a stuffed animal for the baby, helping set up the nursery), and answer questions honestly but simply.',
+    'At the hospital: Many hospitals allow siblings to visit. Arrange for a trusted person to bring your older child to meet the baby. Let the older child come to you (rather than finding you already holding the baby)  -  some parents set the baby down in the bassinet so their arms are open for the older child first.',
+    'First weeks home: Expect disrupted routines, big emotions, and testing behavior. Your older child is processing a massive change. They may swing between adoration and hostility toward the baby, sometimes within minutes. Both reactions are normal.',
+    'The "regression window" typically lasts 2-6 weeks and then gradually improves as the new normal becomes familiar. If regression persists beyond 2-3 months or worsens significantly, discuss it with your pediatrician.',
+    'Your own emotions matter too. Many parents experience guilt about "doing this" to their older child, grief about the end of the exclusive relationship, and exhaustion from meeting two (or more) sets of needs. These feelings are common and valid.',
+  ],
+  whenToWorry: [
+    'If your older child is physically aggressive toward the baby (hitting, pinching, throwing objects at the baby), never leave them unsupervised with the newborn and address the behavior calmly but firmly. If aggression is persistent or escalating, talk to your pediatrician.',
+    'If regression (toileting accidents, sleep disruption, clinginess) does not begin to improve after 2-3 months, or if new behavioral problems emerge (extreme tantrums, self-harm, significant changes in eating), seek guidance from your pediatrician or a child psychologist.',
+    'If your older child expresses persistent sadness, says things like "you don\'t love me anymore" beyond the initial adjustment period, or withdraws from activities they used to enjoy, this warrants attention and possibly professional support.',
+    'If you find yourself feeling persistently resentful, overwhelmed, or unable to bond with either child, reach out for support. Managing the needs of multiple young children is objectively hard, and struggling does not mean you are failing.',
+  ],
+  actionPlan: [
+    'Before the baby arrives: Read sibling-themed books together ("The New Baby" by Mercer Mayer, "I\'m a Big Brother/Sister" by Joanna Cole). Visit friends with babies so your child can see what babies are actually like (small, loud, not great playmates yet).',
+    'Make any big transitions (new room, new bed, starting preschool, potty training) well before or well after the baby arrives  -  at least 2-3 months in either direction. You do not want your child to associate these changes with being displaced by the baby.',
+    'Create a "big sibling" gift from the baby  -  a small wrapped present waiting at the hospital or at home. This establishes the relationship as reciprocal from the start. Many families also keep small gifts on hand for when visitors bring gifts only for the baby.',
+    'Protect one-on-one time with your older child. Even 15-20 minutes of undivided attention daily (reading together, playing their favorite game, going for a walk) provides reassurance that they are still important and loved. This is more impactful than any single conversation.',
+    'Involve your older child in baby care at their level: fetching a diaper, singing to the baby, choosing the baby\'s outfit. Praise their helpfulness genuinely  -  "The baby calmed down when you sang! You are so good at that"  -  but do not force involvement if they are not interested.',
+    'Respond to regression with patience, not punishment. If your potty-trained child has accidents, clean up matter-of-factly without shaming. If they want a bottle or pacifier, consider allowing it briefly  -  the novelty usually wears off quickly. Punishing regression increases anxiety and prolongs the behavior.',
+    'Narrate the baby\'s perspective in a way that builds the older child\'s sense of importance: "Look, the baby is smiling at you! I think she loves her big brother." This helps the older child see themselves as valued by the new family member.',
+    'Maintain existing routines as much as possible  -  bedtime routine, mealtimes, daycare schedule, weekend activities. Predictability is a powerful anxiety reducer for young children during times of change. See also: our checklist at /checklists/preparing-for-sibling for a comprehensive preparation timeline.',
+  ],
+  sources: [
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Preparing Your Child for a New Sibling. HealthyChildren.org.',
+      url: 'https://www.healthychildren.org/English/family-life/family-dynamics/Pages/Preparing-Your-Child-for-a-New-Sibling.aspx',
+    },
+    {
+      org: 'Zero to Three',
+      citation:
+        'Preparing Your Child for the Arrival of a New Baby. Zero to Three.',
+      url: 'https://www.zerotothree.org/resource/preparing-your-child-for-a-new-baby/',
+    },
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Shelov SP, et al. Caring for Your Baby and Young Child: Birth to Age 5. 7th ed. American Academy of Pediatrics; 2019.',
+      url: 'https://publications.aap.org/aapbooks/book/648/Caring-for-Your-Baby-and-Young-Child-Birth-to-Age',
+    },
+  ],
+};
+
+const postpartumFitness: ConditionGuide = {
+  slug: 'postpartum-fitness',
+  title: 'Postpartum Fitness Guide',
+  subtitle:
+    'Returning to exercise safely after pregnancy and birth  -  starting with your pelvic floor',
+  whatHappened:
+    'You have given birth and you may be eager to "get your body back"  -  or you may not be thinking about exercise at all yet, and that is equally valid. The postpartum fitness journey is not about bouncing back to a pre-pregnancy body (that narrative is harmful and unrealistic). It is about rebuilding functional strength, supporting your recovery, improving your energy and mood, and creating a sustainable movement practice that works with your new life. The most important thing to understand is that postpartum exercise must begin from the inside out: pelvic floor and deep core first, then gradually progressing to higher-intensity activity. Rushing back too quickly can worsen diastasis recti (abdominal separation), cause pelvic floor dysfunction, and lead to injury. Your body grew a human  -  it deserves a thoughtful return to movement.',
+  keyFacts: [
+    'ACOG recommends that most women can begin gentle walking and pelvic floor exercises within days of an uncomplicated vaginal delivery. After a C-section, begin with walking and breathing exercises, and follow your surgeon\'s guidance  -  most recommend waiting 6-8 weeks before progressing to more vigorous activity.',
+    'Diastasis recti (separation of the rectus abdominis muscles along the midline) affects up to two-thirds of women in the third trimester and does not always resolve on its own. Before returning to core exercises, check for diastasis (or have a provider check)  -  a gap wider than 2 finger-widths may need targeted rehabilitation before standard ab exercises.',
+    'Pelvic floor rehabilitation is the foundation of postpartum fitness, not an optional add-on. The pelvic floor supports your organs, controls bladder and bowel function, and contributes to core stability. Pregnancy and birth (both vaginal and C-section) affect the pelvic floor.',
+    'Urinary incontinence (leaking when you cough, sneeze, laugh, or exercise) is common postpartum but is NOT something you "just have to live with." Pelvic floor physical therapy resolves or significantly improves stress incontinence in the majority of women.',
+    'Breastfeeding and exercise are compatible. Moderate exercise does not reduce milk supply or change the taste of breast milk. Stay hydrated, wear a supportive bra, and consider nursing or pumping before exercise for comfort.',
+    'Exercise is one of the most effective interventions for postpartum depression and anxiety. Studies show that regular moderate exercise (even 30 minutes of walking 3-5 times per week) significantly reduces symptoms of postpartum mood disorders.',
+    'The postpartum body has increased joint laxity due to the hormone relaxin, which can persist for 3-6 months postpartum (longer if breastfeeding). This increases the risk of joint injury, so avoid high-impact activities and heavy lifting until your connective tissue has recovered.',
+  ],
+  whatToExpect: [
+    'Weeks 1-2 (recovery phase): Focus on rest, gentle walking (even just around the house), diaphragmatic breathing, and gentle pelvic floor engagement (Kegels). Do not exercise through pain. C-section: prioritize incision healing and avoid any abdominal engagement beyond breathing exercises.',
+    'Weeks 3-6 (rebuilding phase): Gradually increase walking distance and pace. Begin postnatal-specific core exercises (pelvic tilts, heel slides, bridge poses). Continue pelvic floor work. This is a good time to schedule a pelvic floor PT assessment if available.',
+    'Weeks 6-12 (progressive phase): After your provider clears you at the 6-week visit, gradually reintroduce strength training with body weight or light weights. Focus on compound movements (squats, lunges, rows). Avoid crunches, sit-ups, and planks until diastasis recti is assessed.',
+    'Months 3-6 (return to activity phase): Progressively increase intensity. Reintroduce running, HIIT, or group fitness classes only after you can walk briskly for 30 minutes without symptoms (no leaking, no pelvic pressure, no pain). Many women return to pre-pregnancy exercise levels during this phase.',
+    'Months 6-12+: Continue building toward your fitness goals. Some women feel fully recovered by 6 months; others need a full year or more. There is no timeline you "should" meet. Persistent symptoms (incontinence, pelvic pain, abdominal weakness) at any point warrant a pelvic floor PT referral.',
+  ],
+  whenToWorry: [
+    'If you experience urinary leakage during exercise (even "just a little"), this is a signal that your pelvic floor is not yet ready for that level of activity. Scale back and see a pelvic floor physical therapist  -  leaking is common but not normal and is treatable.',
+    'If you feel heaviness or a bulging sensation in your vagina during or after exercise, stop the activity and consult a pelvic floor PT. This may indicate pelvic organ prolapse, which is manageable with proper guidance.',
+    'If you experience pain at your C-section scar during exercise, especially sharp or pulling sensations, stop and discuss with your provider. Scar tissue mobilization (gentle massage of the scar) can help  -  ask your provider or PT to teach you the technique.',
+    'If you notice a visible "doming" or "coning" along the midline of your abdomen during core exercises (a ridge pushing outward), you likely have diastasis recti that needs targeted rehabilitation. Avoid exercises that cause doming (crunches, planks, heavy lifting) until assessed.',
+    'If exercise worsens your mood rather than improving it, or if you feel compelled to exercise excessively despite exhaustion or pain, talk to your provider. Compulsive exercise postpartum can be a sign of postpartum anxiety or disordered eating and deserves compassionate support.',
+  ],
+  actionPlan: [
+    'Start with pelvic floor exercises (Kegels) within days of delivery if comfortable: contract the pelvic floor muscles (as if stopping urine flow) for 5 seconds, relax for 10 seconds, repeat 10 times, 3 times per day. Focus on both the squeeze AND the full relaxation  -  a pelvic floor that cannot relax is as problematic as one that cannot contract.',
+    'Begin walking as soon as you feel able  -  even 5-10 minutes around the house counts. Gradually increase duration before increasing pace. Walking is the single best postpartum exercise: it improves mood, promotes healing, builds cardiovascular fitness, and can be done with your baby.',
+    'Check for diastasis recti before returning to core work: lie on your back with knees bent, lift your head slightly, and feel along the midline above and below your navel. If you feel a gap wider than 2 finger-widths or your fingers sink in deeply, work with a pelvic floor PT before doing standard core exercises.',
+    'Consider seeing a pelvic floor physical therapist at 6 weeks postpartum (or sooner if you have symptoms). This is standard care in many countries (France provides every postpartum woman with pelvic floor rehabilitation) and is covered by many US insurance plans. Ask your OB or midwife for a referral.',
+    'When returning to strength training, follow the principle of progressive overload: start with body weight, then add light resistance, then gradually increase. Key exercises to prioritize: glute bridges, squats, deadlifts (light weight), rows, and modified planks (only if no diastasis or pelvic floor symptoms).',
+    'If you are breastfeeding: exercise does not decrease milk supply when caloric intake is adequate. Hydrate well before and after exercise, wear a supportive sports bra, and consider nursing or pumping before exercise for comfort. Some babies may fuss at the breast immediately after vigorous exercise due to increased salt in sweat on the skin  -  a quick rinse solves this.',
+    'Set realistic expectations. Recovery is not linear  -  you will have good days and setbacks. Progress is measured in months, not weeks. Compare yourself only to where you were last month, not to pre-pregnancy or to anyone else\'s postpartum journey.',
+    'Build movement into your daily life with your baby: walks with the stroller, baby-wearing while doing light housework, postnatal yoga or fitness classes that welcome babies. Social exercise (stroller groups, mom-and-baby classes) provides both physical and mental health benefits.',
+  ],
+  sources: [
+    {
+      org: 'American College of Obstetricians and Gynecologists',
+      citation:
+        'ACOG Committee Opinion No. 804: Physical Activity and Exercise During Pregnancy and the Postpartum Period. Obstetrics & Gynecology. 2020;135(4):e178-e188.',
+      url: 'https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/04/physical-activity-and-exercise-during-pregnancy-and-the-postpartum-period',
+    },
+    {
+      org: 'American College of Sports Medicine',
+      citation:
+        'Mottola MF, et al. 2019 Canadian guideline for physical activity throughout pregnancy. British Journal of Sports Medicine. 2018;52(21):1339-1346.',
+      url: 'https://bjsm.bmj.com/content/52/21/1339',
+    },
+    {
+      org: 'American Academy of Pediatrics',
+      citation:
+        'Exercise and Breastfeeding. HealthyChildren.org.',
+      url: 'https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/Exercise-and-Breastfeeding.aspx',
+    },
+  ],
+};
+
 export const allGuides: ConditionGuide[] = [
   febrileSeizures,
   plagiocephaly,
@@ -436,6 +698,10 @@ export const allGuides: ConditionGuide[] = [
   breastfeedingTroubleshooting,
   prematureBabyGuide,
   developmentalAssessmentGuide,
+  postpartumRecovery,
+  choosingAPediatrician,
+  siblingPreparation,
+  postpartumFitness,
 ];
 
 export function getGuideBySlug(slug: string): ConditionGuide | undefined {

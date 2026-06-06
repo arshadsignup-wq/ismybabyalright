@@ -160,7 +160,10 @@ export default function Header() {
                     <DropdownItem href="/poop-guide" icon={iconPoop} label="Poop Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tummy-time" icon={iconTummy} label="Tummy Time" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/emergency-info" icon={iconAlert} label="Emergency Info Vault" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/emergency-contacts" icon={iconAlert} label="Emergency Contacts" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/medicine-dosage" icon={iconPill} label="Medicine Dosage" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/developmental-activities" icon={iconStar} label="Play Activities" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/sign-language" icon={iconBook} label="Baby Sign Language" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/age-advice" icon={iconCalendar} label="Age-Based Advice" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/meal-planner" icon={iconUtensils} label="Meal Planner" onClick={() => setToolsOpen(false)} />
 
@@ -175,6 +178,7 @@ export default function Header() {
                     <DropdownItem href="/tools/gender-predictor" icon={iconStar} label="Gender Predictor" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/pumping-schedule" icon={iconBottle} label="Pumping Schedule" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/breast-milk-storage" icon={iconBottle} label="Milk Storage Guide" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/pregnancy-tracker" icon={iconCalendar} label="Pregnancy Tracker" onClick={() => setToolsOpen(false)} />
 
                     <div className="border-t border-card-border my-1" />
 
@@ -185,6 +189,8 @@ export default function Header() {
                     <DropdownItem href="/tools/height-predictor" icon={iconRuler} label="Height Predictor" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/diaper-size" icon={iconDiaper} label="Diaper Size Guide" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/childcare-cost" icon={iconWallet} label="Childcare Costs" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/tools/baby-budget" icon={iconWallet} label="Budget Planner" onClick={() => setToolsOpen(false)} />
+                    <DropdownItem href="/product-safety" icon={iconShield} label="Product Safety" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/eye-color" icon={iconStar} label="Eye Color Predictor" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/bmi" icon={iconChart} label="BMI Calculator" onClick={() => setToolsOpen(false)} />
                     <DropdownItem href="/tools/wonder-weeks" icon={iconBrain} label="Wonder Weeks" onClick={() => setToolsOpen(false)} />

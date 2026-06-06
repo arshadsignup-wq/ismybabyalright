@@ -89,6 +89,12 @@ const drawerSections = [
       { href: "/tools/name-generator", label: "Name Generator", icon: iconStar },
       { href: "/age-advice", label: "Age-Based Advice", icon: iconCalendar },
       { href: "/meal-planner", label: "Meal Planner", icon: iconUtensils },
+      { href: "/tools/pregnancy-tracker", label: "Pregnancy Tracker", icon: iconCalendar },
+      { href: "/tools/emergency-contacts", label: "Emergency Contacts", icon: iconAlert },
+      { href: "/tools/baby-budget", label: "Budget Planner", icon: iconWallet },
+      { href: "/developmental-activities", label: "Play Activities", icon: iconStar },
+      { href: "/sign-language", label: "Baby Sign Language", icon: iconBook },
+      { href: "/product-safety", label: "Product Safety", icon: iconShield },
     ],
   },
   {

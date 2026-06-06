@@ -76,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/kick-counter`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tools/pumping-schedule`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tools/name-generator`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/pregnancy-tracker`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/tools/baby-budget`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/tools/emergency-contacts`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/product-safety`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/sign-language`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/developmental-activities`, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const milestoneRoutes: MetadataRoute.Sitemap = allCheckpoints.map((cp) => ({
