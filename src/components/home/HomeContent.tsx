@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useProfile, useEvents } from "@/lib/useStorage";
 import { getAgeInMonthsFromDate } from "@/lib/tracker";
 import HeroSection from "./HeroSection";
@@ -113,11 +114,15 @@ const popularConcerns = popularSlugs
 /*  Greeting helper                                                    */
 /* ------------------------------------------------------------------ */
 
-function getGreeting(): string {
-  const hour = new Date().getHours();
-  if (hour < 12) return "Good morning";
-  if (hour < 17) return "Good afternoon";
-  return "Good evening";
+function useGreeting(): string {
+  const [greeting, setGreeting] = useState("Hello");
+  useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) setGreeting("Good morning");
+    else if (hour < 17) setGreeting("Good afternoon");
+    else setGreeting("Good evening");
+  }, []);
+  return greeting;
 }
 
 /* ------------------------------------------------------------------ */
@@ -127,6 +132,7 @@ function getGreeting(): string {
 export default function HomeContent() {
   const { profile } = useProfile();
   const { events, addEvent, updateEvent } = useEvents();
+  const greeting = useGreeting();
 
   /* ---- Returning user ---- */
   if (profile) {
@@ -137,7 +143,7 @@ export default function HomeContent() {
         {/* Greeting */}
         <div className="text-center">
           <p className="text-lg font-bold text-foreground">
-            {getGreeting()}, {profile.name}&rsquo;s parent
+            {greeting}, {profile.name}&rsquo;s parent
           </p>
           <span className="mt-1 inline-block rounded-full bg-primary-light px-3 py-1 text-xs font-bold text-primary">
             {ageMonths} {ageMonths === 1 ? "month" : "months"} old
