@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Is My Baby Alright?",
   },
   description:
-    "Free, evidence-based baby milestone tracker and developmental resource. 680+ concern guides, triage tools, and trackers based on CDC, WHO, and AAP guidelines.",
+    "Free, evidence-based baby milestone tracker and developmental resource. 2,000+ concern guides, triage tools, and trackers based on CDC, WHO, and AAP guidelines.",
   alternates: {
     canonical: "/",
   },
@@ -52,7 +52,7 @@ const jsonLd = {
   name: "Is My Baby Alright?",
   url: "https://www.ismybabyalright.com",
   description:
-    "Free, evidence-based baby milestone tracker and developmental resource. 680+ concern guides based on CDC, WHO, and AAP guidelines.",
+    "Free, evidence-based baby milestone tracker and developmental resource. 2,000+ concern guides based on CDC, WHO, and AAP guidelines.",
 };
 
 const orgJsonLd = {

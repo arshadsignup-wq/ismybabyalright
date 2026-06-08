@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Us - ismybabyalright",
   description:
-    "About ismybabyalright. A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. No ads, no tracking, no data collection.",
+    "About ismybabyalright. A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. Learn about our editorial process and sources.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Us | Is My Baby Alright?",
     description:
-      "A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. No ads, no tracking, no data collection.",
+      "A free, evidence-based baby health resource built on CDC, WHO, and AAP guidelines. Learn about our editorial process and sources.",
   },
 };
 
@@ -72,9 +72,9 @@ export default function AboutPage() {
         <Section title="Our editorial process">
           <p>
             Every concern page on this site cites specific publications from the
-            CDC, WHO, AAP, or other recognized medical organizations. We do not
-            publish content based on anecdotal evidence, personal opinion, or
-            unverified sources.
+            CDC, WHO, AAP, ACOG, ASHA, NIH, or other recognized medical
+            organizations. We do not publish content based on anecdotal
+            evidence, personal opinion, or unverified sources.
           </p>
           <p>
             All content follows a consistent structure: a quick answer for
@@ -83,6 +83,12 @@ export default function AboutPage() {
             when to act now). Pages link to related concerns and resources so
             you can explore further.
           </p>
+          <p>
+            Our editorial team reviews every page against the latest published
+            guidelines from authoritative medical sources. Content is updated
+            when new guidelines are published. Each page displays its source
+            organizations and review date.
+          </p>
         </Section>
 
         <Section title="Transparency">
@@ -90,14 +96,15 @@ export default function AboutPage() {
             We believe in full transparency about how this site works:
           </p>
           <ul className="list-disc list-inside space-y-1 mt-2">
-            <li>No ads or sponsored content</li>
-            <li>No affiliate links</li>
-            <li>No data collection or analytics</li>
-            <li>No cookies or tracking</li>
+            <li>No sponsored content or affiliate links</li>
             <li>No user accounts or email collection</li>
             <li>
-              Everything runs on your device - your data never leaves your
+              Everything runs on your device - your baby data never leaves your
               browser
+            </li>
+            <li>
+              This site is supported by non-intrusive ads to keep it free for
+              all parents
             </li>
           </ul>
         </Section>

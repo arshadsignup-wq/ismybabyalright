@@ -124,10 +124,46 @@ export function getInternalLinks(concern: ConcernPage): InternalLink[] {
     add({ label: 'Growth Percentile Calculator', href: '/tools/growth', icon: 'growth' });
   }
 
+  // Pregnancy-related concerns
+  if (
+    text.includes('pregnan') || text.includes('trimester') || text.includes('prenatal') ||
+    text.includes('morning sickness') || text.includes('labor') || text.includes('contraction')
+  ) {
+    add({ label: 'Pregnancy Tracker', href: '/tools/pregnancy-tracker', icon: 'tracker' });
+  }
+
+  // Developmental activities for milestone concerns
+  if (
+    concern.category === 'physical' || concern.category === 'communication' ||
+    text.includes('play') || text.includes('activity') || text.includes('stimulat')
+  ) {
+    add({ label: 'Developmental Activities', href: '/developmental-activities', icon: 'milestone' });
+  }
+
+  // Sign language for communication concerns
+  if (concern.category === 'communication' || text.includes('sign') || text.includes('gesture')) {
+    add({ label: 'Baby Sign Language Guide', href: '/sign-language', icon: 'milestone' });
+  }
+
+  // Emergency contacts for urgent concerns
+  if (concern.whenToActNow.length >= 3) {
+    add({ label: 'Emergency Contacts', href: '/tools/emergency-contacts', icon: 'triage' });
+  }
+
+  // Sleep schedule for sleep concerns
+  if (concern.category === 'sleep') {
+    add({ label: 'Sleep Schedule Calculator', href: '/tools/sleep-schedule', icon: 'sleep' });
+  }
+
+  // Screen time for behavior concerns
+  if (concern.category === 'behavior' && (text.includes('screen') || text.includes('tv') || text.includes('tablet'))) {
+    add({ label: 'Screen Time Guide', href: '/tools/screen-time', icon: 'tracker' });
+  }
+
   // Daily tracker for ongoing monitoring concerns
   if (concern.whenToMention.length > 0) {
     add({ label: 'Baby Tracker', href: '/tracker', icon: 'tracker' });
   }
 
-  return links.slice(0, 6);
+  return links.slice(0, 12);
 }

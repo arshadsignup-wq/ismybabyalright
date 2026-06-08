@@ -20,13 +20,11 @@ export default function AgeBreakdown({ byAge }: AgeBreakdownProps) {
             aria-label={`${entry.ageRange} age range`}
           >
             <div className="flex items-start gap-3">
-              {/* Age badge */}
-              <span
+              <h3
                 className="flex-shrink-0 inline-flex items-center justify-center min-w-[64px] px-3 py-1.5 rounded-full bg-primary-light text-primary text-xs font-bold whitespace-nowrap"
-                aria-hidden="true"
               >
                 {entry.ageRange}
-              </span>
+              </h3>
 
               <p className="text-sm leading-relaxed text-foreground pt-0.5">
                 {entry.context}

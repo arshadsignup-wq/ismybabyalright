@@ -54,7 +54,7 @@ export default async function TriageSlugPage({
       "@type": "PeopleAudience",
       audienceType: "Parents",
     },
-    lastReviewed: new Date().toISOString().split("T")[0],
+    lastReviewed: "2026-06-01",
   };
 
   return (

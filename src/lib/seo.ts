@@ -7,10 +7,23 @@ export function getCanonicalUrl(path: string): string {
   return `${SITE_URL}${path}`;
 }
 
+const titleTemplates: Record<string, (title: string) => string> = {
+  physical: (t) => `${t} - Normal Development or Cause for Concern?`,
+  communication: (t) => `${t} - Speech & Language Milestones Guide`,
+  feeding: (t) => `${t} - Pediatrician-Backed Feeding Advice`,
+  sleep: (t) => `${t} - Is This Normal? Sleep Guide for Parents`,
+  skin: (t) => `${t} - Causes, Treatment & When to See a Doctor`,
+  digestive: (t) => `${t} - What's Normal & When to Call Your Pediatrician`,
+  behavior: (t) => `${t} - Age-by-Age Behavior Guide for Parents`,
+  medical: (t) => `${t} - Symptoms, Causes & When to Seek Care`,
+  maternal: (t) => `${t} - Evidence-Based Guide for New Mothers`,
+};
+
 export function getConcernMeta(concern: ConcernPage) {
-  const titlePrefix = concern.title.endsWith('?') ? concern.title : `${concern.title}?`;
+  const titleFn = titleTemplates[concern.category];
+  const title = titleFn ? titleFn(concern.title) : `${concern.title} - When to Worry & What to Do`;
   return {
-    title: `${titlePrefix} When to Worry`,
+    title,
     description: truncate(
       `${concern.quickAnswer} Learn when it's normal, when to mention it to your pediatrician, and when to act now.`,
       160
@@ -73,10 +86,23 @@ export function getMedicalWebPageSchema(concern: ConcernPage, path: string) {
       '@type': 'PeopleAudience',
       audienceType: 'Parents',
     },
-    lastReviewed: new Date().toISOString().split('T')[0],
+    lastReviewed: '2026-06-01',
+    reviewedBy: {
+      '@type': 'Organization',
+      name: 'Is My Baby Alright? Editorial Team',
+      url: SITE_URL,
+    },
     medicalAudience: {
       '@type': 'MedicalAudience',
       audienceType: 'Patient',
+    },
+    mainContentOfPage: {
+      '@type': 'WebPageElement',
+      cssSelector: '.concern-content',
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.quick-answer', 'h1'],
     },
   };
 }

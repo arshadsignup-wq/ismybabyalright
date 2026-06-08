@@ -9,8 +9,10 @@ import { allNames } from "@/data/baby-names/names";
 const BASE_URL = "https://www.ismybabyalright.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date().toISOString().split("T")[0];
+
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE_URL, changeFrequency: "weekly", priority: 1.0 },
+    { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/milestones`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/checklist`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/concerns`, changeFrequency: "weekly", priority: 0.9 },
@@ -19,14 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/regression-log`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/resources/mental-health`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/resources/early-intervention`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/tracker`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/tracker/feeding`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/tracker/sleep`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/settings`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE_URL}/sharing`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE_URL}/tools`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/triage`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/vaccines`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/tracker/health`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/food`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/food/allergens`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/mental-health`, changeFrequency: "monthly", priority: 0.8 },
@@ -55,7 +52,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/medicine-dosage`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tools/sleep-schedule`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tools/feeding-amount`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/tracker/diaper`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/first-aid`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/tools/height-predictor`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/quiz/potty-training`, changeFrequency: "monthly", priority: 0.6 },
@@ -92,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const concernRoutes: MetadataRoute.Sitemap = allConcerns.map((c) => ({
     url: `${BASE_URL}/concerns/${c.slug}`,
+    lastModified: "2026-06-05",
     changeFrequency: "monthly",
     priority: 0.8,
   }));

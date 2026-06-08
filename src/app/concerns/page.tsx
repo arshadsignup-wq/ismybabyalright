@@ -3,17 +3,19 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ConcernsListing from "@/components/concerns/ConcernsListing";
 import { allConcerns } from "@/data/concerns";
 
+const concernCount = `${allConcerns.length}+`;
+
 export const metadata: Metadata = {
-  title: "680+ Common Baby Concerns - Evidence-Based Answers",
+  title: `${concernCount} Common Baby Concerns - Evidence-Based Answers`,
   description:
-    "Evidence-based answers to over 680 common baby concerns — from rashes and poop to sleep, feeding, and milestones. Know when it's normal and when to call the doctor.",
+    `Evidence-based answers to over ${allConcerns.length} common baby concerns — from rashes and poop to sleep, feeding, and milestones. Know when it's normal and when to call the doctor.`,
   alternates: {
     canonical: "/concerns",
   },
   openGraph: {
-    title: "680+ Common Baby Concerns - Evidence-Based Answers | Is My Baby Alright?",
+    title: `${concernCount} Common Baby Concerns - Evidence-Based Answers | Is My Baby Alright?`,
     description:
-      "Evidence-based answers to over 680 common baby concerns — from rashes and poop to sleep, feeding, and milestones. Know when it's normal and when to call the doctor.",
+      `Evidence-based answers to over ${allConcerns.length} common baby concerns — from rashes and poop to sleep, feeding, and milestones. Know when it's normal and when to call the doctor.`,
   },
 };
 
@@ -39,9 +41,9 @@ const breadcrumbJsonLd = {
 const collectionJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "680+ Common Baby Concerns - Evidence-Based Answers",
+  name: `${concernCount} Common Baby Concerns - Evidence-Based Answers`,
   description:
-    "Evidence-based answers to over 680 common baby concerns — from rashes and poop to sleep, feeding, and milestones.",
+    `Evidence-based answers to over ${allConcerns.length} common baby concerns — from rashes and poop to sleep, feeding, and milestones.`,
   url: "https://www.ismybabyalright.com/concerns",
   isPartOf: {
     "@type": "WebSite",

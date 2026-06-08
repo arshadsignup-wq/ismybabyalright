@@ -128,6 +128,15 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
 
         <h1>{concern.title}</h1>
 
+        <div className="flex items-center gap-2 mt-2 mb-4 text-xs text-muted">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <span>Editorially reviewed | Sources: {concern.sources.map(s => s.org).join(', ')}</span>
+          <span className="text-muted/50">|</span>
+          <span>Updated June 2026</span>
+        </div>
+
         <QuickAnswer answer={concern.quickAnswer} />
 
         <ReassuranceBanner slug={concern.slug} popular={concern.popular} />
