@@ -524,6 +524,7 @@ import { concern as babyPreSurgeryPreparation } from './baby-pre-surgery-prepara
 import { concern as babyPreferringOneParent } from './baby-preferring-one-parent';
 import { concern as babyPrimitiveReflexNotIntegrating } from './baby-primitive-reflex-not-integrating';
 import { concern as babyProbioticsBenefitsEvidence } from './baby-probiotics-benefits-evidence';
+import { concern as babyProbioticsWhenToUse } from './baby-probiotics-when-to-use';
 import { concern as babyProteinNeedsByAge } from './baby-protein-needs-by-age';
 import { concern as babyPullingToStandLate } from './baby-pulling-to-stand-late';
 import { concern as babyPurpuraNonBlanchingRash } from './baby-purpura-non-blanching-rash';
@@ -805,6 +806,7 @@ import { concern as breastMilkSmellTasteChange } from './breast-milk-smell-taste
 import { concern as breastMilkStorageRules } from './breast-milk-storage-rules';
 import { concern as breastMilkThawingRules } from './breast-milk-thawing-rules';
 import { concern as breastPumpFlangeSizeWrong } from './breast-pump-flange-size-wrong';
+import { concern as breastfedVsFormulaPoopDifferences } from './breastfed-vs-formula-poop-differences';
 import { concern as breastfeedingFirstHour } from './breastfeeding-first-hour';
 import { concern as breastfeedingGriefWhenStopping } from './breastfeeding-grief-when-stopping';
 import { concern as breastfeedingInPublicAnxiety } from './breastfeeding-in-public-anxiety';
@@ -827,6 +829,7 @@ import { concern as cafeAuLaitSpots } from './cafe-au-lait-spots';
 import { concern as caffeineWhileBreastfeeding } from './caffeine-while-breastfeeding';
 import { concern as calciumNeedsToddler } from './calcium-needs-toddler';
 import { concern as caputSuccedaneumHeadSwelling } from './caput-succedaneum-head-swelling';
+import { concern as caringForBabyWhenParentsSick } from './caring-for-baby-when-parents-sick';
 import { concern as carSeatReplacementAfterAccident } from './car-seat-replacement-after-accident';
 import { concern as carSicknessBabyToddler } from './car-sickness-baby-toddler';
 import { concern as catchUpGrowthPrematureBaby } from './catch-up-growth-premature-baby';
@@ -845,6 +848,7 @@ import { concern as childNotUsingPastTense } from './child-not-using-past-tense'
 import { concern as childhoodApraxiaOfSpeechSigns } from './childhood-apraxia-of-speech-signs';
 import { concern as choanalAtresia } from './choanal-atresia';
 import { concern as chokingHazardFoodsList } from './choking-hazard-foods-list';
+import { concern as choosingAPediatrician } from './choosing-a-pediatrician';
 import { concern as cholestasisOfPregnancy } from './cholestasis-of-pregnancy';
 import { concern as cholesteatomaBaby } from './cholesteatoma-baby';
 import { concern as chronicCongestion } from './chronic-congestion';
@@ -900,10 +904,12 @@ import { concern as cyanosisBaby } from './cyanosis-baby';
 import { concern as cysticFibrosisBabySigns } from './cystic-fibrosis-baby-signs';
 import { concern as dacryocystitisTearDuctInfection } from './dacryocystitis-tear-duct-infection';
 import { concern as dairyInMothersDietImpact } from './dairy-in-mothers-diet-impact';
+import { concern as daycareHealthSafetyChecklist } from './daycare-health-safety-checklist';
 import { concern as daycareIllnessFrequencyNormal } from './daycare-illness-frequency-normal';
 import { concern as daycareNapStruggles } from './daycare-nap-struggles';
 import { concern as daycareReadinessSigns } from './daycare-readiness-signs';
 import { concern as daycareSeparationCryingDuration } from './daycare-separation-crying-duration';
+import { concern as daycareNutritionWhatToExpect } from './daycare-nutrition-what-to-expect';
 import { concern as daytimeSleepinessNormal } from './daytime-sleepiness-normal';
 import { concern as decreasedFetalMovement } from './decreased-fetal-movement';
 import { concern as defianceAsDevelopmentalStage } from './defiance-as-developmental-stage';
@@ -1058,6 +1064,7 @@ import { concern as furnitureTipOverPrevention } from './furniture-tip-over-prev
 import { concern as g6pdDeficiencyBaby } from './g6pd-deficiency-baby';
 import { concern as gaggingOnSolids } from './gagging-on-solids';
 import { concern as galactosemiaBaby } from './galactosemia-baby';
+import { concern as gastrocolocReflexPoopingAfterFeeds } from './gastrocolic-reflex-pooping-after-feeds';
 import { concern as gentleParentingWhenNotWorking } from './gentle-parenting-when-not-working';
 import { concern as gestationalDiabetesBabyEffects } from './gestational-diabetes-baby-effects';
 import { concern as gestationalDiabetesRisk } from './gestational-diabetes-risk';
@@ -1114,6 +1121,7 @@ import { concern as hormonalChangesAfterBirth } from './hormonal-changes-after-b
 import { concern as hotCarSeatBuckleBurns } from './hot-car-seat-buckle-burns';
 import { concern as hotelBabyProofingTips } from './hotel-baby-proofing-tips';
 import { concern as houseplantPoisoningBaby } from './houseplant-poisoning-baby';
+import { concern as howOftenBabiesGetSickNormal } from './how-often-babies-get-sick-normal';
 import { concern as hydroceleBaby } from './hydrocele-baby';
 import { concern as hyperemesisGravidarum } from './hyperemesis-gravidarum';
 import { concern as hypoallergenicFormulaWhenNeeded } from './hypoallergenic-formula-when-needed';
@@ -1457,6 +1465,7 @@ import { concern as paternalPostpartumDepression } from './paternal-postpartum-d
 import { concern as pectusDeformityBaby } from './pectus-deformity-baby';
 import { concern as pediatricFeedingDisorderSigns } from './pediatric-feeding-disorder-signs';
 import { concern as pediatricianDisagreementConcerns } from './pediatrician-disagreement-concerns';
+import { concern as pediatricianVsFamilyMedicineForBaby } from './pediatrician-vs-family-medicine-for-baby';
 import { concern as peelingSkinNewborn } from './peeling-skin-newborn';
 import { concern as perinealHealingPostpartum } from './perineal-healing-postpartum';
 import { concern as perioralDermatitisBaby } from './perioral-dermatitis-baby';
@@ -1501,6 +1510,7 @@ import { concern as postpartumHairLoss } from './postpartum-hair-loss';
 import { concern as postpartumIncontinence } from './postpartum-incontinence';
 import { concern as postpartumIntimacyTimeline } from './postpartum-intimacy-timeline';
 import { concern as postpartumLibidoChanges } from './postpartum-libido-changes';
+import { concern as postpartumDoulaVsNightNurse } from './postpartum-doula-vs-night-nurse';
 import { concern as postpartumNightSweats } from './postpartum-night-sweats';
 import { concern as postpartumOcdIntrusiveThoughts } from './postpartum-ocd-intrusive-thoughts';
 import { concern as postpartumPelvicFloorWeakness } from './postpartum-pelvic-floor-weakness';
@@ -1580,6 +1590,7 @@ import { concern as prematureRuptureMembranes } from './premature-rupture-membra
 import { concern as prenatalDepression } from './prenatal-depression';
 import { concern as prenatalTestingAnxiety } from './prenatal-testing-anxiety';
 import { concern as preparingFormulaSafely } from './preparing-formula-safely';
+import { concern as preparingForBabyDoctorVisit } from './preparing-for-baby-doctor-visit';
 import { concern as preparingToddlerForNewBaby } from './preparing-toddler-for-new-baby';
 import { concern as preschoolReadinessAssessment } from './preschool-readiness-assessment';
 import { concern as pressureToEatEffects } from './pressure-to-eat-effects';
@@ -1724,6 +1735,7 @@ import { concern as symphysisPubisDysfunction } from './symphysis-pubis-dysfunct
 import { concern as syndactylyWebbedFingersToes } from './syndactyly-webbed-fingers-toes';
 import { concern as tabletDependencyToddler } from './tablet-dependency-toddler';
 import { concern as tantrums } from './tantrums';
+import { concern as talkingToNewbornLanguageDevelopment } from './talking-to-newborn-language-development';
 import { concern as tdapVaccinePregnancy } from './tdap-vaccine-pregnancy';
 import { concern as teenPregnancyConcerns } from './teen-pregnancy-concerns';
 import { concern as teethingOrderTimeline } from './teething-order-timeline';
@@ -2156,15 +2168,19 @@ import { concern as weaningFromBottle } from './weaning-from-bottle';
 import { concern as weaningOffBreastfeeding } from './weaning-off-breastfeeding';
 import { concern as weaningToddlerEighteenMonthsPlus } from './weaning-toddler-eighteen-months-plus';
 import { concern as weightFalteringBaby } from './weight-faltering-baby';
+import { concern as wellChildVisitScheduleGuide } from './well-child-visit-schedule-guide';
 import { concern as wheezing } from './wheezing';
 import { concern as whenToCallPediatrician } from './when-to-call-pediatrician';
 import { concern as whenToWorryVsWhenItsNormal } from './when-to-worry-vs-when-its-normal';
+import { concern as whenToKeepBabyHomeFromDaycare } from './when-to-keep-baby-home-from-daycare';
+import { concern as whenToSwitchPediatricians } from './when-to-switch-pediatricians';
 import { concern as whitePoop } from './white-poop';
 import { concern as williamsSyndromeBaby } from './williams-syndrome-baby';
 import { concern as wilmsTumorSignsBaby } from './wilms-tumor-signs-baby';
 import { concern as windowFallPreventionBaby } from './window-fall-prevention-baby';
 import { concern as wontSleepWithoutNursing } from './wont-sleep-without-nursing';
 import { concern as wordRetrievalDifficultyToddler } from './word-retrieval-difficulty-toddler';
+import { concern as workingParentReturningToWorkWithBaby } from './working-parent-returning-to-work-with-baby';
 import { concern as yeastDiaperRash } from './yeast-diaper-rash';
 import { concern as yellowWateryPoop } from './yellow-watery-poop';
 import { concern as zikaVirusPregnancy } from './zika-virus-pregnancy';
@@ -2695,6 +2711,7 @@ export const allConcerns: ConcernPage[] = [
   babyPreferringOneParent,
   babyPrimitiveReflexNotIntegrating,
   babyProbioticsBenefitsEvidence,
+  babyProbioticsWhenToUse,
   babyProteinNeedsByAge,
   babyPullingToStandLate,
   babyPurpuraNonBlanchingRash,
@@ -2976,6 +2993,7 @@ export const allConcerns: ConcernPage[] = [
   breastMilkStorageRules,
   breastMilkThawingRules,
   breastPumpFlangeSizeWrong,
+  breastfedVsFormulaPoopDifferences,
   breastfeedingFirstHour,
   breastfeedingGriefWhenStopping,
   breastfeedingInPublicAnxiety,
@@ -2998,6 +3016,7 @@ export const allConcerns: ConcernPage[] = [
   caffeineWhileBreastfeeding,
   calciumNeedsToddler,
   caputSuccedaneumHeadSwelling,
+  caringForBabyWhenParentsSick,
   carSeatReplacementAfterAccident,
   carSicknessBabyToddler,
   catchUpGrowthPrematureBaby,
@@ -3016,6 +3035,7 @@ export const allConcerns: ConcernPage[] = [
   childhoodApraxiaOfSpeechSigns,
   choanalAtresia,
   chokingHazardFoodsList,
+  choosingAPediatrician,
   cholestasisOfPregnancy,
   cholesteatomaBaby,
   chronicCongestion,
@@ -3071,10 +3091,12 @@ export const allConcerns: ConcernPage[] = [
   cysticFibrosisBabySigns,
   dacryocystitisTearDuctInfection,
   dairyInMothersDietImpact,
+  daycareHealthSafetyChecklist,
   daycareIllnessFrequencyNormal,
   daycareNapStruggles,
   daycareReadinessSigns,
   daycareSeparationCryingDuration,
+  daycareNutritionWhatToExpect,
   daytimeSleepinessNormal,
   decreasedFetalMovement,
   defianceAsDevelopmentalStage,
@@ -3229,6 +3251,7 @@ export const allConcerns: ConcernPage[] = [
   g6pdDeficiencyBaby,
   gaggingOnSolids,
   galactosemiaBaby,
+  gastrocolocReflexPoopingAfterFeeds,
   gentleParentingWhenNotWorking,
   gestationalDiabetesBabyEffects,
   gestationalDiabetesRisk,
@@ -3285,6 +3308,7 @@ export const allConcerns: ConcernPage[] = [
   hotCarSeatBuckleBurns,
   hotelBabyProofingTips,
   houseplantPoisoningBaby,
+  howOftenBabiesGetSickNormal,
   hydroceleBaby,
   hyperemesisGravidarum,
   hypoallergenicFormulaWhenNeeded,
@@ -3628,6 +3652,7 @@ export const allConcerns: ConcernPage[] = [
   pectusDeformityBaby,
   pediatricFeedingDisorderSigns,
   pediatricianDisagreementConcerns,
+  pediatricianVsFamilyMedicineForBaby,
   peelingSkinNewborn,
   perinealHealingPostpartum,
   perioralDermatitisBaby,
@@ -3672,6 +3697,7 @@ export const allConcerns: ConcernPage[] = [
   postpartumIncontinence,
   postpartumIntimacyTimeline,
   postpartumLibidoChanges,
+  postpartumDoulaVsNightNurse,
   postpartumNightSweats,
   postpartumOcdIntrusiveThoughts,
   postpartumPelvicFloorWeakness,
@@ -3751,6 +3777,7 @@ export const allConcerns: ConcernPage[] = [
   prenatalDepression,
   prenatalTestingAnxiety,
   preparingFormulaSafely,
+  preparingForBabyDoctorVisit,
   preparingToddlerForNewBaby,
   preschoolReadinessAssessment,
   pressureToEatEffects,
@@ -3895,6 +3922,7 @@ export const allConcerns: ConcernPage[] = [
   syndactylyWebbedFingersToes,
   tabletDependencyToddler,
   tantrums,
+  talkingToNewbornLanguageDevelopment,
   tdapVaccinePregnancy,
   teenPregnancyConcerns,
   teethingOrderTimeline,
@@ -4327,15 +4355,19 @@ export const allConcerns: ConcernPage[] = [
   weaningOffBreastfeeding,
   weaningToddlerEighteenMonthsPlus,
   weightFalteringBaby,
+  wellChildVisitScheduleGuide,
   wheezing,
   whenToCallPediatrician,
   whenToWorryVsWhenItsNormal,
+  whenToKeepBabyHomeFromDaycare,
+  whenToSwitchPediatricians,
   whitePoop,
   williamsSyndromeBaby,
   wilmsTumorSignsBaby,
   windowFallPreventionBaby,
   wontSleepWithoutNursing,
   wordRetrievalDifficultyToddler,
+  workingParentReturningToWorkWithBaby,
   yeastDiaperRash,
   yellowWateryPoop,
   zikaVirusPregnancy,
