@@ -17,6 +17,7 @@ import { concern as allergenIntroductionTiming } from './allergen-introduction-t
 import { concern as altitudeSicknessBaby } from './altitude-sickness-baby';
 import { concern as amblyopiaLazyEyeTreatmentTiming } from './amblyopia-lazy-eye-treatment-timing';
 import { concern as amblyopiaSigns } from './amblyopia-signs';
+import { concern as amberTeethingNecklaceSafetyRisk } from './amber-teething-necklace-safety-risk';
 import { concern as amniocentesisConcerns } from './amniocentesis-concerns';
 import { concern as analFissureBaby } from './anal-fissure-baby';
 import { concern as anaphylaxisSignsInBaby } from './anaphylaxis-signs-in-baby';
@@ -275,6 +276,7 @@ import { concern as babyFontanelleClosingLate } from './baby-fontanelle-closing-
 import { concern as babyFoodAllergyOutgrowing } from './baby-food-allergy-outgrowing';
 import { concern as babyFoodHeavyMetalsConcern } from './baby-food-heavy-metals-concern';
 import { concern as babyFoodIntoleranceVsAllergy } from './baby-food-intolerance-vs-allergy';
+import { concern as babyFoodPouchDependencyTextureRefusal } from './baby-food-pouch-dependency-texture-refusal';
 import { concern as babyFoodReheatingSafety } from './baby-food-reheating-safety';
 import { concern as babyFoodStorageDuration } from './baby-food-storage-duration';
 import { concern as babyFootTurnedInward } from './baby-foot-turned-inward';
@@ -314,6 +316,7 @@ import { concern as babyHandFlapping } from './baby-hand-flapping';
 import { concern as babyHandFootMouthBlistersSevere } from './baby-hand-foot-mouth-blisters-severe';
 import { concern as babyHandFootMouthContagiousPeriod } from './baby-hand-foot-mouth-contagious-period';
 import { concern as babyHandWringingRepetitive } from './baby-hand-wringing-repetitive';
+import { concern as babyHatesTummyTimeAlternatives } from './baby-hates-tummy-time-alternatives';
 import { concern as babyHeadBobbingUnsupported } from './baby-head-bobbing-unsupported';
 import { concern as babyHeadControlDelayed } from './baby-head-control-delayed';
 import { concern as babyHeadGrowthTooFast } from './baby-head-growth-too-fast';
@@ -525,6 +528,7 @@ import { concern as babyPreferringOneParent } from './baby-preferring-one-parent
 import { concern as babyPrimitiveReflexNotIntegrating } from './baby-primitive-reflex-not-integrating';
 import { concern as babyProbioticsBenefitsEvidence } from './baby-probiotics-benefits-evidence';
 import { concern as babyProbioticsWhenToUse } from './baby-probiotics-when-to-use';
+import { concern as babyProductRecallsSafetyChecking } from './baby-product-recalls-safety-checking';
 import { concern as babyProteinNeedsByAge } from './baby-protein-needs-by-age';
 import { concern as babyPullingToStandLate } from './baby-pulling-to-stand-late';
 import { concern as babyPurpuraNonBlanchingRash } from './baby-purpura-non-blanching-rash';
@@ -793,6 +797,7 @@ import { concern as bottleToCupTransitionTiming } from './bottle-to-cup-transiti
 import { concern as bottleWarmingMethodsSafety } from './bottle-warming-methods-safety';
 import { concern as boundaryTestingToddler } from './boundary-testing-toddler';
 import { concern as bowleggedBaby } from './bowlegged-baby';
+import { concern as bpaPhthalatesBabyProductsSafety } from './bpa-phthalates-baby-products-safety';
 import { concern as braxtonHicksVsRealContractions } from './braxton-hicks-vs-real-contractions';
 import { concern as breastAsymmetrySupplyDifference } from './breast-asymmetry-supply-difference';
 import { concern as breastBudsNewborn } from './breast-buds-newborn';
@@ -866,6 +871,7 @@ import { concern as coarctationOfAortaBaby } from './coarctation-of-aorta-baby';
 import { concern as coldWeatherBabyOutdoorSafety } from './cold-weather-baby-outdoor-safety';
 import { concern as colicVsGas } from './colic-vs-gas';
 import { concern as colic } from './colic';
+import { concern as cocomelonYoutubeDependencyToddler } from './cocomelon-youtube-dependency-toddler';
 import { concern as colobomaEyeBaby } from './coloboma-eye-baby';
 import { concern as comboFeedingBreastAndFormula } from './combo-feeding-breast-and-formula';
 import { concern as commonColdDurationBabies } from './common-cold-duration-babies';
@@ -1060,6 +1066,7 @@ import { concern as frequentFalling } from './frequent-falling';
 import { concern as frequentNightWakings } from './frequent-night-wakings';
 import { concern as frequentPooping } from './frequent-pooping';
 import { concern as fungalRash } from './fungal-rash';
+import { concern as fourthTrimesterNewbornAdjustmentReality } from './fourth-trimester-newborn-adjustment-reality';
 import { concern as furnitureTipOverPrevention } from './furniture-tip-over-prevention';
 import { concern as g6pdDeficiencyBaby } from './g6pd-deficiency-baby';
 import { concern as gaggingOnSolids } from './gagging-on-solids';
@@ -1198,8 +1205,10 @@ import { concern as medicationSafetyWhileBreastfeeding } from './medication-safe
 import { concern as meningitisSignsBaby } from './meningitis-signs-baby';
 import { concern as metatarsusAdductus } from './metatarsus-adductus';
 import { concern as microcephalySigns } from './microcephaly-signs';
+import { concern as microplasticsBabyBottlesSafety } from './microplastics-baby-bottles-safety';
 import { concern as microtiaAtresiaEarBaby } from './microtia-atresia-ear-baby';
 import { concern as middleEarInfectionRecurrent } from './middle-ear-infection-recurrent';
+import { concern as milestoneAnxietyObsessiveTracking } from './milestone-anxiety-obsessive-tracking';
 import { concern as milestonePressureParents } from './milestone-pressure-parents';
 import { concern as miliaBaby } from './milia-baby';
 import { concern as milkProteinAllergy } from './milk-protein-allergy';
@@ -1207,6 +1216,7 @@ import { concern as mixingFormulaConcentration } from './mixing-formula-concentr
 import { concern as mixingUpWords } from './mixing-up-words';
 import { concern as molarPregnancySigns } from './molar-pregnancy-signs';
 import { concern as moldAllergyBaby } from './mold-allergy-baby';
+import { concern as moldInSippyCupStrawCup } from './mold-in-sippy-cup-straw-cup';
 import { concern as molluscum } from './molluscum';
 import { concern as momGuilt } from './mom-guilt';
 import { concern as mongolianSpots } from './mongolian-spots';
@@ -1379,6 +1389,7 @@ import { concern as nicuStayMultiples } from './nicu-stay-multiples';
 import { concern as nightTerrors } from './night-terrors';
 import { concern as nightWeaningReadiness } from './night-weaning-readiness';
 import { concern as nightWeaning } from './night-weaning';
+import { concern as nightWakingFrequencyByAgeNormal } from './night-waking-frequency-by-age-normal';
 import { concern as nippleConfusionVsFlowPreference } from './nipple-confusion-vs-flow-preference';
 import { concern as nippleShieldUseConcerns } from './nipple-shield-use-concerns';
 import { concern as noJointAttention } from './no-joint-attention';
@@ -1428,6 +1439,7 @@ import { concern as notWalking } from './not-walking';
 import { concern as notWaving } from './not-waving';
 import { concern as nuchalCordConcerns } from './nuchal-cord-concerns';
 import { concern as nursingStrike } from './nursing-strike';
+import { concern as nurseryOffGassingVocSafety } from './nursery-off-gassing-voc-safety';
 import { concern as nystagmusBaby } from './nystagmus-baby';
 import { concern as obstructiveSleepApneaToddler } from './obstructive-sleep-apnea-toddler';
 import { concern as occupationalTherapyFeeding } from './occupational-therapy-feeding';
@@ -1458,6 +1470,7 @@ import { concern as pallorBaby } from './pallor-baby';
 import { concern as parallelPlayConcerns } from './parallel-play-concerns';
 import { concern as parallelPlayVsInteractivePlay } from './parallel-play-vs-interactive-play';
 import { concern as parentalBurnoutSigns } from './parental-burnout-signs';
+import { concern as parentalDecisionFatigueConflictingAdvice } from './parental-decision-fatigue-conflicting-advice';
 import { concern as parentingAnxietyConstantWorry } from './parenting-anxiety-constant-worry';
 import { concern as partnerConflictParentingDecisions } from './partner-conflict-parenting-decisions';
 import { concern as patentDuctusArteriosus } from './patent-ductus-arteriosus';
@@ -1476,6 +1489,7 @@ import { concern as persistentFeverBaby } from './persistent-fever-baby';
 import { concern as pertussisWhoopingCoughBaby } from './pertussis-whooping-cough-baby';
 import { concern as petAllergyManagementWithBaby } from './pet-allergy-management-with-baby';
 import { concern as petechiaeBaby } from './petechiae-baby';
+import { concern as pfasForeverChemicalsBabyProducts } from './pfas-forever-chemicals-baby-products';
 import { concern as phenylketonuriaPkuBaby } from './phenylketonuria-pku-baby';
 import { concern as phimosisBaby } from './phimosis-baby';
 import { concern as picaDuringPregnancy } from './pica-during-pregnancy';
@@ -1609,6 +1623,7 @@ import { concern as pumpingExclusivelyConcerns } from './pumping-exclusively-con
 import { concern as pumpingNotEnoughOutput } from './pumping-not-enough-output';
 import { concern as pumpingOutputConcerns } from './pumping-output-concerns';
 import { concern as pupppRashPregnancy } from './puppp-rash-pregnancy';
+import { concern as purpleCryingPeriodCoping } from './purple-crying-period-coping';
 import { concern as pyloricStenosisSigns } from './pyloric-stenosis-signs';
 import { concern as pyloricStenosis } from './pyloric-stenosis';
 import { concern as rainbowBabyAnxiety } from './rainbow-baby-anxiety';
@@ -2008,6 +2023,7 @@ import { concern as toddlerSSoundDifficulty } from './toddler-s-sound-difficulty
 import { concern as toddlerSayingNoToEverything } from './toddler-saying-no-to-everything';
 import { concern as toddlerScratchingOthers } from './toddler-scratching-others';
 import { concern as toddlerScreamingPhase } from './toddler-screaming-phase';
+import { concern as toddlerScreenRemovalMeltdown } from './toddler-screen-removal-meltdown';
 import { concern as toddlerScriptedSpeechOnly } from './toddler-scripted-speech-only';
 import { concern as toddlerSecondaryBehaviorsStuttering } from './toddler-secondary-behaviors-stuttering';
 import { concern as toddlerSelectiveHearingVsReal } from './toddler-selective-hearing-vs-real';
@@ -2202,6 +2218,7 @@ export const allConcerns: ConcernPage[] = [
   airQualityPollutionBabyHealth,
   allergenIntroductionTiming,
   altitudeSicknessBaby,
+  amberTeethingNecklaceSafetyRisk,
   amblyopiaLazyEyeTreatmentTiming,
   amblyopiaSigns,
   amniocentesisConcerns,
@@ -2462,6 +2479,7 @@ export const allConcerns: ConcernPage[] = [
   babyFoodAllergyOutgrowing,
   babyFoodHeavyMetalsConcern,
   babyFoodIntoleranceVsAllergy,
+  babyFoodPouchDependencyTextureRefusal,
   babyFoodReheatingSafety,
   babyFoodStorageDuration,
   babyFootTurnedInward,
@@ -2501,6 +2519,7 @@ export const allConcerns: ConcernPage[] = [
   babyHandFootMouthBlistersSevere,
   babyHandFootMouthContagiousPeriod,
   babyHandWringingRepetitive,
+  babyHatesTummyTimeAlternatives,
   babyHeadBobbingUnsupported,
   babyHeadControlDelayed,
   babyHeadGrowthTooFast,
@@ -2712,6 +2731,7 @@ export const allConcerns: ConcernPage[] = [
   babyPrimitiveReflexNotIntegrating,
   babyProbioticsBenefitsEvidence,
   babyProbioticsWhenToUse,
+  babyProductRecallsSafetyChecking,
   babyProteinNeedsByAge,
   babyPullingToStandLate,
   babyPurpuraNonBlanchingRash,
@@ -2980,6 +3000,7 @@ export const allConcerns: ConcernPage[] = [
   bottleWarmingMethodsSafety,
   boundaryTestingToddler,
   bowleggedBaby,
+  bpaPhthalatesBabyProductsSafety,
   braxtonHicksVsRealContractions,
   breastAsymmetrySupplyDifference,
   breastBudsNewborn,
@@ -3050,6 +3071,7 @@ export const allConcerns: ConcernPage[] = [
   cmvCytomegalovirusPregnancy,
   coParentingDifferentStyles,
   coarctationOfAortaBaby,
+  cocomelonYoutubeDependencyToddler,
   coldWeatherBabyOutdoorSafety,
   colicVsGas,
   colic,
@@ -3237,6 +3259,7 @@ export const allConcerns: ConcernPage[] = [
   formulaUnderfeedingSigns,
   fortifiedFormulaWhenNeeded,
   foulSmellingPoop,
+  fourthTrimesterNewbornAdjustmentReality,
   fpiesDiagnosisManagement,
   fpiesFoodProtein,
   fpiesGrainReactions,
@@ -3385,8 +3408,10 @@ export const allConcerns: ConcernPage[] = [
   meningitisSignsBaby,
   metatarsusAdductus,
   microcephalySigns,
+  microplasticsBabyBottlesSafety,
   microtiaAtresiaEarBaby,
   middleEarInfectionRecurrent,
+  milestoneAnxietyObsessiveTracking,
   milestonePressureParents,
   miliaBaby,
   milkProteinAllergy,
@@ -3394,6 +3419,7 @@ export const allConcerns: ConcernPage[] = [
   mixingUpWords,
   molarPregnancySigns,
   moldAllergyBaby,
+  moldInSippyCupStrawCup,
   molluscum,
   momGuilt,
   mongolianSpots,
@@ -3564,6 +3590,7 @@ export const allConcerns: ConcernPage[] = [
   nicuParentTrauma,
   nicuStayMultiples,
   nightTerrors,
+  nightWakingFrequencyByAgeNormal,
   nightWeaningReadiness,
   nightWeaning,
   nippleConfusionVsFlowPreference,
@@ -3614,6 +3641,7 @@ export const allConcerns: ConcernPage[] = [
   notWalking,
   notWaving,
   nuchalCordConcerns,
+  nurseryOffGassingVocSafety,
   nursingStrike,
   nystagmusBaby,
   obstructiveSleepApneaToddler,
@@ -3645,6 +3673,7 @@ export const allConcerns: ConcernPage[] = [
   parallelPlayConcerns,
   parallelPlayVsInteractivePlay,
   parentalBurnoutSigns,
+  parentalDecisionFatigueConflictingAdvice,
   parentingAnxietyConstantWorry,
   partnerConflictParentingDecisions,
   patentDuctusArteriosus,
@@ -3663,6 +3692,7 @@ export const allConcerns: ConcernPage[] = [
   pertussisWhoopingCoughBaby,
   petAllergyManagementWithBaby,
   petechiaeBaby,
+  pfasForeverChemicalsBabyProducts,
   phenylketonuriaPkuBaby,
   phimosisBaby,
   picaDuringPregnancy,
@@ -3796,6 +3826,7 @@ export const allConcerns: ConcernPage[] = [
   pumpingNotEnoughOutput,
   pumpingOutputConcerns,
   pupppRashPregnancy,
+  purpleCryingPeriodCoping,
   pyloricStenosisSigns,
   pyloricStenosis,
   rainbowBabyAnxiety,
@@ -4195,6 +4226,7 @@ export const allConcerns: ConcernPage[] = [
   toddlerSayingNoToEverything,
   toddlerScratchingOthers,
   toddlerScreamingPhase,
+  toddlerScreenRemovalMeltdown,
   toddlerScriptedSpeechOnly,
   toddlerSecondaryBehaviorsStuttering,
   toddlerSelectiveHearingVsReal,
