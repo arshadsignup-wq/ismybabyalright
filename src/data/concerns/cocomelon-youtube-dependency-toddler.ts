@@ -22,7 +22,7 @@ export const concern: ConcernPage = {
     {
       ageRange: '0-18 months',
       context:
-        'The AAP recommends no screen media for this age group except video chatting with family. Babies\' brains develop best through interactive, face-to-face engagement — not passive screen watching. If your infant has been exposed to Cocomelon or YouTube, this is extremely common and not a reason for guilt. However, this is the ideal time to establish screen-free habits. Infants who watch fast-paced content may become less interested in slower-paced real-world interactions, which are the foundation of language and social development.',
+        'The AAP recommends no screen media for this age group except video chatting with family. Babies\' brains develop best through interactive, face-to-face engagement, not passive screen watching. If your infant has been exposed to Cocomelon or YouTube, this is extremely common and not a reason for guilt. However, this is the ideal time to establish screen-free habits. Infants who watch fast-paced content may become less interested in slower-paced real-world interactions, which are the foundation of language and social development.',
     },
     {
       ageRange: '18-24 months',
@@ -32,28 +32,28 @@ export const concern: ConcernPage = {
     {
       ageRange: '2-3 years',
       context:
-        'Toddlers in this age range are the peak audience for Cocomelon and YouTube Kids content. Signs of problematic dependency include: tantrums lasting more than 20 minutes when the screen is turned off, requesting the show as the first activity every morning, showing no interest in other activities, echoing only show phrases rather than generating novel language, and becoming dysregulated (aggressive, hyperactive) after watching. Setting consistent rules — such as "one episode after dinner" — with a visual timer helps toddlers anticipate transitions.',
+        'Toddlers in this age range are the peak audience for Cocomelon and YouTube Kids content. Signs of problematic dependency include: tantrums lasting more than 20 minutes when the screen is turned off, requesting the show as the first activity every morning, showing no interest in other activities, echoing only show phrases rather than generating novel language, and becoming dysregulated (aggressive, hyperactive) after watching. Setting consistent rules, such as "one episode after dinner," with a visual timer helps toddlers anticipate transitions.',
     },
     {
       ageRange: 'All ages',
       context:
-        'YouTube\'s autoplay feature is specifically designed to keep viewers watching. Turn off autoplay for children\'s content, use a kitchen timer to signal "show is done," and avoid using screens as the default tool for transitions (meals, car rides, diaper changes). Research from the University of Michigan suggests that how parents manage screen time transitions matters more than the total minutes — consistent, calm limits teach self-regulation. If your child watches some Cocomelon and is otherwise engaged, verbal, and developing normally, occasional viewing is not harmful.',
+        'YouTube\'s autoplay feature is specifically designed to keep viewers watching. Turn off autoplay for children\'s content, use a kitchen timer to signal "show is done," and avoid using screens as the default tool for transitions (meals, car rides, diaper changes). Research from the University of Michigan suggests that how parents manage screen time transitions matters more than the total minutes: consistent, calm limits teach self-regulation. If your child watches some Cocomelon and is otherwise engaged, verbal, and developing normally, occasional viewing is not harmful.',
     },
   ],
   whenNormal: [
-    'Your toddler briefly protesting when the TV is turned off — this is a normal response to ending a preferred activity',
-    'Your child requesting a favorite show by name — preference is normal',
+    'Your toddler briefly protesting when the TV is turned off (this is a normal response to ending a preferred activity)',
+    'Your child requesting a favorite show by name, since preference is normal',
     'Occasional use of a show to get through a difficult moment (illness, travel, meal prep) without guilt',
-    'Your toddler dancing, singing, or talking about what they watched — this shows engagement, not dependency',
+    'Your toddler dancing, singing, or talking about what they watched, which shows engagement, not dependency',
   ],
   whenToMention: [
     'Your child is not developing language skills on schedule and watches more than 1-2 hours of screen media daily',
     'Tantrums after turning off screens are consistently severe (more than 30 minutes, aggressive, inconsolable)',
-    'Your child shows no interest in playing with toys, going outside, or interacting with others — only wants screens',
+    'Your child shows no interest in playing with toys, going outside, or interacting with others and only wants screens',
     'You find it impossible to get through a day without several hours of screen time and want strategies',
   ],
   whenToActNow: [
-    'Your child has stopped using words they previously had and their primary activity is watching screens — loss of language warrants developmental evaluation',
+    'Your child has stopped using words they previously had and their primary activity is watching screens. Loss of language warrants developmental evaluation',
     'Your toddler becomes physically aggressive (head banging, throwing objects) when screens are removed',
     'You are concerned your child\'s screen use is a coping mechanism for pain, illness, or emotional distress you haven\'t identified',
   ],

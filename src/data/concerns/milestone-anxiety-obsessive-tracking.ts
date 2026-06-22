@@ -17,27 +17,27 @@ export const concern: ConcernPage = {
     'milestone obsession first time mom',
   ],
   quickAnswer:
-    'Milestone anxiety — the persistent worry that your baby is not developing on schedule — has become increasingly common in the age of milestone tracking apps, social media, and readily accessible developmental checklists. While awareness of milestones is important for early identification of delays, constant monitoring can become counterproductive, leading to chronic parental anxiety, reduced enjoyment of the baby stage, and unnecessary medical consultations. Pediatric psychologists note that milestone ranges are wide for a reason: the AAP\'s developmental milestones represent the age by which 75% of children have achieved a skill, meaning 25% of typically developing children will reach it later. A 2023 survey by the Motherly State of Motherhood report found that 70% of millennial mothers report anxiety about their child\'s developmental milestones. If checking milestones is causing you more distress than reassurance, it may be time to adjust your approach.',
+    'Milestone anxiety, the persistent worry that your baby is not developing on schedule, has become increasingly common in the age of milestone tracking apps, social media, and readily accessible developmental checklists. While awareness of milestones is important for early identification of delays, constant monitoring can become counterproductive, leading to chronic parental anxiety, reduced enjoyment of the baby stage, and unnecessary medical consultations. Pediatric psychologists note that milestone ranges are wide for a reason: the AAP\'s developmental milestones represent the age by which 75% of children have achieved a skill, meaning 25% of typically developing children will reach it later. A 2023 survey by the Motherly State of Motherhood report found that 70% of millennial mothers report anxiety about their child\'s developmental milestones. If checking milestones is causing you more distress than reassurance, it may be time to adjust your approach.',
   byAge: [
     {
       ageRange: '0-3 months',
       context:
-        'Early milestones (social smile, head lifting, tracking objects) have wide normal ranges. First-time parents are often hypervigilant during this period. Smiling typically appears between 6-12 weeks — comparing your 5-week-old to a friend\'s 10-week-old who smiles is misleading. Premature babies should be assessed using adjusted age. Limit milestone checking to your pediatrician visits, where standardized screening tools provide accurate assessment rather than app-based checklists.',
+        'Early milestones (social smile, head lifting, tracking objects) have wide normal ranges. First-time parents are often hypervigilant during this period. Smiling typically appears between 6-12 weeks, so comparing your 5-week-old to a friend\'s 10-week-old who smiles is misleading. Premature babies should be assessed using adjusted age. Limit milestone checking to your pediatrician visits, where standardized screening tools provide accurate assessment rather than app-based checklists.',
     },
     {
       ageRange: '3-6 months',
       context:
-        'Rolling, reaching, and laughing emerge during this period, and parents often worry if their baby does one but not another. Development is not linear — babies may work on one skill area intensely (like social babbling) while temporarily pausing another (like rolling). This is normal. Social media posts showing "early" achievements create unrealistic benchmarks. Remember that parents post their baby\'s best moments, not the hours of non-achievement.',
+        'Rolling, reaching, and laughing emerge during this period, and parents often worry if their baby does one but not another. Development is not linear, and babies may work on one skill area intensely (like social babbling) while temporarily pausing another (like rolling). This is normal. Social media posts showing "early" achievements create unrealistic benchmarks. Remember that parents post their baby\'s best moments, not the hours of non-achievement.',
     },
     {
       ageRange: '6-12 months',
       context:
-        'Sitting, crawling, and first words create major anxiety points. About 10% of babies skip crawling entirely and go straight to walking — this is a normal developmental variation, not a red flag. The range for first words is 8-15 months. If you find yourself googling "baby not [skill] at [age] months" multiple times a day, this level of checking is likely increasing your anxiety rather than helping your baby. Your pediatrician\'s standardized assessments (ASQ-3) are more reliable than self-comparison.',
+        'Sitting, crawling, and first words create major anxiety points. About 10% of babies skip crawling entirely and go straight to walking, which is a normal developmental variation, not a red flag. The range for first words is 8-15 months. If you find yourself googling "baby not [skill] at [age] months" multiple times a day, this level of checking is likely increasing your anxiety rather than helping your baby. Your pediatrician\'s standardized assessments (ASQ-3) are more reliable than self-comparison.',
     },
     {
       ageRange: '12-24 months',
       context:
-        'Walking (9-17 months is the normal range) and language explosion (or lack thereof) are the two biggest anxiety triggers in this age group. The pressure intensifies as toddlers become more visible in social settings. If your child is evaluated and found to be developing typically, trust that assessment — do not continue searching for problems. If you genuinely cannot stop worrying despite reassurance, this may indicate parental anxiety that deserves its own attention and treatment.',
+        'Walking (9-17 months is the normal range) and language explosion (or lack thereof) are the two biggest anxiety triggers in this age group. The pressure intensifies as toddlers become more visible in social settings. If your child is evaluated and found to be developing typically, trust that assessment and do not continue searching for problems. If you genuinely cannot stop worrying despite reassurance, this may indicate parental anxiety that deserves its own attention and treatment.',
     },
   ],
   whenNormal: [
@@ -53,8 +53,8 @@ export const concern: ConcernPage = {
     'Your anxiety about milestones is affecting your sleep, relationships, or daily functioning',
   ],
   whenToActNow: [
-    'Your baby has genuinely lost skills they previously had (regression) — this always warrants prompt evaluation',
-    'Your milestone anxiety is accompanied by intrusive thoughts, panic attacks, or inability to function — this may indicate postpartum anxiety or OCD requiring treatment',
+    'Your baby has genuinely lost skills they previously had (regression), which always warrants prompt evaluation',
+    'Your milestone anxiety is accompanied by intrusive thoughts, panic attacks, or inability to function, which may indicate postpartum anxiety or OCD requiring treatment',
     'You are avoiding social situations with other babies because comparing triggers severe distress',
   ],
   relatedMilestones: [],

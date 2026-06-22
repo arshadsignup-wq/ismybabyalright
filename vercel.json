@@ -1,3 +1,11 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "ismybabyalright.com" }],
+      "destination": "https://www.ismybabyalright.com/:path",
+      "permanent": true
+    }
+  ]
 }

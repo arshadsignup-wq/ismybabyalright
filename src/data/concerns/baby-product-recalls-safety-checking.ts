@@ -22,7 +22,7 @@ export const concern: ConcernPage = {
     {
       ageRange: 'Before birth',
       context:
-        'When setting up the nursery and purchasing baby gear, check CPSC.gov for current recalls before buying, especially for secondhand items. Cribs manufactured before June 2011 do not meet current federal safety standards (drop-side cribs are banned). Car seats have expiration dates (typically 6-10 years) — check the date stamped on the seat. If accepting hand-me-down items, look up the specific model and serial number on cpsc.gov. Register all new products with manufacturers using the included registration cards or online portals.',
+        'When setting up the nursery and purchasing baby gear, check CPSC.gov for current recalls before buying, especially for secondhand items. Cribs manufactured before June 2011 do not meet current federal safety standards (drop-side cribs are banned). Car seats have expiration dates (typically 6-10 years), so check the date stamped on the seat. If accepting hand-me-down items, look up the specific model and serial number on cpsc.gov. Register all new products with manufacturers using the included registration cards or online portals.',
     },
     {
       ageRange: '0-6 months',
@@ -37,13 +37,13 @@ export const concern: ConcernPage = {
     {
       ageRange: '12-24 months',
       context:
-        'Toddler-relevant recalls include: strollers (hinge mechanisms can catch fingers), toddler beds, sippy cups, toys with magnets (high-powered magnets are extremely dangerous if swallowed — they can connect through intestinal walls requiring emergency surgery), and children\'s clothing with drawstrings (strangulation hazard). The CPSC Recalls app sends push notifications for new recalls — this is the easiest way to stay current. Check recall status before any garage sale or consignment store purchase.',
+        'Toddler-relevant recalls include: strollers (hinge mechanisms can catch fingers), toddler beds, sippy cups, toys with magnets (high-powered magnets are extremely dangerous if swallowed, as they can connect through intestinal walls requiring emergency surgery), and children\'s clothing with drawstrings (strangulation hazard). The CPSC Recalls app sends push notifications for new recalls, which is the easiest way to stay current. Check recall status before any garage sale or consignment store purchase.',
     },
   ],
   whenNormal: [
-    'Feeling overwhelmed by the number of potential safety concerns — focusing on sleep products and car seats covers the highest-risk categories',
-    'Using products that are not recalled even if they are older — age alone does not make a product unsafe if it meets current standards',
-    'Not being aware of every recall — signing up for CPSC alerts automates this process',
+    'Feeling overwhelmed by the number of potential safety concerns (focusing on sleep products and car seats covers the highest-risk categories)',
+    'Using products that are not recalled even if they are older, since age alone does not make a product unsafe if it meets current standards',
+    'Not being aware of every recall, since signing up for CPSC alerts automates this process',
   ],
   whenToMention: [
     'You discovered you have been using a recalled product and want to know if your child may have been affected',
@@ -51,9 +51,9 @@ export const concern: ConcernPage = {
     'Your child was injured by a product and you want guidance on reporting',
   ],
   whenToActNow: [
-    'Your child was injured by a baby product — seek medical attention first, then report to CPSC at SaferProducts.gov',
-    'You learn your child has been sleeping in a recalled inclined sleeper or other banned sleep product — stop use immediately and contact the manufacturer for a refund',
-    'Your child swallowed magnets or button batteries from a toy — this is a medical emergency requiring immediate ER evaluation',
+    'Your child was injured by a baby product: seek medical attention first, then report to CPSC at SaferProducts.gov',
+    'You learn your child has been sleeping in a recalled inclined sleeper or other banned sleep product. Stop use immediately and contact the manufacturer for a refund',
+    'Your child swallowed magnets or button batteries from a toy. This is a medical emergency requiring immediate ER evaluation',
   ],
   relatedMilestones: [],
   showSelfReferral: false,

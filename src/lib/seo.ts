@@ -7,24 +7,12 @@ export function getCanonicalUrl(path: string): string {
   return `${SITE_URL}${path}`;
 }
 
-const titleTemplates: Record<string, (title: string) => string> = {
-  physical: (t) => `${t} - Normal Development or Cause for Concern?`,
-  communication: (t) => `${t} - Speech & Language Milestones Guide`,
-  feeding: (t) => `${t} - Pediatrician-Backed Feeding Advice`,
-  sleep: (t) => `${t} - Is This Normal? Sleep Guide for Parents`,
-  skin: (t) => `${t} - Causes, Treatment & When to See a Doctor`,
-  digestive: (t) => `${t} - What's Normal & When to Call Your Pediatrician`,
-  behavior: (t) => `${t} - Age-by-Age Behavior Guide for Parents`,
-  medical: (t) => `${t} - Symptoms, Causes & When to Seek Care`,
-  maternal: (t) => `${t} - Evidence-Based Guide for New Mothers`,
-};
-
+// Layout adds " | Is My Baby Alright?" (22 chars), so page title must stay under ~38 chars
+// to hit the 60-char SERP limit. The concern title itself carries the keyword value.
 export function getConcernMeta(concern: ConcernPage) {
-  const titleFn = titleTemplates[concern.category];
-  const title = titleFn ? titleFn(concern.title) : `${concern.title} - When to Worry & What to Do`;
   return {
-    title,
-    description: truncate(
+    title: concern.title,
+    description: truncateSentence(
       `${concern.quickAnswer} Learn when it's normal, when to mention it to your pediatrician, and when to act now.`,
       160
     ),
@@ -71,7 +59,11 @@ export function getFAQSchema(concern: ConcernPage) {
   };
 }
 
-export function getMedicalWebPageSchema(concern: ConcernPage, path: string) {
+export function getMedicalWebPageSchema(
+  concern: ConcernPage,
+  path: string,
+  lastModified?: string
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
@@ -86,7 +78,7 @@ export function getMedicalWebPageSchema(concern: ConcernPage, path: string) {
       '@type': 'PeopleAudience',
       audienceType: 'Parents',
     },
-    lastReviewed: '2026-06-01',
+    lastReviewed: lastModified || new Date().toISOString().split('T')[0],
     reviewedBy: {
       '@type': 'Organization',
       name: 'Is My Baby Alright? Editorial Team',
@@ -129,11 +121,21 @@ export function getOrganizationSchema() {
     logo: `${SITE_URL}/logo.png`,
     description:
       'Free, evidence-based baby developmental milestone tracker and parenting resource. Based on CDC, WHO, and AAP guidelines.',
-    sameAs: [],
   };
 }
 
-function truncate(str: string, maxLen: number): string {
+function truncateSentence(str: string, maxLen: number): string {
   if (str.length <= maxLen) return str;
-  return str.slice(0, maxLen - 1).replace(/\s+\S*$/, '') + '…';
+  // Try to truncate at the last sentence boundary within the limit
+  const trimmed = str.slice(0, maxLen);
+  const lastSentenceEnd = Math.max(
+    trimmed.lastIndexOf('. '),
+    trimmed.lastIndexOf('? '),
+    trimmed.lastIndexOf('! ')
+  );
+  if (lastSentenceEnd > maxLen * 0.4) {
+    return trimmed.slice(0, lastSentenceEnd + 1);
+  }
+  // Fall back to word boundary
+  return trimmed.replace(/\s+\S*$/, '') + '…';
 }

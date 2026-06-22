@@ -17,12 +17,12 @@ export const concern: ConcernPage = {
     'how to stop overthinking parenting decisions',
   ],
   quickAnswer:
-    'Decision fatigue — the mental exhaustion from making too many choices — is a well-documented psychological phenomenon that intensifies dramatically in new parenthood. From choosing bottles, diapers, and sleep methods to evaluating feeding approaches and childcare options, new parents face hundreds of micro-decisions daily, often with conflicting advice from pediatricians, family members, social media, and parenting books. A 2022 Ohio State University study found that mothers make an average of 1,500 additional decisions daily compared to before having children. Compounding this, the internet provides infinite and often contradictory information — breastfeeding communities say one thing, formula-feeding groups say another, and your mother-in-law says something different entirely. The result is "analysis paralysis," where parents feel unable to make any decision for fear of making the wrong one. Evidence-based strategies include: choosing 1-2 trusted sources (your pediatrician + one reputable resource), accepting "good enough" over "perfect," and recognizing that most parenting decisions fall in a range of acceptable options, not a single right answer.',
+    'Decision fatigue, the mental exhaustion from making too many choices, is a well-documented psychological phenomenon that intensifies dramatically in new parenthood. From choosing bottles, diapers, and sleep methods to evaluating feeding approaches and childcare options, new parents face hundreds of micro-decisions daily, often with conflicting advice from pediatricians, family members, social media, and parenting books. A 2022 Ohio State University study found that mothers make an average of 1,500 additional decisions daily compared to before having children. Compounding this, the internet provides infinite and often contradictory information: breastfeeding communities say one thing, formula-feeding groups say another, and your mother-in-law says something different entirely. The result is "analysis paralysis," where parents feel unable to make any decision for fear of making the wrong one. Evidence-based strategies include: choosing 1-2 trusted sources (your pediatrician + one reputable resource), accepting "good enough" over "perfect," and recognizing that most parenting decisions fall in a range of acceptable options, not a single right answer.',
   byAge: [
     {
       ageRange: '0-3 months',
       context:
-        'Decision fatigue peaks in the newborn period when sleep deprivation compounds cognitive overload. Common decision paralysis points: breast vs. bottle, which formula brand, swaddle vs. sleep sack, when to introduce a pacifier, which pediatrician to choose. Limit your information sources — pick one evidence-based website (like HealthyChildren.org) and your pediatrician as your primary guides. Unfollow social media accounts that trigger comparison or anxiety. Most decisions at this stage are reversible — if a choice isn\'t working, you can change course.',
+        'Decision fatigue peaks in the newborn period when sleep deprivation compounds cognitive overload. Common decision paralysis points: breast vs. bottle, which formula brand, swaddle vs. sleep sack, when to introduce a pacifier, which pediatrician to choose. Limit your information sources: pick one evidence-based website (like HealthyChildren.org) and your pediatrician as your primary guides. Unfollow social media accounts that trigger comparison or anxiety. Most decisions at this stage are reversible, so if a choice isn\'t working, you can change course.',
     },
     {
       ageRange: '3-6 months',
@@ -37,14 +37,14 @@ export const concern: ConcernPage = {
     {
       ageRange: '12-24 months',
       context:
-        'Toddler-stage decisions include: discipline approach, screen time rules, when to wean from bottle/breast, toilet training timing, and preschool selection. At this point, you have a year of parenting experience — trust your growing knowledge of your own child. No parenting expert knows your specific child better than you do. If conflicting advice from family members is a source of stress, it is okay to set boundaries: "We appreciate your input, but we\'re following our pediatrician\'s guidance on this."',
+        'Toddler-stage decisions include: discipline approach, screen time rules, when to wean from bottle/breast, toilet training timing, and preschool selection. At this point, you have a year of parenting experience, so trust your growing knowledge of your own child. No parenting expert knows your specific child better than you do. If conflicting advice from family members is a source of stress, it is okay to set boundaries: "We appreciate your input, but we\'re following our pediatrician\'s guidance on this."',
     },
   ],
   whenNormal: [
-    'Feeling overwhelmed by the number of choices in the baby products aisle — this is a universal experience',
-    'Changing your mind about a parenting approach after trying it — flexibility is a strength, not failure',
-    'Disagreeing with a friend or family member about parenting choices — there are many valid approaches',
-    'Spending time researching before making a decision — it becomes a problem only when research prevents action',
+    'Feeling overwhelmed by the number of choices in the baby products aisle (this is a universal experience)',
+    'Changing your mind about a parenting approach after trying it, since flexibility is a strength, not failure',
+    'Disagreeing with a friend or family member about parenting choices, as there are many valid approaches',
+    'Spending time researching before making a decision, though it becomes a problem only when research prevents action',
   ],
   whenToMention: [
     'Decision paralysis is preventing you from taking necessary actions (like scheduling doctor visits or starting solids)',
@@ -53,7 +53,7 @@ export const concern: ConcernPage = {
     'You feel paralyzed by guilt after every parenting decision',
   ],
   whenToActNow: [
-    'Decision fatigue is accompanied by persistent hopelessness, inability to care for your baby, or thoughts of self-harm — this may indicate postpartum depression or anxiety',
+    'Decision fatigue is accompanied by persistent hopelessness, inability to care for your baby, or thoughts of self-harm, which may indicate postpartum depression or anxiety',
     'You are avoiding medical care for your baby because you are overwhelmed by the decision-making involved',
     'Your inability to make decisions is putting your baby\'s safety at risk (not installing a car seat because you can\'t choose one, not baby-proofing, etc.)',
   ],

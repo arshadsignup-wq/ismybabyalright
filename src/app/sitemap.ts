@@ -123,5 +123,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...milestoneRoutes, ...concernRoutes, ...guideRoutes, ...checklistRoutes, ...triageRoutes, ...babyNameRoutes, ...ageAdviceRoutes];
+  const allRoutes = [...staticRoutes, ...milestoneRoutes, ...concernRoutes, ...guideRoutes, ...checklistRoutes, ...triageRoutes, ...babyNameRoutes, ...ageAdviceRoutes];
+
+  // Ensure every route has a lastModified date
+  return allRoutes.map((route) => ({
+    ...route,
+    lastModified: route.lastModified || now,
+  }));
 }
