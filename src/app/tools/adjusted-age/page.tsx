@@ -21,7 +21,7 @@ export default function AdjustedAgePage() {
     <div>
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Adjusted Age Calculator" },
         ]}
       />

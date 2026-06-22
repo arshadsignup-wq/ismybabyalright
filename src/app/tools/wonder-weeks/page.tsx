@@ -49,7 +49,7 @@ export default function WonderWeeksPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Wonder Weeks" },
         ]}
       />

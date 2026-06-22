@@ -1,5 +1,57 @@
 import Link from "next/link";
 
+const footerNav = [
+  {
+    heading: "Milestones & Development",
+    links: [
+      { href: "/milestones", label: "Milestones by Age" },
+      { href: "/concerns", label: "Common Concerns" },
+      { href: "/triage", label: "Symptom Checker" },
+      { href: "/developmental-activities", label: "Play Activities" },
+      { href: "/growth-spurts", label: "Growth Spurts" },
+      { href: "/age-advice", label: "Age-Based Advice" },
+    ],
+  },
+  {
+    heading: "Tools & Calculators",
+    links: [
+      { href: "/tools", label: "All Tools" },
+      { href: "/tools/growth", label: "Growth Calculator" },
+      { href: "/tools/due-date", label: "Due Date Calculator" },
+      { href: "/tools/medicine-dosage", label: "Medicine Dosage" },
+      { href: "/tools/sleep-schedule", label: "Sleep Schedule" },
+      { href: "/tools/feeding-amount", label: "Feeding Amount" },
+      { href: "/tools/pregnancy-tracker", label: "Pregnancy Tracker" },
+    ],
+  },
+  {
+    heading: "Guides & Resources",
+    links: [
+      { href: "/food", label: "Food Introduction" },
+      { href: "/sleep", label: "Sleep Guide" },
+      { href: "/feeding", label: "Feeding Guide" },
+      { href: "/teething", label: "Teething Guide" },
+      { href: "/poop-guide", label: "Poop Guide" },
+      { href: "/skin-guide", label: "Skin Guide" },
+      { href: "/tummy-time", label: "Tummy Time" },
+      { href: "/first-aid", label: "First Aid" },
+    ],
+  },
+  {
+    heading: "Health & Support",
+    links: [
+      { href: "/vaccines", label: "Vaccine Tracker" },
+      { href: "/doctor-visits", label: "Doctor Visit Prep" },
+      { href: "/mental-health", label: "Mental Health" },
+      { href: "/mental-health/check-in", label: "Am I Okay? Check-in" },
+      { href: "/resources/early-intervention", label: "Early Intervention" },
+      { href: "/resources/guides", label: "Condition Guides" },
+      { href: "/checklists", label: "Checklists" },
+      { href: "/baby-names", label: "Baby Names" },
+    ],
+  },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,7 +60,32 @@ export default function Footer() {
       className="bg-card-alt border-t border-card-border mt-auto"
       role="contentinfo"
     >
-      <div className="max-w-4xl mx-auto px-5 py-8 sm:py-10">
+      <div className="max-w-5xl mx-auto px-5 py-8 sm:py-10">
+        {/* Site navigation */}
+        <nav aria-label="Footer navigation" className="mb-8 pb-8 border-b border-border">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {footerNav.map((section) => (
+              <div key={section.heading}>
+                <h2 className="text-xs font-bold text-foreground uppercase tracking-wider mb-3">
+                  {section.heading}
+                </h2>
+                <ul className="space-y-2" role="list">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-xs text-muted hover:text-primary transition-colors no-underline"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </nav>
+
         {/* Disclaimer */}
         <div className="mb-6 pb-6 border-b border-border">
           <p className="text-sm text-muted leading-relaxed">

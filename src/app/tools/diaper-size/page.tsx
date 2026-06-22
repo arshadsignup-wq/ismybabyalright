@@ -49,7 +49,7 @@ export default function DiaperSizePage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Diaper Size Guide" },
         ]}
       />

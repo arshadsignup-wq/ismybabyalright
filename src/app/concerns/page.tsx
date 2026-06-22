@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ConcernsListing from "@/components/concerns/ConcernsListing";
 import { allConcerns } from "@/data/concerns";
 
+const PAGE_SIZE = 24;
 const concernCount = `${allConcerns.length}+`;
 
 export const metadata: Metadata = {
@@ -52,7 +54,15 @@ const collectionJsonLd = {
   },
 };
 
-export default function ConcernsPage() {
+interface ConcernsPageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function ConcernsPage({ searchParams }: ConcernsPageProps) {
+  const params = await searchParams;
+  const totalPages = Math.ceil(allConcerns.length / PAGE_SIZE);
+  const currentPage = Math.max(1, Math.min(parseInt(params.page || "1", 10) || 1, totalPages));
+
   return (
     <div>
       <script
@@ -83,7 +93,35 @@ export default function ConcernsPage() {
           </div>
         </div>
 
-        <ConcernsListing concerns={allConcerns} />
+        <ConcernsListing concerns={allConcerns} initialPage={currentPage} />
+
+        {/* Server-rendered pagination nav for search engine crawlers */}
+        <nav aria-label="Browse all concern pages" className="mt-10 pt-6 border-t border-border">
+          <h2 className="text-xs font-bold text-foreground uppercase tracking-wider mb-3 text-center">
+            Browse All Pages
+          </h2>
+          <div className="flex flex-wrap gap-1.5 justify-center">
+            {Array.from({ length: totalPages }, (_, i) => {
+              const pageNum = i + 1;
+              const isCurrent = pageNum === currentPage;
+              return (
+                <Link
+                  key={pageNum}
+                  href={pageNum === 1 ? "/concerns" : `/concerns?page=${pageNum}`}
+                  className={`inline-flex items-center justify-center w-8 h-8 rounded-md text-xs font-medium transition-colors no-underline ${
+                    isCurrent
+                      ? "bg-primary text-white"
+                      : "bg-white border border-[#E8E2D9] text-muted hover:border-primary hover:text-primary"
+                  }`}
+                  aria-label={`Page ${pageNum}`}
+                  aria-current={isCurrent ? "page" : undefined}
+                >
+                  {pageNum}
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
       </div>
     </div>
   );

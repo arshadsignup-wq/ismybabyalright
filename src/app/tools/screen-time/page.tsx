@@ -49,7 +49,7 @@ export default function ScreenTimePage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Screen Time Guidelines" },
         ]}
       />

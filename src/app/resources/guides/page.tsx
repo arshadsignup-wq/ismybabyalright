@@ -4,16 +4,16 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { allGuides } from "@/data/guides";
 
 export const metadata: Metadata = {
-  title: "Guides  -  ismybabyalright",
+  title: "Baby Health Condition Guides - Evidence-Based Parent Resources",
   description:
-    "Evidence-based condition guides for common childhood health topics.",
+    "Evidence-based guides to common childhood conditions including fevers, ear infections, RSV, croup, and more. Know what to expect, when to worry, and when to call the doctor. Based on AAP and CDC guidelines.",
   alternates: {
     canonical: "/resources/guides",
   },
   openGraph: {
-    title: "Condition Guides | Is My Baby Alright?",
+    title: "Baby Health Condition Guides | Is My Baby Alright?",
     description:
-      "Evidence-based condition guides for common childhood health topics.",
+      "Evidence-based guides to common childhood conditions. Know what to expect, when to worry, and when to call the doctor.",
   },
 };
 

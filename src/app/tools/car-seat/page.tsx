@@ -49,7 +49,7 @@ export default function CarSeatPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Car Seat Guide" },
         ]}
       />

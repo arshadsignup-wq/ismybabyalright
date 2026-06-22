@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Settings",
   description:
     "Manage your baby's profile, preferences, and data. Export, import, or clear stored data.",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/settings",
   },

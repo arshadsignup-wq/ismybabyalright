@@ -57,7 +57,7 @@ export default function BabyBudgetPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Budget Planner" },
         ]}
       />

@@ -87,7 +87,7 @@ export default function EmergencyContactsPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Emergency Contacts" },
         ]}
       />

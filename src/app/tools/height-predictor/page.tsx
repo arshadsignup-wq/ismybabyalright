@@ -49,7 +49,7 @@ export default function HeightPredictorPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Height Predictor" },
         ]}
       />

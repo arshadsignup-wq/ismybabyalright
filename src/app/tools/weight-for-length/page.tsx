@@ -21,7 +21,7 @@ export default function WeightForLengthPage() {
     <div>
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Weight-for-Length Calculator" },
         ]}
       />

@@ -57,7 +57,7 @@ export default function SleepSchedulePage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Sleep Schedule" },
         ]}
       />

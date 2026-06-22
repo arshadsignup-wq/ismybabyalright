@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Share with Caregiver",
   description:
     "Create a shareable handoff card for babysitters, grandparents, or daycare. Includes feeding schedule, sleep routine, and emergency contacts.",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/sharing",
   },

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Caregiver Handoff",
   description:
     "View a shared baby care summary with feeding schedule, sleep routine, medications, and emergency contacts.",
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "/shared/view",
   },

@@ -49,7 +49,7 @@ export default function DueDatePage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Due Date Calculator" },
         ]}
       />

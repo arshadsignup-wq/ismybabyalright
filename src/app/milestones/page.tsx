@@ -6,14 +6,14 @@ import { allCheckpoints } from "@/data/milestones";
 export const metadata: Metadata = {
   title: "Baby Developmental Milestones by Age (1-36 Months)",
   description:
-    "Track your baby's developmental milestones from 1 to 36 months. Gross motor, fine motor, language, social-emotional, and cognitive skills based on CDC, WHO, and AAP guidelines.",
+    "Track your baby's milestones from 1 to 36 months. Gross motor, fine motor, language, social, and cognitive skills based on CDC, WHO, and AAP guidelines.",
   alternates: {
     canonical: "/milestones",
   },
   openGraph: {
     title: "Baby Developmental Milestones by Age (1-36 Months) | Is My Baby Alright?",
     description:
-      "Track your baby's developmental milestones from 1 to 36 months. Gross motor, fine motor, language, social-emotional, and cognitive skills based on CDC, WHO, and AAP guidelines.",
+      "Track your baby's milestones from 1 to 36 months. Gross motor, fine motor, language, social, and cognitive skills based on CDC, WHO, and AAP guidelines.",
   },
 };
 

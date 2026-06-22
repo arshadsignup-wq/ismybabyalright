@@ -57,7 +57,7 @@ export default function PregnancyTrackerPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Pregnancy Tracker" },
         ]}
       />

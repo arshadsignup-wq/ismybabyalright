@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { ConcernCategory, ConcernPage } from "@/data/concerns/types";
 
@@ -44,10 +45,11 @@ const categoryLabels: Record<ConcernCategory, string> = {
   maternal: "Maternal",
 };
 
-export default function ConcernsListing({ concerns }: { concerns: ConcernPage[] }) {
+export default function ConcernsListing({ concerns, initialPage = 1 }: { concerns: ConcernPage[]; initialPage?: number }) {
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<ConcernCategory | "all">("all");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
 
   const filtered = useMemo(() => {
     let result = concerns;
@@ -74,6 +76,15 @@ export default function ConcernsListing({ concerns }: { concerns: ConcernPage[] 
   const startIdx = (safePageNum - 1) * PAGE_SIZE;
   const endIdx = Math.min(startIdx + PAGE_SIZE, filtered.length);
   const paged = filtered.slice(startIdx, endIdx);
+
+  function changePage(newPage: number) {
+    setPage(newPage);
+    // Update URL for crawlability (only when not filtering/searching)
+    if (!search.trim() && activeCategory === "all") {
+      const url = newPage === 1 ? "/concerns" : `/concerns?page=${newPage}`;
+      window.history.replaceState({}, "", url);
+    }
+  }
 
   function handleCategoryChange(key: ConcernCategory | "all") {
     setActiveCategory(key);
@@ -197,7 +208,7 @@ export default function ConcernsListing({ concerns }: { concerns: ConcernPage[] 
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-3 mt-8">
               <button
-                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                onClick={() => changePage(Math.max(1, safePageNum - 1))}
                 disabled={safePageNum <= 1}
                 className="inline-flex items-center gap-1.5 rounded-lg border border-[#E8E2D9] bg-white px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-primary-light hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >
@@ -210,7 +221,7 @@ export default function ConcernsListing({ concerns }: { concerns: ConcernPage[] 
                 Page {safePageNum} of {totalPages}
               </span>
               <button
-                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                onClick={() => changePage(Math.min(totalPages, safePageNum + 1))}
                 disabled={safePageNum >= totalPages}
                 className="inline-flex items-center gap-1.5 rounded-lg border border-[#E8E2D9] bg-white px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-primary-light hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >

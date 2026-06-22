@@ -49,7 +49,7 @@ export default function BabyProofingPage() {
 
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Baby-Proofing Checklist" },
         ]}
       />

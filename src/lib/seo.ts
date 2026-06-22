@@ -83,7 +83,14 @@ export function getMedicalWebPageSchema(
       '@type': 'Organization',
       name: 'Is My Baby Alright? Editorial Team',
       url: SITE_URL,
+      description:
+        'Content reviewed against published guidelines from the CDC, WHO, AAP, ACOG, ASHA, and NIH.',
     },
+    isBasedOn: [
+      { '@type': 'MedicalGuideline', name: 'CDC Developmental Milestones', url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html' },
+      { '@type': 'MedicalGuideline', name: 'AAP Clinical Guidelines', url: 'https://www.aap.org/en/clinical-guidance/' },
+      { '@type': 'MedicalGuideline', name: 'WHO Child Growth Standards', url: 'https://www.who.int/tools/child-growth-standards' },
+    ],
     medicalAudience: {
       '@type': 'MedicalAudience',
       audienceType: 'Patient',
@@ -121,6 +128,28 @@ export function getOrganizationSchema() {
     logo: `${SITE_URL}/logo.png`,
     description:
       'Free, evidence-based baby developmental milestone tracker and parenting resource. Based on CDC, WHO, and AAP guidelines.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      url: `${SITE_URL}/about`,
+    },
+    sameAs: [],
+  };
+}
+
+export function getEditorialPolicySchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: 'Editorial Policy',
+    description:
+      'All content is reviewed against published guidelines from the CDC, WHO, AAP, ACOG, ASHA, and NIH. Content follows a three-tier action guidance structure and is updated when new guidelines are published.',
+    url: `${SITE_URL}/about`,
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
   };
 }
 

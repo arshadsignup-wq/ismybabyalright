@@ -1,7 +1,7 @@
 {
   "name": "Is My Baby Alright?",
   "short_name": "IMBA",
-  "description": "Free, evidence-based baby tracker and parenting tool. No accounts, no ads, all private.",
+  "description": "Free, evidence-based baby tracker and parenting tool. No accounts required, all data stays on your device.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#faf8f5",

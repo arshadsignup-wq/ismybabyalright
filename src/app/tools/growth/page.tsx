@@ -79,7 +79,7 @@ export default function GrowthPage() {
       />
       <Breadcrumbs
         items={[
-          { label: "Tools", href: "/tools/growth" },
+          { label: "Tools", href: "/tools" },
           { label: "Growth Calculator" },
         ]}
       />
