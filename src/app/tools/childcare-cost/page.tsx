@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ChildcareCostCalculator from "@/components/tools/ChildcareCostCalculator";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Childcare Cost Calculator - Compare Daycare, Nanny & More",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Childcare Cost Calculator',
+  description: 'Estimate childcare costs by type (daycare, nanny, au pair), region, and hours. Compare options side by side and learn about tax credits and savings.',
+  path: '/tools/childcare-cost',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Childcare Costs' },
+]);
+
 export default function ChildcareCostPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function ChildcareCostPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A childcare cost estimator helps parents compare the costs of different care options — daycare centers, in-home daycares, nannies, and au pairs — based on location and schedule to find the best fit for their budget.</p>
         <ChildcareCostCalculator />
       </div>
     </div>

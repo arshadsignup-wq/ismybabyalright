@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'petechiae',
+  title: 'Petechiae (Non-Blanching Spots) in Babies & Toddlers',
+  bodySystem: 'skin',
+  description: 'Petechiae are tiny (pinpoint, 1-2mm) flat red or purple spots that do NOT fade when pressed (non-blanching). They result from small bleeds under the skin. While petechiae above the nipple line after forceful coughing or vomiting are often benign, widespread or unexplained petechiae require urgent evaluation to rule out serious conditions like meningococcal disease, sepsis, or blood disorders.',
+  possibleCauses: [
+    { cause: 'Mechanical petechiae from coughing, vomiting, or straining', likelihood: 'common' },
+    { cause: 'Viral infection (non-specific viral petechiae)', likelihood: 'common' },
+    { cause: 'Trauma or pressure (e.g., tight clothing, tourniquets)', likelihood: 'common' },
+    { cause: 'Immune thrombocytopenic purpura (ITP)', likelihood: 'uncommon' },
+    { cause: 'Meningococcal septicaemia', likelihood: 'rare' },
+    { cause: 'Henoch-Schonlein purpura (HSP/IgA vasculitis)', likelihood: 'uncommon' },
+    { cause: 'Leukemia or bone marrow disorder', likelihood: 'rare' },
+    { cause: 'Non-accidental injury', likelihood: 'rare' },
+    { cause: 'Sepsis (bacterial bloodstream infection)', likelihood: 'rare' },
+    { cause: 'Thrombocytopenia from other causes', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Petechiae on the face and upper chest from birth trauma (especially after difficult delivery or cord around neck) are common and resolve within days. Petechiae limited to face after forceful crying or vomiting are usually mechanical.', whenToWorry: 'Any widespread petechiae in a newborn. Petechiae with fever, poor feeding, or lethargy. Petechiae that are increasing in number. Petechiae below the nipple line without clear mechanical cause.' },
+    { ageRange: '2-6 months', normalVariation: 'Petechiae limited to face/upper chest after intense vomiting or coughing episode are common and benign. These should not be spreading or increasing once the mechanical cause has stopped.', whenToWorry: 'Petechiae with fever (even low-grade). Petechiae appearing on trunk or limbs. Spots that are growing in size (becoming purpura). Baby appearing unwell, irritable, or lethargic. Petechiae with pallor or bruising.' },
+    { ageRange: '6-12 months', normalVariation: 'Face/neck petechiae after forceful vomiting during viral gastroenteritis. Petechiae from tight nappy or clothing elastic that resolve quickly.', whenToWorry: 'Unexplained petechiae anywhere on the body. Petechiae with fever and rash. Easy bruising alongside petechiae. Petechiae that are spreading rapidly (check hourly). Child appearing pale or unusually tired.' },
+    { ageRange: '1-3 years', normalVariation: 'Mechanical petechiae on face after forceful vomiting or coughing fits (e.g., pertussis, croup). Occasional petechiae at site of minor trauma.', whenToWorry: 'New widespread petechiae with or without fever. Petechiae with joint pain and abdominal pain (HSP). Petechiae with pallor, fatigue, or unexplained bruising (blood disorder). Rapidly spreading spots with unwell child (meningococcal disease).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Non-blanching rash (petechiae or purpura) with fever — call 911/999 immediately',
+      'Rapidly spreading petechiae (new spots appearing over minutes to hours)',
+      'Petechiae with stiff neck, light sensitivity, or altered consciousness',
+      'Widespread petechiae with child appearing very unwell or floppy',
+      'Petechiae with signs of shock: cold extremities, fast breathing, mottled skin',
+    ],
+    urgent: [
+      'Any unexplained petechiae below the nipple line (even without fever)',
+      'Petechiae with pallor, fatigue, or unexplained bruising',
+      'Petechiae with abdominal pain or joint swelling',
+      'Non-blanching spots that are increasing in number',
+      'Petechiae in a child who has not been well recently',
+    ],
+    sameDay: [
+      'Petechiae limited to face/neck after confirmed forceful vomiting/coughing but parent concerned',
+      'Small number of petechiae with recent viral illness and otherwise well child',
+      'Recurrent petechiae episodes without clear cause',
+    ],
+    monitor: [
+      'Clear mechanical petechiae (face only, after vomiting/coughing) in a completely well child — monitor for 24 hours and seek care if spreading',
+      'Petechiae at site of blood pressure cuff or tourniquet that are not spreading',
+    ],
+  },
+  homeRemedies: [
+    'Perform the glass/tumbler test: press a clear glass firmly against the spots — if they DO NOT fade, seek medical attention',
+    'Circle existing spots with a pen and check hourly to see if new spots are appearing beyond the circles',
+    'Take photos with timestamps to document any changes or spreading',
+    'If mechanical cause is clear (after vomiting): monitor closely for 24 hours',
+    'Do NOT give ibuprofen or aspirin if petechiae are present (may worsen bleeding)',
+    'Check for petechiae in other areas: lift clothing to check trunk, legs, and arms',
+    'Keep a record of any recent illnesses, medications, or injuries',
+    'When in doubt, ALWAYS seek medical evaluation — petechiae can indicate life-threatening conditions',
+  ],
+  triageSlug: 'rash',
+  relatedSymptomSlugs: ['red-rash', 'bruising', 'fever'],
+  relatedIllnessSlugs: ['meningococcal-disease', 'itp', 'hsp', 'leukemia'],
+  relatedConcernSlugs: ['baby-non-blanching-rash', 'baby-purple-spots', 'baby-rash-with-fever'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Petechiae and Purpura. Pediatrics in Review.', url: 'https://publications.aap.org/pediatricsinreview' },
+    { org: 'NHS', citation: 'NHS. Meningitis — symptoms: The glass test.', url: 'https://www.nhs.uk/conditions/meningitis/symptoms/' },
+    { org: 'NICE', citation: 'National Institute for Health and Care Excellence. Fever in under 5s: assessment and initial management (NG143).', url: 'https://www.nice.org.uk/guidance/ng143' },
+  ],
+};

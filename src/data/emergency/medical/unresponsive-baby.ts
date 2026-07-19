@@ -1,0 +1,70 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'unresponsive-baby',
+  title: 'Unresponsive Baby',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'An unresponsive baby who is not reacting to stimulation requires immediate emergency action. Check for breathing, begin CPR if needed, and call 911 without delay.',
+  immediateActions: [
+    'Check for responsiveness — tap the soles of the feet and call the baby\'s name loudly',
+    'If no response, call 911 immediately',
+    'Check for breathing — look, listen, and feel for no more than 10 seconds',
+    'If not breathing normally, begin infant CPR immediately',
+  ],
+  doNotDo: [
+    'Do NOT shake the baby to try to wake them',
+    'Do NOT splash water on the baby',
+    'Do NOT delay calling 911 while trying to figure out what is wrong',
+    'Do NOT move the baby unnecessarily if a spinal injury is suspected',
+    'Do NOT give the baby anything by mouth',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Check responsiveness', description: 'Tap the baby\'s foot firmly and call their name loudly. Flick the sole of the foot. Look for any movement, eye opening, or crying.' },
+    { step: 2, title: 'Call for help', description: 'If baby does not respond, shout for help. Have someone call 911. If alone, perform 2 minutes of CPR before calling.' },
+    { step: 3, title: 'Open the airway', description: 'Place baby on a firm, flat surface. Tilt head back slightly (neutral position for infants) and lift chin. Do not over-extend the neck.' },
+    { step: 4, title: 'Check breathing', description: 'Look for chest rise, listen for breath sounds, and feel for air on your cheek. Take no more than 10 seconds. Gasping is NOT normal breathing.' },
+    { step: 5, title: 'If not breathing: begin CPR', description: 'Give 2 rescue breaths (cover mouth and nose). Then give 30 chest compressions using 2 fingers on the breastbone just below the nipple line. Push 1.5 inches deep at 100-120 per minute.' },
+    { step: 6, title: 'Continue CPR', description: 'Alternate 30 compressions and 2 breaths. Do not stop until baby responds, EMS arrives, or you are physically unable to continue.' },
+    { step: 7, title: 'If baby starts breathing', description: 'Place in recovery position (on their side) while maintaining airway. Monitor breathing continuously until help arrives. Be ready to resume CPR if breathing stops again.' },
+  ],
+  whenToCall911: [
+    'Baby is unresponsive to stimulation',
+    'Baby is not breathing or only gasping',
+    'Baby is limp and floppy',
+    'Baby is blue or very pale',
+    'Any situation where CPR is needed',
+  ],
+  whenToCallDoctor: [
+    'Baby was briefly unresponsive but recovered — still needs emergency evaluation',
+    'Baby is unusually drowsy or difficult to wake from sleep',
+    'Baby had a "brief resolved unexplained event" (BRUE) — went limp, changed color, or stopped breathing momentarily',
+  ],
+  whenToGoToER: [
+    'Any episode of unresponsiveness, even if baby appears to recover',
+    'Baby had a color change (blue, pale, or grey) with reduced responsiveness',
+    'Baby went limp or stiff unexpectedly',
+    'Baby stopped breathing even briefly',
+  ],
+  prevention: [
+    'Always place babies on their back to sleep on a firm, flat surface',
+    'Keep cribs free of pillows, blankets, stuffed animals, and bumper pads',
+    'Never co-sleep on a couch or armchair',
+    'Keep medications, cleaning products, and small objects out of reach',
+    'Learn infant CPR — all caregivers should be trained',
+    'Use a pacifier at sleep time (after breastfeeding is established)',
+    'Do not overdress baby or overheat the sleep environment',
+  ],
+  byAge: [
+    { ageRange: '0-3 months', context: 'Newborns may appear unresponsive when in deep sleep. Gently stimulate before panicking. However, if baby does not respond to firm stimulation, act immediately. SIDS risk is highest in this period.' },
+    { ageRange: '3-12 months', context: 'Common causes include choking, suffocation from soft bedding, infection, or accidental ingestion. Check the environment for clues about what happened.' },
+    { ageRange: '1-3 years', context: 'Consider poisoning, head injury, drowning, or febrile seizure as potential causes. Check for evidence of what the child may have gotten into. Provide this information to EMS.' },
+  ],
+  relatedEmergencySlugs: ['cpr-infant', 'cpr-toddler', 'breathing-emergency', 'choking-infant'],
+  relatedConcernSlugs: ['baby-not-breathing'],
+  sources: [
+    { org: 'AHA', citation: 'American Heart Association. Pediatric Basic Life Support: 2020 AHA Guidelines for CPR and Emergency Cardiovascular Care.', url: 'https://www.heart.org/en/health-topics/first-aid/first-aid-for-cardiac-arrest/child-baby-cpr' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Responding to a Cardiac or Breathing Emergency.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Responding-to-a-Cardiac-Emergency.aspx' },
+    { org: 'NHS', citation: 'National Health Service. How to resuscitate a baby.', url: 'https://www.nhs.uk/conditions/baby/first-aid-and-safety/first-aid/how-to-resuscitate-a-baby/' },
+  ],
+};

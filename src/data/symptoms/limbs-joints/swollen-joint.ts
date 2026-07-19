@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'swollen-joint',
+  title: 'Swollen Joint in Babies & Toddlers',
+  bodySystem: 'limbs-joints',
+  description: 'A swollen joint in a baby or toddler — characterized by visible swelling, warmth, redness, or reduced movement of a joint — always requires medical evaluation. The most important distinction is between septic arthritis (bacterial joint infection, a surgical emergency) and reactive/inflammatory causes. A hot, swollen joint with fever in a child who will not weight-bear is septic arthritis until proven otherwise.',
+  possibleCauses: [
+    { cause: 'Transient synovitis (reactive, post-viral hip irritation)', likelihood: 'common' },
+    { cause: 'Trauma (sprain, soft tissue swelling)', likelihood: 'common' },
+    { cause: 'Septic arthritis (bacterial joint infection)', likelihood: 'uncommon' },
+    { cause: 'Reactive arthritis (post-infectious)', likelihood: 'uncommon' },
+    { cause: 'Juvenile idiopathic arthritis (JIA)', likelihood: 'uncommon' },
+    { cause: 'Osteomyelitis (bone infection near joint)', likelihood: 'uncommon' },
+    { cause: 'Henoch-Schonlein purpura (IgA vasculitis — joint + rash)', likelihood: 'uncommon' },
+    { cause: 'Hemarthrosis (bleeding into joint — hemophilia)', likelihood: 'rare' },
+    { cause: 'Lyme disease arthritis', likelihood: 'rare' },
+    { cause: 'Bone tumor (near joint)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Joint swelling is NOT normal at this age. Any joint swelling in a neonate is concerning.', whenToWorry: 'Any visible joint swelling — septic arthritis is a priority concern in this age group. Limb not being moved. Fever with joint changes. Swelling with redness or warmth over the joint. Irritability with handling or diaper changes.' },
+    { ageRange: '2-6 months', normalVariation: 'Joint swelling is not expected at this age. Chubby folds around joints are normal but should be symmetric.', whenToWorry: 'Any true joint swelling (asymmetric compared to other side). Reduced movement of a limb. Fever with joint findings. Warmth or redness over a joint.' },
+    { ageRange: '6-12 months', normalVariation: 'Some puffiness around joints from minor bumps during crawling may occur briefly. Bilateral chubby knees and wrists are normal body habitus.', whenToWorry: 'True joint swelling (one joint larger than the other side). Joint that is warm to touch. Refusal to use limb or bear weight. Fever with joint swelling (emergency evaluation needed). Morning stiffness or joint swelling lasting more than 6 weeks (JIA).' },
+    { ageRange: '1-3 years', normalVariation: 'Brief joint effusion with transient synovitis after viral illness is relatively common and self-limiting. Mild swelling after a fall that improves within days.', whenToWorry: 'Hot, swollen joint with fever — needs emergency assessment. Joint swelling lasting more than 48 hours. Multiple swollen joints. Joint swelling with rash (HSP or reactive arthritis). Morning stiffness or joint swelling persisting more than 6 weeks. Night pain with joint swelling.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Hot, swollen, red joint with fever and child refusing to use limb (septic arthritis)',
+      'Joint swelling in baby under 3 months with fever',
+      'Rapid onset joint swelling with child appearing very unwell',
+      'Joint swelling with non-blanching rash (purpura)',
+    ],
+    urgent: [
+      'Swollen joint with fever at any age',
+      'Single hot, swollen joint with inability to bear weight',
+      'Joint swelling with severe pain limiting all movement',
+      'Joint swelling following puncture wound or open injury near joint',
+      'Multiple joint swelling with systemic illness',
+    ],
+    sameDay: [
+      'Joint swelling without fever that is persisting more than 24-48 hours',
+      'Recurrent joint swelling episodes',
+      'Joint swelling with morning stiffness',
+      'Knee swelling with recent rash and abdominal pain (HSP)',
+      'Joint swelling after tick exposure in endemic area',
+    ],
+    monitor: [
+      'Mild joint swelling after known minor trauma that is improving',
+      'Known transient synovitis under medical guidance with improving symptoms',
+      'Brief post-viral joint irritation resolving within days',
+    ],
+  },
+  homeRemedies: [
+    'Joint swelling with fever is a medical emergency — go to emergency department, do not manage at home',
+    'Rest the affected joint — do not force the child to use it',
+    'Apply ice wrapped in cloth for 10-15 minutes to reduce swelling (if no fever)',
+    'Give ibuprofen for pain and inflammation (if no fever suggesting infection)',
+    'Compare the joint to the same joint on the other side — true swelling will be asymmetric',
+    'Note the time of onset, any preceding illness, injury, or fever',
+    'Do not massage a swollen joint',
+    'Keep a symptom diary noting which joints, duration, time of day worst, and associated symptoms',
+  ],
+  triageSlug: 'joint-swelling',
+  relatedSymptomSlugs: ['limping', 'not-using-arm', 'growing-pains'],
+  relatedIllnessSlugs: ['septic-arthritis', 'transient-synovitis', 'juvenile-arthritis', 'hsp'],
+  relatedConcernSlugs: ['toddler-swollen-knee', 'baby-joint-pain', 'toddler-limp-after-cold'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Joint Pain and Swelling in Children. Pediatrics in Review.', url: 'https://publications.aap.org/pediatricsinreview' },
+    { org: 'NHS', citation: 'NHS. Septic arthritis — Symptoms.', url: 'https://www.nhs.uk/conditions/septic-arthritis/' },
+    { org: 'NIH', citation: 'National Institute of Arthritis and Musculoskeletal and Skin Diseases. Juvenile Arthritis.', url: 'https://www.niams.nih.gov/health-topics/juvenile-arthritis' },
+  ],
+};

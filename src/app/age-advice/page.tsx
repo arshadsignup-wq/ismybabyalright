@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 
 export const metadata: Metadata = {
   title: "Age-Based Advice - What to Know at Every Age",
@@ -28,8 +30,26 @@ const ageGroupLabels: Record<string, number[]> = {
 };
 
 export default function AgeAdvicePage() {
+  const collectionSchema = getCollectionPageSchema({
+    name: "Age-Based Advice - What to Know at Every Age",
+    description:
+      "Select your baby's age to see personalized guidance on milestones, common concerns, food readiness, sleep needs, and upcoming vaccines. Evidence-based advice from 0 to 36 months.",
+    path: "/age-advice",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Age-Based Advice" },
+  ]);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([collectionSchema, breadcrumbSchema]),
+        }}
+      />
       <Breadcrumbs items={[{ label: "Age-Based Advice" }]} />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
@@ -68,6 +88,10 @@ export default function AgeAdvicePage() {
               </div>
             </section>
           ))}
+        </div>
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
         </div>
 
         <div className="mt-12 card-alt p-6 text-center">

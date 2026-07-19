@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import RelatedGuides from "@/components/guides/RelatedGuides";
+import LastReviewed from "@/components/shared/LastReviewed";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import BottomLine from "@/components/shared/BottomLine";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { wellVisits } from "@/data/doctor-visits/data";
 
 export const metadata: Metadata = {
@@ -17,52 +24,48 @@ export const metadata: Metadata = {
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How many well-baby visits does the AAP recommend?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The American Academy of Pediatrics (AAP) recommends 11 well-baby visits during the first three years: at 3-5 days (newborn), 1 month, 2 months, 4 months, 6 months, 9 months, 12 months, 15 months, 18 months, 24 months, and 30 months/3 years.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What happens at a well-baby checkup?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "At each well-baby visit, the pediatrician measures your baby's weight, length, and head circumference, performs a physical exam, assesses developmental milestones, administers age-appropriate vaccines, conducts recommended screenings, and discusses feeding, sleep, and safety with parents.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "When is autism screening done at well-baby visits?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The AAP recommends formal autism screening with the M-CHAT-R/F questionnaire at both the 18-month and 24-month well-baby visits. Developmental surveillance (informal monitoring) happens at every visit.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which well-baby visits include vaccines?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The visits with the most vaccines are at 2 months, 4 months, 6 months, and 12 months. The 2-month and 4-month visits typically include DTaP, IPV, Hib, PCV13, and rotavirus. The 12-month visit introduces MMR, varicella, and hepatitis A vaccines.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What questions should I ask at my baby's checkup?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Good questions include asking about your baby's growth trajectory, whether developmental milestones are on track, what to expect before the next visit, vaccine side effects to watch for, feeding and sleep guidance, and when to call the office vs. go to the ER.",
-      },
-    },
-  ],
-};
+const doctorVisitsFaqItems = [
+  {
+    question: "How many well-baby visits does the AAP recommend?",
+    answer:
+      "The American Academy of Pediatrics (AAP) recommends 11 well-baby visits during the first three years: at 3-5 days (newborn), 1 month, 2 months, 4 months, 6 months, 9 months, 12 months, 15 months, 18 months, 24 months, and 30 months/3 years.",
+  },
+  {
+    question: "What happens at a well-baby checkup?",
+    answer:
+      "At each well-baby visit, the pediatrician measures your baby's weight, length, and head circumference, performs a physical exam, assesses developmental milestones, administers age-appropriate vaccines, conducts recommended screenings, and discusses feeding, sleep, and safety with parents.",
+  },
+  {
+    question: "When is autism screening done at well-baby visits?",
+    answer:
+      "The AAP recommends formal autism screening with the M-CHAT-R/F questionnaire at both the 18-month and 24-month well-baby visits. Developmental surveillance (informal monitoring) happens at every visit.",
+  },
+  {
+    question: "Which well-baby visits include vaccines?",
+    answer:
+      "The visits with the most vaccines are at 2 months, 4 months, 6 months, and 12 months. The 2-month and 4-month visits typically include DTaP, IPV, Hib, PCV13, and rotavirus. The 12-month visit introduces MMR, varicella, and hepatitis A vaccines.",
+  },
+  {
+    question: "What questions should I ask at my baby's checkup?",
+    answer:
+      "Good questions include asking about your baby's growth trajectory, whether developmental milestones are on track, what to expect before the next visit, vaccine side effects to watch for, feeding and sleep guidance, and when to call the office vs. go to the ER.",
+  },
+];
+
+const faqJsonLd = getFAQPageSchema(doctorVisitsFaqItems);
+
+const contentSchema = getContentPageSchema({
+  name: 'Well-Baby Visit Guide: What to Expect at Every Checkup',
+  description:
+    'Complete guide to all 11 AAP-recommended well-baby checkups from newborn to 3 years. Know what to expect, which vaccines are due, questions to ask your pediatrician, and developmental milestones your doctor will check.',
+  path: '/doctor-visits',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Doctor Visits' },
+]);
 
 /* ------------------------------------------------------------------ */
 /*  Icons                                                              */
@@ -184,10 +187,18 @@ function VisitSection({
 
 export default function DoctorVisitsPage() {
   return (
-    <>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -198,7 +209,11 @@ export default function DoctorVisitsPage() {
           <h1 className="text-foreground">
             Well-Baby Visit Guide
           </h1>
-          <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
+          <LastReviewed date="2026-07-01" />
+          <div className="mt-3">
+            <MedicalReviewAttribution sources={['AAP', 'CDC']} />
+          </div>
+          <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl mt-3">
             Know exactly what to expect at every well-baby checkup from birth through age 3.
             Covers all 11 AAP-recommended visits with vaccines, screenings, milestones your
             doctor will check, and questions worth asking.
@@ -218,6 +233,16 @@ export default function DoctorVisitsPage() {
             <span className="source-badge source-badge-cdc">CDC Vaccine Schedule</span>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "The AAP recommends 11 well-baby visits from birth through age 3, each with specific screenings and vaccines.",
+            "The 2-month, 4-month, 6-month, and 12-month visits have the most vaccines -- prepare questions for your pediatrician ahead of time.",
+            "Formal autism screening (M-CHAT-R/F) happens at the 18-month and 24-month visits.",
+            "Every visit includes growth measurements, a physical exam, and developmental milestone checks.",
+            "Write down your questions before each visit -- your pediatrician expects and welcomes them.",
+          ]}
+        />
 
         {/* Quick jump nav */}
         <nav className="mb-8 print:hidden" aria-label="Jump to visit">
@@ -348,6 +373,11 @@ export default function DoctorVisitsPage() {
           <RelatedGuides currentPath="/doctor-visits" />
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-8">
+          <FAQSection items={doctorVisitsFaqItems} />
+        </div>
+
         {/* Sources footer */}
         <section className="mt-12 mb-10 rounded-xl border border-card-border bg-card-alt p-5">
           <h3 className="text-sm font-bold text-foreground mb-3">Sources</h3>
@@ -377,7 +407,13 @@ export default function DoctorVisitsPage() {
             your child&apos;s individual needs, health history, and risk factors.
           </p>
         </section>
+
+        <BottomLine
+          summary="Well-baby visits are one of the most important things you can do for your child's health. These 11 checkups catch potential issues early, keep vaccines on schedule, and give you dedicated time with your pediatrician to ask questions about your baby's growth and development."
+        />
+
+        <div className="mt-6"><EditorialTrustBanner variant="compact" /></div>
       </div>
-    </>
+    </article>
   );
 }

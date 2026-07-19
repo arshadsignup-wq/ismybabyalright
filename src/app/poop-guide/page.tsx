@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import RelatedGuides from "@/components/guides/RelatedGuides";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import AuthoritativeQuote from '@/components/shared/AuthoritativeQuote';
+import { getQuotesForTopic } from '@/data/authoritative-quotes';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { poopColors, poopTextures, poopByAge } from "@/data/poop/data";
 
 export const metadata: Metadata = {
@@ -45,25 +54,37 @@ const faqItems = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+const jsonLd = getFAQPageSchema(faqItems);
+
+const contentSchema = getContentPageSchema({
+  name: "Baby Poop Color Guide: What's Normal & When to Worry",
+  description:
+    "Visual guide to baby poop colors, textures, and frequency by age. Learn what's normal, what to monitor, and when to call your pediatrician. Evidence-based, no photos.",
+  path: '/poop-guide',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Poop Guide' },
+]);
 
 export default function PoopGuidePage() {
+  const topicQuotes = getQuotesForTopic('digestive');
+
   return (
-    <>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="mx-auto max-w-3xl px-4 py-6 sm:py-8">
         <Breadcrumbs items={[{ label: "Poop Guide" }]} />
@@ -79,7 +100,28 @@ export default function PoopGuidePage() {
           <p className="text-sm text-muted mt-2">
             Color swatches only. No photos. Evidence-based and pediatrician-reviewed.
           </p>
+          <MedicalReviewAttribution sources={['AAP']} />
+          <LastReviewed date="2026-07-01" />
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Normal baby poop colors include yellow, green, brown, tan, and orange -- white, red, or black stool (after the newborn period) needs medical attention.",
+            "Poop frequency varies widely: breastfed newborns may go after every feeding, while older breastfed babies can go up to 7-10 days between stools and be perfectly normal.",
+            "White or clay-colored stool is urgent and may indicate biliary atresia -- call your pediatrician immediately or go to the ER.",
+            "Seedy poop in breastfed babies is completely normal and is a sign of healthy breast milk digestion.",
+            "Poop changes dramatically when starting solids, and seeing undigested food pieces is normal for babies learning to eat.",
+          ]}
+        />
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         {/* Quick navigation */}
         <nav
@@ -483,42 +525,9 @@ export default function PoopGuidePage() {
         {/* ============================================================
             SECTION 5: FAQ
             ============================================================ */}
-        <section id="faq" className="mb-12">
-          <h2 className="text-foreground mb-6">
-            Frequently Asked Questions
-          </h2>
-          <div className="flex flex-col gap-4">
-            {faqItems.map((item) => (
-              <details
-                key={item.question}
-                className="rounded-xl border border-card-border bg-white group"
-              >
-                <summary className="p-5 cursor-pointer text-base font-bold text-foreground list-none flex items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
-                  <span>{item.question}</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-muted flex-shrink-0 transition-transform group-open:rotate-180"
-                    aria-hidden="true"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </summary>
-                <div className="px-5 pb-5">
-                  <p className="text-sm text-foreground leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
+        <div id="faq" className="mb-12">
+          <FAQSection items={faqItems} />
+        </div>
 
         {/* ============================================================
             SOURCES
@@ -601,6 +610,12 @@ export default function PoopGuidePage() {
         {/* Related Guides */}
         <RelatedGuides currentPath="/poop-guide" />
 
+        <BottomLine summary="Baby poop varies widely in color, texture, and frequency — most variations are normal. Breastfed and formula-fed babies have different patterns. The colors to watch for are white/pale (liver concern), red (blood), and black after the meconium stage. When in doubt, take a photo and show it to your pediatrician." />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         {/* Disclaimer */}
         <p className="text-xs text-muted text-center leading-relaxed pb-6 mt-8">
           Based on AAP, CDC, and NASPGHAN guidelines. This is educational
@@ -608,6 +623,6 @@ export default function PoopGuidePage() {
           pediatrician. No photos are used in this guide -- only color swatches.
         </p>
       </div>
-    </>
+    </article>
   );
 }

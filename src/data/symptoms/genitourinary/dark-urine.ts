@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'dark-urine',
+  title: 'Dark Urine in Babies & Toddlers',
+  bodySystem: 'genitourinary',
+  description: 'Normal baby urine is pale yellow to almost clear. Dark urine (deep yellow, amber, brown, or tea-colored) in babies most commonly indicates dehydration (concentrated urine) but can also suggest liver problems, blood in the urine, certain medications, or metabolic conditions. In newborns, brick-red urate crystals in the diaper are common and harmless but can be mistaken for blood.',
+  possibleCauses: [
+    { cause: 'Dehydration (concentrated urine)', likelihood: 'common' },
+    { cause: 'Urate crystals (brick-red/orange in newborns — normal)', likelihood: 'common' },
+    { cause: 'Food or medication coloring (beets, rifampin, nitrofurantoin)', likelihood: 'uncommon' },
+    { cause: 'Urinary tract infection', likelihood: 'uncommon' },
+    { cause: 'Jaundice/liver disease (bilirubin in urine)', likelihood: 'uncommon' },
+    { cause: 'Hematuria (blood in urine — can appear dark/brown)', likelihood: 'uncommon' },
+    { cause: 'Myoglobinuria (muscle breakdown)', likelihood: 'rare' },
+    { cause: 'Hemolytic anemia (breakdown of red blood cells)', likelihood: 'rare' },
+    { cause: 'Metabolic disorder (maple syrup urine disease, alkaptonuria)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Urate crystals (pink/orange staining in diaper) are very common in first week and harmless. Slightly concentrated urine on day 2-3 before milk comes in is normal. Urine should become pale yellow by day 4-5 as feeding establishes.', whenToWorry: 'Dark urine beyond day 4-5 of life (inadequate feeding/dehydration). Tea-colored or brown urine (liver concern). Dark urine with jaundice (conjugated hyperbilirubinemia). Fewer than 6 wet diapers per day after day 4. Dark urine with poor feeding or lethargy.' },
+    { ageRange: '2-6 months', normalVariation: 'Normal urine is pale yellow. Slightly darker first morning urine is normal. Color variation from day to day depending on hydration.', whenToWorry: 'Persistently dark or tea-colored urine. Dark urine with fewer wet diapers than usual. Brown or cola-colored urine. Dark urine with vomiting, diarrhea, or reduced feeds. Dark urine with pale/white stools (biliary concern).' },
+    { ageRange: '6-12 months', normalVariation: 'Urine color may vary slightly with diet as solids are introduced. Beets can turn urine pink/red. First morning urine being slightly darker is normal.', whenToWorry: 'Persistently dark amber urine suggesting chronic dehydration. Tea/cola-colored urine (glomerulonephritis). Dark urine with swelling (puffy eyes, swollen hands/feet). Dark urine with abdominal pain or fever.' },
+    { ageRange: '1-3 years', normalVariation: 'Normal urine is pale to medium yellow. Some color change from food dyes is common. Slightly darker after active play without enough fluids.', whenToWorry: 'Cola/tea-colored urine persisting more than one void. Dark urine with facial puffiness (nephritic syndrome). Dark urine following sore throat or skin infection by 1-2 weeks (post-streptococcal glomerulonephritis). Dark urine with significant pallor or jaundice.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Dark urine with signs of severe dehydration (no tears, sunken fontanelle, unresponsive)',
+      'Brown/cola urine with facial swelling and reduced urine output (acute nephritis)',
+      'Dark urine with severe abdominal pain and jaundice',
+      'Very dark urine with muscle pain after prolonged illness/immobility (rhabdomyolysis)',
+    ],
+    urgent: [
+      'Persistently dark urine with reduced wet diapers in infant (dehydration)',
+      'Tea/cola-colored urine that persists over multiple voids',
+      'Dark urine with yellow skin/eyes (jaundice) in baby over 2 weeks old',
+      'Dark urine with pale/clay-colored stools (biliary obstruction)',
+      'Dark urine with puffy face or limb swelling',
+    ],
+    sameDay: [
+      'Dark urine lasting more than 24 hours without clear dehydration cause',
+      'Dark urine 1-2 weeks after sore throat or skin infection',
+      'Persistent dark urine despite adequate fluid intake',
+      'Dark urine with dysuria or foul smell (UTI concern)',
+    ],
+    monitor: [
+      'Slightly concentrated first morning urine that clears with fluids',
+      'Dark urine during illness that improves with rehydration',
+      'Urate crystals in newborn diaper (pink/orange staining first week)',
+      'Urine color change clearly related to food (beets, berries) that resolves',
+    ],
+  },
+  homeRemedies: [
+    'Increase fluid intake: offer more frequent breastfeeds/formula or water (for babies over 6 months)',
+    'Monitor wet diapers: aim for at least 6 wet diapers per day in infants',
+    'Check diaper color against white tissue to accurately assess urine color',
+    'Keep a record of urine color, frequency, and fluid intake',
+    'For mild dehydration during illness: offer small frequent amounts of fluids or oral rehydration solution',
+    'Note recent food intake that could change urine color (beets, blackberries, food dyes)',
+    'Note any medications that may change urine color',
+    'If urine is tea/cola-colored: save the diaper or collect a sample to show the doctor',
+    'Dark urine with pale stools = always needs medical evaluation (liver/biliary concern)',
+  ],
+  relatedSymptomSlugs: ['strong-smelling-urine', 'blood-in-urine', 'diaper-crystals'],
+  relatedIllnessSlugs: ['dehydration', 'urinary-tract-infection', 'jaundice', 'glomerulonephritis'],
+  relatedConcernSlugs: ['baby-dark-urine', 'baby-dehydrated', 'newborn-orange-diaper'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Signs of Dehydration in Infants & Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Dehydration.aspx' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Urine color — When to see a doctor.', url: 'https://www.mayoclinic.org/diseases-conditions/urine-color/symptoms-causes/syc-20367333' },
+    { org: 'NHS', citation: 'NHS. Dehydration in babies and young children.', url: 'https://www.nhs.uk/conditions/dehydration/symptoms/' },
+  ],
+};

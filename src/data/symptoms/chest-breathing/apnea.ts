@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'apnea',
+  title: 'Apnea (Pauses in Breathing) in Babies',
+  bodySystem: 'chest-breathing',
+  description: 'Apnea refers to a pause in breathing lasting more than 20 seconds, or a shorter pause accompanied by color change (blue or pale), limpness, or a drop in heart rate (bradycardia). Brief pauses of 5-10 seconds in breathing are normal in newborns (periodic breathing), but true apnea is always abnormal and requires medical evaluation. Apnea of prematurity is the most common type, affecting premature infants whose brainstem respiratory control is immature. In term infants, apnea can signal infection, airway obstruction, reflux, seizures, or other serious conditions.',
+  possibleCauses: [
+    { cause: 'Apnea of prematurity (immature respiratory control)', likelihood: 'common' },
+    { cause: 'Normal periodic breathing in newborns (brief 5-10 second pauses — NOT true apnea)', likelihood: 'common' },
+    { cause: 'Respiratory infection (RSV, pertussis, bronchiolitis)', likelihood: 'uncommon' },
+    { cause: 'Gastroesophageal reflux', likelihood: 'uncommon' },
+    { cause: 'Obstructive apnea from enlarged adenoids/tonsils', likelihood: 'uncommon' },
+    { cause: 'Sepsis or meningitis', likelihood: 'rare' },
+    { cause: 'Seizures', likelihood: 'rare' },
+    { cause: 'Congenital central hypoventilation syndrome', likelihood: 'rare' },
+    { cause: 'Inborn errors of metabolism', likelihood: 'rare' },
+    { cause: 'Non-accidental trauma (child abuse)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months (premature)', normalVariation: 'Periodic breathing (clusters of breaths with 5-10 second pauses, then breathing resumes) is normal in preterm infants and resolves by 43-44 weeks corrected gestational age.', whenToWorry: 'Pauses lasting more than 20 seconds. Any breathing pause with color change (blue, pale, or gray). Pauses requiring stimulation to restart breathing. Pauses associated with bradycardia or limpness.' },
+    { ageRange: '0-2 months (term)', normalVariation: 'Periodic breathing with brief 5-10 second pauses is normal in healthy term newborns, especially during sleep. Baby should pink up immediately and resume regular breathing.', whenToWorry: 'Any apneic episode in a term infant is abnormal and requires urgent evaluation. True apnea (more than 20 seconds or with color change) in a term newborn may indicate sepsis, metabolic disease, or cardiac problem.' },
+    { ageRange: '2-12 months', normalVariation: 'Apnea of prematurity should have resolved by this age (by 43-44 weeks corrected age). Brief breath-holding spells (triggered by crying or pain) may begin around 6 months.', whenToWorry: 'Any new apnea after apnea of prematurity has resolved. Apnea during illness (RSV or pertussis can present with apnea). Apnea occurring during sleep without known cause (apparent life-threatening event / BRUE).' },
+    { ageRange: '1-3 years', normalVariation: 'Breath-holding spells (triggered by pain, frustration, or crying) are common and benign despite appearing frightening. Child resumes breathing spontaneously.', whenToWorry: 'Apnea during sleep with snoring and observed pauses (obstructive sleep apnea). Apnea not triggered by crying/emotion. Apnea with seizure activity. Apnea causing loss of consciousness beyond typical breath-holding spell.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Any apneic episode with color change (blue, gray, pale) or limpness',
+      'Breathing pause requiring stimulation or resuscitation to restart',
+      'Apnea in a term newborn (always requires emergency evaluation)',
+      'Apnea with seizure activity',
+      'Recurrent apnea episodes in an infant',
+      'Apnea with bradycardia (slow heart rate) or desaturation',
+    ],
+    urgent: [
+      'First-time apnea episode in any infant — even if baby appeared to recover',
+      'Apnea during an illness (even if brief)',
+      'Former premature infant with recurrence of apnea after it had resolved',
+      'Witnessed apnea with pale color that self-resolved — still needs same-day or urgent evaluation',
+    ],
+    sameDay: [
+      'Suspected obstructive sleep apnea (loud snoring with pauses observed by parents)',
+      'Parental concern about breathing patterns during sleep in a healthy baby — evaluation provides reassurance',
+    ],
+    monitor: [
+      'Normal periodic breathing in healthy newborn (5-10 second pauses with immediate self-resolution)',
+      'Known breath-holding spells in a toddler (diagnosed by doctor, typical pattern)',
+      'Premature infant on apnea monitor with no alarms and nearing discharge criteria',
+    ],
+  },
+  homeRemedies: [
+    'There are no home remedies for true apnea — it always requires medical evaluation',
+    'Learn infant CPR — all parents of babies at risk for apnea should be trained',
+    'For premature infants discharged on monitors: follow all monitoring protocols exactly',
+    'Place baby on back to sleep on a firm, flat surface (reduces SIDS risk)',
+    'Avoid overheating, loose bedding, or soft objects in sleep area',
+    'For diagnosed breath-holding spells in toddlers: lay child on side, do NOT shake or put water on face',
+    'Keep baby in parents\' room (but not same bed) for at least first 6 months',
+    'If you witness apnea: stimulate gently by flicking feet or rubbing back. Call 911 if breathing does not restart immediately',
+    'Do NOT use home apnea monitors as a substitute for medical evaluation of a concerning event',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['blue-lips', 'grunting', 'noisy-breathing', 'snoring'],
+  relatedIllnessSlugs: ['apnea-of-prematurity', 'obstructive-sleep-apnea', 'brue', 'pertussis'],
+  relatedConcernSlugs: ['baby-stops-breathing', 'baby-turning-blue', 'breath-holding-spells'],
+  sources: [
+    { org: 'AAP', citation: 'Eichenwald EC; Committee on Fetus and Newborn. Apnea of Prematurity. Pediatrics. 2016;137(1):e20153757.', url: 'https://publications.aap.org/pediatrics/article/137/1/e20153757/81428' },
+    { org: 'AAP', citation: 'Tieder JS, et al. Brief Resolved Unexplained Events (Formerly Apparent Life-Threatening Events) and Evaluation of Lower-Risk Infants. Pediatrics. 2016;137(5):e20160590.', url: 'https://publications.aap.org/pediatrics/article/137/5/e20160590/81424' },
+    { org: 'NIH', citation: 'National Institutes of Health. What Is Sleep Apnea? NHLBI.', url: 'https://www.nhlbi.nih.gov/health/sleep-apnea' },
+  ],
+};

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - ismybabyalright",
+  title: "Privacy Policy",
   description:
     "Privacy policy for ismybabyalright. All data stays on your device. No cookies, no analytics, no tracking.",
   alternates: {
@@ -15,9 +16,25 @@ export const metadata: Metadata = {
   },
 };
 
+const privacySchema = getWebPageSchema({
+  name: 'Privacy Policy',
+  description:
+    'Privacy policy for ismybabyalright. All data stays on your device. No cookies, no analytics, no tracking.',
+  path: '/privacy',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Privacy Policy' },
+]);
+
 export default function PrivacyPage() {
   return (
-    <main className="max-w-3xl mx-auto px-5 py-10">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <main className="max-w-3xl mx-auto px-5 py-10">
       <h1 className="text-2xl font-bold text-foreground mb-2">
         Privacy Policy
       </h1>
@@ -59,26 +76,36 @@ export default function PrivacyPage() {
           </p>
         </Section>
 
-        <Section title="No cookies">
+        <Section title="Advertising">
           <p>
-            This site does not use cookies of any kind - no session cookies,
-            no tracking cookies, and no third-party cookies.
+            This site displays ads through Google AdSense to keep it free for
+            all parents. Google AdSense may use cookies and similar technologies
+            to serve ads based on your prior visits to this or other websites.
+            You can opt out of personalized advertising by visiting{" "}
+            <a
+              href="https://www.google.com/settings/ads"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold hover:underline"
+            >
+              Google Ad Settings
+            </a>
+            .
+          </p>
+          <p>
+            Apart from Google AdSense, we do not use any analytics, tracking
+            pixels, or other third-party services that collect your personal
+            information. We do not use Google Analytics, Facebook Pixel, or
+            similar tools.
           </p>
         </Section>
 
-        <Section title="No analytics or tracking">
+        <Section title="Cookies">
           <p>
-            We do not use Google Analytics, Facebook Pixel, or any other
-            analytics or tracking service. We do not collect information about
-            how you use the site, what pages you visit, or how long you stay.
-          </p>
-        </Section>
-
-        <Section title="No third-party services">
-          <p>
-            This site does not load scripts, fonts, or resources from
-            third-party services that could track you. All assets are served
-            directly from our domain.
+            This site does not set its own cookies. However, Google AdSense,
+            our advertising partner, may set cookies to serve and measure ads.
+            These cookies are managed entirely by Google. You can manage cookie
+            preferences in your browser settings.
           </p>
         </Section>
 
@@ -143,6 +170,7 @@ export default function PrivacyPage() {
         </Link>
       </div>
     </main>
+    </>
   );
 }
 

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import CarSeatCalculator from "@/components/tools/CarSeatCalculator";
+import ComparisonTable from "@/components/shared/ComparisonTable";
+import { CAR_SEAT_STAGES } from "@/data/car-seat/data";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Car Seat Safety Guide - Find the Right Seat by Age, Weight & Height",
@@ -39,9 +42,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Car Seat Safety Guide',
+  description: 'Find the right car seat for your child based on age, weight, and height. Covers rear-facing, forward-facing, booster seats, and seat belt readiness. Based on AAP and NHTSA guidelines.',
+  path: '/tools/car-seat',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Car Seat Guide' },
+]);
+
 export default function CarSeatPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,7 +73,30 @@ export default function CarSeatPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">
+          A car seat safety guide helps parents choose the right car seat type — rear-facing, forward-facing, booster, or seat belt — based on their child's age, weight, and height, following AAP and NHTSA guidelines.
+        </p>
+
         <CarSeatCalculator />
+
+        <section className="mt-12 border-t border-[#E8E2D9] pt-8">
+          <h2 className="text-lg font-bold text-foreground mb-4">
+            Car Seat Stages by Age, Weight, and Height
+          </h2>
+          <ComparisonTable
+            caption="Car Seat Stages by Age, Weight, and Height"
+            headers={["Stage", "Type", "Age Range", "Weight Range", "Height Limit", "Direction"]}
+            rows={CAR_SEAT_STAGES.map((s) => [
+              s.name,
+              s.type,
+              s.ageRange,
+              s.weightRange,
+              s.heightLimit,
+              s.direction,
+            ])}
+            sourceNote="Based on AAP and NHTSA car seat safety recommendations. Always follow the limits specified by your car seat manufacturer."
+          />
+        </section>
       </div>
     </div>
   );

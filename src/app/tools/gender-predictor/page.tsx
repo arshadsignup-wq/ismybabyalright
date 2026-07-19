@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import GenderPredictor from "@/components/tools/GenderPredictor";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Chinese Gender Predictor - Boy or Girl?",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Chinese Gender Predictor',
+  description: 'Use the traditional Chinese Gender Prediction Chart to guess if you\'re having a boy or girl. Based on the mother\'s lunar age and month of conception. For fun only!',
+  path: '/tools/gender-predictor',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Gender Predictor' },
+]);
+
 export default function GenderPredictorPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function GenderPredictorPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A baby gender predictor uses the Chinese Gender Calendar method, which cross-references the mother&apos;s lunar age at conception with the month of conception — this is for entertainment only and is not scientifically accurate.</p>
         <GenderPredictor />
       </div>
     </div>

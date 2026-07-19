@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'genital-swelling',
+  title: 'Genital Swelling in Babies & Toddlers',
+  bodySystem: 'genitourinary',
+  description: 'Genital swelling in newborns is very common and usually caused by maternal hormones and/or birth-related fluid accumulation. In boys, scrotal swelling from hydroceles (fluid around the testicle) is extremely common and usually resolves by 12 months. In girls, labial swelling from maternal estrogen is normal in the first weeks. Beyond the newborn period, genital swelling can indicate hernias, infections, torsion, or trauma requiring prompt evaluation.',
+  possibleCauses: [
+    { cause: 'Hydrocele (fluid around testicle — very common in newborn boys)', likelihood: 'common' },
+    { cause: 'Maternal hormone effect (swollen labia/breasts in newborns)', likelihood: 'common' },
+    { cause: 'Inguinal hernia (bowel or fluid in groin/scrotum)', likelihood: 'uncommon' },
+    { cause: 'Diaper dermatitis with localized swelling', likelihood: 'common' },
+    { cause: 'Testicular torsion (twisted testicle — emergency)', likelihood: 'rare' },
+    { cause: 'Insect bite on genital area', likelihood: 'uncommon' },
+    { cause: 'Trauma or injury', likelihood: 'uncommon' },
+    { cause: 'Labial abscess or Bartholin cyst (girls)', likelihood: 'rare' },
+    { cause: 'Ovarian torsion (girls — rare in infants)', likelihood: 'rare' },
+    { cause: 'Henoch-Schonlein purpura (scrotal involvement)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Scrotal swelling from hydrocele is present in up to 80% of newborn boys and is benign. Labial swelling, vaginal discharge (white or blood-tinged), and breast buds in both sexes are normal from maternal hormones. These resolve over first weeks to months.', whenToWorry: 'Hard, tender, discolored scrotum (testicular torsion — emergency). Scrotal swelling that does not transilluminate or comes and goes with crying (hernia). Increasing genital swelling rather than decreasing. Swelling with redness, warmth, or fever (infection). Swelling with inconsolable crying.' },
+    { ageRange: '2-6 months', normalVariation: 'Hydroceles are still common and should be slowly decreasing. Communicating hydroceles may vary in size with activity. Maternal hormone effects should have resolved.', whenToWorry: 'Scrotal swelling that increases with crying or straining (communicating hydrocele or hernia — needs evaluation). Sudden firm scrotal swelling with crying (incarcerated hernia). Discolored or very tender scrotum. New genital swelling at this age without hormonal explanation.' },
+    { ageRange: '6-12 months', normalVariation: 'Most hydroceles resolve by 12 months. Mild residual swelling that transilluminates and is non-tender is acceptable to monitor.', whenToWorry: 'Large hydrocele not resolving. Swelling that comes and goes or is reducible (hernia). Any acute painful scrotal swelling. Genital swelling with signs of infection. Groin lump that does not go away.' },
+    { ageRange: '1-3 years', normalVariation: 'Genitals should be normal size without swelling. Mild labial erythema from diaper irritation is common.', whenToWorry: 'Any sudden scrotal pain and swelling (testicular torsion until proven otherwise — emergency). Inguinal swelling that does not reduce (incarcerated hernia). Genital swelling with bruising (trauma concern). Scrotal swelling with abdominal pain and purpura (HSP). Labial swelling with discharge or foul odor.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Sudden painful scrotal swelling with discoloration (blue/red) — testicular torsion (needs surgery within 6 hours)',
+      'Hard, tender, irreducible groin/scrotal lump with vomiting (incarcerated hernia)',
+      'Acute genital swelling with high fever and child very unwell',
+      'Sudden severe abdominal/groin pain with genital swelling in a girl (ovarian torsion)',
+    ],
+    urgent: [
+      'Acute scrotal pain and swelling at any age (torsion must be excluded)',
+      'Inguinal/groin lump that cannot be gently pushed back (possible incarcerated hernia)',
+      'Genital swelling with fever, redness, and warmth (infection)',
+      'Genital swelling with signs of trauma or concerning history',
+    ],
+    sameDay: [
+      'Inguinal swelling that comes and goes (likely hernia — needs surgical referral)',
+      'Hydrocele persisting beyond 12-18 months',
+      'Genital swelling with discharge or foul odor',
+      'Labial swelling or mass in a girl',
+    ],
+    monitor: [
+      'Newborn hydrocele (non-tender, transilluminates) — usually resolves by 12 months',
+      'Newborn labial swelling from maternal hormones (resolving)',
+      'Mild scrotal swelling present since birth, stable, non-tender',
+      'Breast buds in newborn (maternal hormone effect — resolves)',
+    ],
+  },
+  homeRemedies: [
+    'Genital swelling with pain requires medical evaluation — do not manage at home',
+    'For newborn hydrocele: observation is appropriate — most resolve by 12 months',
+    'Keep genital area clean and dry to prevent secondary irritation',
+    'For maternal hormone effects in newborns: no treatment needed, resolves on its own',
+    'Do NOT squeeze or drain breast buds in newborns (can cause infection)',
+    'Newborn vaginal discharge (white or blood-tinged): clean gently with warm water, no treatment needed',
+    'If you notice scrotal swelling that varies in size: note when it appears (crying? straining?) and tell your doctor',
+    'A hydrocele should transilluminate (glow red when a flashlight is placed behind it) — if it does not, tell your doctor',
+    'Remember: sudden painful scrotal swelling is ALWAYS an emergency — go to ER immediately',
+  ],
+  relatedSymptomSlugs: ['penile-concerns', 'undescended-testicle', 'labial-adhesion'],
+  relatedIllnessSlugs: ['hydrocele', 'inguinal-hernia', 'testicular-torsion'],
+  relatedConcernSlugs: ['baby-swollen-scrotum', 'newborn-genital-swelling', 'baby-groin-lump'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Inguinal Hernia and Hydrocele. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Inguinal-Hernia.aspx' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Hydrocele — Symptoms and causes.', url: 'https://www.mayoclinic.org/diseases-conditions/hydrocele/symptoms-causes/syc-20363969' },
+    { org: 'NHS', citation: 'NHS. Testicular torsion.', url: 'https://www.nhs.uk/conditions/testicular-torsion/' },
+  ],
+};

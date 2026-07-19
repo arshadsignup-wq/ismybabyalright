@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'rectal-bleeding',
+  title: 'Rectal Bleeding (Blood in Stool) in Babies & Toddlers',
+  bodySystem: 'abdomen',
+  description: 'Blood in a baby\'s stool can range from small red streaks on the surface of stool to large amounts of bloody diarrhea. While always alarming for parents, the most common cause in healthy infants is allergic proctocolitis (cow\'s milk protein allergy) in young formula-fed or breastfed babies, and anal fissures (small tears) from constipation in older babies and toddlers. However, blood in stool can also indicate more serious conditions like intussusception, infectious colitis, or Meckel diverticulum, making medical evaluation important.',
+  possibleCauses: [
+    { cause: 'Anal fissure from hard stool or constipation', likelihood: 'common' },
+    { cause: 'Cow\'s milk protein allergy (allergic proctocolitis)', likelihood: 'common' },
+    { cause: 'Swallowed maternal blood (breastfed infants — cracked nipples)', likelihood: 'common' },
+    { cause: 'Infectious diarrhea (bacterial — Salmonella, Campylobacter, Shigella)', likelihood: 'uncommon' },
+    { cause: 'Intussusception ("currant jelly" bloody mucus)', likelihood: 'rare' },
+    { cause: 'Meckel diverticulum (painless large-volume rectal bleeding)', likelihood: 'rare' },
+    { cause: 'Inflammatory bowel disease (extremely rare in infants)', likelihood: 'rare' },
+    { cause: 'Juvenile polyps (painless rectal bleeding in toddlers)', likelihood: 'rare' },
+    { cause: 'Coagulation disorder', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Blood-streaked stool from swallowed maternal blood (cracked nipples) is common in breastfed newborns. An APT test can confirm if blood is maternal.', whenToWorry: 'Significant blood in stool with poor feeding or irritability (allergic proctocolitis). Bloody stool with abdominal distension and vomiting in a newborn (possible necrotizing enterocolitis in premature infants). Bloody stool with fever.' },
+    { ageRange: '2-6 months', normalVariation: 'Small streaks of blood in an otherwise well, thriving baby — most commonly CMPA. Blood-streaked mucus is the classic presentation.', whenToWorry: 'Large volume of blood. Blood with severe abdominal pain episodes and lethargy (intussusception — peak age 6-36 months). Blood with high fever and toxic appearance. Blood with poor weight gain.' },
+    { ageRange: '6-12 months', normalVariation: 'Small amount of bright red blood on surface of hard stool (anal fissure from constipation) is common when introducing solids.', whenToWorry: 'Painless large-volume rectal bleeding (maroon or brick-colored — possible Meckel diverticulum). "Currant jelly" stool with episodic screaming. Bloody diarrhea with high fever.' },
+    { ageRange: '1-3 years', normalVariation: 'Bright red blood on toilet paper or surface of hard stool from anal fissure is the most common cause in toddlers.', whenToWorry: 'Painless rectal bleeding mixed in with stool (possible polyp or Meckel diverticulum). Bloody diarrhea with fever and abdominal cramps (infectious colitis). Blood with chronic diarrhea and poor growth (possible IBD — rare).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      '"Currant jelly" bloody mucus stool with episodic severe pain and lethargy — possible intussusception',
+      'Large volume painless rectal bleeding (maroon/brick red) — possible Meckel diverticulum',
+      'Bloody stool with signs of shock (pale, rapid heart rate, lethargic)',
+      'Bloody stool with abdominal distension and bilious vomiting',
+      'Significant rectal bleeding in a premature newborn (possible NEC)',
+    ],
+    urgent: [
+      'Bloody diarrhea with high fever and toxic appearance',
+      'Blood in stool with progressive abdominal pain worsening over hours',
+      'Moderate blood in stool with signs of anemia (pallor, fatigue, rapid heartbeat)',
+      'Recurrent significant bleeding episodes',
+    ],
+    sameDay: [
+      'Small blood streaks in stool persisting for more than a few days',
+      'Blood in stool with suspected milk protein allergy (needs dietary management)',
+      'Anal fissure not healing with standard care',
+      'First episode of blood in stool in a well child (even if small amount — warrants confirmation of cause)',
+    ],
+    monitor: [
+      'Confirmed anal fissure from constipation with small blood streaks that is healing with treatment',
+      'Known CMPA with minimal blood streaks while awaiting dietary change to take effect',
+      'Confirmed swallowed maternal blood in breastfed newborn',
+    ],
+  },
+  homeRemedies: [
+    'For anal fissure: apply petroleum jelly or a barrier cream to the anal area to protect and promote healing',
+    'Address constipation with increased fluids, fiber (for babies on solids), and prune/pear juice',
+    'Warm sitz baths for toddlers can soothe an anal fissure',
+    'For suspected CMPA in breastfed baby: mother may trial eliminating dairy and soy (allow 2-4 weeks for full effect, under medical guidance)',
+    'Save the diaper (or take a photo) to show the pediatrician — this helps with diagnosis',
+    'Note the color and amount of blood: bright red streaks on surface of stool vs. blood mixed in vs. maroon-colored stool',
+    'If suspected anal fissure, avoid wipes with alcohol — use warm water and soft cloth',
+    'Do NOT use suppositories or rectal thermometers on an area with a fissure',
+    'Any rectal bleeding in infants should be evaluated — do NOT assume it is benign without medical assessment',
+  ],
+  triageSlug: 'blood-in-stool',
+  relatedSymptomSlugs: ['mucus-in-stool', 'abdominal-pain', 'black-stool', 'diarrhea'],
+  relatedIllnessSlugs: ['milk-protein-allergy', 'intussusception', 'anal-fissure', 'meckels-diverticulum'],
+  relatedConcernSlugs: ['blood-in-baby-stool', 'baby-poop-blood-streaks', 'toddler-blood-in-diaper'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Rectal Bleeding in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/default.aspx' },
+    { org: 'AAP', citation: 'Fox VL. Gastrointestinal bleeding in infancy and childhood. Gastroenterology Clinics of North America. 2000;29(1):37-66.', url: 'https://pubmed.ncbi.nlm.nih.gov/10752017/' },
+    { org: 'NASPGHAN', citation: 'Koletzko S, et al. Diagnostic approach and management of cow\'s-milk protein allergy in infants and children. JPGN. 2012;55(2):221-229.', url: 'https://pubmed.ncbi.nlm.nih.gov/22569527/' },
+  ],
+};

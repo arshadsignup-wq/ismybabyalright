@@ -1,0 +1,71 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'hot-car',
+  title: 'Child Left in Hot Car',
+  category: 'environmental',
+  callNineOneOne: true,
+  description: 'Vehicular heatstroke is one of the leading causes of non-crash vehicle deaths in children. A car can heat up 20 degrees in just 10 minutes. A child\'s body heats up 3-5 times faster than an adult\'s. This is always a life-threatening emergency requiring immediate action.',
+  immediateActions: [
+    'Call 911 immediately',
+    'Remove the child from the vehicle as quickly as possible — break a window if doors are locked',
+    'Begin cooling the child immediately with water, fans, and removal of clothing',
+    'If child is unresponsive or not breathing, begin CPR',
+  ],
+  doNotDo: [
+    'Do NOT wait for the car owner or keys — seconds matter',
+    'Do NOT put child in ice water or ice bath (can cause shock)',
+    'Do NOT leave to look for help if a child is alone in the car — act immediately',
+    'Do NOT assume cracking windows makes a car safe — interior temperature still rises dangerously',
+    'Do NOT give fluids to an unconscious child',
+    'Do NOT hesitate to break a car window if a child is in distress',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Call 911', description: 'Call 911 immediately. If you find an unresponsive child in a hot car, this is a life-threatening emergency. Tell dispatcher: location, child\'s condition, and that you are removing the child from the vehicle.' },
+    { step: 2, title: 'Remove from vehicle', description: 'Try all doors first. If locked, break the REAR window (furthest from child) using a tool, rock, or car headrest post. Remove the child immediately.' },
+    { step: 3, title: 'Move to shade or AC', description: 'Get child to a cool area: shade, air-conditioned building, or air-conditioned vehicle. Get out of direct sun.' },
+    { step: 4, title: 'Begin rapid cooling', description: 'Remove unnecessary clothing. Apply cool (not ice cold) water to the skin, especially head, neck, armpits, and groin. Fan the child vigorously. Spray with a hose or pour water from bottles.' },
+    { step: 5, title: 'Check responsiveness', description: 'Is child responsive? Alert? Confused? Unconscious? If unresponsive or not breathing, begin CPR immediately while continuing cooling efforts.' },
+    { step: 6, title: 'Offer fluids if conscious', description: 'If child is alert and can swallow, offer small sips of cool water. Do not force fluids if confused or drowsy.' },
+    { step: 7, title: 'Continue cooling until EMS arrives', description: 'Do not stop cooling efforts. Body temperature can exceed 104F rapidly in children. Heatstroke above 107F is often fatal. Keep applying cool water and fanning.' },
+  ],
+  whenToCall911: [
+    'ANY time a child is found in a hot car — always call 911',
+    'Child is unresponsive, confused, or not acting normally',
+    'Child has hot, red skin or hot, dry skin (no sweating)',
+    'Child is having a seizure',
+    'Child is not breathing',
+    'Child has been in the car for an unknown period of time',
+  ],
+  whenToCallDoctor: [
+    'After any hot car event — even if child appears to recover, they need medical evaluation',
+  ],
+  whenToGoToER: [
+    'ALL children found in hot cars need emergency medical evaluation',
+    'Even if child appears well after cooling, organ damage can occur silently',
+    'Heatstroke can cause brain damage, kidney failure, and death — always get checked',
+  ],
+  prevention: [
+    'NEVER leave a child alone in a vehicle — not even for one minute',
+    'Place something you need (phone, shoe, briefcase) in the back seat to force you to check',
+    'Keep vehicles locked at all times — children can climb in on their own',
+    'Create a reminder system: ask your daycare to call if your child does not arrive',
+    'Set a phone alarm or calendar reminder for drop-offs that are not part of your normal routine',
+    'If a child is missing, check the car and trunk FIRST — including pool areas',
+    '"Look Before You Lock" — make it a habit to check the back seat every time you exit',
+    'Teach children that cars are not play areas',
+    'If you see a child alone in a hot car, take action — call 911 and remove the child if in distress',
+  ],
+  byAge: [
+    { ageRange: '0-1 year', context: 'Infants are at highest risk because they cannot escape, communicate distress effectively, or regulate body temperature. Most hot car deaths are in children under 3. Rear-facing car seats make it harder to notice a quiet infant.' },
+    { ageRange: '1-3 years', context: 'Toddlers cannot unbuckle from car seats or open car doors. They heat up faster than adults. Forgotten child syndrome is most common when routines change (different parent doing drop-off). Use visual and technological reminders.' },
+    { ageRange: '3-8 years', context: 'Children may climb into unlocked vehicles to play and become trapped. Keep cars locked at all times. Teach children that cars are not playgrounds. Some older children may be left intentionally during "quick" errands — this is never safe.' },
+  ],
+  relatedEmergencySlugs: ['heat-stroke', 'unresponsive-baby', 'severe-dehydration'],
+  relatedConcernSlugs: [],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Prevent Child Deaths in Hot Cars.', url: 'https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Prevent-Child-Deaths-in-Hot-Cars.aspx' },
+    { org: 'NHTSA', citation: 'National Highway Traffic Safety Administration. Heatstroke Prevention.', url: 'https://www.nhtsa.gov/campaign/heatstroke' },
+    { org: 'Safe Kids', citation: 'Safe Kids Worldwide. Hot Car Deaths.', url: 'https://www.safekids.org/heatstroke' },
+  ],
+};

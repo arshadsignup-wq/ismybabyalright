@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { allGuides } from "@/data/guides";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 
 export const metadata: Metadata = {
   title: "Baby Health Condition Guides - Evidence-Based Parent Resources",
@@ -18,8 +20,26 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesIndexPage() {
+  const collectionSchema = getCollectionPageSchema({
+    name: "Baby Health Condition Guides - Evidence-Based Parent Resources",
+    description:
+      "Evidence-based guides to common childhood conditions including fevers, ear infections, RSV, croup, and more. Know what to expect, when to worry, and when to call the doctor. Based on AAP and CDC guidelines.",
+    path: "/resources/guides",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Guides" },
+  ]);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([collectionSchema, breadcrumbSchema]),
+        }}
+      />
       <Breadcrumbs
         items={[
           { label: "Resources", href: "/resources/early-intervention" },
@@ -70,6 +90,10 @@ export default function GuidesIndexPage() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,22 @@ import { useProfile, useEvents, useSettings, useDataExport } from "@/lib/useStor
 import type { AppSettings } from "@/data/tracker/types";
 import BabyProfileForm from "@/components/tracker/BabyProfileForm";
 
+const SITE_URL = "https://www.ismybabyalright.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Settings",
+  description:
+    "Manage your baby profile, preferences, and data. All data stays on your device.",
+  url: `${SITE_URL}/settings`,
+  publisher: {
+    "@type": "Organization",
+    name: "Is My Baby Alright?",
+    url: SITE_URL,
+  },
+};
+
 export default function SettingsPage() {
   const { profile, saveProfile, deleteProfile } = useProfile();
   const { events, clearAllEvents, deleteEventsByCaregiver, renameCaregiver } = useEvents();
@@ -69,6 +85,10 @@ export default function SettingsPage() {
 
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8 flex flex-col gap-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <div className="flex items-center gap-3">
         <Link
           href="/tracker"

@@ -1,0 +1,73 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'diabetic-emergency',
+  title: 'Diabetic Emergency in Children',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'A diabetic emergency in a child can involve dangerously high blood sugar (diabetic ketoacidosis/DKA) or dangerously low blood sugar (hypoglycemia). Both can be life-threatening and require immediate action.',
+  immediateActions: [
+    'If child is unconscious or having a seizure, call 911 immediately',
+    'If child is conscious and has low blood sugar, give fast-acting sugar immediately (juice, glucose tablets)',
+    'If child has signs of DKA (vomiting, fruity breath, rapid breathing), call 911',
+    'Do NOT give insulin during a low blood sugar episode',
+  ],
+  doNotDo: [
+    'Do NOT give food or drink to an unconscious child',
+    'Do NOT give insulin if blood sugar is low',
+    'Do NOT ignore signs of DKA (fruity breath, vomiting, excessive thirst, rapid breathing)',
+    'Do NOT leave a child having a diabetic emergency alone',
+    'Do NOT delay calling 911 if child is confused, unresponsive, or having a seizure',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Identify the type of emergency', description: 'Low blood sugar (hypoglycemia): shakiness, sweating, confusion, irritability, pale skin. High blood sugar/DKA: excessive thirst, frequent urination, fruity breath, vomiting, rapid breathing, lethargy.' },
+    { step: 2, title: 'For low blood sugar (conscious child)', description: 'Give 15 grams of fast-acting carbohydrates: 4 oz juice, 3-4 glucose tablets, or 1 tablespoon of honey (over age 1 only). Wait 15 minutes and recheck.' },
+    { step: 3, title: 'For low blood sugar (unconscious child)', description: 'Call 911. Place child on their side (recovery position). If glucagon is available and you are trained, administer it. Do NOT put anything in their mouth.' },
+    { step: 4, title: 'For high blood sugar/DKA', description: 'Call 911 or go to ER immediately. DKA is a medical emergency. Do not attempt to treat at home with insulin alone. The child needs IV fluids and monitoring.' },
+    { step: 5, title: 'Monitor and record', description: 'Check blood sugar if a meter is available. Note symptoms, time of onset, last meal, and last insulin dose. Share all information with EMS.' },
+    { step: 6, title: 'Keep child comfortable', description: 'For conscious children: keep calm and reassure them. For DKA: offer small sips of water if conscious and not vomiting. Keep them in a comfortable position.' },
+  ],
+  whenToCall911: [
+    'Child is unconscious or unresponsive',
+    'Child is having a seizure',
+    'Child has signs of DKA: fruity breath, vomiting, rapid/deep breathing, confusion',
+    'Blood sugar will not come up after treatment for hypoglycemia',
+    'Child is newly diagnosed and in crisis (new-onset DKA)',
+    'Glucagon is unavailable and child cannot take sugar by mouth',
+  ],
+  whenToCallDoctor: [
+    'Blood sugar remains high despite correction dose',
+    'Child is showing mild ketones on urine test',
+    'Repeated low blood sugar episodes',
+    'Child is sick with fever or vomiting and has diabetes',
+    'Need guidance on insulin dosing during illness',
+  ],
+  whenToGoToER: [
+    'Moderate to large ketones that are not resolving',
+    'Child cannot keep fluids down and has high blood sugar',
+    'Blood sugar above 400 mg/dL that is not responding to treatment',
+    'Signs of dehydration with high blood sugar',
+    'New diagnosis of diabetes with DKA symptoms',
+  ],
+  prevention: [
+    'Follow diabetes management plan closely — regular blood sugar checks and correct insulin dosing',
+    'Always carry fast-acting sugar and glucagon kit',
+    'Ensure all caregivers, teachers, and coaches know about the child\'s diabetes and emergency plan',
+    'Wear a medical alert bracelet',
+    'Monitor blood sugar more frequently during illness, exercise, or changes in routine',
+    'Know the signs of both high and low blood sugar',
+    'Keep diabetes supplies stocked and check expiration dates',
+  ],
+  byAge: [
+    { ageRange: '0-2 years', context: 'Type 1 diabetes can present in infancy. Symptoms of DKA (new onset) include excessive wet diapers, weight loss, lethargy, and rapid breathing. Hypoglycemia may present as seizures or limpness. Diagnosis is often delayed at this age.' },
+    { ageRange: '2-5 years', context: 'DKA at new diagnosis is common because symptoms are attributed to other illnesses. Watch for increased thirst, bedwetting in a previously dry child, weight loss, and irritability. Children cannot reliably report low blood sugar symptoms.' },
+    { ageRange: '5+ years', context: 'Children may be able to report feeling "shaky" or "weird" with low blood sugar. Ensure school has an emergency plan. Physical activity can cause rapid blood sugar drops. Teach children to always carry a snack.' },
+  ],
+  relatedEmergencySlugs: ['seizure-response', 'unresponsive-baby', 'severe-dehydration'],
+  relatedConcernSlugs: [],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Type 1 Diabetes: A Guide for Families.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chronic/Pages/Diabetes.aspx' },
+    { org: 'ADA', citation: 'American Diabetes Association. Standards of Medical Care in Diabetes — Children and Adolescents.', url: 'https://diabetes.org/living-with-diabetes/newly-diagnosed/type-1-children' },
+    { org: 'JDRF', citation: 'JDRF. Low Blood Sugar (Hypoglycemia) Emergency Treatment.', url: 'https://www.jdrf.org/t1d-resources/about/symptoms/blood-sugar/low/' },
+  ],
+};

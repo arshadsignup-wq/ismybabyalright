@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import PregnancyTracker from "@/components/tools/PregnancyTracker";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Pregnancy Tracker - Week by Week Guide",
@@ -47,9 +48,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Pregnancy Tracker',
+  description: 'Track your pregnancy week by week from 4 to 40 weeks. See baby\'s size, development milestones, body changes, and expert tips for every stage. Based on ACOG and Mayo Clinic guidelines.',
+  path: '/tools/pregnancy-tracker',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Pregnancy Tracker' },
+]);
+
 export default function PregnancyTrackerPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -63,6 +79,7 @@ export default function PregnancyTrackerPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A pregnancy tracker provides week-by-week updates on your baby&apos;s development, your body&apos;s changes, and important milestones from conception through delivery, based on ACOG pregnancy guidelines.</p>
         <PregnancyTracker />
       </div>
     </div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import DosageCalculator from "@/components/tools/DosageCalculator";
+import ComparisonTable from "@/components/shared/ComparisonTable";
+import { acetaminophen, ibuprofen } from "@/data/medicine/dosage";
 
 export const metadata: Metadata = {
   title: "Baby Medicine Dosage Calculator - Tylenol & Motrin by Weight",
@@ -71,7 +73,7 @@ const medicalJsonLd = {
   description:
     "Weight-based dosing calculator for infant acetaminophen and ibuprofen based on AAP-published dosing tables.",
   url: "https://www.ismybabyalright.com/tools/medicine-dosage",
-  lastReviewed: "2025-05-01",
+  lastReviewed: "2026-06-01",
   medicalAudience: {
     "@type": "MedicalAudience",
     audienceType: "Patient",
@@ -98,7 +100,37 @@ export default function MedicineDosagePage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">
+          A baby medicine dosage calculator is a weight-based tool that determines the correct amount of acetaminophen (Tylenol) or ibuprofen (Motrin/Advil) for infants and children, based on AAP-published dosing tables.
+        </p>
+
         <DosageCalculator />
+
+        <section id="dosing-reference" className="mt-12 border-t border-[#E8E2D9] pt-8">
+          <h2 className="text-lg font-bold text-foreground mb-4">
+            Complete Dosing Reference Tables
+          </h2>
+          <ComparisonTable
+            caption="Acetaminophen (Tylenol) Dosing by Weight"
+            headers={["Weight (lbs)", "Dose (mg)", "Volume (mL)"]}
+            rows={acetaminophen.doses.map((d) => [
+              d.weightMaxLbs ? `${d.weightMinLbs} - ${d.weightMaxLbs}` : `${d.weightMinLbs}+`,
+              String(d.doseMg),
+              String(d.volumeMl),
+            ])}
+            sourceNote={`Concentration: ${acetaminophen.concentration}. Interval: ${acetaminophen.interval}. Maximum ${acetaminophen.maxDosesPerDay} doses per 24 hours. Not for infants under ${acetaminophen.minAgeMonths} months without a doctor's guidance.`}
+          />
+          <ComparisonTable
+            caption="Ibuprofen (Motrin/Advil) Dosing by Weight"
+            headers={["Weight (lbs)", "Dose (mg)", "Volume (mL)"]}
+            rows={ibuprofen.doses.map((d) => [
+              d.weightMaxLbs ? `${d.weightMinLbs} - ${d.weightMaxLbs}` : `${d.weightMinLbs}+`,
+              String(d.doseMg),
+              String(d.volumeMl),
+            ])}
+            sourceNote={`Concentration: ${ibuprofen.concentration}. Interval: ${ibuprofen.interval}. Maximum ${ibuprofen.maxDosesPerDay} doses per 24 hours. Not for infants under ${ibuprofen.minAgeMonths} months.`}
+          />
+        </section>
 
         <section className="mt-12 border-t border-[#E8E2D9] pt-8">
           <h2 className="text-lg font-bold text-foreground mb-4">

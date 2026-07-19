@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import { getEditorialPolicySchema } from "@/lib/seo";
 import { Nunito, Fira_Code } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -37,6 +39,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Is My Baby Alright?",
+    description:
+      "Free, evidence-based baby milestone tracker and developmental resource. 2,000+ concern guides based on CDC, WHO, and AAP guidelines.",
+    images: ["/og/default.png"],
   },
 };
 
@@ -53,6 +59,15 @@ const jsonLd = {
   url: "https://www.ismybabyalright.com",
   description:
     "Free, evidence-based baby milestone tracker and developmental resource. 2,000+ concern guides based on CDC, WHO, and AAP guidelines.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate:
+        "https://www.ismybabyalright.com/concerns?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const orgJsonLd = {
@@ -63,10 +78,14 @@ const orgJsonLd = {
   logo: "https://www.ismybabyalright.com/logo.png",
   description:
     "Free, evidence-based baby developmental milestone tracker and parenting resource. Based on CDC, WHO, and AAP guidelines.",
+  foundingDate: "2026",
+  publishingPrinciples: "https://www.ismybabyalright.com/editorial-policy",
+  ethicsPolicy: "https://www.ismybabyalright.com/editorial-policy",
+  correctionsPolicy: "https://www.ismybabyalright.com/editorial-policy",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
-    url: "https://www.ismybabyalright.com/about",
+    url: "https://www.ismybabyalright.com/contact",
   },
   knowsAbout: [
     "Baby developmental milestones",
@@ -76,6 +95,8 @@ const orgJsonLd = {
     "Baby nutrition and feeding",
   ],
 };
+
+const editorialPolicyJsonLd = getEditorialPolicySchema();
 
 const siteNavJsonLd = {
   "@context": "https://schema.org",
@@ -126,9 +147,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavJsonLd) }}
         />
         <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5784937598297489"
-          crossOrigin="anonymous"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(editorialPolicyJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col">
@@ -140,6 +160,11 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5784937598297489"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

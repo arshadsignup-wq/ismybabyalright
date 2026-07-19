@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'noisy-breathing',
+  title: 'Noisy Breathing in Babies',
+  bodySystem: 'chest-breathing',
+  description: 'Noisy breathing in babies is extremely common and usually benign. Newborns and young infants have narrow nasal passages and small airways that produce audible sounds with normal breathing. The most common cause is laryngomalacia (floppy larynx), which produces a high-pitched inspiratory noise that typically worsens with feeding, crying, or lying on the back and resolves by 12-18 months. Other causes range from simple nasal congestion to more serious airway abnormalities.',
+  possibleCauses: [
+    { cause: 'Laryngomalacia (floppy larynx — most common cause of chronic stridor in infants)', likelihood: 'common' },
+    { cause: 'Nasal congestion from small nasal passages or mucus', likelihood: 'common' },
+    { cause: 'Normal "snorty" breathing in newborns (narrow nasal passages)', likelihood: 'common' },
+    { cause: 'Upper respiratory infection (cold)', likelihood: 'common' },
+    { cause: 'Tracheomalacia (floppy trachea)', likelihood: 'uncommon' },
+    { cause: 'Subglottic stenosis (narrowing below vocal cords)', likelihood: 'uncommon' },
+    { cause: 'Vocal cord paralysis', likelihood: 'rare' },
+    { cause: 'Vascular ring (blood vessel compressing airway)', likelihood: 'rare' },
+    { cause: 'Hemangioma of the airway', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Snuffling, snorting, and mild squeaky breathing are very common in newborns due to narrow nasal passages. Laryngomalacia often presents in the first weeks of life as a high-pitched inspiratory noise.', whenToWorry: 'Noisy breathing with retractions (chest pulling in), poor feeding/weight gain, color changes (blue or pale), or progressive worsening rather than staying stable or improving.' },
+    { ageRange: '2-6 months', normalVariation: 'Laryngomalacia typically worsens at 4-8 months before improving. Baby should still be feeding well and gaining weight despite the noise.', whenToWorry: 'Increasing stridor with feeding difficulty and poor weight gain. Noisy breathing with apneic episodes. Biphasic stridor (noisy on both inhale and exhale) suggesting fixed obstruction.' },
+    { ageRange: '6-12 months', normalVariation: 'Laryngomalacia begins to improve in most babies. Noisy breathing during colds is normal and temporary.', whenToWorry: 'Stridor worsening rather than improving after 6-8 months. New-onset noisy breathing that was not present before. Noisy breathing only with exercise/exertion in older infant.' },
+    { ageRange: '1-3 years', normalVariation: 'Most laryngomalacia has resolved by 18-24 months. Temporary noisy breathing during respiratory infections is normal.', whenToWorry: 'Persistent stridor beyond age 2 years. Noisy breathing with exercise intolerance. Sudden onset noisy breathing (possible foreign body aspiration).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Noisy breathing with significant respiratory distress (retractions, nasal flaring, grunting)',
+      'Cyanosis (blue lips or face) with noisy breathing',
+      'Sudden onset of noisy breathing/choking suggesting foreign body aspiration',
+      'Apnea or near-apnea episodes with color change',
+      'Unable to feed due to breathing difficulty',
+    ],
+    urgent: [
+      'Progressive worsening of stridor over hours (possible croup or swelling)',
+      'Noisy breathing with high fever and drooling (possible epiglottitis or abscess)',
+      'Stridor at rest with poor feeding in young infant',
+      'Biphasic stridor (noise on both inhalation and exhalation)',
+    ],
+    sameDay: [
+      'Chronic noisy breathing with poor weight gain despite adequate intake',
+      'Noisy breathing that worsens significantly with feeding causing choking or cyanosis',
+      'Parents concerned about new or changing character of noisy breathing',
+    ],
+    monitor: [
+      'Mild laryngomalacia with good weight gain and no distress',
+      'Nasal congestion causing snorting in an otherwise well newborn',
+      'Temporary noisy breathing during a cold that improves as illness resolves',
+    ],
+  },
+  homeRemedies: [
+    'Position baby on side or tummy during supervised awake time (noise often decreases)',
+    'Keep nasal passages clear with saline drops and gentle suction',
+    'Use a cool-mist humidifier in the bedroom',
+    'Feed baby in a more upright position if noise worsens with feeding',
+    'For laryngomalacia, smaller and more frequent feeds may help',
+    'Keep baby\'s head slightly elevated during sleep (raise mattress, not with pillows)',
+    'Avoid exposure to cigarette smoke and strong irritants',
+    'Record videos of the noisy breathing to show the pediatrician',
+    'Do NOT use over-the-counter decongestants in babies under 2 years',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['stridor', 'snoring', 'mouth-breathing', 'grunting'],
+  relatedIllnessSlugs: ['laryngomalacia', 'croup', 'tracheomalacia'],
+  relatedConcernSlugs: ['baby-noisy-breathing', 'newborn-snoring-while-breathing'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Noisy Breathing in Infants. Pediatrics in Review. 2018;39(10):508.', url: 'https://publications.aap.org/pediatricsinreview/article/39/10/508/382' },
+    { org: 'NIH', citation: 'Landry AM, Thompson DM. Laryngomalacia: Disease Presentation, Spectrum, and Management. International Journal of Pediatrics. 2012;2012:753526.', url: 'https://pubmed.ncbi.nlm.nih.gov/22518181/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Stridor in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/default.aspx' },
+  ],
+};

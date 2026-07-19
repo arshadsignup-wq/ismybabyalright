@@ -23,7 +23,7 @@ const jsonLd = {
   description:
     "Essential emergency phone numbers for parents across all 50 US states and DC including poison control, child abuse hotlines, children's hospitals, and crisis resources.",
   url: "https://www.ismybabyalright.com/tools/emergency-contacts",
-  lastReviewed: "2025-06-01",
+  lastReviewed: "2026-06-01",
   medicalAudience: {
     "@type": "MedicalAudience",
     audienceType: "Patient",
@@ -93,6 +93,7 @@ export default function EmergencyContactsPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">An emergency contacts card generator creates a printable or shareable card with your family&apos;s essential medical and emergency information, ensuring babysitters, daycare providers, and family members have critical details readily available.</p>
         <EmergencyContactsByState />
       </div>
     </div>

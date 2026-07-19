@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import EyeColorPredictor from "@/components/tools/EyeColorPredictor";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Baby Eye Color Predictor - What Color Will My Baby's Eyes Be?",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Baby Eye Color Predictor',
+  description: 'Predict your baby\'s eye color based on both parents\' eye colors. See probabilities for brown, blue, green, and hazel eyes.',
+  path: '/tools/eye-color',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Eye Color Predictor' },
+]);
+
 export default function EyeColorPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function EyeColorPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A baby eye color predictor estimates the likelihood of your child&apos;s eye color based on both parents&apos; eye colors, using simplified genetics principles — though actual eye color involves multiple genes.</p>
         <EyeColorPredictor />
       </div>
     </div>

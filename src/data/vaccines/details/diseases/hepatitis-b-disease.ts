@@ -1,0 +1,46 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'hepatitis-b-disease',
+  name: 'Hepatitis B',
+  description: 'Hepatitis B is a potentially life-threatening liver infection caused by the hepatitis B virus (HBV). It can cause both acute and chronic disease. While many infected adults recover completely, infants and young children are at extremely high risk of developing chronic infection — approximately 90% of infants infected at birth become chronically infected compared to only 5% of adults. Chronic hepatitis B can lead to cirrhosis, liver failure, and liver cancer decades later, often without symptoms until severe damage has occurred.',
+  symptoms: [
+    'Many infants and young children are ASYMPTOMATIC despite being infected (making detection difficult)',
+    'Jaundice (yellowing of skin and eyes)',
+    'Dark urine',
+    'Pale or clay-colored stools',
+    'Fatigue and malaise',
+    'Abdominal pain (especially right upper quadrant)',
+    'Nausea, vomiting, and loss of appetite',
+    'Joint pain',
+    'Low-grade fever',
+    'Note: 30-50% of children aged 1-5 and most infants have NO symptoms during acute infection',
+  ],
+  complications: [
+    'Chronic hepatitis B infection (90% of infected infants, 25-50% of children infected at age 1-5)',
+    'Cirrhosis of the liver (develops in 25% of those chronically infected as children)',
+    'Hepatocellular carcinoma (liver cancer) — 200x higher risk than uninfected individuals',
+    'Liver failure requiring transplantation',
+    'Death from liver disease (approximately 25% of those with chronic infection acquired in childhood die prematurely)',
+    'Fulminant hepatitis (acute liver failure) — rare but nearly always fatal without transplant',
+    'Glomerulonephritis (kidney inflammation)',
+    'Polyarteritis nodosa (blood vessel inflammation)',
+    'Perinatal transmission to the next generation if not detected and treated',
+  ],
+  howItSpreads: 'Hepatitis B spreads through contact with infected blood and body fluids. In the context of infants and children, the most important routes are: perinatal (mother-to-child) transmission during birth (responsible for most childhood chronic infections worldwide), horizontal transmission from infected household contacts through small breaks in the skin, shared personal items (toothbrushes, nail clippers), and contact with open wounds. The virus is 50-100 times more infectious than HIV and can survive outside the body on surfaces for at least 7 days.',
+  whoIsAtRisk: [
+    'Infants born to HBsAg-positive mothers (highest risk — 70-90% transmission rate without prophylaxis)',
+    'Household contacts of chronically infected individuals',
+    'Children in institutions or group care',
+    'Children who have emigrated from or travel to endemic regions (Asia, Africa, Pacific Islands)',
+    'Children requiring frequent blood products or dialysis',
+    'Unvaccinated children exposed to infected blood through wounds or bites',
+  ],
+  vaccineSlug: 'hepatitis-b',
+  historicalContext: 'Before the universal infant hepatitis B vaccination program began in 1991, approximately 18,000 children under age 10 were infected annually in the US. The virus infects approximately 296 million people worldwide and causes approximately 820,000 deaths per year from cirrhosis and liver cancer. Since universal infant vaccination in the US, acute hepatitis B infections in children have declined by over 98%. The WHO considers hepatitis B vaccination one of the most important public health interventions ever implemented, targeting global elimination by 2030.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Hepatitis B: For Healthcare Providers.', url: 'https://www.cdc.gov/hepatitis/hbv/hcp.htm' },
+    { org: 'WHO', citation: 'WHO. Hepatitis B Fact Sheet.', url: 'https://www.who.int/news-room/fact-sheets/detail/hepatitis-b' },
+    { org: 'AAP', citation: 'AAP. Elimination of Perinatal Hepatitis B: Providing the First Vaccine Dose Within 24 Hours of Birth. Pediatrics. 2017.', url: 'https://publications.aap.org/pediatrics/article/140/3/e20171870/38467' },
+  ],
+};

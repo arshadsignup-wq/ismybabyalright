@@ -1,0 +1,73 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'cpr-infant',
+  title: 'CPR for Infants (Under 1 Year)',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'Infant CPR is performed when a baby is unresponsive and not breathing normally. The technique uses 2 fingers for chest compressions at a 30:2 ratio with rescue breaths. Every second counts — begin CPR immediately.',
+  immediateActions: [
+    'Check for responsiveness — tap the sole of the foot and call baby\'s name',
+    'If no response, shout for help and have someone call 911',
+    'If alone, perform 2 minutes of CPR before calling 911',
+    'Place baby on a firm, flat surface',
+    'Begin chest compressions immediately if baby is not breathing or only gasping',
+  ],
+  doNotDo: [
+    'Do NOT shake the baby to check for responsiveness',
+    'Do NOT use the palm or heel of your hand for compressions — use 2 fingers only',
+    'Do NOT compress too deep — aim for about 1.5 inches (one-third chest depth)',
+    'Do NOT tilt the head back too far — overextension can block infant airways',
+    'Do NOT stop CPR until emergency services arrive or baby starts breathing',
+    'Do NOT delay CPR to look for a pulse if you are not trained to do so',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Check for responsiveness', description: 'Tap the bottom of baby\'s foot firmly. Call their name loudly. If no response, proceed immediately.' },
+    { step: 2, title: 'Call for help', description: 'Shout for someone to call 911. If alone, perform 2 minutes (5 cycles) of CPR first, then call 911 with baby nearby.' },
+    { step: 3, title: 'Position the baby', description: 'Place baby on a firm, flat surface (floor, table). Remove clothing from chest if possible.' },
+    { step: 4, title: 'Open the airway', description: 'Gently tilt head back to neutral position (not hyperextended) with one hand on forehead. Lift chin with fingertips of other hand. Do not press on soft tissue under chin.' },
+    { step: 5, title: 'Check for breathing', description: 'Look, listen, and feel for breathing for no more than 10 seconds. Gasping is NOT normal breathing. If not breathing or only gasping, begin CPR.' },
+    { step: 6, title: 'Give 30 chest compressions', description: 'Place 2 fingers on the breastbone just below the nipple line. Push down about 1.5 inches (one-third of chest depth). Compress at a rate of 100-120 per minute. Allow full chest recoil between compressions.' },
+    { step: 7, title: 'Give 2 rescue breaths', description: 'Cover baby\'s mouth AND nose with your mouth to create a seal. Give 2 gentle breaths, each lasting about 1 second. Watch for chest rise. If chest doesn\'t rise, re-tilt head and try again.' },
+    { step: 8, title: 'Continue 30:2 cycles', description: 'Continue cycles of 30 compressions and 2 breaths. Do not stop unless: baby starts breathing, emergency help arrives, you are too exhausted, or an AED becomes available.' },
+    { step: 9, title: 'If you have an AED', description: 'Use pediatric pads if available. If only adult pads are available, use them — place one on chest and one on back. Follow AED prompts. Resume CPR immediately after shock if directed.' },
+  ],
+  whenToCall911: [
+    'Baby is unresponsive and not breathing',
+    'Baby is only gasping (not normal breathing)',
+    'Baby has no pulse (if you are trained to check)',
+    'Baby was found face-down and is not responding',
+    'After any near-drowning or submersion event',
+    'After any choking episode where baby becomes unresponsive',
+  ],
+  whenToCallDoctor: [
+    'After any CPR event, even if baby recovers — baby must be evaluated',
+    'Baby had a brief period of not breathing but resumed on their own',
+    'You witnessed an apnea episode (baby stopped breathing briefly)',
+  ],
+  whenToGoToER: [
+    'Any baby who required CPR must go to the ER — no exceptions',
+    'Baby recovered but is lethargic, pale, or not acting normally',
+    'Baby had a near-SIDS event or apparent life-threatening event (ALTE)',
+  ],
+  prevention: [
+    'Always place baby on their back to sleep (reduces SIDS risk)',
+    'Keep crib free of blankets, pillows, bumpers, and toys',
+    'Never bed-share with an infant, especially if you smoke or have been drinking',
+    'Take an infant CPR class — practice on a mannequin so muscle memory is ready',
+    'Ensure all caregivers (grandparents, babysitters) know infant CPR',
+    'Keep baby\'s sleep environment firm and flat',
+    'Never leave baby unattended in water — even an inch can cause drowning',
+  ],
+  byAge: [
+    { ageRange: '0-12 months', context: 'Use infant CPR technique: 2-finger compressions on lower breastbone, cover mouth AND nose for breaths. Do not hyperextend the neck — keep in neutral "sniffing" position.' },
+    { ageRange: '1-8 years', context: 'Switch to child CPR: use the heel of one hand for compressions on the lower half of the breastbone. Pinch nose and cover mouth only for breaths. Compress about 2 inches deep.' },
+  ],
+  relatedEmergencySlugs: ['choking-infant', 'drowning-near', 'breathing-emergency'],
+  relatedConcernSlugs: ['baby-stopped-breathing'],
+  sources: [
+    { org: 'AHA', citation: 'American Heart Association. 2020 AHA Guidelines for CPR and Emergency Cardiovascular Care. Pediatric Basic Life Support.', url: 'https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. CPR Steps. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/CPR-Steps.aspx' },
+    { org: 'Red Cross', citation: 'American Red Cross. Child and Baby CPR.', url: 'https://www.redcross.org/take-a-class/cpr/performing-cpr/child-baby-cpr' },
+  ],
+};

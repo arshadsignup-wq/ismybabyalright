@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'night-sweats',
+  title: 'Night Sweats in Babies & Toddlers',
+  bodySystem: 'fever-general',
+  description: 'Night sweats in babies and toddlers — waking with damp hair, clothing, or bedding from sweating — are very common and usually caused by the baby being too warm (over-bundled) or by the natural deep sleep cycle. Babies have immature temperature regulation and sweat heavily in deep sleep, especially on the head. While usually benign, persistent drenching night sweats with other symptoms (fever, weight loss, pain) should be evaluated.',
+  possibleCauses: [
+    { cause: 'Over-bundling or overheated room', likelihood: 'common' },
+    { cause: 'Normal deep sleep sweating (immature temperature regulation)', likelihood: 'common' },
+    { cause: 'Fever breaking during sleep (viral illness)', likelihood: 'common' },
+    { cause: 'Obstructive sleep apnea (enlarged tonsils/adenoids)', likelihood: 'uncommon' },
+    { cause: 'Nightmares or night terrors (arousal causes sweating)', likelihood: 'uncommon' },
+    { cause: 'Congenital heart disease (compensatory sweating)', likelihood: 'rare' },
+    { cause: 'Hyperthyroidism', likelihood: 'rare' },
+    { cause: 'Tuberculosis', likelihood: 'rare' },
+    { cause: 'Lymphoma or leukemia (B symptoms: night sweats, weight loss, fever)', likelihood: 'rare' },
+    { cause: 'Hypoglycemia during sleep', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Newborns have immature thermoregulation and can sweat heavily, especially on the head during deep sleep. Sweating during feeds (particularly with breastfeeding due to body warmth) is common.', whenToWorry: 'Profuse sweating during feeding with fast breathing and poor weight gain (heart disease). Sweating with blue color around lips (cyanotic heart disease). Sweating with tremors or irritability followed by improvement with feeding (hypoglycemia). Drenching sweats with fever and poor feeding.' },
+    { ageRange: '2-6 months', normalVariation: 'Head sweating during sleep remains very common. Sweating more in warm environments. Brief sweating when fevering during illness (breaking fever).', whenToWorry: 'Consistent sweating during feeds with slow weight gain (cardiac concern). Night sweats with persistent cough (rare in this age but tuberculosis exposure). Sweating with persistent fast breathing at rest.' },
+    { ageRange: '6-12 months', normalVariation: 'Deep sleep sweating continues to be common, especially on head and neck. Sweating more during active sleep (REM) phases. Teething can mildly increase sweating.', whenToWorry: 'Night sweats with snoring and pauses in breathing (sleep apnea). Night sweats with unexplained weight loss. Drenching sweats that soak through clothing/sheets nightly. Night sweats with persistent fevers and fatigue.' },
+    { ageRange: '1-3 years', normalVariation: 'Many toddlers sweat during deep sleep (first 1-2 hours of night). Night terrors (screaming, confused arousal) commonly cause sweating. Being too warm in bed with too many blankets.', whenToWorry: 'Drenching night sweats with weight loss and persistent low fevers (lymphoma B symptoms). Night sweats with loud snoring, mouth breathing, and apnea (obstructive sleep apnea). Night sweats with bone pain or unusual bruising. Night sweats with persistent or recurrent fever without clear cause.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Night sweats with breathing difficulty, blue color, or unresponsiveness',
+      'Profuse sweating with lethargy and inability to rouse baby',
+      'Sweating with seizure-like activity',
+    ],
+    urgent: [
+      'Night sweats with persistent unexplained fever and weight loss',
+      'Night sweats with progressive breathing difficulty or rapid breathing',
+      'Night sweats with significant pallor, bruising, or bone pain',
+      'Profuse sweating during every feed with poor weight gain in young infant (cardiac evaluation)',
+    ],
+    sameDay: [
+      'Persistent nightly drenching sweats not explained by environment',
+      'Night sweats with snoring and witnessed apneas (sleep apnea evaluation)',
+      'Night sweats with persistent fatigue, appetite loss, or declining activity',
+      'Night sweats with enlarged lymph nodes',
+    ],
+    monitor: [
+      'Mild head sweating during deep sleep in well child (very common and normal)',
+      'Sweating during illness that resolves when infection clears',
+      'Sweating related to room temperature or over-bundling (resolves with adjustment)',
+      'Sweating associated with night terrors in toddler (otherwise well)',
+    ],
+  },
+  homeRemedies: [
+    'Check room temperature: ideal is 68-72F (20-22C) for sleeping babies',
+    'Dress baby in one layer more than you would wear — avoid over-bundling',
+    'Use breathable cotton sleepwear rather than synthetic materials',
+    'Use a light sleep sack instead of heavy blankets (blankets are unsafe under 12 months anyway)',
+    'Keep the room well-ventilated with air circulation',
+    'Place a muslin cloth under baby\'s head to absorb sweat (change if damp)',
+    'If sweating occurs only in deep sleep (first 1-2 hours) and baby is otherwise well, this is normal',
+    'Monitor for pattern: is sweating every night or only during illness?',
+    'Note any associated symptoms: snoring, fever, weight change, pain',
+    'If night sweats persist despite appropriate sleeping environment, discuss with pediatrician',
+  ],
+  relatedSymptomSlugs: ['persistent-low-fever', 'weight-loss', 'irritability', 'pale-skin'],
+  relatedIllnessSlugs: ['sleep-apnea', 'congenital-heart-disease', 'lymphoma', 'tuberculosis'],
+  relatedConcernSlugs: ['baby-sweating-during-sleep', 'baby-sweaty-head', 'toddler-night-sweats'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Safe Sleep for Babies (room temperature guidance). HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/default.aspx' },
+    { org: 'NHS', citation: 'NHS. Overheating and SIDS — room temperature and clothing.', url: 'https://www.nhs.uk/conditions/sudden-infant-death-syndrome-sids/' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Night sweats — When to see a doctor.', url: 'https://www.mayoclinic.org/symptoms/night-sweats/basics/when-to-see-doctor/sym-20050768' },
+  ],
+};

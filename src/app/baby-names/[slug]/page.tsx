@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import FavoriteButton from "@/components/baby-names/FavoriteButton";
 import { allNames, getNameBySlug } from "@/data/baby-names/names";
+import { getBreadcrumbSchema } from "@/lib/seo";
 
 interface NamePageProps {
   params: Promise<{ slug: string }>;
@@ -112,14 +113,24 @@ export default async function BabyNameSlugPage({ params }: NamePageProps) {
     "@type": "Article",
     name: `${name.name} - Baby Name Meaning and Origin`,
     description: `${name.name} is a ${name.gender} name of ${name.origin} origin meaning "${name.meaning}".`,
-    url: `https://ismybabyalright.com/baby-names/${name.slug}`,
+    url: `https://www.ismybabyalright.com/baby-names/${name.slug}`,
   };
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Baby Names", url: "/baby-names" },
+    { name: name.name },
+  ]);
 
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Breadcrumbs
         items={[

@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'fever',
+  title: 'Fever in Babies & Toddlers',
+  bodySystem: 'fever-general',
+  description: 'Fever is defined as a rectal temperature of 100.4\u00b0F (38\u00b0C) or higher. It is the body\'s natural response to infection and is not itself an illness. In young babies under 3 months, any fever requires immediate medical evaluation.',
+  possibleCauses: [
+    { cause: 'Viral infection (cold, flu, roseola)', likelihood: 'common' },
+    { cause: 'Ear infection', likelihood: 'common' },
+    { cause: 'Teething (may cause very mild elevation up to 100.4\u00b0F)', likelihood: 'common' },
+    { cause: 'Urinary tract infection', likelihood: 'uncommon' },
+    { cause: 'Vaccination response', likelihood: 'common' },
+    { cause: 'Bacterial infection (pneumonia, meningitis)', likelihood: 'uncommon' },
+    { cause: 'Overdressing / overheating', likelihood: 'common' },
+    { cause: 'Kawasaki disease', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Normal temperature ranges from 97.7-99.5\u00b0F rectally. Slight variations after feeding or bundling are normal.', whenToWorry: 'ANY rectal temperature of 100.4\u00b0F (38\u00b0C) or higher in a baby under 3 months requires IMMEDIATE medical evaluation \u2014 call your pediatrician or go to the ER right away, even if baby seems fine.' },
+    { ageRange: '3-6 months', normalVariation: 'Low-grade fevers with mild colds are common and often resolve in 1-2 days.', whenToWorry: 'Fever above 102\u00b0F (38.9\u00b0C), fever lasting more than 24 hours, or baby appearing ill (not feeding, very sleepy, irritable).' },
+    { ageRange: '6-12 months', normalVariation: 'Fevers with viral illnesses are common as maternal antibodies wane. Many babies get multiple febrile illnesses as immunity develops.', whenToWorry: 'Fever above 104\u00b0F (40\u00b0C), fever lasting more than 3 days, or fever with rash, stiff neck, or persistent vomiting.' },
+    { ageRange: '1-3 years', normalVariation: 'Frequent fevers with daycare illnesses are normal. Height of fever does not necessarily indicate severity of illness.', whenToWorry: 'Fever lasting more than 5 days, fever with difficulty breathing, signs of dehydration, or child appears very unwell.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Baby under 3 months with ANY fever (rectal temp 100.4\u00b0F / 38\u00b0C or higher)',
+      'Fever with purple/red spots that don\'t blanch (petechiae)',
+      'Fever with stiff neck, bulging fontanelle, or severe headache',
+      'Fever with difficulty breathing',
+      'Fever with seizure lasting more than 5 minutes',
+      'Baby is unresponsive or extremely difficult to wake',
+    ],
+    urgent: [
+      'Baby 3-6 months with fever above 102\u00b0F (38.9\u00b0C)',
+      'Fever with signs of dehydration (no wet diapers 6+ hours)',
+      'Febrile seizure (even if brief \u2014 first episode needs evaluation)',
+      'Fever above 104\u00b0F (40\u00b0C) at any age',
+      'Fever persisting more than 5 days',
+    ],
+    sameDay: [
+      'Fever 100.4-102\u00b0F in baby 3-6 months who otherwise seems well',
+      'Fever lasting more than 3 days with no clear source',
+      'Fever returning after being gone for 24+ hours',
+      'Baby not drinking well but still making some wet diapers',
+    ],
+    monitor: [
+      'Low-grade fever (under 102\u00b0F) with mild cold symptoms in baby over 6 months',
+      'Fever after vaccination (common, usually resolves in 24-48 hours)',
+      'Baby over 6 months with fever who is still drinking, playing, and making wet diapers',
+    ],
+  },
+  homeRemedies: [
+    'Dress baby in light clothing \u2014 do not bundle up',
+    'Offer frequent breast/bottle feeds to prevent dehydration',
+    'Acetaminophen (Tylenol) for babies 2+ months per doctor guidance',
+    'Ibuprofen (Motrin/Advil) for babies 6+ months',
+    'Lukewarm (not cold) sponge bath if baby is uncomfortable',
+    'Keep room at comfortable temperature',
+    'Do NOT give aspirin to children',
+    'Monitor wet diapers \u2014 aim for at least 4-6 per day',
+  ],
+  triageSlug: 'fever',
+  relatedSymptomSlugs: ['lethargy', 'poor-feeding', 'dehydration'],
+  relatedIllnessSlugs: ['rsv', 'ear-infection', 'roseola', 'flu'],
+  relatedConcernSlugs: ['baby-fever-teething', 'baby-fever-after-vaccines'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Fever and Your Baby. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/default.aspx' },
+    { org: 'AAP', citation: 'AAP Clinical Report. Fever and Antipyretic Use in Children. Pediatrics. 2011.', url: 'https://publications.aap.org/pediatrics/article/127/3/580/65038' },
+    { org: 'CDC', citation: 'CDC. Fever or Chills.', url: 'https://www.cdc.gov/flu/symptoms/symptoms.htm' },
+  ],
+};

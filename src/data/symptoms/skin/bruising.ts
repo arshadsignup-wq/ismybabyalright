@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'bruising',
+  title: 'Bruising in Babies & Toddlers',
+  bodySystem: 'skin',
+  description: 'Bruises (contusions) occur when blood vessels under the skin break from impact. In mobile toddlers, shin and forehead bruises are common from falls. However, bruising in pre-mobile infants (before crawling/cruising) is unusual and warrants medical evaluation. The mnemonic "those who don\'t cruise rarely bruise" is a key clinical principle — any bruising in a baby who is not yet pulling to stand should be assessed.',
+  possibleCauses: [
+    { cause: 'Normal childhood bumps and falls (mobile toddlers)', likelihood: 'common' },
+    { cause: 'Mongolian spots (congenital dermal melanocytosis — not true bruises)', likelihood: 'common' },
+    { cause: 'Accidental injury from falls, furniture bumps', likelihood: 'common' },
+    { cause: 'Non-accidental injury (child abuse)', likelihood: 'uncommon' },
+    { cause: 'Immune thrombocytopenic purpura (ITP)', likelihood: 'uncommon' },
+    { cause: 'Henoch-Schonlein purpura (IgA vasculitis)', likelihood: 'uncommon' },
+    { cause: 'Von Willebrand disease', likelihood: 'rare' },
+    { cause: 'Hemophilia', likelihood: 'rare' },
+    { cause: 'Leukemia or bone marrow failure', likelihood: 'rare' },
+    { cause: 'Vitamin K deficiency bleeding (newborns who missed vitamin K)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Mongolian spots (blue-grey flat patches on buttocks/back) are normal pigmentation, not bruises. Birth-related bruising (from forceps, vacuum extraction) resolves within 1-2 weeks. Some petechiae on face from birth is normal.', whenToWorry: 'ANY unexplained bruising in a non-mobile infant is concerning and needs evaluation. Bruising in unusual locations (ears, neck, trunk, buttocks). Bruising with bleeding from other sites. Bruising with no clear mechanical explanation.' },
+    { ageRange: '2-6 months', normalVariation: 'Babies at this age are typically not yet mobile enough to bruise themselves. Mongolian spots are still present.', whenToWorry: 'ANY bruising in a pre-mobile infant requires medical assessment. Bruising in patterned shapes (hand prints, loop marks, grab marks). Multiple bruises at different stages of healing. Bruising with poor weight gain or other concerns.' },
+    { ageRange: '6-12 months', normalVariation: 'Once cruising and pulling to stand (typically 8-10 months+), forehead and shin bruises from falls become common and expected. Bruises over bony prominences (forehead, shins, knees) are typical.', whenToWorry: 'Bruising in a baby not yet cruising/pulling to stand. Bruises on soft tissue areas (cheeks, ears, neck, trunk, buttocks). Excessive bruising disproportionate to activity level. Bruising with pallor, fatigue, or enlarged lymph nodes.' },
+    { ageRange: '1-3 years', normalVariation: 'Toddlers bruise frequently on shins, forehead, and knees from their many falls. Multiple shin bruises are extremely common. Colors change from purple/blue to green/yellow over 1-2 weeks as they heal.', whenToWorry: 'Bruising in unusual locations (ears, neck, genitals, trunk). Bruises with shape of objects. Easy or excessive bruising beyond what is expected for activity. Bruising with nosebleeds, bleeding gums, or blood in stool/urine. Large bruises from minor trauma.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Any bruising in a non-mobile infant (cannot yet pull to stand)',
+      'Bruising with signs of head injury (vomiting, unresponsive, seizure)',
+      'Widespread sudden bruising with bleeding from gums, nose, or in stools',
+      'Bruising with very high fever and child appearing extremely unwell (sepsis)',
+    ],
+    urgent: [
+      'Multiple unexplained bruises in unusual locations at any age',
+      'Bruising with pallor, fatigue, weight loss, or enlarged lymph nodes',
+      'Easy bruising with a family history of bleeding disorders',
+      'Patterned bruising or bruising in shapes inconsistent with accidental injury',
+      'Bruising with petechiae (pinpoint non-blanching spots)',
+    ],
+    sameDay: [
+      'New onset of easy bruising — bruising more than usual for activity level',
+      'Large bruise from relatively minor impact (may indicate bleeding disorder)',
+      'Bruising with frequent nosebleeds or prolonged bleeding from cuts',
+      'Parent concerned about pattern or frequency of bruises',
+    ],
+    monitor: [
+      'Typical shin and forehead bruises in an active toddler',
+      'Single bruise with clear accidental cause in a mobile child',
+      'Mongolian spots (blue-grey flat patches present from birth)',
+      'Bruise healing normally through expected color changes',
+    ],
+  },
+  homeRemedies: [
+    'Apply a cold compress or ice wrapped in cloth for 10-15 minutes to reduce swelling after injury',
+    'Elevate bruised limbs if possible',
+    'Give age-appropriate pain relief (acetaminophen) if painful — avoid ibuprofen initially as it may increase bleeding',
+    'Gentle pressure for a few minutes after a bump may limit bruise size',
+    'Track bruises with photos and dates if they seem frequent or concerning',
+    'Ensure baby received vitamin K injection at birth (prevents bleeding disease of newborn)',
+    'Remember the rule: "those who don\'t cruise rarely bruise" — seek evaluation for any bruising in pre-mobile infants',
+    'Normal bruise healing progression: red/purple (day 1-2), blue/dark purple (day 3-5), green (day 5-7), yellow/brown (day 7-14), fading (day 14+)',
+  ],
+  triageSlug: 'bruising',
+  relatedSymptomSlugs: ['petechiae', 'pale-skin', 'birthmarks'],
+  relatedIllnessSlugs: ['itp', 'hemophilia', 'von-willebrand', 'leukemia'],
+  relatedConcernSlugs: ['baby-bruising-easily', 'mongolian-spots-vs-bruises', 'toddler-bruises'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Evaluating for Suspected Child Physical Abuse. Pediatrics. 2015;135(5).', url: 'https://publications.aap.org/pediatrics/article/135/5/e1337/33961' },
+    { org: 'NICE', citation: 'National Institute for Health and Care Excellence. Child abuse and neglect (NG76).', url: 'https://www.nice.org.uk/guidance/ng76' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Child Abuse and Neglect Prevention.', url: 'https://www.cdc.gov/violenceprevention/childabuseandneglect/index.html' },
+  ],
+};

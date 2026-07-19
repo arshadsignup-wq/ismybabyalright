@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'penile-concerns',
+  title: 'Penile Concerns in Babies & Toddlers',
+  bodySystem: 'genitourinary',
+  description: 'Parents commonly have concerns about their baby boy\'s penis including foreskin issues, circumcision care, swelling, erections, or appearance. In uncircumcised boys, the foreskin is naturally adherent to the glans at birth and gradually separates over years — forceful retraction should NEVER be attempted. In circumcised boys, normal healing includes yellow-white discharge at the circumcision site and mild swelling for the first week.',
+  possibleCauses: [
+    { cause: 'Normal foreskin adherence (physiologic phimosis) in uncircumcised boys', likelihood: 'common' },
+    { cause: 'Normal circumcision healing (yellow membrane, mild swelling)', likelihood: 'common' },
+    { cause: 'Smegma (white pearls under foreskin — normal)', likelihood: 'common' },
+    { cause: 'Normal infant erections', likelihood: 'common' },
+    { cause: 'Balanitis (inflammation of glans or foreskin)', likelihood: 'uncommon' },
+    { cause: 'Paraphimosis (foreskin stuck behind glans — emergency)', likelihood: 'rare' },
+    { cause: 'Circumcision complications (bleeding, infection)', likelihood: 'uncommon' },
+    { cause: 'Buried/concealed penis (normal penis hidden by suprapubic fat pad)', likelihood: 'uncommon' },
+    { cause: 'Hypospadias (urethral opening not at tip)', likelihood: 'uncommon' },
+    { cause: 'Meatal stenosis (narrowed urethral opening post-circumcision)', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Foreskin is normally tight and non-retractable in uncircumcised boys (physiologic phimosis). After circumcision: yellow-white membrane on healing area, mild swelling, slight oozing for first 24-48 hours — all normal. Erections are normal and common. A "buried" appearance in chubby babies is common.', whenToWorry: 'Active bleeding from circumcision site (more than oozing). Signs of circumcision infection: spreading redness, pus, foul smell, fever. Inability to urinate after circumcision. Foreskin that was retracted and stuck behind glans (paraphimosis — emergency). Hypospadias identified (urine stream from underneath rather than tip).' },
+    { ageRange: '2-6 months', normalVariation: 'Foreskin remains naturally adherent. Circumcision should be fully healed by 2 weeks. Buried penis in chubby babies. Smegma beginning to form (white material under foreskin — normal). Occasional redness at the tip from diaper irritation.', whenToWorry: 'Persistent circumcision healing problems. Ballooning of foreskin during urination with inability to pass urine (very rare). Redness and swelling with pus discharge (balanitis). Skin adhesions/skin bridges forming over circumcision site.' },
+    { ageRange: '6-12 months', normalVariation: 'Foreskin begins very gradual natural separation (may not retract until age 3-10+). Small white lumps under foreskin are smegma (normal). Buried penis common in overweight babies.', whenToWorry: 'Painful swelling of penis or foreskin. Difficulty urinating or thin stream with straining. Persistent ballooning with signs of obstruction. Trapped foreskin behind the glans (paraphimosis).' },
+    { ageRange: '1-3 years', normalVariation: 'Foreskin still normally non-retractable for most boys (full retraction often not until ages 5-10). Boys may begin exploring genitals — this is normal development. Occasional mild balanitis (redness at tip) that resolves with bathing.', whenToWorry: 'Forceful retraction of foreskin by caregivers causing scarring/phimosis. Recurrent balanitis with pus. Difficulty urinating or spraying. Foreskin stuck behind glans (always an emergency). Progressive narrowing of urinary stream (meatal stenosis in circumcised boys).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Paraphimosis: foreskin stuck behind glans with swelling — needs immediate reduction',
+      'Significant active bleeding from circumcision site that does not stop with gentle pressure',
+      'Complete inability to pass urine',
+      'Penile injury with deformity or significant swelling',
+    ],
+    urgent: [
+      'Signs of circumcision infection: spreading redness, fever, pus, foul smell',
+      'Moderate bleeding from circumcision requiring more than gentle pressure',
+      'Painful swollen penis with fever',
+      'Significantly reduced or absent urine stream post-circumcision',
+    ],
+    sameDay: [
+      'Balanitis with discharge or significant discomfort',
+      'Concerns about circumcision healing appearance',
+      'Suspected skin adhesions or skin bridges after circumcision',
+      'Thin or deflected urine stream (meatal stenosis)',
+      'Persistent buried penis with difficulty seeing the tip',
+    ],
+    monitor: [
+      'Normal physiologic phimosis (tight foreskin in uncircumcised boy under 5)',
+      'Normal yellow membrane during first week of circumcision healing',
+      'Smegma pearls under foreskin (white lumps — normal)',
+      'Normal infant erections',
+      'Mild redness at tip from diaper irritation resolving with barrier cream',
+    ],
+  },
+  homeRemedies: [
+    'NEVER forcefully retract the foreskin of an uncircumcised baby — it separates naturally over years',
+    'Clean an uncircumcised penis by washing the outside only with water; retract only as far as it goes easily',
+    'After circumcision: apply petroleum jelly to the healing area with every diaper change for 7-10 days',
+    'Keep circumcision site clean — no special cleaning, just gentle water',
+    'For mild balanitis: warm water soaks, gentle cleaning, and keep area dry',
+    'For buried penis: gently push back the fat pad when applying diaper to prevent adhesions',
+    'Normal circumcision healing: yellow film is healing tissue (not pus), mild swelling resolves in days',
+    'Diaper-free time helps keep the area dry and promotes healing',
+    'Do NOT apply antiseptics, alcohol, or powders to circumcision sites',
+  ],
+  relatedSymptomSlugs: ['genital-swelling', 'undescended-testicle', 'blood-in-urine'],
+  relatedIllnessSlugs: ['balanitis', 'phimosis', 'hypospadias', 'circumcision-care'],
+  relatedConcernSlugs: ['circumcision-care-newborn', 'baby-foreskin-concerns', 'baby-buried-penis'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Circumcision Policy Statement. Pediatrics. 2012;130(3).', url: 'https://publications.aap.org/pediatrics/article/130/3/585/30235' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Care for an Uncircumcised Penis. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Care-for-an-Uncircumcised-Penis.aspx' },
+    { org: 'NHS', citation: 'NHS. Phimosis (tight foreskin).', url: 'https://www.nhs.uk/conditions/phimosis/' },
+  ],
+};

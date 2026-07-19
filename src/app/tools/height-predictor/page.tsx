@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import HeightPredictor from "@/components/tools/HeightPredictor";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Child Height Predictor - Estimate Adult Height from Parent Heights",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Child Height Predictor',
+  description: 'Predict your child\'s adult height using the mid-parental height formula. Enter both parents\' heights and child\'s sex to get an estimated height range. Based on AAP guidelines.',
+  path: '/tools/height-predictor',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Height Predictor' },
+]);
+
 export default function HeightPredictorPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function HeightPredictorPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A child height predictor estimates adult height using the mid-parental height method, which averages both parents&apos; heights with an adjustment factor to provide a predicted height range.</p>
         <HeightPredictor />
       </div>
     </div>

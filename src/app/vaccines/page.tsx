@@ -6,7 +6,80 @@ import { useProfile } from "@/lib/useStorage";
 import { getAgeInMonthsFromDate } from "@/lib/tracker";
 import type { VaccineRecord } from "@/data/vaccines/types";
 import VaccineSchedule from "@/components/vaccines/VaccineSchedule";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import BottomLine from "@/components/shared/BottomLine";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 import { cdcVaccineSchedule } from "@/data/vaccines/cdc-schedule";
+
+const contentSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Baby Vaccine Tracker & CDC Immunization Schedule",
+  description:
+    "Track your baby's vaccinations against the CDC recommended immunization schedule. Log doses, see what's due next, and keep a printable record for your pediatrician.",
+  url: "https://www.ismybabyalright.com/vaccines",
+  audience: { "@type": "PeopleAudience", audienceType: "Parents" },
+  author: {
+    "@type": "Organization",
+    name: "Is My Baby Alright?",
+    url: "https://www.ismybabyalright.com",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      url: "https://www.ismybabyalright.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Vaccines",
+    },
+  ],
+};
+
+const vaccineFaqItems = [
+  {
+    question: "What vaccines does my baby need in the first year?",
+    answer: "In the first year, your baby will receive vaccines for Hepatitis B (HepB), Rotavirus (RV), DTaP (diphtheria, tetanus, pertussis), Haemophilus influenzae type b (Hib), Pneumococcal (PCV13), Inactivated Poliovirus (IPV), and Influenza (flu). Most require multiple doses given at 2, 4, and 6 months, with boosters later.",
+  },
+  {
+    question: "Are vaccines safe for babies?",
+    answer: "Yes. Vaccines are among the most rigorously tested medical products. The CDC, AAP, and AAFP all recommend following the standard immunization schedule. Common side effects like mild fever, fussiness, and soreness at the injection site are normal and temporary. Serious reactions are extremely rare.",
+  },
+  {
+    question: "What should I do if my baby has a reaction to a vaccine?",
+    answer: "Mild reactions like low-grade fever, fussiness, and redness at the injection site are normal and resolve within 1-2 days. You can give infant acetaminophen (Tylenol) if your pediatrician approves. Call your doctor if your baby has a fever above 105°F (40.5°C), cries inconsolably for more than 3 hours, has seizures, or shows signs of an allergic reaction like hives, swelling, or difficulty breathing.",
+  },
+  {
+    question: "Can I delay or spread out my baby's vaccines?",
+    answer: "The CDC schedule is designed to protect babies as early as possible when they are most vulnerable to serious diseases. Delaying vaccines leaves your baby unprotected longer. The AAP does not recommend alternative schedules. If you have concerns, discuss them with your pediatrician rather than skipping or delaying doses.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: vaccineFaqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
+const vaccineTakeaways = [
+  "The CDC recommends vaccines starting at birth (Hepatitis B) through age 6, with most doses in the first 2 years.",
+  "Vaccines protect against 14 serious diseases including whooping cough, measles, and meningitis.",
+  "Common side effects (mild fever, fussiness, soreness) are normal and resolve within 1-2 days.",
+  "The AAP, CDC, and AAFP all endorse the standard immunization schedule for healthy infants.",
+];
 
 const VACCINE_STORAGE_KEY = "imba_vaccines";
 
@@ -61,12 +134,27 @@ export default function VaccinesPage() {
   if (!profile) {
     return (
       <div className="mx-auto max-w-lg px-4 py-6 sm:py-8">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <div className="mb-5">
           <h1 className="text-xl font-bold text-foreground">CDC Vaccine Schedule</h1>
+          <p className="text-base text-muted leading-relaxed mb-6">The recommended childhood immunization schedule outlines which vaccines your baby needs and when, based on the CDC-recommended schedule endorsed by the AAP and AAFP.</p>
           <p className="text-sm text-muted mt-1">
             Recommended immunization schedule for children ages 0-6 years.
           </p>
         </div>
+
+        <KeyTakeaways takeaways={vaccineTakeaways} />
 
         <div className="flex flex-col gap-3 mb-6">
           {cdcVaccineSchedule.map((vaccine) => (
@@ -144,10 +232,20 @@ export default function VaccinesPage() {
           </Link>
         </div>
 
+        <div className="mt-6">
+          <FAQSection items={vaccineFaqItems} />
+        </div>
+
+        <BottomLine summary="Vaccines are one of the most effective ways to protect your baby from serious diseases. The CDC schedule is designed to provide protection at the earliest safe age. If you have questions about any vaccine, talk to your pediatrician." />
+
         <p className="text-xs text-muted text-center mt-6 leading-relaxed">
           Based on the CDC Recommended Immunization Schedule.
           Your pediatrician may adjust the timing for your baby.
         </p>
+
+        <div className="mt-4">
+          <EditorialTrustBanner variant="compact" />
+        </div>
       </div>
     );
   }
@@ -156,6 +254,14 @@ export default function VaccinesPage() {
 
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex items-center gap-3 mb-5">
         <Link
           href="/tracker"

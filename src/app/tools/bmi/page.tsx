@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import BMICalculator from "@/components/tools/BMICalculator";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Pediatric BMI Calculator - Child BMI Percentile by Age",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Pediatric BMI Calculator',
+  description: 'Calculate your child\'s BMI and BMI-for-age percentile based on CDC growth charts. For children ages 2-18. Understand weight categories and what they mean.',
+  path: '/tools/bmi',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'BMI Calculator' },
+]);
+
 export default function BMIPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function BMIPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A child BMI calculator determines your child&apos;s Body Mass Index percentile based on age and sex, using CDC growth charts to screen for underweight, healthy weight, overweight, or obesity categories.</p>
         <BMICalculator />
       </div>
     </div>

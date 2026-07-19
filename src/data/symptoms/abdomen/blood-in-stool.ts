@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'blood-in-stool',
+  title: 'Blood in Stool in Babies & Toddlers',
+  bodySystem: 'abdomen',
+  description: 'Blood in a baby\'s stool is alarming for parents but is often caused by minor issues like an anal fissure or swallowed maternal blood (in newborns). Blood can appear as red streaks on the outside of stool, mixed throughout, or as dark/black tarry stools (indicating upper GI bleeding). The cause, amount, and appearance all help determine urgency.',
+  possibleCauses: [
+    { cause: 'Anal fissure (small tear from hard stool)', likelihood: 'common' },
+    { cause: 'Cow\'s milk protein allergy/intolerance (allergic proctocolitis)', likelihood: 'common' },
+    { cause: 'Swallowed maternal blood (cracked nipples during breastfeeding, or birth)', likelihood: 'common' },
+    { cause: 'Infectious gastroenteritis (bacterial)', likelihood: 'uncommon' },
+    { cause: 'Intussusception (currant jelly stool)', likelihood: 'rare' },
+    { cause: 'Meckel diverticulum', likelihood: 'rare' },
+    { cause: 'Inflammatory bowel disease', likelihood: 'rare' },
+    { cause: 'Necrotizing enterocolitis (in premature infants)', likelihood: 'rare' },
+    { cause: 'Polyps', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Small blood streaks from swallowed maternal blood (from cracked nipples during breastfeeding) are common in the first weeks. A small amount of mucus in breastfed baby stool can be normal.', whenToWorry: 'Persistent blood-streaked mucoid stools (possible milk protein allergy). Significant blood volume. Dark tarry stools (upper GI bleeding). Blood with distended abdomen in premature infant (NEC risk).' },
+    { ageRange: '3-12 months', normalVariation: 'Occasional blood streak on hard stool surface (anal fissure) is the most common cause and is usually benign. May recur with constipation episodes.', whenToWorry: 'Currant jelly stools (blood and mucus mixed) with intermittent severe pain and vomiting (intussusception \u2014 emergency). Large amounts of blood. Blood with high fever and appearing very ill.' },
+    { ageRange: '1-3 years', normalVariation: 'Anal fissures from constipation remain the most common cause at this age. Small bright red streaks on stool surface after straining.', whenToWorry: 'Painless significant rectal bleeding (possible Meckel diverticulum or polyp). Blood mixed throughout stool with diarrhea and fever (bacterial infection). Chronic bloody diarrhea with weight loss.' },
+    { ageRange: 'Any age', normalVariation: 'Red foods (beets, red gelatin, tomatoes) and medications (iron, bismuth) can mimic blood in stool.', whenToWorry: 'Large volume of blood (tablespoon or more), blood with hemodynamic instability (pale, rapid heart rate, weak), black tarry stools (melena), or bloody stools with abdominal distension.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Currant jelly stools with intermittent screaming and vomiting (possible intussusception)',
+      'Large volume rectal bleeding (more than a tablespoon)',
+      'Black tarry stools (melena) suggesting upper GI bleeding',
+      'Bloody stool with abdominal distension and bilious vomiting',
+      'Blood in stool with signs of shock (pale, cold, rapid heart rate, lethargic)',
+      'Blood in stool in premature infant with distended abdomen (NEC)',
+    ],
+    urgent: [
+      'Bloody diarrhea with high fever',
+      'Blood in stool with significant abdominal pain',
+      'Moderate amount of blood mixed throughout stool',
+      'Painless significant rectal bleeding (red blood without stool)',
+      'Blood in stool with signs of dehydration',
+    ],
+    sameDay: [
+      'Persistent blood-streaked mucoid stools in an otherwise well infant (possible milk protein allergy)',
+      'Recurrent blood with constipation not resolving with home treatment',
+      'Small amount of blood in stool that persists for more than a few days',
+    ],
+    monitor: [
+      'Single small streak of bright red blood on hard stool (likely anal fissure)',
+      'Known anal fissure with occasional blood that resolves with stool softening',
+      'Suspected swallowed maternal blood in a breastfed newborn with no other symptoms',
+    ],
+  },
+  homeRemedies: [
+    'For anal fissure: soften stools with increased fiber and fluids (see constipation remedies)',
+    'Apply small amount of petroleum jelly or coconut oil to the anus to ease passage of hard stool',
+    'Warm sitz baths for toddlers with anal fissures (sit in warm water 10-15 minutes)',
+    'If cow\'s milk protein allergy suspected in breastfed baby: mother may trial eliminating dairy for 2-4 weeks under doctor guidance',
+    'Save the diaper with blood to show the doctor',
+    'Note the color, amount, and pattern of blood (on surface vs. mixed in, with or without mucus)',
+    'Do NOT insert anything into the rectum without medical guidance',
+    'Do NOT give iron supplements that could mask dark stools without consulting doctor',
+  ],
+  triageSlug: 'blood-in-stool',
+  relatedSymptomSlugs: ['diarrhea', 'constipation', 'vomiting', 'fever'],
+  relatedIllnessSlugs: ['intussusception', 'cow-milk-allergy', 'anal-fissure', 'gastroenteritis'],
+  relatedConcernSlugs: ['blood-in-baby-diaper', 'baby-poop-red', 'baby-mucus-stool'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Bloody Stool (Rectal Bleeding) in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Blood-in-Stool.aspx' },
+    { org: 'NASPGHAN', citation: 'Hillemeier AC. Rectal Bleeding in Children. NASPGHAN Clinical Guidelines.', url: 'https://www.naspghan.org/professional-resources/clinical-guidelines/' },
+    { org: 'AAP', citation: 'Arvola T, et al. Rectal bleeding in infancy: clinical, allergological, and microbiological examination. Pediatrics. 2006.', url: 'https://publications.aap.org/pediatrics/article/117/4/e760/68638' },
+  ],
+};

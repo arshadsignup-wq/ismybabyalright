@@ -1,0 +1,72 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'emergency-plan',
+  title: 'Creating a Family Emergency Plan',
+  category: 'preparedness',
+  callNineOneOne: false,
+  description: 'A family emergency plan ensures all caregivers know what to do in an emergency, where to go, and who to contact. Having a plan reduces panic and response time when every second counts. Review and practice your plan every 6 months.',
+  immediateActions: [
+    'Post emergency numbers (911, Poison Control, pediatrician, nearest ER) on the refrigerator and in your phone',
+    'Share your emergency plan with all caregivers (babysitters, grandparents, daycare)',
+    'Know the fastest route to your nearest emergency room',
+    'Keep a printed emergency contact card in your wallet, diaper bag, and car',
+  ],
+  doNotDo: [
+    'Do NOT rely solely on memory — write plans down and post visibly',
+    'Do NOT assume all caregivers know what to do — train and review regularly',
+    'Do NOT keep important medical information only on your phone (battery may die)',
+    'Do NOT forget to update the plan as your child grows and needs change',
+    'Do NOT skip practice drills — familiarity reduces panic in real emergencies',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Create emergency contact list', description: 'Include: 911, Poison Control (1-800-222-1222), pediatrician (office and after-hours), nearest ER, trusted neighbor, out-of-area contact, and any specialists. Post in kitchen and store in phone.' },
+    { step: 2, title: 'Document medical information', description: 'For each child, record: allergies, medications, blood type, medical conditions, insurance info, and pediatrician contact. Keep copies in diaper bag, car, and with caregivers.' },
+    { step: 3, title: 'Know your nearest ER', description: 'Identify the nearest pediatric ER (preferred) and general ER. Know driving routes from home, work, and daycare. Store addresses in your GPS favorites.' },
+    { step: 4, title: 'Establish meeting places', description: 'Choose a family meeting spot outside the home (for fire evacuation) and one outside the neighborhood (for wider emergencies). Ensure all family members know both.' },
+    { step: 5, title: 'Plan for natural disasters', description: 'Based on your area: prepare for earthquakes, hurricanes, tornadoes, floods, or wildfires. Keep emergency supplies (water, food, diapers, formula, medications) for 72 hours.' },
+    { step: 6, title: 'Brief all caregivers', description: 'Give babysitters, grandparents, and daycare your emergency plan, medical info, consent-to-treat forms, and insurance cards. Walk them through specific scenarios.' },
+    { step: 7, title: 'Practice regularly', description: 'Practice fire drills and meeting place plans every 6 months. Quiz caregivers on emergency numbers. Check that smoke detectors and fire extinguishers work.' },
+    { step: 8, title: 'Review and update', description: 'Update the plan when: you move, change doctors, child develops new conditions, medications change, or family situation changes. Review at minimum every 6 months.' },
+  ],
+  whenToCall911: [
+    'Life-threatening emergency: not breathing, unresponsive, severe bleeding, suspected poisoning with symptoms',
+    'Fire or gas leak in the home',
+    'Severe allergic reaction (anaphylaxis)',
+    'Suspected broken neck or back',
+    'When in doubt, call — dispatchers can help you decide',
+  ],
+  whenToCallDoctor: [
+    'Non-emergency medical questions during office hours',
+    'After-hours nurse line for guidance on whether to go to ER',
+    'Prescription refills needed for chronic conditions',
+    'Follow-up on emergency visits',
+  ],
+  whenToGoToER: [
+    'Your instinct says something is seriously wrong',
+    'Difficulty breathing, high fever in young infants, severe pain, head injury with altered consciousness',
+    'Anytime 911 is called, the ER is the destination',
+    'If unsure between ER and urgent care, err on the side of ER for young children',
+  ],
+  prevention: [
+    'Keep first aid kit stocked and accessible (but out of children\'s reach)',
+    'Install and maintain smoke detectors on every floor and in every bedroom',
+    'Keep fire extinguisher in kitchen and know how to use it',
+    'Store emergency supplies: flashlights, batteries, water, food, medications, diapers',
+    'Childproof the home systematically (outlet covers, cabinet locks, stair gates, furniture anchors)',
+    'Take a pediatric first aid and CPR class — refresh every 2 years',
+    'Ensure your home address is clearly visible from the street for emergency responders',
+  ],
+  byAge: [
+    { ageRange: '0-1 year', context: 'Plan should emphasize: SIDS prevention, safe sleep environment, choking hazards, fever protocols for under 3 months, and formula/breastmilk emergency supply. Consent-to-treat forms are critical for all caregivers.' },
+    { ageRange: '1-3 years', context: 'Update plan for mobility: poison prevention, fall hazards, water safety, and updated emergency kit with toddler medications. Begin teaching child their full name and practice "stop, drop, and roll."' },
+    { ageRange: '3-8 years', context: 'Teach children to call 911 and state their name and address. Practice fire drills. Create emergency cards for backpacks. Discuss "safe adults" and meeting points. Begin teaching basic first aid.' },
+  ],
+  relatedEmergencySlugs: ['emergency-kit', 'cpr-training-guide'],
+  relatedConcernSlugs: [],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Family Emergency Plan.', url: 'https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Getting-Your-Family-Prepared-for-an-Emergency.aspx' },
+    { org: 'Red Cross', citation: 'American Red Cross. Make a Plan.', url: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/make-a-plan.html' },
+    { org: 'FEMA', citation: 'Federal Emergency Management Agency. Plan Ahead for Emergencies.', url: 'https://www.ready.gov/plan' },
+  ],
+};

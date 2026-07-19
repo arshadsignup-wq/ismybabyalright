@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import PumpingScheduleCalculator from "@/components/tools/PumpingScheduleCalculator";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Pumping Schedule Calculator - EP, Work, & Combo Feeding",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Pumping Schedule Calculator',
+  description: 'Get a personalized pumping schedule based on your situation — exclusively pumping, pumping at work, or combo feeding. Includes supply tips and milestones.',
+  path: '/tools/pumping-schedule',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Pumping Schedule' },
+]);
+
 export default function PumpingSchedulePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function PumpingSchedulePage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A pumping schedule generator creates a personalized breast milk pumping routine based on your baby&apos;s age, feeding patterns, and work schedule, helping maintain milk supply while managing daily demands.</p>
         <PumpingScheduleCalculator />
       </div>
     </div>

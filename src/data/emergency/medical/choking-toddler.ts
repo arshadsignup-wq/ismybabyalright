@@ -1,0 +1,72 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'choking-toddler',
+  title: 'Choking in a Toddler (1-3 Years)',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'A choking toddler who cannot cough, speak, or breathe requires immediate abdominal thrusts (Heimlich maneuver). For children over 1 year, the technique differs from infant back blows.',
+  immediateActions: [
+    'If child cannot cough, cry, or breathe — begin abdominal thrusts immediately',
+    'Call 911 or have someone else call while you begin first aid',
+    'Stand or kneel behind the child for the Heimlich maneuver',
+    'If child is coughing forcefully, encourage them to keep coughing',
+  ],
+  doNotDo: [
+    'Do NOT perform blind finger sweeps — you may push the object deeper',
+    'Do NOT interfere if the child is coughing forcefully',
+    'Do NOT give water or food to try to wash the object down',
+    'Do NOT hold the child upside down',
+    'Do NOT slap the child on the back if they are standing upright (use abdominal thrusts instead)',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Assess the situation', description: 'If child is coughing forcefully, let them try to clear it. If child cannot cough, speak, or breathe, or is making high-pitched sounds, proceed immediately.' },
+    { step: 2, title: 'Position yourself', description: 'Kneel or stand behind the child. Wrap your arms around their waist. For a small toddler, you may need to kneel.' },
+    { step: 3, title: 'Make a fist', description: 'Place the thumb side of your fist just above the belly button and well below the breastbone.' },
+    { step: 4, title: 'Perform abdominal thrusts', description: 'Grasp your fist with your other hand. Give quick, upward thrusts into the abdomen. Each thrust should be a distinct, forceful movement.' },
+    { step: 5, title: 'Give up to 5 thrusts', description: 'Continue giving abdominal thrusts until the object is expelled or the child can breathe, cough, or cry.' },
+    { step: 6, title: 'Check mouth', description: 'If the object becomes visible, carefully remove it. Do NOT perform blind sweeps.' },
+    { step: 7, title: 'Repeat', description: 'Continue cycles of 5 abdominal thrusts until the object is cleared, the child starts breathing, or the child becomes unresponsive.' },
+    { step: 8, title: 'If child becomes unresponsive', description: 'Lower child to the ground. Begin CPR immediately. Call 911 if not already done. After 30 compressions, look in the mouth before giving breaths.' },
+  ],
+  whenToCall911: [
+    'Child cannot breathe, speak, or cough',
+    'Child is turning blue or losing consciousness',
+    'Child becomes unresponsive',
+    'Abdominal thrusts are not clearing the object',
+    'Child was choking and is now lethargic or confused',
+  ],
+  whenToCallDoctor: [
+    'After any choking episode, even if child seems fine',
+    'Child has persistent cough or sore throat after episode',
+    'Child complains of abdominal pain after receiving abdominal thrusts',
+    'You suspect child swallowed something but is currently breathing normally',
+  ],
+  whenToGoToER: [
+    'Child was choking and is now having difficulty breathing or swallowing',
+    'Child is drooling excessively after the episode',
+    'Child choked on a battery, magnet, or sharp object',
+    'Abdominal thrusts caused visible injury or severe pain',
+  ],
+  prevention: [
+    'Cut round foods (grapes, hot dogs, cherry tomatoes) lengthwise into quarters',
+    'Avoid high-risk foods: whole nuts, popcorn, hard candy, chunks of raw vegetables, whole grapes',
+    'Supervise all meals and snacks — child should be seated and not running or playing while eating',
+    'Teach child to chew food thoroughly before swallowing',
+    'Keep small objects out of reach (coins, buttons, small toy parts, balloons)',
+    'Check toy labels for age-appropriate warnings',
+    'All caregivers should learn child choking first aid',
+  ],
+  byAge: [
+    { ageRange: '1-2 years', context: 'Toddlers are still learning to chew effectively and may stuff too much food in their mouths. Cut all food into small pieces. Be especially cautious with round, firm foods.' },
+    { ageRange: '2-3 years', context: 'Children are more mobile and may eat while running or playing. Enforce sitting during mealtimes. Be aware of non-food items like coins, small toy parts, and balloons that pose choking risks.' },
+    { ageRange: '3+ years', context: 'Children should be taught to take small bites and chew thoroughly. Hot dogs, grapes, and popcorn remain high-risk. Latex balloons are the leading cause of non-food choking death in children.' },
+  ],
+  relatedEmergencySlugs: ['choking-infant', 'cpr-toddler', 'foreign-object'],
+  relatedConcernSlugs: ['baby-choking-on-food'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Choking Prevention and First Aid for Infants and Children.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Choking-Prevention.aspx' },
+    { org: 'AHA', citation: 'American Heart Association. Child and Infant Choking.', url: 'https://www.heart.org/en/health-topics/first-aid/first-aid-for-cardiac-arrest/child-choking' },
+    { org: 'Red Cross', citation: 'American Red Cross. Conscious Choking — Child.', url: 'https://www.redcross.org/take-a-class/cpr/performing-cpr/child-baby-cpr' },
+  ],
+};

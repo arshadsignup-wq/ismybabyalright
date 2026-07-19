@@ -1,0 +1,72 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'blue-baby-cyanosis',
+  title: 'Blue Baby (Cyanosis)',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'Cyanosis — a blue or purple coloring of the skin, lips, or nail beds — indicates the baby is not getting enough oxygen. Central cyanosis (blue lips, tongue, or trunk) is always a medical emergency requiring immediate action.',
+  immediateActions: [
+    'Call 911 immediately if baby\'s lips, tongue, or trunk appear blue or purple',
+    'Check if baby is breathing — if not, begin CPR',
+    'Clear any obstructions from the airway',
+    'Keep baby warm but do not overheat',
+  ],
+  doNotDo: [
+    'Do NOT ignore blue discoloration of lips or tongue — this is always serious',
+    'Do NOT confuse peripheral cyanosis (blue hands/feet in newborns) with central cyanosis',
+    'Do NOT try to feed a baby who is blue and struggling to breathe',
+    'Do NOT delay calling 911 to "wait and see"',
+    'Do NOT assume it will resolve on its own',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Identify the type of cyanosis', description: 'Central cyanosis (blue lips, tongue, trunk) = emergency. Peripheral cyanosis (just blue hands/feet in a newborn who is otherwise well) may be normal in first 48 hours but should still be evaluated.' },
+    { step: 2, title: 'Call 911', description: 'If baby has blue lips, tongue, or trunk, call 911 immediately. Every minute without adequate oxygen can cause harm.' },
+    { step: 3, title: 'Check airway and breathing', description: 'Is baby breathing? Is there anything blocking the airway? If not breathing, begin infant CPR immediately.' },
+    { step: 4, title: 'Position baby', description: 'Hold baby in a slightly upright position to ease breathing, unless CPR is needed (then flat on back). Keep the head in a neutral position to maintain an open airway.' },
+    { step: 5, title: 'Remove restrictive clothing', description: 'Loosen any tight clothing around the neck and chest to allow easier breathing. Keep baby warm with a blanket.' },
+    { step: 6, title: 'Monitor and note symptoms', description: 'Note: when it started, whether it comes and goes, if baby was feeding or crying, and any other symptoms like grunting, flaring nostrils, or chest retractions.' },
+    { step: 7, title: 'Prepare for EMS', description: 'Gather baby\'s medical information. Note any known heart conditions. Be ready to describe what happened and timeline of symptoms.' },
+  ],
+  whenToCall911: [
+    'Blue or purple lips, tongue, or gums',
+    'Blue or dusky skin on trunk or face',
+    'Baby is struggling to breathe or not breathing',
+    'Baby is limp or unresponsive with blue coloring',
+    'Cyanosis that does not improve when baby is warmed',
+    'Blue color appearing during or after feeding with choking',
+  ],
+  whenToCallDoctor: [
+    'Baby\'s hands and feet appear blue but lips and tongue are pink (in first few days of life)',
+    'Brief blue color around mouth that resolves quickly with stimulation',
+    'Baby appears blue only during crying episodes (breath-holding spells in toddlers)',
+    'Any episode of cyanosis, even if it resolved, needs medical follow-up',
+  ],
+  whenToGoToER: [
+    'Any episode of central cyanosis (blue lips/tongue) even if it resolved',
+    'Baby has recurrent episodes of turning blue',
+    'Blue color associated with feeding difficulties',
+    'Known heart defect with new or worsening blue color',
+    'Cyanosis with lethargy or poor feeding',
+  ],
+  prevention: [
+    'Attend all prenatal appointments — many heart defects are detected before birth',
+    'Ensure newborn pulse oximetry screening is completed before hospital discharge',
+    'Know the signs of congenital heart disease: blue skin, poor feeding, rapid breathing, poor weight gain',
+    'Keep follow-up appointments for babies with known heart conditions',
+    'Ensure safe sleep practices to prevent suffocation',
+    'Do not smoke around baby — secondhand smoke impairs oxygen delivery',
+  ],
+  byAge: [
+    { ageRange: '0-48 hours', context: 'Mild peripheral cyanosis (acrocyanosis) of hands and feet is common and usually normal in the first 48 hours. Central cyanosis (lips, tongue) is NEVER normal and may indicate a congenital heart defect or respiratory problem.' },
+    { ageRange: '2 days - 6 months', context: 'New cyanosis at this age could indicate a heart defect, respiratory infection (RSV, bronchiolitis), or airway obstruction. Some heart defects present days to weeks after birth as fetal circulation changes.' },
+    { ageRange: '6 months - 3 years', context: 'Cyanosis may result from choking, asthma, croup, pneumonia, or breath-holding spells. Breath-holding spells (turning blue during intense crying) are usually benign but should be evaluated on first occurrence.' },
+  ],
+  relatedEmergencySlugs: ['breathing-emergency', 'choking-infant', 'unresponsive-baby', 'cpr-infant'],
+  relatedConcernSlugs: ['baby-turning-blue', 'baby-not-breathing'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Cyanosis in the Newborn.', url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx' },
+    { org: 'AHA', citation: 'American Heart Association. Congenital Heart Defects in Children.', url: 'https://www.heart.org/en/health-topics/congenital-heart-defects' },
+    { org: 'NIH', citation: 'National Institutes of Health. Cyanosis in Infants and Children.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK559119/' },
+  ],
+};

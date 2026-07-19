@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'bumpy-rash',
+  title: 'Bumpy Rash in Babies & Toddlers',
+  bodySystem: 'skin',
+  description: 'Bumpy rashes (papular rashes) in babies feature small, raised bumps on the skin. They are extremely common and usually caused by viral infections, keratosis pilaris, insect bites, or allergic reactions. Most bumpy rashes in babies are harmless and resolve on their own, but certain patterns warrant medical attention.',
+  possibleCauses: [
+    { cause: 'Keratosis pilaris (rough, sandpaper-like bumps)', likelihood: 'common' },
+    { cause: 'Viral exanthem (bumpy rash with viral illness)', likelihood: 'common' },
+    { cause: 'Insect bites (mosquito, flea)', likelihood: 'common' },
+    { cause: 'Heat rash (miliaria rubra)', likelihood: 'common' },
+    { cause: 'Molluscum contagiosum (pearly dome-shaped bumps)', likelihood: 'uncommon' },
+    { cause: 'Folliculitis (infected hair follicles)', likelihood: 'uncommon' },
+    { cause: 'Scabies (intensely itchy bumps, especially at night)', likelihood: 'uncommon' },
+    { cause: 'Milia (tiny white bumps in newborns)', likelihood: 'common' },
+    { cause: 'Erythema toxicum neonatorum (red blotches with yellow bumps)', likelihood: 'common' },
+    { cause: 'Allergic contact dermatitis', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Erythema toxicum (red blotches with white/yellow bumps) is extremely common in the first week and resolves spontaneously. Milia (tiny pearly white bumps on nose and cheeks) are normal and disappear within weeks. Neonatal cephalic pustulosis (baby acne) appears as small red bumps around 2-4 weeks.', whenToWorry: 'Bumps that are fluid-filled or blistering in a newborn (concern for herpes simplex or staphylococcal infection). Bumps with fever or poor feeding. Widespread pustules that appear infected.' },
+    { ageRange: '2-6 months', normalVariation: 'Keratosis pilaris can begin appearing on upper arms, thighs, and cheeks. Drool rash causes rough bumps around the mouth. Mild heat rash bumps in skin folds are common in warm weather.', whenToWorry: 'Bumps that are rapidly spreading, painful to touch, or associated with fever. Red streaks radiating from bumpy areas. Bumps that seem to be getting larger or more inflamed.' },
+    { ageRange: '6-12 months', normalVariation: 'Viral rashes with small bumps are frequent as babies explore and encounter more infections. Molluscum contagiosum may first appear with small pearly bumps. Insect bite reactions can cause prominent bumps.', whenToWorry: 'Itchy bumps concentrated in web spaces, wrists, or diaper area (scabies pattern). Bumps that develop central dimple with spreading (concerning for molluscum requiring assessment). Large or painful bumps with red halos.' },
+    { ageRange: '1-3 years', normalVariation: 'Keratosis pilaris is very common and gives a rough sandpaper texture to upper arms and cheeks. Molluscum is common in toddlers and self-resolves over 6-18 months. Viral bumpy rashes with mild illness are frequent.', whenToWorry: 'Bumpy rash with joint pain or swelling. Rapidly spreading bumps with systemic illness. Bumps that are worsening despite treatment or present for many weeks without explanation.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Bumpy rash with difficulty breathing or throat swelling (anaphylaxis)',
+      'Rapidly spreading painful bumps with high fever and lethargy',
+      'Widespread blistering bumps in a newborn under 4 weeks',
+    ],
+    urgent: [
+      'Bumps with fever in a baby under 3 months',
+      'Red streaks spreading from bumpy area (possible cellulitis)',
+      'Intensely itchy bumps disrupting sleep in infant, especially in web spaces (scabies)',
+      'Bumps with pus or honey-colored crusting suggesting bacterial infection',
+    ],
+    sameDay: [
+      'New bumpy rash you cannot identify with mild fever',
+      'Bumps that appear infected (increasing redness, warmth, swelling)',
+      'Itchy bumps causing significant distress',
+      'Bumpy rash following new medication',
+    ],
+    monitor: [
+      'Keratosis pilaris (rough bumps on arms/cheeks, no distress)',
+      'Mild viral bumps with well-appearing child',
+      'Small number of insect bites without spreading redness',
+      'Milia or erythema toxicum in a well newborn',
+    ],
+  },
+  homeRemedies: [
+    'For keratosis pilaris: gentle exfoliation with a soft washcloth and regular moisturizing with fragrance-free cream',
+    'Avoid harsh soaps or frequent bathing which can worsen dry bumpy skin',
+    'For heat rash bumps: cool the environment, remove excess clothing layers, and allow skin to air dry',
+    'Apply cool compresses to itchy bumps for temporary relief',
+    'Use fragrance-free, hypoallergenic laundry detergent',
+    'For insect bites: clean with soap and water, apply cold compress, use age-appropriate anti-itch cream',
+    'Do not squeeze or pop bumps as this can cause infection or scarring',
+    'Take photos to track changes over time and show the doctor if needed',
+  ],
+  triageSlug: 'rash',
+  relatedSymptomSlugs: ['red-rash', 'blistering-rash', 'hives'],
+  relatedIllnessSlugs: ['eczema', 'keratosis-pilaris', 'molluscum-contagiosum', 'scabies'],
+  relatedConcernSlugs: ['baby-bumps-on-skin', 'baby-rough-skin', 'newborn-rash-normal'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Common Skin Rashes in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/skin/Pages/default.aspx' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Keratosis pilaris - Symptoms and causes.', url: 'https://www.mayoclinic.org/diseases-conditions/keratosis-pilaris/symptoms-causes/syc-20351149' },
+    { org: 'NHS', citation: 'NHS. Rashes in babies and children.', url: 'https://www.nhs.uk/conditions/rashes-babies-and-children/' },
+  ],
+};

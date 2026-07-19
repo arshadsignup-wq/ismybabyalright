@@ -1,0 +1,47 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'mumps',
+  name: 'Mumps',
+  description: 'Mumps is a contagious viral disease caused by the mumps virus (a paramyxovirus in the genus Rubulavirus). It is best known for causing painful swelling of the salivary glands (parotitis), giving a characteristic "chipmunk cheek" appearance. While often considered mild, mumps can cause serious complications including meningitis, encephalitis, deafness, and inflammation of the testicles or ovaries. Before vaccination, mumps was one of the most common causes of acquired deafness in children and viral meningitis.',
+  symptoms: [
+    'Painful swelling of one or both parotid (salivary) glands — the hallmark symptom',
+    'Jaw pain, especially when chewing or swallowing',
+    'Fever (typically 101-104°F/38.3-40°C)',
+    'Headache',
+    'Muscle aches',
+    'Fatigue and malaise',
+    'Loss of appetite',
+    'Pain with opening the mouth or eating acidic foods',
+    'Swelling may spread to submandibular and sublingual glands',
+    'Note: Approximately 20-30% of infections are asymptomatic',
+    'Note: Symptoms appear 12-25 days after exposure (average 16-18 days)',
+  ],
+  complications: [
+    'Aseptic meningitis (occurs in up to 10% of cases — usually resolves without lasting effects)',
+    'Encephalitis (approximately 1 in 6,000 cases — can cause permanent neurological damage)',
+    'Permanent sensorineural deafness (approximately 1 in 20,000 cases; was leading cause of acquired deafness before vaccination)',
+    'Orchitis (testicular inflammation) in post-pubertal males (20-30% of cases; can rarely cause infertility)',
+    'Oophoritis (ovarian inflammation) in post-pubertal females (5% of cases)',
+    'Pancreatitis (4% of cases)',
+    'Myocarditis (rare but potentially serious)',
+    'Spontaneous abortion if infected in first trimester of pregnancy',
+    'Death — rare (approximately 1-3 per 10,000 cases before vaccination)',
+  ],
+  howItSpreads: 'Mumps spreads through respiratory droplets and saliva — through coughing, sneezing, talking, sharing utensils or cups, and close personal contact. The virus can also spread by touching contaminated surfaces and then touching the mouth or nose. A person with mumps is most contagious from 2 days before to 5 days after parotid gland swelling begins. The virus can spread from people with subclinical (asymptomatic) infections, making containment difficult without vaccination.',
+  whoIsAtRisk: [
+    'Unvaccinated infants under 12 months (too young for MMR)',
+    'Unvaccinated or incompletely vaccinated children and adults',
+    'People in congregate settings (schools, college dormitories, camps)',
+    'International travelers to areas with ongoing mumps transmission',
+    'Healthcare workers without evidence of immunity',
+    'Immunocompromised individuals',
+  ],
+  vaccineSlug: 'mmr',
+  historicalContext: 'Before the mumps vaccine was licensed in 1967, approximately 186,000 cases were reported annually in the US (actual infections were likely much higher). Mumps was the leading cause of viral meningitis and acquired sensorineural deafness in children. After vaccine introduction, cases declined by over 99%. However, outbreaks still occur, particularly in close-contact settings like college campuses, even among vaccinated populations, because mumps vaccine efficacy (88% after 2 doses) is somewhat lower than measles and rubella vaccines. During 2006, a major US outbreak caused over 6,500 cases, primarily in college-aged young adults.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Mumps: For Healthcare Providers.', url: 'https://www.cdc.gov/mumps/hcp/index.html' },
+    { org: 'WHO', citation: 'WHO. Mumps Virus Vaccines: WHO Position Paper. 2007.', url: 'https://www.who.int/publications/i/item/WER8207' },
+    { org: 'AAP', citation: 'AAP. Mumps. Red Book: Report of the Committee on Infectious Diseases.', url: 'https://publications.aap.org/redbook' },
+  ],
+};

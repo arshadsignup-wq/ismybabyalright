@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import BabyProofingChecklist from "@/components/tools/BabyProofingChecklist";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Baby-Proofing Checklist - Room by Room Safety Guide",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Baby-Proofing Checklist',
+  description: 'Complete baby-proofing checklist by room and age. Track your progress from prenatal through toddlerhood. Based on AAP, CPSC, and Safe Kids Worldwide guidelines.',
+  path: '/tools/baby-proofing',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Baby-Proofing Checklist' },
+]);
+
 export default function BabyProofingPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function BabyProofingPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A baby-proofing checklist is a room-by-room safety guide that identifies potential hazards in your home and provides age-appropriate recommendations for childproofing, based on CPSC safety guidelines.</p>
         <BabyProofingChecklist />
       </div>
     </div>

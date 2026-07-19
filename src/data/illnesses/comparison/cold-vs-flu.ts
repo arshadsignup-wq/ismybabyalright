@@ -1,0 +1,45 @@
+import type { IllnessComparison } from '../types';
+
+export const comparison: IllnessComparison = {
+  slug: 'cold-vs-flu',
+  title: 'Cold vs Flu in Babies & Toddlers: How to Tell Them Apart',
+  description: 'Colds and the flu are both respiratory illnesses but are caused by different viruses. In young children, it can be difficult to tell them apart, but the flu tends to come on suddenly with higher fever and more body-wide symptoms, while colds are gradual and milder.',
+  conditionA: { name: 'Common Cold', illnessSlug: 'common-cold' },
+  conditionB: { name: 'Influenza (Flu)', illnessSlug: 'flu' },
+  comparisonPoints: [
+    { category: 'Onset', conditionA: 'Gradual over 1-2 days', conditionB: 'Sudden — child may go from fine to miserable in hours' },
+    { category: 'Fever', conditionA: 'Low-grade or none (under 101\u00B0F)', conditionB: 'High (often 102-104\u00B0F), lasts 3-5 days' },
+    { category: 'Body aches', conditionA: 'Minimal', conditionB: 'Significant — baby is very fussy, refuses to be put down' },
+    { category: 'Fatigue', conditionA: 'Mild', conditionB: 'Extreme — child is wiped out, very sleepy' },
+    { category: 'Main symptoms', conditionA: 'Runny/stuffy nose, sneezing, mild cough', conditionB: 'High fever, cough, extreme tiredness, body aches' },
+    { category: 'Runny nose', conditionA: 'Prominent — the main symptom', conditionB: 'May be present but less prominent' },
+    { category: 'Cough', conditionA: 'Mild, intermittent', conditionB: 'Often harsh, dry, and more prominent' },
+    { category: 'Appetite', conditionA: 'Mildly decreased', conditionB: 'Significantly decreased — child may refuse to eat' },
+    { category: 'Duration', conditionA: '7-10 days', conditionB: '7-14 days, fatigue may linger longer' },
+    { category: 'Complications', conditionA: 'Ear infections (most common)', conditionB: 'Pneumonia, dehydration, hospitalization' },
+    { category: 'Treatment', conditionA: 'Supportive care only', conditionB: 'Antiviral (Tamiflu) within 48 hours can help' },
+    { category: 'Prevention', conditionA: 'No vaccine — handwashing only', conditionB: 'Annual flu vaccine (6+ months)' },
+  ],
+  keyDifferences: [
+    'The flu hits suddenly and hard; a cold creeps in gradually',
+    'Flu causes high fever (102-104\u00B0F); colds cause low or no fever',
+    'Flu makes a child feel terrible all over (body aches, extreme fatigue); colds mainly cause nasal symptoms',
+    'Flu can lead to serious complications like pneumonia; cold complications are usually just ear infections',
+    'Flu can be treated with antivirals (Tamiflu) if caught within 48 hours; colds have no treatment',
+    'Flu is preventable with a vaccine; colds are not',
+    'If your child went from happy to miserable in a few hours with high fever during flu season, think flu',
+  ],
+  whenToWorry: [
+    'High fever (over 104\u00B0F) or fever lasting more than 5 days — could be flu with complications',
+    'Child seems to improve then gets worse (possible secondary infection like pneumonia)',
+    'Difficulty breathing, rapid breathing, or chest retractions — whether cold or flu, this needs evaluation',
+    'Refusal to drink fluids — dehydration risk with either illness but more likely with flu',
+    'Baby under 6 months with flu-like symptoms — cannot receive flu vaccine and at higher risk',
+    'Any infant under 3 months with fever needs immediate medical evaluation regardless of suspected cause',
+  ],
+  sources: [
+    { org: 'CDC', citation: 'CDC. Cold Versus Flu.', url: 'https://www.cdc.gov/flu/symptoms/coldflu.htm' },
+    { org: 'AAP', citation: 'AAP. Is It a Cold or the Flu?', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/The-Flu.aspx' },
+    { org: 'CDC', citation: 'CDC. Children, the Flu, and the Flu Vaccine.', url: 'https://www.cdc.gov/flu/highrisk/children.htm' },
+  ],
+};

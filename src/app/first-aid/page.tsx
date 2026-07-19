@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import {
   INFANT_CPR_STEPS,
   TODDLER_CPR_STEPS,
@@ -23,6 +30,19 @@ export const metadata: Metadata = {
   },
 };
 
+const contentSchema = getContentPageSchema({
+  name: 'Baby CPR & Choking First Aid Guide - Step-by-Step Instructions',
+  description:
+    'Learn infant and toddler CPR and choking first aid with clear step-by-step instructions. Know when to call 911 and common choking hazards by age. Based on AHA and AAP guidelines.',
+  path: '/first-aid',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'First Aid' },
+]);
+
 const howToJsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -36,47 +56,32 @@ const howToJsonLd = {
   })),
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What should I do if my baby is choking?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For infants under 1: give 5 back blows between the shoulder blades, then 5 chest thrusts. Alternate until the object is dislodged. If the baby becomes unresponsive, begin CPR and call 911.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I perform CPR on a baby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Place 2 fingers on the breastbone just below the nipple line. Push down about 1.5 inches at 100-120 compressions per minute. Give 2 small rescue breaths covering mouth and nose after every 30 compressions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "When should I call 911 for my baby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call 911 if your baby is not breathing, turning blue, unresponsive, having a seizure lasting more than 5 minutes, or has significant bleeding that won't stop. Also call Poison Control (1-800-222-1222) for suspected poisoning.",
-      },
-    },
-  ],
-};
+const firstAidFaqItems = [
+  { question: "What should I do if my baby is choking?", answer: "For infants under 1: give 5 back blows between the shoulder blades, then 5 chest thrusts. Alternate until the object is dislodged. If the baby becomes unresponsive, begin CPR and call 911." },
+  { question: "How do I perform CPR on a baby?", answer: "Place 2 fingers on the breastbone just below the nipple line. Push down about 1.5 inches at 100-120 compressions per minute. Give 2 small rescue breaths covering mouth and nose after every 30 compressions." },
+  { question: "When should I call 911 for my baby?", answer: "Call 911 if your baby is not breathing, turning blue, unresponsive, having a seizure lasting more than 5 minutes, or has significant bleeding that won't stop. Also call Poison Control (1-800-222-1222) for suspected poisoning." },
+  { question: "Is toddler CPR different from infant CPR?", answer: "Yes. For toddlers (1-3 years), use the heel of one hand instead of two fingers for chest compressions, and compress about 2 inches deep. Rescue breaths cover only the mouth, with the nose pinched closed." },
+  { question: "Should I take a CPR class?", answer: "Yes. The AHA strongly recommends all parents and caregivers take a hands-on infant CPR course. Reading a guide is helpful for reference, but practicing on a mannequin builds muscle memory that is critical in a real emergency." },
+];
 
 export default function FirstAidPage() {
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQPageSchema(firstAidFaqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "First Aid & CPR" }]} />
@@ -91,7 +96,21 @@ export default function FirstAidPage() {
             Step-by-step instructions for infant and toddler CPR and choking
             response. Based on American Heart Association and AAP guidelines.
           </p>
+          <LastReviewed date="2026-07-01" />
+          <div className="mt-3">
+            <MedicalReviewAttribution sources={['AAP', 'Red Cross']} />
+          </div>
         </div>
+
+        <KeyTakeaways
+          takeaways={[
+            "In an emergency, call 911 immediately -- this guide is for reference and education, not a substitute for hands-on CPR training.",
+            "For infant choking (under 1 year): alternate 5 back blows and 5 chest thrusts until the object is dislodged.",
+            "Infant CPR uses 2 fingers on the breastbone, pressing about 1.5 inches deep at 100-120 compressions per minute with 2 rescue breaths after every 30 compressions.",
+            "Common choking hazards include grapes, hot dogs, coins, small batteries, and popcorn -- always cut food into age-appropriate pieces.",
+            "The AHA recommends all parents take a hands-on infant CPR course for the best preparation.",
+          ]}
+        />
 
         {/* Emergency banner */}
         <div className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-4 dark:border-red-500/40 dark:bg-red-950/30">
@@ -197,6 +216,8 @@ export default function FirstAidPage() {
           </div>
         </section>
 
+        <FAQSection items={firstAidFaqItems} />
+
         {/* Sources */}
         <div className="text-xs text-muted">
           <p className="font-semibold mb-1">Sources</p>
@@ -233,8 +254,17 @@ export default function FirstAidPage() {
             </li>
           </ul>
         </div>
+
+        <BottomLine
+          summary="Knowing infant CPR and choking first aid can save your baby's life. This guide is a helpful reference, but the AHA strongly recommends all parents take a hands-on CPR course. In any emergency, always call 911 first."
+          supportiveMessage="Being prepared is the best thing you can do for your child. Taking a CPR class and keeping this guide handy means you are ready if the unexpected happens."
+        />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
 

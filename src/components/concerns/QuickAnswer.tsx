@@ -5,7 +5,7 @@ interface QuickAnswerProps {
 export default function QuickAnswer({ answer }: QuickAnswerProps) {
   return (
     <div
-      className="rounded-xl bg-primary-light border border-primary/20 px-5 py-6 sm:px-7 sm:py-7"
+      className="quick-answer rounded-xl bg-primary-light border border-primary/20 px-5 py-6 sm:px-7 sm:py-7"
       role="region"
       aria-label="Quick answer"
     >

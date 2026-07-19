@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'vomiting',
+  title: 'Vomiting in Babies & Toddlers',
+  bodySystem: 'abdomen',
+  description: 'Vomiting in babies is the forceful expulsion of stomach contents. It is different from spit-up (reflux), which is effortless and common in young babies. Most vomiting in babies and toddlers is caused by viral gastroenteritis and resolves in 1-3 days. However, certain patterns of vomiting \u2014 particularly projectile vomiting in young infants, green (bilious) vomiting, or persistent vomiting with dehydration \u2014 require urgent evaluation.',
+  possibleCauses: [
+    { cause: 'Viral gastroenteritis (stomach flu)', likelihood: 'common' },
+    { cause: 'Gastroesophageal reflux (spitting up)', likelihood: 'common' },
+    { cause: 'Overfeeding', likelihood: 'common' },
+    { cause: 'Food intolerance or milk protein allergy', likelihood: 'uncommon' },
+    { cause: 'Pyloric stenosis (projectile vomiting at 2-8 weeks)', likelihood: 'uncommon' },
+    { cause: 'Urinary tract infection', likelihood: 'uncommon' },
+    { cause: 'Intussusception (bowel telescoping)', likelihood: 'rare' },
+    { cause: 'Intestinal obstruction (bilious/green vomit)', likelihood: 'rare' },
+    { cause: 'Increased intracranial pressure (brain tumor, meningitis)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Spit-up (effortless milk return) is extremely common and usually normal. Most babies spit up several times a day, peaking around 3-4 months.', whenToWorry: 'Forceful/projectile vomiting that shoots across the room (pyloric stenosis typically presents at 2-6 weeks). Green (bile-stained) vomiting at any age is urgent. Poor weight gain with frequent vomiting.' },
+    { ageRange: '2-6 months', normalVariation: 'Reflux-related spitting up peaks around 4 months. Small amounts after feeds with happy, growing baby is normal.', whenToWorry: 'Projectile vomiting, vomiting blood or coffee-ground material, green/bilious vomiting, vomiting with distended abdomen, or baby losing weight or becoming dehydrated.' },
+    { ageRange: '6-12 months', normalVariation: 'Occasional vomiting with viral illnesses (1-2 days) is common. Some babies vomit with forceful coughing or gagging on new foods.', whenToWorry: 'Vomiting with severe abdominal pain (drawing legs up, screaming in episodes), bloody stools (jelly-like), or persistent vomiting lasting more than 24 hours with signs of dehydration.' },
+    { ageRange: '1-3 years', normalVariation: 'Stomach bugs (gastroenteritis) are frequent in toddlers, especially in daycare. Vomiting that resolves within 12-24 hours with oral rehydration is typical.', whenToWorry: 'Vomiting lasting more than 24-48 hours, signs of dehydration (no wet diapers 6-8 hours, no tears, dry mouth), vomiting with headache and altered consciousness, or vomiting after head injury.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Green (bile-stained) vomiting at any age \u2014 possible bowel obstruction',
+      'Projectile vomiting in infant 2-8 weeks old (possible pyloric stenosis)',
+      'Vomiting blood or coffee-ground material',
+      'Vomiting with severe abdominal distension',
+      'Vomiting with bulging fontanelle, stiff neck, or altered consciousness',
+      'Vomiting after significant head injury',
+      'Baby is lethargic and difficult to rouse between vomiting episodes',
+    ],
+    urgent: [
+      'Vomiting with signs of dehydration (no wet diapers 6+ hours, dry mouth, no tears)',
+      'Intermittent screaming with vomiting and bloody/jelly-like stools (possible intussusception)',
+      'Vomiting with fever in infant under 3 months',
+      'Persistent vomiting (unable to keep any fluids down for 8+ hours)',
+      'Vomiting with abdominal pain that is getting worse',
+    ],
+    sameDay: [
+      'Vomiting lasting more than 24 hours but child keeping some fluids down',
+      'Vomiting with low-grade fever in baby over 6 months who is mildly dehydrated but still making some wet diapers',
+      'Recurrent vomiting episodes (cyclical) without clear cause',
+    ],
+    monitor: [
+      'Viral gastroenteritis with vomiting less than 24 hours and child maintaining hydration',
+      'Occasional spit-up in infant who is growing well',
+      'Single vomiting episode with no other symptoms and child returns to normal',
+    ],
+  },
+  homeRemedies: [
+    'Wait 30-60 minutes after vomiting before offering fluids',
+    'Start with small sips of oral rehydration solution (Pedialyte) \u2014 1-2 teaspoons every 5 minutes',
+    'For breastfed babies: nurse frequently but for shorter periods',
+    'Gradually increase amounts as tolerated over several hours',
+    'Avoid juice, soda, or full-strength sports drinks',
+    'Once keeping clear fluids down for 6-8 hours, introduce bland foods (bananas, rice, toast)',
+    'Do NOT give anti-vomiting medications to young children without doctor guidance',
+    'Track wet diapers and signs of dehydration carefully',
+    'Keep baby positioned on side or upright (not flat on back) during active vomiting',
+  ],
+  triageSlug: 'vomiting',
+  relatedSymptomSlugs: ['diarrhea', 'dehydration', 'poor-feeding', 'fever'],
+  relatedIllnessSlugs: ['gastroenteritis', 'pyloric-stenosis', 'reflux', 'intussusception'],
+  relatedConcernSlugs: ['baby-projectile-vomiting', 'baby-vomiting-after-feeding', 'toddler-stomach-bug'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Vomiting in Infants. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Vomiting.aspx' },
+    { org: 'NICE', citation: 'NICE Clinical Guideline CG84. Diarrhoea and vomiting in children under 5.', url: 'https://www.nice.org.uk/guidance/cg84' },
+    { org: 'AAP', citation: 'Zella GC, Israel EJ. An evidence-based approach to infant vomiting. Pediatrics in Review. 2012.', url: 'https://publications.aap.org/pediatricsinreview/article/33/4/e21/32578' },
+  ],
+};

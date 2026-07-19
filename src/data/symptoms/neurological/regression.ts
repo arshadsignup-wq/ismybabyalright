@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'regression',
+  title: 'Developmental Regression in Babies & Toddlers',
+  bodySystem: 'neurological',
+  description: 'Developmental regression — the loss of previously acquired skills — is always concerning and warrants medical evaluation. It differs from normal developmental "plateaus" or temporary setbacks. True regression means a child could previously do something (walk, speak words, make eye contact, use hands purposefully) and has now lost that ability. Causes range from autism spectrum disorder to rare neurodegenerative conditions, and early identification is critical for treatment.',
+  possibleCauses: [
+    { cause: 'Autism spectrum disorder (language/social regression around 15-24 months)', likelihood: 'uncommon' },
+    { cause: 'Prolonged illness causing temporary regression (not true regression)', likelihood: 'common' },
+    { cause: 'Epileptic encephalopathy (seizures disrupting development)', likelihood: 'uncommon' },
+    { cause: 'Rett syndrome (regression in girls around 6-18 months)', likelihood: 'rare' },
+    { cause: 'Landau-Kleffner syndrome (language regression with seizures)', likelihood: 'rare' },
+    { cause: 'Neurodegenerative disorders (leukodystrophies, NCL, Tay-Sachs)', likelihood: 'rare' },
+    { cause: 'Metabolic disorders (mitochondrial disease, organic acidemias)', likelihood: 'rare' },
+    { cause: 'Brain tumor', likelihood: 'rare' },
+    { cause: 'Subacute sclerosing panencephalitis (SSPE)', likelihood: 'rare' },
+    { cause: 'Infantile spasms (West syndrome) causing developmental arrest/regression', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'True regression is hard to assess at this age as skills are still emerging. Brief periods where reflexes are less robust during illness or fatigue. Weight loss and reduced activity during acute illness (temporary).', whenToWorry: 'Loss of sucking ability. Loss of visual tracking previously established. Decreasing alertness and interaction. Increasingly floppy or stiff. Loss of primitive reflexes before they should disappear.' },
+    { ageRange: '2-6 months', normalVariation: 'Primitive reflexes normally disappear (this is NOT regression — it is normal development). Brief reduction in activity during illness. Temporary decrease in vocalizations during new skill acquisition.', whenToWorry: 'Loss of head control previously achieved. Loss of social smile. Decreasing visual engagement. Loss of hand regard or reaching. Increasing floppiness or stiffness. Hand wringing replacing purposeful hand use (Rett syndrome sign in girls).' },
+    { ageRange: '6-12 months', normalVariation: 'Some apparent "regression" when a new major skill is being acquired (e.g., babbling may decrease temporarily when learning to crawl). Temporary setback during illness.', whenToWorry: 'Loss of sitting independently. Loss of babbling or vocalizations. Loss of purposeful hand use (replaced by stereotyped movements). Loss of social engagement or eye contact. Unable to do things they could clearly do before. Clusters of head drops/spasms with skill loss (infantile spasms).' },
+    { ageRange: '1-3 years', normalVariation: 'Brief speech regression around birth of a sibling or major life change (temporary, behavioral, rebounds quickly). Temporary regression during illness with rapid recovery. Using fewer words during a vocabulary spurt (pausing before explosion).', whenToWorry: 'Loss of words previously used (more than 5-6 words lost). Loss of social pointing, waving, or gestures. Loss of walking ability. Increasing isolation and loss of eye contact. Loss of play skills (pretend play, imitation). Loss of self-help skills (feeding, drinking). New onset seizures with skill loss. Any clear loss of motor ability.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Acute loss of motor skills (sudden inability to walk or move limbs)',
+      'Regression with seizures, altered consciousness, or unresponsiveness',
+      'Rapid regression over hours to days (metabolic crisis, encephalitis)',
+      'Loss of skills with new onset vomiting, headache, and lethargy (raised ICP)',
+    ],
+    urgent: [
+      'Clear regression of motor skills over days to weeks',
+      'Loss of speech and social skills with onset of seizures',
+      'Progressive loss of vision or hearing with developmental regression',
+      'Regression with new movement disorder (tremor, abnormal postures)',
+      'Loss of hand skills in girl aged 6-18 months (Rett syndrome)',
+    ],
+    sameDay: [
+      'Loss of words or social skills over weeks to months',
+      'Parent reports child "has stopped doing things they used to do"',
+      'Suspected autistic regression (loss of language and social engagement)',
+      'Any confirmed skill loss not explained by illness or temporary setback',
+    ],
+    monitor: [
+      'Brief temporary reduction in skills during acute illness (with rapid recovery)',
+      'Developmental plateau (not losing skills, just not gaining new ones temporarily)',
+      'Minor behavioral regression with life changes (new sibling) with clear cause',
+      'Apparent regression explained by assessment (skills were inconsistent rather than truly lost)',
+    ],
+  },
+  homeRemedies: [
+    'Developmental regression ALWAYS needs professional evaluation — do not wait and see',
+    'Document specific skills that have been lost: what could the child do before that they cannot do now?',
+    'Video old recordings vs current behavior to show doctors the contrast',
+    'Note the timeline: when did you first notice the loss? Was it sudden or gradual?',
+    'Record any associated symptoms: seizures, sleep changes, behavior changes, illness',
+    'Request developmental screening and referral — early intervention is critical regardless of cause',
+    'Continue engaging the child with activities that support development while awaiting evaluation',
+    'Distinguish true regression from plateau: regression = lost skills; plateau = not gaining new ones',
+    'Do not delay — for conditions like infantile spasms, every day without treatment matters for outcome',
+    'Bring milestone photos/videos to appointments to demonstrate prior abilities',
+  ],
+  relatedSymptomSlugs: ['seizure', 'staring-spells', 'floppiness', 'stiffness'],
+  relatedIllnessSlugs: ['autism-spectrum-disorder', 'rett-syndrome', 'infantile-spasms', 'epileptic-encephalopathy'],
+  relatedConcernSlugs: ['baby-lost-skills', 'toddler-stopped-talking', 'child-regression-signs', 'autism-regression'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Identification, Evaluation, and Management of Children with Autism. Pediatrics. 2020;145(1).', url: 'https://publications.aap.org/pediatrics/article/145/1/e20193447/36917' },
+    { org: 'NIH', citation: 'National Institute of Neurological Disorders and Stroke. Neurodegeneration in Childhood.', url: 'https://www.ninds.nih.gov/health-information/disorders' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Signs and Symptoms of Autism Spectrum Disorder.', url: 'https://www.cdc.gov/ncbddd/autism/signs.html' },
+  ],
+};

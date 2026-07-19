@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { allConcerns } from "@/data/concerns";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Sources & References - ismybabyalright",
+  title: "Sources & References",
   description:
     "All medical sources and references used across ismybabyalright, including CDC, WHO, AAP, and NIH guidelines.",
   alternates: {
@@ -65,6 +66,19 @@ const orgDescriptions: Record<string, string> = {
   NIH: "National Institutes of Health - The nation's medical research agency.",
 };
 
+const sourcesSchema = getWebPageSchema({
+  name: 'Sources & References',
+  description:
+    'All medical sources and references used across ismybabyalright, including CDC, WHO, AAP, and NIH guidelines.',
+  path: '/sources',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Sources' },
+]);
+
 export default function SourcesPage() {
   const { grouped, sortedOrgs } = getGroupedSources();
   const totalSources = Object.values(grouped).reduce(
@@ -73,7 +87,10 @@ export default function SourcesPage() {
   );
 
   return (
-    <main className="max-w-3xl mx-auto px-5 py-10">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sourcesSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <main className="max-w-3xl mx-auto px-5 py-10">
       <h1 className="text-2xl font-bold text-foreground mb-2">
         Sources & References
       </h1>
@@ -126,5 +143,6 @@ export default function SourcesPage() {
         </Link>
       </div>
     </main>
+    </>
   );
 }

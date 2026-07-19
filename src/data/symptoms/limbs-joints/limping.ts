@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'limping',
+  title: 'Limping in Babies & Toddlers',
+  bodySystem: 'limbs-joints',
+  description: 'Limping in a young child means an abnormal gait pattern — favoring one leg, refusing to bear weight, or walking differently than usual. In toddlers, the most common cause is a "toddler\'s fracture" (a spiral fracture of the tibia from a minor twist/fall) or transient synovitis (irritable hip after a viral illness). Any new limp in a child should be evaluated, as it can indicate injuries, infections, or other conditions requiring treatment.',
+  possibleCauses: [
+    { cause: 'Toddler\'s fracture (spiral tibial fracture from minor fall/twist)', likelihood: 'common' },
+    { cause: 'Transient synovitis (irritable hip, post-viral)', likelihood: 'common' },
+    { cause: 'Soft tissue injury (muscle strain, bruise)', likelihood: 'common' },
+    { cause: 'Foreign body in foot (splinter, piece of glass)', likelihood: 'common' },
+    { cause: 'Ill-fitting or uncomfortable shoes', likelihood: 'common' },
+    { cause: 'Septic arthritis (joint infection)', likelihood: 'uncommon' },
+    { cause: 'Osteomyelitis (bone infection)', likelihood: 'uncommon' },
+    { cause: 'Developmental dysplasia of the hip (DDH)', likelihood: 'uncommon' },
+    { cause: 'Legg-Calve-Perthes disease (avascular necrosis of hip)', likelihood: 'rare' },
+    { cause: 'Malignancy (bone tumor or leukemia)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Babies are not yet walking. Asymmetric leg movements may be normal but should be assessed.', whenToWorry: 'One leg not moving normally or appearing stiff. Asymmetric thigh skin folds or leg length (DDH). Swelling, warmth, or tenderness of a limb. Crying when leg is moved during diaper changes.' },
+    { ageRange: '2-6 months', normalVariation: 'Babies should be moving both legs symmetrically. Kicking both legs equally is expected.', whenToWorry: 'Favoring one leg or not using one leg as much. Swelling of a joint. Crying with passive movement of a limb. Fever with limb disuse (septic arthritis/osteomyelitis).' },
+    { ageRange: '6-12 months', normalVariation: 'As babies begin pulling to stand and cruising, mild unsteadiness is normal. Brief preference for one side when first learning is common.', whenToWorry: 'Refusal to bear weight on one leg. Swollen, warm joint. Limb disuse with fever. Progressive inability to use leg.' },
+    { ageRange: '1-3 years', normalVariation: 'Toddlers fall frequently and brief limping after a bump that resolves quickly (within hours) can be normal. Mild viral illness can cause temporary hip irritation (transient synovitis).', whenToWorry: 'Limp lasting more than 24-48 hours. Refusal to bear weight at all. Fever with limp (septic arthritis until proven otherwise). Night pain waking the child. Limp with no known injury. Progressive worsening.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Severe limb deformity after injury (obvious fracture)',
+      'Limb that is pale, cold, or pulseless below injury site',
+      'High fever with refusal to bear weight and toxic appearance',
+    ],
+    urgent: [
+      'Fever with limp or refusal to weight bear (septic arthritis must be ruled out)',
+      'Swollen, hot, red joint with inability to move',
+      'Complete refusal to bear weight with no clear cause',
+      'Limp with severe pain, especially at night',
+      'Limb disuse in a non-mobile infant',
+    ],
+    sameDay: [
+      'New limp lasting more than 24 hours without fever',
+      'Limp after known minor fall without improvement',
+      'Recurrent or persistent limp',
+      'Limp with mild warmth or swelling of a joint',
+    ],
+    monitor: [
+      'Brief limp after a known minor bump that is improving over hours',
+      'Toddler refusing to walk briefly after waking (resolves within minutes)',
+      'Mild limp with recent viral illness and child otherwise well (likely transient synovitis)',
+    ],
+  },
+  homeRemedies: [
+    'Rest the affected leg — do not force the child to walk',
+    'Check the foot carefully for foreign bodies, blisters, or sores',
+    'Check shoes for stones, rough seams, or poor fit',
+    'Apply ice wrapped in cloth to any visible swelling for 10-15 minutes',
+    'Give age-appropriate pain relief (acetaminophen or ibuprofen)',
+    'Observe for 24 hours if mild limp after known minor bump and child is otherwise well',
+    'Any limp with fever needs same-day medical evaluation — do not wait',
+    'Document when the limp started, any known injuries, recent illnesses, and whether pain wakes the child at night',
+  ],
+  triageSlug: 'limping',
+  relatedSymptomSlugs: ['swollen-joint', 'not-using-arm', 'growing-pains'],
+  relatedIllnessSlugs: ['transient-synovitis', 'septic-arthritis', 'toddlers-fracture'],
+  relatedConcernSlugs: ['toddler-not-walking', 'baby-favoring-one-leg', 'toddler-limp-after-fall'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Limping in Children. Pediatrics in Review. 2020;41(2).', url: 'https://publications.aap.org/pediatricsinreview' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Toddler\'s fracture — Overview.', url: 'https://www.mayoclinic.org/diseases-conditions/broken-leg/symptoms-causes/syc-20370412' },
+    { org: 'NHS', citation: 'NHS. Limp in children.', url: 'https://www.nhs.uk/conditions/limp-in-children/' },
+  ],
+};

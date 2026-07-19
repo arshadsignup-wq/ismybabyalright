@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ContractionTimer from "@/components/tools/ContractionTimer";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Contraction Timer - Track Duration & Frequency",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Contraction Timer',
+  description: 'Time your contractions to know when it\'s time to go to the hospital. Track duration, frequency, and the 5-1-1 rule for labor.',
+  path: '/tools/contraction-timer',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Contraction Timer' },
+]);
+
 export default function ContractionTimerPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function ContractionTimerPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A contraction timer tracks the duration and frequency of contractions during labor, helping you determine when contractions are regular enough to head to the hospital — typically when they are 5 minutes apart, lasting 1 minute each, for at least 1 hour.</p>
         <ContractionTimer />
       </div>
     </div>

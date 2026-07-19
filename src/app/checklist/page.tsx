@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ChecklistTool from "@/components/checklist/ChecklistTool";
 
@@ -16,9 +17,30 @@ export const metadata: Metadata = {
   },
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: "Milestone Checklist",
+  description:
+    "Interactive developmental milestone checklist. Track your baby's progress across motor, language, social, and cognitive skills. Based on CDC and AAP guidelines.",
+  path: "/checklist",
+  applicationCategory: "UtilityApplication",
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Checklist" },
+]);
+
 export default function ChecklistPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Breadcrumbs items={[{ label: "Checklist" }]} />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">

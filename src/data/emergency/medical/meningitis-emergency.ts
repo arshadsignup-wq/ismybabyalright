@@ -1,0 +1,70 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'meningitis-emergency',
+  title: 'Meningitis Emergency Signs',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'Meningitis is an infection of the membranes surrounding the brain and spinal cord. Bacterial meningitis can progress rapidly and is life-threatening. Early recognition and immediate medical care are critical.',
+  immediateActions: [
+    'Call 911 or go to the nearest ER immediately — meningitis can progress in hours',
+    'Note the time symptoms started and any changes',
+    'Do NOT wait to see if symptoms improve on their own',
+    'Check for non-blanching rash (press a clear glass against it — if it does not fade, call 911)',
+  ],
+  doNotDo: [
+    'Do NOT wait for all symptoms to appear before seeking help',
+    'Do NOT give aspirin to children',
+    'Do NOT expose child to bright lights if they appear light-sensitive',
+    'Do NOT assume it is just the flu — meningitis can mimic viral illness early on',
+    'Do NOT delay seeking care because your child "seems a little better"',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Recognize symptoms', description: 'Look for: high fever, stiff neck, severe headache, vomiting, sensitivity to light, bulging fontanelle (in infants), drowsiness, irritability, poor feeding, and/or rash.' },
+    { step: 2, title: 'Check for rash', description: 'Press a clear glass against any rash. If the rash does not fade (non-blanching), this is a sign of meningococcal septicemia — a medical emergency.' },
+    { step: 3, title: 'Call 911 or go to ER', description: 'Do not wait. Bacterial meningitis can cause brain damage or death within hours. Time is critical.' },
+    { step: 4, title: 'Keep child comfortable', description: 'Dim the lights. Support the child in a comfortable position. Keep them warm. Do not force fluids if vomiting.' },
+    { step: 5, title: 'Prepare information for doctors', description: 'Note when symptoms started, recent illnesses, vaccinations, and any medications given. This helps doctors act quickly.' },
+    { step: 6, title: 'Monitor closely', description: 'Watch for worsening symptoms: increasing drowsiness, seizures, difficulty breathing, or spreading rash. Report all changes immediately.' },
+  ],
+  whenToCall911: [
+    'Non-blanching rash (does not fade when pressed with a glass)',
+    'Child is extremely drowsy, difficult to wake, or unresponsive',
+    'Seizures',
+    'Stiff neck with fever',
+    'Bulging fontanelle in an infant with fever',
+    'Rapid breathing or difficulty breathing',
+  ],
+  whenToCallDoctor: [
+    'Child has high fever with unusual irritability or lethargy',
+    'Infant is refusing feeds and has a fever',
+    'Child complains of severe headache with stiff neck',
+    'You are concerned about possible meningitis but symptoms are mild',
+  ],
+  whenToGoToER: [
+    'Any suspected meningitis — do not wait for a doctor appointment',
+    'Child has fever with vomiting and neck stiffness',
+    'Infant under 3 months with fever above 100.4F (38C)',
+    'Child has fever with a new rash that does not fade',
+    'Child is increasingly confused or difficult to rouse',
+  ],
+  prevention: [
+    'Keep vaccinations up to date — Hib, pneumococcal (PCV13), and meningococcal vaccines prevent bacterial meningitis',
+    'Teach good hand hygiene to prevent spread of infections',
+    'Avoid sharing cups, utensils, or toothbrushes',
+    'Ensure close contacts receive prophylactic antibiotics if exposed to bacterial meningitis',
+    'Seek prompt treatment for ear and sinus infections which can rarely spread',
+  ],
+  byAge: [
+    { ageRange: '0-3 months', context: 'Symptoms are often vague: poor feeding, irritability, high-pitched cry, bulging fontanelle, and fever or hypothermia. Newborns are at highest risk for Group B Strep meningitis. Any fever in this age requires immediate evaluation.' },
+    { ageRange: '3-12 months', context: 'May show fever, irritability, vomiting, poor feeding, and drowsiness. Neck stiffness may be difficult to detect. Bulging fontanelle is a key sign. Hib and pneumococcal vaccines significantly reduce risk.' },
+    { ageRange: '1-5 years', context: 'Classic symptoms become more apparent: fever, headache, neck stiffness, vomiting, and light sensitivity. The "glass test" for non-blanching rash is important. Ensure meningococcal vaccines are up to date.' },
+  ],
+  relatedEmergencySlugs: ['newborn-fever-emergency', 'seizure-response'],
+  relatedConcernSlugs: ['baby-fever', 'stiff-neck-baby'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Meningitis in Infants and Children.', url: 'https://www.healthychildren.org/English/health-issues/conditions/head-neck-nervous-system/Pages/Meningitis.aspx' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Bacterial Meningitis.', url: 'https://www.cdc.gov/meningitis/bacterial.html' },
+    { org: 'WHO', citation: 'World Health Organization. Meningococcal Meningitis Fact Sheet.', url: 'https://www.who.int/news-room/fact-sheets/detail/meningococcal-meningitis' },
+  ],
+};

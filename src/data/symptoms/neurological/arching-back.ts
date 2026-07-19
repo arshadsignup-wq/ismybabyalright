@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'arching-back',
+  title: 'Arching Back in Babies',
+  bodySystem: 'neurological',
+  description: 'Back arching in babies (where the baby stiffens and throws their head and body backward) is common and usually caused by normal frustration, discomfort from gas or reflux, or as a way to communicate displeasure. It is one of the most common concerns parents bring to pediatricians. While usually benign, persistent forceful arching — especially during feeding or when associated with other neurological signs — can indicate gastroesophageal reflux, Sandifer syndrome, or rarely neurological conditions.',
+  possibleCauses: [
+    { cause: 'Normal expression of frustration or discomfort', likelihood: 'common' },
+    { cause: 'Gastroesophageal reflux (GER/GERD)', likelihood: 'common' },
+    { cause: 'Gas pain or colic', likelihood: 'common' },
+    { cause: 'Sandifer syndrome (abnormal posturing with reflux)', likelihood: 'uncommon' },
+    { cause: 'Fatigue or overstimulation', likelihood: 'common' },
+    { cause: 'Cerebral palsy (extensor posturing)', likelihood: 'rare' },
+    { cause: 'Infantile spasms (extensor type)', likelihood: 'rare' },
+    { cause: 'Kernicterus (severe jaundice brain damage)', likelihood: 'rare' },
+    { cause: 'Raised intracranial pressure', likelihood: 'rare' },
+    { cause: 'Meningitis', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Brief arching when upset, gassy, or during crying is normal. Some arching during stretching after feeds is normal. Startled arching (Moro reflex) is normal.', whenToWorry: 'Persistent arching during or after feeds with distressed crying (severe reflux). Constant arching at rest (not just during discomfort). Arching with high-pitched inconsolable screaming. Arching with bulging fontanelle, fever, or lethargy (raised intracranial pressure/meningitis). Arching with jaundice (kernicterus concern if severe).' },
+    { ageRange: '2-6 months', normalVariation: 'Arching when frustrated (cannot reach toy, being dressed) is very common behavioral response. Brief arching after feeding from gas. Arching to look around/behind them (curiosity!).', whenToWorry: 'Forceful arching during feeding that disrupts meals consistently. Arching with vomiting and poor weight gain. Constant arching at rest or in sleep. Arching with head turning and eye deviation (Sandifer or seizure). Arching with developmental regression or poor milestone achievement.' },
+    { ageRange: '6-12 months', normalVariation: 'Arching backward to resist being held or carried (very common from 6-7 months as independence grows). Arching during tantrums or when told "no." Arching to see things behind them.', whenToWorry: 'Arching that is always the same stereotyped pattern (not situational). Arching with loss of consciousness or color change. Arching that is increasing in frequency. Arching with feeding refusal and weight loss. Arching with stiffness of limbs or abnormal eye movements.' },
+    { ageRange: '1-3 years', normalVariation: 'Arching during tantrums is extremely common in toddlers (particularly 12-24 months). Arching when they do not want to be in car seat or high chair. Deliberate "going stiff" when being picked up.', whenToWorry: 'Arching with loss of consciousness. Arching with seizure-like activity. Arching with persistent headache, vomiting, or altered behavior (raised ICP). Arching with regression of skills or new neurological symptoms.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Persistent backward arching (opisthotonus) with fever and altered consciousness (meningitis)',
+      'Arching with bulging fontanelle, vomiting, and lethargy (raised intracranial pressure)',
+      'Arching with seizure activity',
+      'Extreme arching with very high-pitched cry and jaundice in newborn (kernicterus)',
+      'Arching with breathing difficulty or color change',
+    ],
+    urgent: [
+      'New onset persistent arching not related to feeds or frustration',
+      'Arching with developmental regression',
+      'Arching with forceful vomiting and poor weight gain',
+      'Arching with abnormal eye movements or head posturing (Sandifer syndrome)',
+    ],
+    sameDay: [
+      'Frequent arching during feeds causing feeding difficulties',
+      'Arching that is causing parental distress and disrupting daily care',
+      'Arching pattern parent cannot explain or feels is abnormal',
+      'Arching with significant reflux symptoms needing management',
+    ],
+    monitor: [
+      'Arching during frustration or tantrums that resolves when baby is comforted/distracted',
+      'Brief arching with gas that resolves after burping/passing wind',
+      'Situational arching (being dressed, resisting car seat) in otherwise well baby',
+      'Mild reflux-related arching with normal weight gain and development',
+    ],
+  },
+  homeRemedies: [
+    'For reflux-related arching: hold baby upright for 20-30 minutes after feeds',
+    'Burp frequently during and after feeds',
+    'Try smaller, more frequent feeds',
+    'For gas: bicycle legs, gentle tummy massage in clockwise direction, warm bath',
+    'Avoid overstimulation — watch for tired cues and provide calm environment',
+    'Swaddling (for young infants) can provide comfort and reduce arching from discomfort',
+    'For tantrum-related arching in toddlers: stay calm, ensure safety, wait it out',
+    'Elevate head of crib slightly (with wedge under mattress, not pillows) if reflux is severe',
+    'Video the arching episodes to show your pediatrician — context and pattern matter for diagnosis',
+    'Important: most arching is behavioral/reflux and benign — but if you have a gut feeling something is wrong, get it checked',
+  ],
+  relatedSymptomSlugs: ['stiffness', 'seizure', 'irritability', 'floppiness'],
+  relatedIllnessSlugs: ['gerd', 'sandifer-syndrome', 'cerebral-palsy', 'colic'],
+  relatedConcernSlugs: ['baby-arching-back', 'baby-arching-during-feeds', 'baby-reflux-signs'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Gastroesophageal Reflux in Infants. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/GERD-Reflux.aspx' },
+    { org: 'NIH', citation: 'National Library of Medicine. Sandifer Syndrome: A Forgotten Diagnosis. Archives of Disease in Childhood.', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1720328/' },
+    { org: 'NHS', citation: 'NHS. Reflux in babies.', url: 'https://www.nhs.uk/conditions/reflux-in-babies/' },
+  ],
+};

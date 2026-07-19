@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import EPDSScreener from "@/components/tools/EPDSScreener";
+import { getContentPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+
+const contentSchema = getContentPageSchema({
+  name: "Mental Health Resources for Parents",
+  description:
+    "Postpartum depression screening, warmline numbers, and mental health resources for new parents. You deserve support.",
+  path: "/resources/mental-health",
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Resources", url: "/resources/guides" },
+  { name: "Mental Health" },
+]);
 
 export const metadata: Metadata = {
   title: "Mental Health Resources for Parents",
@@ -19,6 +33,14 @@ export const metadata: Metadata = {
 export default function MentalHealthPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Resources", href: "/resources/mental-health" },

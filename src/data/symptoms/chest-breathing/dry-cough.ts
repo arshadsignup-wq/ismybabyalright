@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'dry-cough',
+  title: 'Dry Cough in Babies & Toddlers',
+  bodySystem: 'chest-breathing',
+  description: 'A dry cough (non-productive cough) sounds tight, hacking, or barking without any mucus or phlegm production. In babies and toddlers, dry coughs are commonly caused by viral upper respiratory infections (early stage before mucus develops), croup (characteristic barking seal-like cough), asthma or reactive airways, and environmental irritants. Most dry coughs from viral illness are self-limiting, but a persistent dry cough or a cough with specific characteristics (barking, whooping) may need specific treatment.',
+  possibleCauses: [
+    { cause: 'Viral upper respiratory infection (early or tail-end)', likelihood: 'common' },
+    { cause: 'Croup (barking cough from laryngeal inflammation)', likelihood: 'common' },
+    { cause: 'Post-viral reactive airway/cough', likelihood: 'common' },
+    { cause: 'Asthma or virus-triggered wheezing', likelihood: 'uncommon' },
+    { cause: 'Environmental irritants (smoke, dry air, dust)', likelihood: 'uncommon' },
+    { cause: 'Pertussis (whooping cough)', likelihood: 'uncommon' },
+    { cause: 'Habit/psychogenic cough (older toddlers)', likelihood: 'uncommon' },
+    { cause: 'Gastroesophageal reflux', likelihood: 'uncommon' },
+    { cause: 'Foreign body aspiration', likelihood: 'rare' },
+    { cause: 'Tracheoesophageal fistula (congenital)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Coughing is uncommon in very young infants. Occasional throat clearing or single coughs are normal.', whenToWorry: 'Any repetitive cough in infant under 3 months needs evaluation. Paroxysmal (burst) coughing with apnea or color change. Cough with poor feeding or fast breathing.' },
+    { ageRange: '3-12 months', normalVariation: 'Dry coughs at the beginning or end of a cold are common. A few coughs per day without distress is normal during viral season.', whenToWorry: 'Barking seal-like cough with stridor (croup). Paroxysmal coughing fits followed by whooping sound or vomiting (pertussis). Cough with wheezing and difficulty breathing. Dry cough persisting more than 3 weeks.' },
+    { ageRange: '1-3 years', normalVariation: 'Croup is very common in toddlers aged 6 months to 3 years (usually at night). Dry cough lingering 2-3 weeks after a cold is typical. Occasional coughing from dry air is normal.', whenToWorry: 'Severe croup with stridor at rest. Persistent nighttime dry cough suggesting asthma. Sudden onset cough after possible choking (foreign body). Coughing fits with vomiting, face turning red/blue, or whooping.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Barking cough with severe stridor at rest and retractions',
+      'Cough with blue lips or face',
+      'Sudden onset of coughing and choking (possible foreign body aspiration)',
+      'Paroxysmal cough with apnea in young infant (possible pertussis)',
+      'Cough with severe respiratory distress (unable to speak, grunting)',
+    ],
+    urgent: [
+      'Croup with stridor at rest even when calm',
+      'Persistent coughing fits causing vomiting with inability to keep fluids down',
+      'Suspected pertussis (repetitive machine-gun cough, whooping, apnea) in unvaccinated infant',
+      'Dry cough with wheezing not responding to home treatment',
+    ],
+    sameDay: [
+      'Croup with barking cough recurring multiple nights',
+      'Dry cough persisting more than 3-4 weeks without improvement',
+      'Recurrent dry cough episodes suggesting reactive airways or asthma',
+    ],
+    monitor: [
+      'Mild dry cough with cold symptoms (runny nose) and no breathing difficulty',
+      'Mild croup with barking cough but no stridor at rest',
+      'Dry cough in the morning from dry bedroom air, resolving with fluids',
+    ],
+  },
+  homeRemedies: [
+    'For croup: expose child to cool night air (open window or go outside) for 15-20 minutes',
+    'Run a cool-mist humidifier to add moisture to dry air',
+    'Offer warm clear fluids (warm water, broth) for children over 6 months',
+    'Honey (half to one teaspoon) for children over 1 year before bed reduces nighttime cough',
+    'Keep child upright during coughing episodes',
+    'Avoid irritants: cigarette smoke, strong perfumes, aerosol sprays',
+    'Saline nasal drops to address any post-nasal drip component',
+    'Do NOT give over-the-counter cough suppressants to children under 6 years',
+    'Do NOT give honey to babies under 12 months',
+    'For recurrent nighttime cough, keep a symptom diary to discuss with pediatrician',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['wet-cough', 'cough-at-night', 'stridor', 'noisy-breathing'],
+  relatedIllnessSlugs: ['croup', 'pertussis', 'asthma', 'viral-uri'],
+  relatedConcernSlugs: ['baby-dry-cough', 'toddler-barking-cough', 'croup-sound'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Croup Treatment. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/Croup-Treatment.aspx' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Coughs and Colds: Medicines or Home Remedies? HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/Coughs-and-Colds-Medicines-or-Home-Remedies.aspx' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Pertussis (Whooping Cough) — Clinical Features.', url: 'https://www.cdc.gov/pertussis/about/signs-symptoms.html' },
+  ],
+};

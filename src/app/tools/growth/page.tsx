@@ -55,13 +55,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.ismybabyalright.com",
+      url: "https://www.ismybabyalright.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Growth Calculator",
-      item: "https://www.ismybabyalright.com/tools/growth",
+      url: "https://www.ismybabyalright.com/tools/growth",
     },
   ],
 };
@@ -85,6 +85,7 @@ export default function GrowthPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A baby growth tracker is a percentile-based tool that plots your child's weight, length, and head circumference on WHO growth charts to monitor healthy development from birth to 36 months.</p>
         <GrowthCalculator />
       </div>
     </div>

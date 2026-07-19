@@ -1,0 +1,47 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'polio',
+  name: 'Polio (Poliomyelitis)',
+  description: 'Poliomyelitis (polio) is a highly infectious disease caused by poliovirus, an enterovirus that can invade the nervous system and cause irreversible paralysis within hours. Most infections (72%) are asymptomatic, but approximately 1 in 200 infections leads to irreversible paralysis, and 5-10% of those paralyzed die when their breathing muscles become immobilized. Polio primarily affects children under 5 years of age. While largely eliminated through vaccination, poliovirus still circulates in some countries and remains a threat to unvaccinated populations worldwide.',
+  symptoms: [
+    'Most infections (72%) are completely asymptomatic',
+    'Minor illness (24%): Fever, fatigue, headache, nausea, sore throat, lasting 2-5 days',
+    'Non-paralytic aseptic meningitis (1-5%): Neck stiffness, back pain, muscle spasms',
+    'Paralytic polio (less than 1%): Sudden onset of floppy weakness in one or more limbs',
+    'Paralysis is usually asymmetric and affects legs more than arms',
+    'Muscle pain and spasms preceding paralysis',
+    'Fever followed by rapid onset of paralysis over 1-3 days',
+    'Bulbar polio: Difficulty swallowing, breathing, and speaking (most dangerous form)',
+    'Post-polio syndrome: New weakness, fatigue, and pain developing 15-40 years after initial infection',
+  ],
+  complications: [
+    'Permanent paralysis (irreversible in most cases)',
+    'Respiratory failure from paralysis of breathing muscles (bulbar or spinal polio)',
+    'Death — 5-10% of paralytic cases in children; 25-75% of bulbar cases',
+    'Post-polio syndrome (affects 25-40% of polio survivors 15-40 years later)',
+    'Skeletal deformities and muscle atrophy',
+    'Chronic pain',
+    'Lifelong disability requiring braces, crutches, or wheelchairs',
+    'Swallowing dysfunction',
+    'Sleep apnea and breathing difficulties',
+    'Joint contractures and osteoporosis',
+  ],
+  howItSpreads: 'Poliovirus spreads primarily through the fecal-oral route — the virus is shed in the stool of infected persons and can contaminate water and food in areas with poor sanitation. It can also spread through oral-oral transmission via respiratory droplets, though this is less common. The virus enters through the mouth, multiplies in the intestinal tract, and can then invade the nervous system. An infected person can spread the virus for several weeks even without symptoms. The virus is extremely hardy and can survive in water and sewage for weeks.',
+  whoIsAtRisk: [
+    'Unvaccinated children under 5 years of age',
+    'Unvaccinated individuals of any age',
+    'People living in or traveling to countries where polio still circulates (Afghanistan, Pakistan, and areas with vaccine-derived poliovirus)',
+    'Immunocompromised individuals (can shed virus for prolonged periods)',
+    'Pregnant women (increased susceptibility to paralytic disease)',
+    'People living in areas with poor sanitation and low vaccination coverage',
+    'Communities with undervaccination where vaccine-derived poliovirus can emerge',
+  ],
+  vaccineSlug: 'ipv',
+  historicalContext: 'Polio was one of the most feared diseases of the 20th century. In the US, the worst epidemic year was 1952 with 57,628 cases, 21,269 paralytic cases, and 3,145 deaths. The Salk inactivated polio vaccine (IPV) was introduced in 1955 and the Sabin oral polio vaccine (OPV) in 1961, leading to rapid decline. The US was declared polio-free in 1979 and the Western Hemisphere in 1994. The Global Polio Eradication Initiative has reduced cases by over 99.9% since 1988 — from 350,000 annual cases to fewer than 50 worldwide. However, poliovirus still circulates in Afghanistan and Pakistan, and vaccine-derived poliovirus outbreaks occur in under-immunized areas.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Poliomyelitis: For Healthcare Providers.', url: 'https://www.cdc.gov/polio/hcp/index.html' },
+    { org: 'WHO', citation: 'WHO. Poliomyelitis (Polio) Fact Sheet.', url: 'https://www.who.int/news-room/fact-sheets/detail/poliomyelitis' },
+    { org: 'AAP', citation: 'AAP. Poliovirus Infections. Red Book: Report of the Committee on Infectious Diseases.', url: 'https://publications.aap.org/redbook' },
+  ],
+};

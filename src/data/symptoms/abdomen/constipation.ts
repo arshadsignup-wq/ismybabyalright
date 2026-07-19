@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'constipation',
+  title: 'Constipation in Babies & Toddlers',
+  bodySystem: 'abdomen',
+  description: 'Constipation in babies is defined by hard, difficult-to-pass stools rather than infrequent stools. Exclusively breastfed babies can go up to 7-10 days between stools and be normal, as long as stools are soft when they come. True constipation is more common in formula-fed babies, when starting solids, and during potty training. It is usually functional and responds to dietary changes.',
+  possibleCauses: [
+    { cause: 'Dietary factors (low fiber, insufficient fluids, cow\'s milk)', likelihood: 'common' },
+    { cause: 'Transition to solids or formula changes', likelihood: 'common' },
+    { cause: 'Withholding behavior (especially during potty training)', likelihood: 'common' },
+    { cause: 'Functional constipation (most common chronic cause)', likelihood: 'common' },
+    { cause: 'Cow\'s milk protein intolerance', likelihood: 'uncommon' },
+    { cause: 'Medication side effect (iron supplements)', likelihood: 'uncommon' },
+    { cause: 'Hypothyroidism', likelihood: 'rare' },
+    { cause: 'Hirschsprung disease (absence of nerve cells in colon)', likelihood: 'rare' },
+    { cause: 'Anal fissure causing withholding', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Breastfed babies may stool after every feed or go 7-10 days between soft stools \u2014 both are normal. Formula-fed babies typically stool 1-3 times daily with firmer consistency. Grunting and straining with soft stools (infant dyschezia) is normal and resolves by 3-4 months.', whenToWorry: 'No stool in first 48 hours of life (possible Hirschsprung disease), hard pellet-like stools, blood on stool surface, abdominal distension with vomiting, or failure to thrive.' },
+    { ageRange: '3-6 months', normalVariation: 'Stool frequency often decreases around 2-3 months in breastfed babies. Some babies have 1 soft stool every few days. Straining with soft stools is still common (infant dyschezia).', whenToWorry: 'Hard, pellet-like stools causing pain or bleeding. Significant abdominal distension. Progressive worsening constipation since birth (red flag for Hirschsprung).' },
+    { ageRange: '6-12 months', normalVariation: 'Constipation often starts when solids are introduced. Stools may become firmer and less frequent. Brief episodes of hard stools while adjusting to new foods are common.', whenToWorry: 'Consistent hard, painful stools despite dietary adjustments. Blood on stool surface (possible anal fissure). Abdominal distension or vomiting. Baby in pain and refusing to eat.' },
+    { ageRange: '1-3 years', normalVariation: 'Constipation peaks around potty training age. Withholding behavior (squeezing legs together, hiding to avoid stooling) is very common and perpetuates the cycle.', whenToWorry: 'Soiling (encopresis) around hard stools, significant abdominal distension, poor growth, vomiting, or constipation not responding to standard dietary measures and requiring ongoing laxative use.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Newborn with no meconium passed in first 48 hours of life',
+      'Constipation with bilious (green) vomiting and abdominal distension (possible obstruction)',
+      'Constipation with fever, abdominal distension, and baby appearing very ill',
+    ],
+    urgent: [
+      'Significant abdominal distension with vomiting',
+      'Blood in stool with pain and fever',
+      'Newborn with constipation since birth and progressively worsening (Hirschsprung concern)',
+      'Constipation with failure to gain weight appropriately',
+    ],
+    sameDay: [
+      'Hard painful stools with visible blood (likely anal fissure \u2014 needs treatment to break cycle)',
+      'Constipation not responding to 2 weeks of dietary changes',
+      'Toddler showing signs of impaction (soiling around hard stool mass)',
+    ],
+    monitor: [
+      'Infrequent but soft stools in a breastfed baby (normal)',
+      'Mild firmness of stools with introduction of new foods that improves with dietary adjustments',
+      'Infant dyschezia (straining with soft stools) in baby under 4 months',
+      'Occasional hard stool with no blood and no significant distress',
+    ],
+  },
+  homeRemedies: [
+    'For babies on solids: increase fiber (pureed prunes, pears, peas, oatmeal)',
+    'Offer extra water between meals for babies over 6 months',
+    'Prune, pear, or apple juice (1-2 oz diluted) for babies over 4-6 months per doctor guidance',
+    'Bicycle baby\'s legs gently and provide tummy time to stimulate bowel movement',
+    'Warm bath may help relax the rectal muscles',
+    'For formula-fed babies: discuss formula changes with pediatrician',
+    'For toddlers: regular toilet time after meals (gastrocolic reflex), feet supported on stool',
+    'Avoid constipating foods: excess bananas, rice cereal, applesauce',
+    'Do NOT give enemas, suppositories, or laxatives without doctor guidance for babies',
+    'Do NOT delay treatment of hard stools \u2014 the longer stool sits, the harder it becomes (cycle)',
+  ],
+  triageSlug: 'constipation',
+  relatedSymptomSlugs: ['blood-in-stool', 'vomiting', 'poor-feeding'],
+  relatedIllnessSlugs: ['anal-fissure', 'hirschsprung-disease', 'cow-milk-allergy'],
+  relatedConcernSlugs: ['baby-not-pooping', 'baby-straining-to-poop', 'toddler-constipation'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Constipation in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Constipation.aspx' },
+    { org: 'NASPGHAN', citation: 'Tabbers MM, et al. Evaluation and Treatment of Functional Constipation in Infants and Children. JPGN. 2014.', url: 'https://journals.lww.com/jpgn/fulltext/2014/02000/evaluation_and_treatment_of_functional.16.aspx' },
+    { org: 'NICE', citation: 'NICE Clinical Guideline CG99. Constipation in Children and Young People.', url: 'https://www.nice.org.uk/guidance/cg99' },
+  ],
+};

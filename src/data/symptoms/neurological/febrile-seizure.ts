@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'febrile-seizure',
+  title: 'Febrile Seizures in Babies & Toddlers',
+  bodySystem: 'neurological',
+  description: 'Febrile seizures are convulsions triggered by fever, occurring in 2-5% of children aged 6 months to 5 years. They are the most common type of seizure in childhood. Simple febrile seizures (generalized, lasting under 15 minutes, occurring once in 24 hours) are frightening but benign — they do not cause brain damage, do not lead to epilepsy in the vast majority of cases, and do not affect development. The seizure typically occurs as temperature rises rapidly, often before parents even realize the child has a fever.',
+  possibleCauses: [
+    { cause: 'Rapid rise in temperature from viral infection (most common)', likelihood: 'common' },
+    { cause: 'Ear infection with fever', likelihood: 'common' },
+    { cause: 'Roseola (HHV-6) — particularly associated with febrile seizures', likelihood: 'common' },
+    { cause: 'Upper respiratory infection with fever', likelihood: 'common' },
+    { cause: 'Urinary tract infection with fever', likelihood: 'uncommon' },
+    { cause: 'Gastroenteritis with fever', likelihood: 'common' },
+    { cause: 'Post-vaccination fever (particularly MMR and DTaP)', likelihood: 'uncommon' },
+    { cause: 'Genetic predisposition (family history in 25-40% of cases)', likelihood: 'common' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Febrile seizures do NOT occur in this age group by definition. A seizure with fever in a baby under 6 months is NOT a febrile seizure and needs urgent evaluation for meningitis, sepsis, or structural causes.', whenToWorry: 'Any seizure with fever in a baby under 6 months — always an emergency.' },
+    { ageRange: '2-6 months', normalVariation: 'Febrile seizures are uncommon under 6 months. If they occur at the younger end of this range (especially under 6 months), more investigation is typically needed to rule out CNS infection.', whenToWorry: 'Seizure with fever under 6 months always needs emergency evaluation including consideration of lumbar puncture. Multiple seizures. Prolonged seizure. Focal (one-sided) seizure. Baby not recovering to baseline after seizure.' },
+    { ageRange: '6-12 months', normalVariation: 'This is the beginning of the typical febrile seizure age window. A simple febrile seizure (generalized, brief <15 min, single in 24h) with rapid recovery is classic.', whenToWorry: 'First febrile seizure under 12 months (AAP recommends considering evaluation for meningitis as signs can be subtle). Seizure lasting >15 minutes. Focal features (one side only). Multiple seizures in same febrile illness. Baby not back to normal within 1-2 hours of seizure.' },
+    { ageRange: '1-3 years', normalVariation: 'Peak age for febrile seizures is 12-18 months. Simple febrile seizures are common and benign. Approximately 1 in 3 children who have one febrile seizure will have another with a future fever (recurrence risk is higher with younger age at first seizure and family history).', whenToWorry: 'Complex febrile seizure: lasting >15 minutes, focal (one-sided), or occurring more than once in 24 hours. Seizure with stiff neck or persistent altered consciousness. Not returning to baseline. Very frequent recurrences (multiple per year).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Febrile seizure lasting more than 5 minutes — call 911/999',
+      'Seizure with fever in baby under 6 months',
+      'Multiple seizures without regaining normal consciousness between them',
+      'Seizure followed by difficulty breathing or blue color',
+      'Child not regaining consciousness within 15 minutes of seizure ending',
+      'Seizure with stiff neck, bulging fontanelle, or non-blanching rash',
+    ],
+    urgent: [
+      'First febrile seizure — needs same-day medical evaluation',
+      'Complex febrile seizure (prolonged, focal, or repeated in 24h)',
+      'Febrile seizure in child under 12 months',
+      'Child not back to baseline within 1-2 hours post-seizure',
+      'Febrile seizure with signs of serious bacterial infection',
+    ],
+    sameDay: [
+      'First simple febrile seizure that was brief and child has fully recovered',
+      'Recurrent simple febrile seizure in child with known febrile seizure history (if any concerns)',
+      'Parent needs reassurance and management plan after witnessing febrile seizure',
+    ],
+    monitor: [
+      'Known history of febrile seizures with typical brief episode and full recovery (follow existing management plan)',
+      'Child has completely recovered to normal behavior after brief simple febrile seizure',
+    ],
+  },
+  homeRemedies: [
+    'During seizure: place child on their side, clear surroundings, time the seizure, do NOT put anything in mouth',
+    'After seizure: keep child on side, stay calm, they will likely be sleepy for 30-60 minutes (normal)',
+    'Once child is alert: give age-appropriate fever reducer (acetaminophen or ibuprofen)',
+    'Important: giving fever medicine does NOT prevent febrile seizures — they occur during rapid temperature rise',
+    'Do NOT put child in cold bath during or after seizure',
+    'Do NOT restrain the child during the seizure',
+    'Video the seizure if possible for medical review',
+    'For future fever episodes: you cannot reliably prevent febrile seizures, but treating fever helps comfort',
+    'Know your emergency plan: if seizure lasts >5 minutes, call emergency services',
+    'Reassurance: simple febrile seizures do NOT cause brain damage, intellectual disability, or epilepsy in the vast majority',
+  ],
+  triageSlug: 'seizure',
+  relatedSymptomSlugs: ['seizure', 'staring-spells', 'tremors', 'stiffness'],
+  relatedIllnessSlugs: ['febrile-seizures', 'roseola', 'meningitis'],
+  relatedConcernSlugs: ['febrile-seizure-what-to-do', 'febrile-seizure-recurrence', 'fever-in-toddler'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Febrile Seizures: Guideline for the Neurodiagnostic Evaluation. Pediatrics. 2011;127(2):389-394.', url: 'https://publications.aap.org/pediatrics/article/127/2/389/65074' },
+    { org: 'NIH', citation: 'National Institute of Neurological Disorders and Stroke. Febrile Seizures Fact Sheet.', url: 'https://www.ninds.nih.gov/health-information/disorders/febrile-seizures' },
+    { org: 'NHS', citation: 'NHS. Febrile seizures.', url: 'https://www.nhs.uk/conditions/febrile-seizures/' },
+  ],
+};

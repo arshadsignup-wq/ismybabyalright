@@ -1,0 +1,71 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'dental-trauma',
+  title: 'Dental Trauma (Knocked Out or Broken Tooth)',
+  category: 'injury',
+  callNineOneOne: false,
+  description: 'Dental injuries are common in children from falls and play. A knocked-out permanent tooth is a dental emergency with a 30-minute window for reimplantation. Baby teeth should NOT be reimplanted. Quick action can save a permanent tooth.',
+  immediateActions: [
+    'Control bleeding with gentle pressure using clean gauze',
+    'Find the tooth if knocked out — handle by the crown (white part), NEVER the root',
+    'For a permanent tooth: reimplant or store in milk immediately',
+    'For a baby tooth: do NOT reimplant — but see a dentist to ensure nothing is embedded',
+  ],
+  doNotDo: [
+    'Do NOT handle a knocked-out tooth by the root',
+    'Do NOT scrub or clean the tooth with soap or chemicals',
+    'Do NOT let a knocked-out permanent tooth dry out',
+    'Do NOT reimplant a baby tooth — this can damage the developing permanent tooth underneath',
+    'Do NOT ignore a chipped or broken tooth — the nerve may be exposed',
+    'Do NOT give aspirin (increases bleeding)',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Control bleeding', description: 'Have the child bite on a piece of clean gauze with gentle pressure for 10-15 minutes. A cold compress on the outside of the cheek can help with pain and swelling.' },
+    { step: 2, title: 'Find the tooth', description: 'If a tooth was knocked out, find it. Handle ONLY by the crown (white part). Never touch the root (the yellowish part that was in the gum).' },
+    { step: 3, title: 'Clean gently if dirty', description: 'If the tooth is dirty, rinse briefly (10 seconds max) under running water while holding by the crown. Do NOT scrub, use soap, or wrap in tissue.' },
+    { step: 4, title: 'Reimplant permanent tooth', description: 'If it is a permanent tooth (child 6+ years), try to gently push it back into the socket. Have child bite on gauze to hold in place. If you cannot reimplant, go to step 5.' },
+    { step: 5, title: 'Store properly if cannot reimplant', description: 'Place the tooth in cold milk, saline, or the child\'s saliva (have them spit into a cup with the tooth). Do NOT store in water. Do NOT let it dry out.' },
+    { step: 6, title: 'Get to a dentist immediately', description: 'Time is critical for permanent teeth — best chance of saving the tooth is within 30 minutes. Call your dentist or go to an emergency dental clinic.' },
+    { step: 7, title: 'For broken/chipped teeth', description: 'Save any tooth fragments in milk. If you can see pink or red in the broken area, the nerve may be exposed — this is urgent. See a dentist within hours.' },
+  ],
+  whenToCall911: [
+    'Dental trauma with loss of consciousness or suspected head/neck injury',
+    'Uncontrolled bleeding that does not stop after 15 minutes of pressure',
+    'Difficulty breathing due to a displaced tooth or blood',
+    'Jaw appears broken or dislocated',
+  ],
+  whenToCallDoctor: [
+    'Baby tooth knocked out — still needs evaluation to ensure tooth fragment is not embedded',
+    'Tooth is loose but not knocked out',
+    'Minor chip without pain or visible nerve',
+    'Lip or tongue bite that is not deep',
+  ],
+  whenToGoToER: [
+    'Cannot reach a dentist within 30 minutes for a knocked-out permanent tooth',
+    'Significant facial swelling',
+    'Jaw injury or inability to open/close mouth',
+    'Dental injury with other facial injuries',
+    'Tooth pushed up into the gum (intruded)',
+  ],
+  prevention: [
+    'Use a mouthguard for contact sports and activities (even recreational)',
+    'Childproof the home — secure rugs, pad sharp corners',
+    'Use car seats and seatbelts properly',
+    'Supervise bathtub play and swimming pool areas (slippery surfaces)',
+    'Avoid running with objects in the mouth (toothbrush, lollipop sticks)',
+    'Address protruding front teeth with orthodontic evaluation — they are more prone to injury',
+  ],
+  byAge: [
+    { ageRange: '0-1 year', context: 'Dental injuries are less common but can occur from falls when learning to walk. Baby teeth start erupting around 6 months. Any trauma to erupting teeth should be evaluated by a pediatric dentist.' },
+    { ageRange: '1-5 years', context: 'Falls are the primary cause of dental trauma. All teeth at this age are baby teeth — do NOT reimplant them. Still see a dentist to check for embedded fragments and damage to developing permanent teeth underneath.' },
+    { ageRange: '6-12 years', context: 'Children have a mix of baby and permanent teeth. Permanent incisors (front teeth) erupt around age 6-7 and are most commonly injured. A knocked-out permanent tooth is a true emergency — reimplant or store in milk and get to dentist within 30 minutes.' },
+  ],
+  relatedEmergencySlugs: ['head-injury-fall', 'cut-laceration', 'broken-bone'],
+  relatedConcernSlugs: ['baby-teeth-injury'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Dental Emergencies.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Dental-Emergencies.aspx' },
+    { org: 'ADA', citation: 'American Dental Association. Knocked-Out Tooth.', url: 'https://www.ada.org/resources/research/science-and-research-institute/oral-health-topics/dental-emergencies' },
+    { org: 'IADT', citation: 'International Association of Dental Traumatology. Guidelines for Management of Traumatic Dental Injuries.', url: 'https://www.iadt-dentaltrauma.org/for-patients.html' },
+  ],
+};

@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'stiffness',
+  title: 'Stiffness (Hypertonia) in Babies & Toddlers',
+  bodySystem: 'neurological',
+  description: 'Stiffness (hypertonia) in babies refers to increased muscle tone — the limbs feel tight or resist being moved through their range of motion. While some degree of flexor tone is normal in newborns (and increases briefly around 4 months), persistent or progressive stiffness, especially if asymmetric (one side more than the other), may indicate neurological conditions such as cerebral palsy or spinal cord problems.',
+  possibleCauses: [
+    { cause: 'Normal physiologic hypertonia in newborns (flexed posture)', likelihood: 'common' },
+    { cause: 'Spastic cerebral palsy', likelihood: 'uncommon' },
+    { cause: 'Neonatal abstinence syndrome (maternal drug exposure)', likelihood: 'uncommon' },
+    { cause: 'Benign hypertonia of infancy (resolves by 12-18 months)', likelihood: 'uncommon' },
+    { cause: 'Hypoxic-ischemic encephalopathy (birth injury)', likelihood: 'uncommon' },
+    { cause: 'Kernicterus (severe bilirubin-induced brain damage)', likelihood: 'rare' },
+    { cause: 'Metabolic disorder (Krabbe disease, phenylketonuria)', likelihood: 'rare' },
+    { cause: 'Spinal cord abnormality (tethered cord, spinal dysraphism)', likelihood: 'rare' },
+    { cause: 'Meningitis/encephalitis (acute stiffness)', likelihood: 'rare' },
+    { cause: 'Dystonia (movement disorder)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Newborns have high physiologic flexor tone — arms and legs are curled, fists clenched. This is normal. Tone should be symmetric. Premature babies may have lower tone initially. "Fisting" (clenched hands) is normal until around 3 months.', whenToWorry: 'Extreme stiffness with legs crossed like scissors. Asymmetric tone (one side stiffer than other). Persistent arching backward (opisthotonus). Stiffness with poor feeding or irritability. Hands constantly and tightly fisted beyond 3 months. Stiffness with abnormal reflexes.' },
+    { ageRange: '2-6 months', normalVariation: 'Tone gradually changes from flexor dominance to more extension. Hands should be opening more by 3-4 months. Legs extending more during play. Brief stiffening when excited or upset is common.', whenToWorry: 'Increasing stiffness rather than decreasing. Hands still constantly fisted at 4+ months. Difficulty with diaper changes (legs do not spread easily). Head consistently turned to one side with arm extension (asymmetric tonic neck reflex persisting beyond 6 months). One side of body stiffer than other.' },
+    { ageRange: '6-12 months', normalVariation: 'Tone should allow good range of movement. Baby should be able to sit with support, reach, and grasp. Brief stiffening with excitement, frustration, or during effort (like pulling to stand) is normal.', whenToWorry: 'Stiff legs making it hard to sit or stand. W-sitting as only option. Toe-pointing when held upright (always on toes, never flat). One arm/hand not used as well as the other. Stiffness interfering with milestones (sitting, crawling). Falling backward stiffly rather than crumpling.' },
+    { ageRange: '1-3 years', normalVariation: 'Mild stiffening during tantrums or excitement is common and normal. Muscles should feel relaxed when child is calm and at rest.', whenToWorry: 'Persistent toe walking (always on toes). Stiff scissoring gait (legs crossing when walking). One leg/arm clearly stiffer or less coordinated. Increasing difficulty with motor tasks. Stiffness with regression of skills. Acute stiffness with fever and altered consciousness (meningitis/encephalitis).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Acute onset stiffness with fever, vomiting, and altered consciousness (meningitis)',
+      'Stiffness with seizures',
+      'Extreme backward arching (opisthotonus) with distress',
+      'Sudden onset stiffness following injury',
+      'Stiffness with breathing difficulties',
+    ],
+    urgent: [
+      'Progressive stiffness developing over days',
+      'Asymmetric stiffness (one-sided) in young infant',
+      'Stiffness with feeding difficulties and poor weight gain',
+      'Stiffness with developmental regression (losing skills)',
+      'Stiffness with persistent irritability or high-pitched cry',
+    ],
+    sameDay: [
+      'Parent concerned about increasing tone or stiffness',
+      'Stiffness limiting milestone achievement',
+      'One hand consistently fisted at age 4+ months',
+      'Stiffness affecting diaper changes or dressing',
+    ],
+    monitor: [
+      'Normal newborn flexor tone (symmetric, resolving over months)',
+      'Brief stiffening with excitement or crying (common and benign)',
+      'Mild benign hypertonia that is symmetric and not limiting development',
+      'Known condition under physiotherapy management',
+    ],
+  },
+  homeRemedies: [
+    'Stiffness concerns should be discussed with your pediatrician — early assessment leads to better outcomes',
+    'Gentle range-of-motion exercises: slowly and gently move arms and legs through their full range during play',
+    'Tummy time helps develop balanced muscle tone and reduce stiffness',
+    'Warm bath before stretching can help relax muscles',
+    'Avoid equipment that promotes stiffness patterns (walkers, bouncers) if hypertonia is present',
+    'Position baby to encourage looking both ways (alternate crib position, place toys on both sides)',
+    'Carry baby in positions that promote hip flexion and knee bending (facing parent with legs wrapped around)',
+    'Early referral to physiotherapy or occupational therapy is key — do not wait',
+    'Important: brief stiffening with excitement or tantrums is normal in all babies and is NOT a sign of cerebral palsy',
+  ],
+  relatedSymptomSlugs: ['floppiness', 'arching-back', 'toe-walking', 'seizure'],
+  relatedIllnessSlugs: ['cerebral-palsy', 'meningitis', 'dystonia'],
+  relatedConcernSlugs: ['baby-stiff-legs', 'baby-tight-muscles', 'baby-arching-back'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Cerebral Palsy. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/developmental-disabilities/Pages/Cerebral-Palsy.aspx' },
+    { org: 'NIH', citation: 'National Institute of Neurological Disorders and Stroke. Cerebral Palsy: Hope Through Research.', url: 'https://www.ninds.nih.gov/health-information/disorders/cerebral-palsy' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Cerebral Palsy Signs and Symptoms.', url: 'https://www.cdc.gov/ncbddd/cp/signs.html' },
+  ],
+};

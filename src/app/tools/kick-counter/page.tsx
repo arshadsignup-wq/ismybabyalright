@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import KickCounter from "@/components/tools/KickCounter";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Baby Kick Counter - Track Fetal Movement During Pregnancy",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Baby Kick Counter',
+  description: 'Count your baby\'s kicks during pregnancy. Track how long it takes to feel 10 movements — recommended starting at 28 weeks. Based on ACOG guidelines.',
+  path: '/tools/kick-counter',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Kick Counter' },
+]);
+
 export default function KickCounterPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function KickCounterPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A kick counter helps expectant parents track fetal movements during the third trimester, with the goal of feeling at least 10 movements within 2 hours as recommended by ACOG.</p>
         <KickCounter />
       </div>
     </div>

@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'blue-lips',
+  title: 'Blue Lips (Cyanosis) in Babies',
+  bodySystem: 'chest-breathing',
+  description: 'Blue discoloration of the lips, mouth, or face (central cyanosis) in a baby indicates low oxygen levels in the blood and is always a medical emergency requiring immediate evaluation. It is critical to distinguish central cyanosis (blue lips, tongue, and mucous membranes) from acrocyanosis (blue hands and feet only), which is very common and normal in newborns, especially when cold. Central cyanosis can indicate serious heart or lung problems and must never be ignored.',
+  possibleCauses: [
+    { cause: 'Acrocyanosis — blue hands and feet only (normal in newborns, not true cyanosis)', likelihood: 'common' },
+    { cause: 'Perioral cyanosis from cold or crying (transient, resolves quickly)', likelihood: 'common' },
+    { cause: 'Respiratory illness (bronchiolitis, pneumonia, severe croup)', likelihood: 'uncommon' },
+    { cause: 'Breath-holding spell (toddlers — resolves spontaneously)', likelihood: 'uncommon' },
+    { cause: 'Congenital heart disease (cyanotic heart defect)', likelihood: 'rare' },
+    { cause: 'Persistent pulmonary hypertension of the newborn', likelihood: 'rare' },
+    { cause: 'Methemoglobinemia (abnormal hemoglobin)', likelihood: 'rare' },
+    { cause: 'Airway obstruction (foreign body, severe swelling)', likelihood: 'rare' },
+    { cause: 'Sepsis with circulatory failure', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Blue hands and feet (acrocyanosis) are normal for the first 24-48 hours of life and can recur with cold exposure. Brief perioral blue tinge during vigorous crying that resolves immediately is common.', whenToWorry: 'Blue tongue or inside of lips at any time (central cyanosis). Persistent blue color that does not resolve with warming or when baby stops crying. Blue color during feeding. Blue color with fast breathing, grunting, or lethargy.' },
+    { ageRange: '2-6 months', normalVariation: 'Mild blue discoloration around mouth during vigorous crying that resolves within seconds is generally not concerning.', whenToWorry: 'Any episode where lips or tongue appear blue. Blue color with feeding difficulty or sweating during feeds. Blue color during sleep. Persistent or worsening blue episodes.' },
+    { ageRange: '6-12 months', normalVariation: 'Breath-holding spells may begin, where child turns blue during intense crying but recovers spontaneously within 30-60 seconds.', whenToWorry: 'Blue lips not associated with crying or breath-holding. Blue color with respiratory illness or distress. Blue episodes with limpness or loss of consciousness beyond typical breath-holding. Blue color with new onset of exercise intolerance.' },
+    { ageRange: '1-3 years', normalVariation: 'Breath-holding spells peak at 1-2 years. Brief circumoral blue tinge in cold weather that resolves indoors is normal.', whenToWorry: 'Blue lips with activity or exercise. Blue episodes lasting more than a minute. Blue color with squatting (classic sign of tetralogy of Fallot). Blue with chest pain or difficulty breathing.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Blue lips or tongue at rest — call 911 immediately',
+      'Blue face or body with difficulty breathing',
+      'Blue color that does not resolve within 1-2 minutes',
+      'Blue color with lethargy, limpness, or unresponsiveness',
+      'Blue color with signs of choking or airway obstruction',
+      'Newborn with persistent central cyanosis after birth',
+      'Blue color with grunting, retractions, or fast breathing',
+    ],
+    urgent: [
+      'Episode of blue lips that resolved but has never been evaluated',
+      'Recurrent blue episodes even if brief and self-resolving',
+      'Blue color during feeds in an infant (possible cardiac cause)',
+      'Toddler with blue lips during physical activity',
+    ],
+    sameDay: [
+      'First breath-holding spell with cyanosis — needs diagnosis confirmation',
+      'Parent reports possible brief blue episode but child appears well now',
+    ],
+    monitor: [
+      'Blue hands and feet only (acrocyanosis) in a well newborn — normal',
+      'Known breath-holding spells (previously diagnosed) with typical pattern',
+      'Brief perioral blue tinge only during intense crying that resolves within seconds',
+    ],
+  },
+  homeRemedies: [
+    'Central cyanosis (blue lips/tongue) is a medical emergency — call 911 immediately',
+    'While waiting for help: keep baby calm and in a comfortable position',
+    'Do NOT restrict baby\'s breathing with tight swaddling if baby appears blue',
+    'For acrocyanosis (blue hands/feet only): warm the baby with skin-to-skin or a blanket',
+    'Learn infant CPR — essential for all parents',
+    'For known breath-holding spells: lay child on their side, stay calm, time the episode',
+    'Do NOT blow in face, splash water, or shake baby during a breath-holding spell',
+    'After an episode of blue lips: even if baby recovers, seek medical evaluation for first-time events',
+    'Do NOT assume it was "just a breath-holding spell" without prior medical diagnosis',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['apnea', 'grunting', 'noisy-breathing', 'stridor'],
+  relatedIllnessSlugs: ['congenital-heart-disease', 'bronchiolitis', 'pneumonia', 'breath-holding-spells'],
+  relatedConcernSlugs: ['baby-lips-blue', 'baby-turning-blue', 'blue-around-mouth-baby'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Cyanosis in the Newborn. NeoReviews. 2020.', url: 'https://publications.aap.org/neoreviews' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Breath-Holding Spells. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/head-neck-nervous-system/Pages/Breath-Holding-Spells.aspx' },
+    { org: 'NIH', citation: 'National Heart, Lung, and Blood Institute. Congenital Heart Defects.', url: 'https://www.nhlbi.nih.gov/health/congenital-heart-defects' },
+  ],
+};

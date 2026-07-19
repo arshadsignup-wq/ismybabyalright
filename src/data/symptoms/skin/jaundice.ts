@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'jaundice',
+  title: 'Jaundice (Yellow Skin) in Babies',
+  bodySystem: 'skin',
+  description: 'Jaundice is a yellow discoloration of the skin and whites of the eyes caused by elevated bilirubin levels. It is extremely common in newborns, affecting approximately 60% of full-term and 80% of preterm infants in their first week. Most newborn jaundice is physiological (normal) and resolves on its own. However, very high bilirubin levels can cause brain damage (kernicterus) if untreated, making proper monitoring essential.',
+  possibleCauses: [
+    { cause: 'Physiological jaundice (normal newborn bilirubin processing)', likelihood: 'common' },
+    { cause: 'Breastfeeding jaundice (insufficient milk intake in early days)', likelihood: 'common' },
+    { cause: 'Breast milk jaundice (substance in breast milk slowing bilirubin clearance)', likelihood: 'common' },
+    { cause: 'ABO or Rh blood group incompatibility', likelihood: 'uncommon' },
+    { cause: 'G6PD deficiency', likelihood: 'uncommon' },
+    { cause: 'Prematurity', likelihood: 'common' },
+    { cause: 'Cephalohematoma or significant bruising from birth', likelihood: 'uncommon' },
+    { cause: 'Biliary atresia (blocked bile ducts)', likelihood: 'rare' },
+    { cause: 'Hypothyroidism', likelihood: 'rare' },
+    { cause: 'Infection (sepsis)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-24 hours', normalVariation: 'Jaundice appearing within the first 24 hours of life is NOT normal and always requires urgent evaluation.', whenToWorry: 'Any visible jaundice in the first 24 hours is pathological and needs immediate bilirubin testing. This can indicate hemolytic disease (blood group incompatibility or G6PD deficiency).' },
+    { ageRange: '2-5 days', normalVariation: 'Physiological jaundice typically appears day 2-3, peaks day 3-5, and resolves by 1-2 weeks. Mild yellow tinge of face and chest with normal feeding and stooling.', whenToWorry: 'Jaundice spreading below the nipple line to the belly, arms, and legs. Baby too sleepy to feed (8+ feeds per day needed). Fewer than 3 stools per day by day 4. High-pitched cry. Dark urine or pale stools.' },
+    { ageRange: '1-2 weeks', normalVariation: 'Physiological jaundice should be fading by this point. Breast milk jaundice can persist and peaks around 2 weeks but is benign if levels are not dangerously high and baby is feeding/growing well.', whenToWorry: 'Jaundice intensifying rather than fading after day 5. Pale/chalky white stools with dark urine (possible biliary atresia \u2014 urgent). Baby not back to birth weight. Extreme sleepiness or high-pitched cry.' },
+    { ageRange: '2-12 weeks', normalVariation: 'Breast milk jaundice can persist for up to 12 weeks in some breastfed babies. Baby should be feeding well, gaining weight, and having normal colored stools (yellow, not pale).', whenToWorry: 'Jaundice persisting beyond 2 weeks always needs evaluation (check stool color). Pale/white stools at any point are a red flag for biliary atresia and need urgent referral. Poor weight gain.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Jaundice in the first 24 hours of life',
+      'Baby extremely sleepy, difficult to wake, or high-pitched cry with jaundice',
+      'Baby arching back (opisthotonus) with jaundice (possible kernicterus)',
+      'Jaundice with fever in a newborn',
+      'Baby refusing all feeds with visible jaundice',
+    ],
+    urgent: [
+      'Rapidly worsening jaundice (spreading to arms and legs)',
+      'Jaundice with fewer than 4-6 wet diapers per day',
+      'Jaundice with poor feeding and weight loss more than 10% of birth weight',
+      'Pale/white stools with jaundice at any age (biliary atresia concern)',
+      'Premature baby with jaundice (lower threshold for treatment)',
+    ],
+    sameDay: [
+      'Jaundice persisting beyond 2 weeks of age (needs conjugated bilirubin check)',
+      'Moderate jaundice with adequate feeding but parents wanting bilirubin checked',
+      'Jaundice after hospital discharge getting more noticeable',
+    ],
+    monitor: [
+      'Mild physiological jaundice (face/chest only) in a well-feeding baby days 2-5',
+      'Known breast milk jaundice with good weight gain and normal stool color',
+      'Jaundice that is clearly fading day by day',
+    ],
+  },
+  homeRemedies: [
+    'Feed frequently: aim for 8-12 breastfeeds per day (frequent feeding helps excrete bilirubin through stool)',
+    'Do NOT skip feedings or supplement with water (water does not help clear bilirubin)',
+    'Watch for adequate stooling: 3-4+ yellow stools per day by day 4 indicates good bilirubin clearance',
+    'Undress baby by a well-lit window (indirect sunlight) \u2014 this is NOT a substitute for phototherapy if needed',
+    'Monitor stool color: yellow/green = normal; pale/white/clay = urgent medical concern',
+    'Track wet diapers: at least 4-6 per day indicates adequate hydration',
+    'Attend all scheduled follow-up bilirubin checks after hospital discharge',
+    'Wake sleepy jaundiced baby for feeds if sleeping more than 3 hours',
+    'Do NOT stop breastfeeding unless specifically directed by doctor (rare)',
+  ],
+  triageSlug: 'jaundice',
+  relatedSymptomSlugs: ['lethargy', 'poor-feeding'],
+  relatedIllnessSlugs: ['newborn-jaundice', 'biliary-atresia', 'g6pd-deficiency'],
+  relatedConcernSlugs: ['baby-skin-yellow', 'newborn-jaundice-breastfeeding', 'baby-jaundice-going-away'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Clinical Practice Guideline: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics. 2004 (revised 2022).', url: 'https://publications.aap.org/pediatrics/article/150/3/e2022058859/188443' },
+    { org: 'AAP', citation: 'HealthyChildren.org. Jaundice in Newborns: Parent FAQs.', url: 'https://www.healthychildren.org/English/ages-stages/baby/Pages/Jaundice.aspx' },
+    { org: 'NICE', citation: 'NICE Clinical Guideline CG98. Jaundice in newborn babies under 28 days.', url: 'https://www.nice.org.uk/guidance/cg98' },
+  ],
+};

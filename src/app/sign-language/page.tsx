@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import {
   signs,
   teachingTips,
@@ -21,25 +28,43 @@ export const metadata: Metadata = {
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const contentSchema = getContentPageSchema({
+  name: 'Baby Sign Language Guide: 30 Signs, Tips & When to Start',
+  description:
+    'Learn 30 baby signs across 5 categories with step-by-step descriptions. Evidence-based guide covering when to start (6-8 months), teaching tips, and FAQs. Based on research by Acredolo & Goodwyn.',
+  path: '/sign-language',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Baby Sign Language Guide' },
+]);
+
+const signLanguageFaqItems = [
+  { question: "When should I start teaching my baby sign language?", answer: "Most babies are ready to begin learning signs between 6 and 8 months. You can start modeling signs as early as 4 months, but expect your baby to sign back around 8 to 10 months after consistent exposure." },
+  { question: "Does baby sign language delay speech?", answer: "No. Research by Acredolo and Goodwyn shows that signing babies often speak sooner and develop larger vocabularies. Signing is a bridge to spoken language, not a replacement." },
+  { question: "How many signs should I start with?", answer: "Start with 3 to 5 high-motivation signs like 'milk,' 'more,' 'all done,' 'eat,' and 'help.' Add more signs gradually as your baby masters the initial ones." },
+  { question: "What if my baby makes the sign incorrectly?", answer: "Baby approximations are completely normal and expected. Just as babies babble before speaking clearly, they will modify signs to match their motor abilities. Respond to their attempt enthusiastically and continue modeling the correct form." },
+  { question: "Will my baby stop signing once they start talking?", answer: "Yes, most babies naturally transition from signing to speaking as their verbal skills develop, typically between 18 and 24 months. Some may continue to use signs alongside speech for emphasis or clarity." },
+];
+
+const faqJsonLd = getFAQPageSchema(signLanguageFaqItems);
 
 export default function SignLanguagePage() {
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "Baby Sign Language Guide" }]} />
@@ -57,7 +82,20 @@ export default function SignLanguagePage() {
             how they feel, and what they see  -  dramatically reducing frustration
             for both of you.
           </p>
+          <LastReviewed date="2026-07-01" />
+          <div className="mt-3">
+            <MedicalReviewAttribution sources={['AAP', 'ASHA']} />
+          </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Babies can start learning signs between 6 and 8 months and typically sign back around 8 to 10 months after consistent exposure.",
+            "Research shows signing does not delay speech -- signing babies often speak sooner and develop larger vocabularies.",
+            "Start with 3 to 5 high-motivation signs like 'milk,' 'more,' and 'all done,' then add more as your baby masters them.",
+            "Signing reduces frustration, strengthens the parent-baby bond, and builds early cognitive and fine motor skills.",
+          ]}
+        />
 
         {/* Benefits */}
         <section className="mb-10">
@@ -218,46 +256,16 @@ export default function SignLanguagePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-10">
-          <h2 className="text-lg sm:text-xl font-extrabold text-foreground mb-4">
-            Frequently Asked Questions
-          </h2>
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, index) => (
-              <details
-                key={index}
-                className="rounded-xl border border-[#E8E2D9] bg-white group"
-              >
-                <summary className="cursor-pointer p-5 text-sm font-bold text-foreground list-none flex items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
-                  <span>{faq.question}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="shrink-0 mt-0.5 text-muted transition-transform group-open:rotate-180"
-                    aria-hidden="true"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </summary>
-                <div className="px-5 pb-5 -mt-1">
-                  <p className="text-sm text-muted leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
+        <div className="mb-10">
+          <FAQSection items={signLanguageFaqItems} />
+        </div>
+
+        <BottomLine
+          summary="Baby sign language is a safe, evidence-based way to help your baby communicate before they can talk. Research consistently shows that signing does not delay speech -- in fact, signing babies often develop larger vocabularies and speak sooner. Starting with a few simple signs around 6 to 8 months can reduce frustration and strengthen your bond."
+        />
 
         {/* Sources */}
-        <section className="mb-4">
+        <section className="mb-4 mt-10">
           <div className="rounded-xl bg-card-alt p-5">
             <h2 className="text-sm font-bold text-foreground mb-2">Sources</h2>
             <ul className="flex flex-col gap-1.5">
@@ -293,6 +301,10 @@ export default function SignLanguagePage() {
           </div>
         </section>
 
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         {/* Disclaimer */}
         <p className="text-xs text-muted text-center leading-relaxed pb-4 mt-8">
           This guide is for educational purposes only and is not a substitute
@@ -302,6 +314,6 @@ export default function SignLanguagePage() {
           speech-language pathologist. All data stays on your device.
         </p>
       </div>
-    </div>
+    </article>
   );
 }

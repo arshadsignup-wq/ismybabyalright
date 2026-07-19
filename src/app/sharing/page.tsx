@@ -4,6 +4,22 @@ import Link from "next/link";
 import { useProfile, useEvents } from "@/lib/useStorage";
 import ShareSetup from "@/components/sharing/ShareSetup";
 
+const SITE_URL = "https://www.ismybabyalright.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Share with Caregiver",
+  description:
+    "Share your baby's tracking data with another caregiver. Export and import data between devices.",
+  url: `${SITE_URL}/sharing`,
+  publisher: {
+    "@type": "Organization",
+    name: "Is My Baby Alright?",
+    url: SITE_URL,
+  },
+};
+
 export default function SharingPage() {
   const { profile } = useProfile();
   const { events } = useEvents();
@@ -11,6 +27,10 @@ export default function SharingPage() {
   if (!profile) {
     return (
       <div className="mx-auto max-w-lg px-4 py-10 text-center">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        />
         <h1 className="text-xl font-bold text-foreground mb-3">Caregiver Sharing</h1>
         <p className="text-muted mb-4">
           Set up your baby&apos;s profile first to start sharing.
@@ -27,6 +47,10 @@ export default function SharingPage() {
 
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <div className="flex items-center gap-3 mb-5">
         <Link
           href="/tracker"

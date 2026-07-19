@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import RelatedGuides from "@/components/guides/RelatedGuides";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import AuthoritativeQuote from '@/components/shared/AuthoritativeQuote';
+import { getQuotesForTopic } from '@/data/authoritative-quotes';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { teeth, symptoms, safeRemedies, unsafeRemedies, myths } from "@/data/teething/data";
 
 export const metadata: Metadata = {
@@ -22,6 +31,14 @@ export const metadata: Metadata = {
 // JSON-LD structured data
 // ---------------------------------------------------------------------------
 
+const teethingFaqItems = [
+  { question: "When do babies start teething?", answer: "Most babies get their first tooth around 6 months, but the normal range is 3 to 14 months. The lower central incisors are usually the first to appear. If your baby has no teeth by 18 months, mention it to your pediatrician." },
+  { question: "What are safe remedies for teething pain?", answer: "Safe remedies include chilled (not frozen) teething rings, gently rubbing the gums with a clean finger, and offering cold washcloths to chew on. Infant acetaminophen or ibuprofen (6+ months) can be used per your pediatrician's guidance." },
+  { question: "Is it normal for teething to cause fever?", answer: "No. Research shows teething does not cause true fever (100.4\u00b0F / 38\u00b0C or higher). A slight temperature increase is possible, but actual fever indicates infection and should be evaluated by your pediatrician." },
+  { question: "Are amber teething necklaces safe?", answer: "No. The FDA, AAP, and CPSC have issued warnings against amber teething necklaces. They pose strangulation and choking hazards and have no proven pain-relieving properties." },
+  { question: "When should I start brushing my baby's teeth?", answer: "Start brushing with a soft-bristled infant toothbrush and a rice-grain-sized smear of fluoride toothpaste from the very first tooth. Schedule a dental visit by age 1 or within 6 months of the first tooth erupting." },
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -34,6 +51,19 @@ const faqJsonLd = {
     },
   })),
 };
+
+const contentSchema = getContentPageSchema({
+  name: 'Baby Teething Guide: Timeline, Symptoms & Safe Remedies',
+  description:
+    'Complete baby teething guide with eruption timeline for all 20 teeth, common symptoms, safe remedies, what to avoid (benzocaine, amber necklaces), and myths debunked. Based on AAP and ADA guidelines.',
+  path: '/teething',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Teething' },
+]);
 
 const howToJsonLd = {
   "@context": "https://schema.org",
@@ -114,12 +144,13 @@ function SymptomCard({
 // ---------------------------------------------------------------------------
 
 export default function TeethingPage() {
+  const topicQuotes = getQuotesForTopic('teething');
   const sortedTeeth = [...teeth].sort((a, b) => a.order - b.order);
   const upperTeeth = sortedTeeth.filter((t) => t.position === "upper");
   const lowerTeeth = sortedTeeth.filter((t) => t.position === "lower");
 
   return (
-    <>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -127,6 +158,18 @@ export default function TeethingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQPageSchema(teethingFaqItems)) }}
       />
 
       <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
@@ -147,7 +190,27 @@ export default function TeethingPage() {
             <span className="source-badge" style={{ backgroundColor: "#7C3AED" }}>ADA</span>
             <span className="source-badge" style={{ backgroundColor: "#DC2626" }}>FDA</span>
           </div>
+          <MedicalReviewAttribution sources={['AAP', 'ADA']} />
+          <LastReviewed date="2026-07-01" />
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Most babies get their first tooth around 6 months, but the normal range is 3 to 14 months and all 20 primary teeth are usually in by age 3.",
+            "Common teething symptoms include drooling, gum swelling, irritability, and chewing on objects -- true fever, diarrhea, and rashes are NOT caused by teething.",
+            "Safe remedies include chilled teething rings, gum massage, and cold washcloths. Avoid benzocaine, amber necklaces, and homeopathic teething tablets.",
+            "Start brushing with fluoride toothpaste from the very first tooth and schedule a dental visit by age 1.",
+          ]}
+        />
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         {/* ----------------------------------------------------------------
             Eruption Timeline
@@ -504,6 +567,16 @@ export default function TeethingPage() {
         {/* Related Guides */}
         <RelatedGuides currentPath="/teething" />
 
+        <div className="mt-8 mb-6">
+          <FAQSection items={teethingFaqItems} />
+        </div>
+
+        <BottomLine summary="Teething is a normal part of development that usually begins around 6 months and continues until about age 3. While uncomfortable, teething does not cause high fevers, diarrhea, or serious illness. Safe remedies include chilled teething rings and gentle gum massage. Avoid teething tablets, benzocaine gels, and amber necklaces." />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         {/* ----------------------------------------------------------------
             Disclaimer
         ---------------------------------------------------------------- */}
@@ -514,6 +587,6 @@ export default function TeethingPage() {
           health. All data stays on your device.
         </p>
       </div>
-    </>
+    </article>
   );
 }

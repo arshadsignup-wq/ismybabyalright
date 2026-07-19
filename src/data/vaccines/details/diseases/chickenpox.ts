@@ -1,0 +1,45 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'chickenpox',
+  name: 'Chickenpox (Varicella)',
+  description: 'Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It causes an itchy, blister-like rash that typically covers the entire body, along with fever and fatigue. While often considered a mild childhood illness, chickenpox can cause serious complications including bacterial skin infections, pneumonia, encephalitis, and death — particularly in infants, pregnant women, and immunocompromised individuals. The virus remains dormant in nerve cells after infection and can reactivate decades later as shingles (herpes zoster).',
+  symptoms: [
+    'Intensely itchy rash that progresses from red spots to fluid-filled blisters to crusted scabs',
+    'Rash appears in successive "crops" so lesions at different stages are present simultaneously',
+    'Typically 250-500 lesions covering the trunk, face, scalp, and extremities',
+    'Fever (100-102°F/37.8-38.9°C), often beginning 1-2 days before the rash',
+    'Fatigue and malaise',
+    'Loss of appetite',
+    'Headache',
+    'Lesions can also occur in the mouth, eyes, and genital area',
+  ],
+  complications: [
+    'Bacterial skin infections (group A streptococcus or staphylococcus) — most common complication in children',
+    'Pneumonia (more common in adults and immunocompromised, but can affect infants)',
+    'Encephalitis or cerebellar ataxia (1 in 5,000 cases)',
+    'Sepsis and toxic shock syndrome',
+    'Dehydration (from inability to eat/drink due to mouth lesions)',
+    'Neonatal varicella — extremely dangerous in infants born to mothers infected 5 days before to 2 days after delivery (30% mortality without treatment)',
+    'Congenital varicella syndrome — birth defects if mother infected in first 20 weeks of pregnancy',
+    'Reye syndrome (if aspirin is given during infection)',
+    'Death — approximately 100-150 deaths per year in the US before vaccination (about half in children)',
+    'Shingles later in life — the virus reactivates in approximately 1 in 3 people',
+  ],
+  howItSpreads: 'Chickenpox is extremely contagious, spreading through direct contact with the fluid from blisters, through respiratory droplets from coughing or sneezing, and via airborne transmission of virus particles. The virus can travel considerable distances through the air. A person is contagious from 1-2 days before the rash appears until all lesions have crusted over (usually 5-7 days after rash onset). The attack rate among susceptible household contacts is 85-90%.',
+  whoIsAtRisk: [
+    'Unvaccinated infants under 12 months (too young for the vaccine)',
+    'Unvaccinated children and adults who have never had chickenpox',
+    'Immunocompromised individuals (cancer patients, transplant recipients, those on immunosuppressive therapy)',
+    'Pregnant women who have never had chickenpox or been vaccinated',
+    'Newborns whose mothers develop chickenpox around the time of delivery',
+    'Premature infants',
+  ],
+  vaccineSlug: 'varicella',
+  historicalContext: 'Before the varicella vaccine was introduced in the US in 1995, approximately 4 million people got chickenpox each year, resulting in about 10,600 hospitalizations, 13,500 hospital days, and 100-150 deaths annually. Since widespread vaccination, chickenpox cases have declined by more than 97%, hospitalizations by 93%, and deaths by 94%. However, outbreaks still occur in undervaccinated communities.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Chickenpox (Varicella): For Healthcare Providers.', url: 'https://www.cdc.gov/chickenpox/hcp/index.html' },
+    { org: 'AAP', citation: 'AAP. Varicella-Zoster Virus Infections. Red Book: Report of the Committee on Infectious Diseases.', url: 'https://publications.aap.org/redbook' },
+    { org: 'WHO', citation: 'WHO. Varicella and Herpes Zoster Vaccines: WHO Position Paper. 2014.', url: 'https://www.who.int/publications/i/item/who-wer8925' },
+  ],
+};

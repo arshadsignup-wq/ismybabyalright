@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'barking-cough',
+  title: 'Barking Cough (Croup) in Babies & Toddlers',
+  bodySystem: 'chest-breathing',
+  description: 'A barking cough sounds like a seal or dog bark and is the hallmark symptom of croup (laryngotracheobronchitis). It is caused by swelling of the voice box (larynx) and windpipe (trachea), usually due to a viral infection. Croup is most common in children aged 6 months to 3 years and characteristically worsens at night. Stridor (a harsh sound when breathing in) may accompany the cough.',
+  possibleCauses: [
+    { cause: 'Viral croup (parainfluenza virus most common)', likelihood: 'common' },
+    { cause: 'RSV or other respiratory viruses', likelihood: 'common' },
+    { cause: 'Spasmodic croup (recurrent, often triggered by cold air or allergies)', likelihood: 'uncommon' },
+    { cause: 'Bacterial tracheitis', likelihood: 'rare' },
+    { cause: 'Epiglottitis', likelihood: 'rare' },
+    { cause: 'Foreign body in airway', likelihood: 'rare' },
+    { cause: 'Allergic reaction causing airway swelling', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-6 months', normalVariation: 'Croup is uncommon under 6 months. Any barking cough or stridor at this age is more concerning and warrants prompt evaluation.', whenToWorry: 'Any barking cough or stridor in a baby under 6 months should be evaluated promptly, as it may indicate a structural airway issue or more serious infection.' },
+    { ageRange: '6 months-2 years', normalVariation: 'Peak age for croup. Typical pattern: starts as cold symptoms, develops barking cough and possibly stridor at night. Worse for 2-3 nights then gradually improves over 5-7 days.', whenToWorry: 'Stridor at rest (not just when crying), chest retractions, drooling or inability to swallow, high fever above 104\u00b0F, or croup lasting more than 7 days.' },
+    { ageRange: '2-5 years', normalVariation: 'Still common age for croup, though children are less likely to develop severe symptoms as airways are larger. Barking cough that is worse at night and improves during the day.', whenToWorry: 'Stridor while resting, unable to drink fluids, leaning forward and drooling (possible epiglottitis \u2014 very rare but dangerous), blue or gray color.' },
+    { ageRange: '5+ years', normalVariation: 'Croup becomes uncommon after age 5-6. Barking cough at this age may have other causes.', whenToWorry: 'Barking cough or stridor in an older child is less typical and may need investigation for structural causes or other conditions.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Stridor that is loud at rest and baby appears distressed',
+      'Blue or gray color around lips or fingernails',
+      'Drooling with inability to swallow (possible epiglottitis)',
+      'Child appears very anxious, is silent, or is losing consciousness',
+      'Severe chest retractions with each breath',
+      'Croup not improving after 20 minutes of steam or cool air',
+    ],
+    urgent: [
+      'Stridor audible when child is calm and at rest',
+      'Moderate chest retractions with breathing',
+      'Child unable or unwilling to drink fluids',
+      'Croup with high fever above 104\u00b0F (40\u00b0C)',
+      'Barking cough in a baby under 6 months',
+    ],
+    sameDay: [
+      'First episode of croup for evaluation and possible steroid prescription',
+      'Croup lasting more than 5-7 days',
+      'Mild stridor only when crying or upset but child otherwise comfortable',
+    ],
+    monitor: [
+      'Barking cough at night with no stridor and child comfortable between episodes',
+      'Mild croup improving with cool air exposure',
+      'Known croup pattern (previously diagnosed) with mild symptoms responding to home care',
+    ],
+  },
+  homeRemedies: [
+    'Cool night air: bundle baby up and step outside for 10-15 minutes \u2014 cold air reduces airway swelling',
+    'Run a hot shower and sit in the steamy bathroom for 15-20 minutes (though evidence is mixed)',
+    'Cool-mist humidifier near the crib at night',
+    'Keep baby calm \u2014 crying worsens airway swelling and stridor',
+    'Elevate the head of the bed slightly',
+    'Offer warm clear fluids (for babies over 6 months) to soothe the throat',
+    'Sit upright and hold baby when symptoms flare',
+    'Acetaminophen or ibuprofen (age-appropriate) for fever and discomfort',
+    'If prescribed, administer oral dexamethasone as directed \u2014 this is the most effective treatment',
+  ],
+  triageSlug: 'croup',
+  relatedSymptomSlugs: ['fast-breathing', 'wheezing', 'chest-retractions', 'fever'],
+  relatedIllnessSlugs: ['croup', 'epiglottitis', 'bronchiolitis'],
+  relatedConcernSlugs: ['baby-barking-cough', 'croup-at-night', 'toddler-croup-remedies'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Croup and Your Child. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/Croup-Treatment.aspx' },
+    { org: 'NICE', citation: 'National Institute for Health and Care Excellence. Croup: Clinical Knowledge Summary.', url: 'https://cks.nice.org.uk/topics/croup/' },
+    { org: 'Cochrane', citation: 'Russell KF, et al. Glucocorticoids for croup. Cochrane Database Syst Rev. 2011.', url: 'https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD001955.pub3/full' },
+  ],
+};

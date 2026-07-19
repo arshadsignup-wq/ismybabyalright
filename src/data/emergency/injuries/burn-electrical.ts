@@ -1,0 +1,71 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'burn-electrical',
+  title: 'Electrical Burn in a Child',
+  category: 'injury',
+  callNineOneOne: true,
+  description: 'Electrical burns in children often look minor on the surface but can cause serious internal damage to muscles, nerves, blood vessels, and organs. The current travels through the body, and the true extent of injury is often hidden. All electrical burns require emergency evaluation.',
+  immediateActions: [
+    'Ensure the power source is OFF before touching the child — do NOT touch a child still in contact with electricity',
+    'Call 911 immediately — electrical burns always need emergency evaluation',
+    'If child is unresponsive or not breathing, begin CPR',
+    'Check for entry and exit wounds (the burns may be at two distant points on the body)',
+  ],
+  doNotDo: [
+    'Do NOT touch the child if they are still in contact with the electrical source',
+    'Do NOT use water to separate child from electrical source',
+    'Do NOT assume the injury is minor because the skin burn looks small',
+    'Do NOT apply butter, ointment, or ice to electrical burns',
+    'Do NOT underestimate — internal injuries may be far worse than visible damage',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Ensure safety', description: 'Turn off the power source at the breaker/switch. If you cannot turn off power, use a dry non-conductive object (wooden broom handle, rubber mat) to separate the child from the source. Do NOT use metal or wet objects.' },
+    { step: 2, title: 'Call 911', description: 'All electrical injuries need emergency evaluation. Internal damage can affect the heart rhythm, muscles, and organs even when external burns appear minor.' },
+    { step: 3, title: 'Check responsiveness and breathing', description: 'If child is unresponsive or not breathing, begin CPR. Electrical shock can cause cardiac arrest.' },
+    { step: 4, title: 'Assess burns', description: 'Look for entry wound (where electricity entered the body) and exit wound (where it left). Burns may appear as small, deep, charred areas.' },
+    { step: 5, title: 'Cover burns', description: 'Cover burn wounds with a sterile, non-stick dressing. Do not apply pressure. Do not use fluffy materials that can stick to the wound.' },
+    { step: 6, title: 'Treat for shock', description: 'Lay child flat, elevate legs slightly (unless there is a head or spine injury). Keep warm with a blanket. Monitor breathing continuously.' },
+    { step: 7, title: 'Monitor for cardiac issues', description: 'Electrical injuries can cause heart arrhythmias. The child will need an ECG/heart monitoring in the hospital even if they seem fine.' },
+  ],
+  whenToCall911: [
+    'Any electrical burn or shock — always call 911',
+    'Child was in contact with household current (110-240V) or higher',
+    'Child is unresponsive or confused after electrical contact',
+    'Child has burns at the contact point',
+    'Child was struck by lightning',
+    'Child bit through an electrical cord',
+  ],
+  whenToCallDoctor: [
+    'Child touched a low-voltage source (battery-operated toy) and has minor redness — call for guidance',
+    'Follow-up after ER discharge from electrical injury',
+  ],
+  whenToGoToER: [
+    'ALL electrical burns and shocks from household current or higher need ER evaluation',
+    'Child bit through a power cord (even if not visibly burned — delayed lip/mouth burns are common)',
+    'Any contact with a wall outlet, power strip, or appliance that resulted in a shock or burn',
+    'Child was in contact with a downed power line (call 911)',
+  ],
+  prevention: [
+    'Cover all electrical outlets with safety covers or outlet plates',
+    'Keep electrical cords out of reach and secured against walls',
+    'Replace frayed or damaged cords immediately',
+    'Use cord covers/organizers to prevent chewing',
+    'Never use electrical appliances near water (baths, pools, sinks)',
+    'Teach children to never put objects into outlets',
+    'Install GFCI outlets in bathrooms, kitchens, and outdoor areas',
+    'Keep children away from downed power lines — always assume they are live',
+  ],
+  byAge: [
+    { ageRange: '0-1 year', context: 'Infants most commonly suffer electrical burns from chewing on plugged-in cords. Oral electrical burns can cause significant damage to lips, tongue, and surrounding tissue with risk of delayed bleeding from the labial artery.' },
+    { ageRange: '1-3 years', context: 'Toddlers often stick objects (keys, forks, hairpins) into electrical outlets. Install tamper-resistant outlet covers. Cord-biting injuries remain common. Any electrical injury needs ER evaluation.' },
+    { ageRange: '3-8 years', context: 'Older children may climb power structures, fly kites near power lines, or use electrical tools unsupervised. Teach electrical safety rules. High-voltage injuries are extremely dangerous.' },
+  ],
+  relatedEmergencySlugs: ['burn-thermal', 'burn-chemical', 'cpr-infant', 'cpr-toddler'],
+  relatedConcernSlugs: ['baby-burned-skin'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Electrical Injuries in Children.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Electrical-Injuries.aspx' },
+    { org: 'ABA', citation: 'American Burn Association. Electrical Burn Injury Fact Sheet.', url: 'https://ameriburn.org/prevention/prevention-resources/' },
+    { org: 'Red Cross', citation: 'American Red Cross. First Aid for Electrical Burns.', url: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/fire/electrical-fire.html' },
+  ],
+};

@@ -1,0 +1,48 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'pneumococcal-disease',
+  name: 'Pneumococcal Disease',
+  description: 'Pneumococcal disease is caused by the bacterium Streptococcus pneumoniae (pneumococcus). It is a leading cause of serious illness in young children worldwide, causing a range of infections from relatively common ear infections and sinusitis to life-threatening invasive diseases including bacterial meningitis, bacteremia (bloodstream infection), and pneumonia. Children under 2 years of age are at the highest risk because their immune systems cannot effectively respond to the polysaccharide capsule that surrounds the bacteria.',
+  symptoms: [
+    'Depend on the type of infection — ranges from mild to life-threatening',
+    'Pneumonia: High fever, cough, rapid or difficult breathing, chest pain, chills',
+    'Meningitis: High fever, stiff neck, headache, confusion, sensitivity to light, bulging fontanelle in infants',
+    'Bacteremia: High fever, often without an obvious source of infection, lethargy',
+    'Ear infection (otitis media): Ear pain, fever, irritability, pulling at ears',
+    'Sinusitis: Nasal congestion, facial pain, fever',
+    'Irritability, poor feeding, and lethargy in infants',
+    'Seizures (particularly with meningitis)',
+  ],
+  complications: [
+    'Hearing loss (occurs in approximately 30% of pneumococcal meningitis survivors)',
+    'Brain damage and neurological disabilities from meningitis',
+    'Death (case fatality rate for pneumococcal meningitis in children is approximately 8%)',
+    'Empyema (pus collection around the lungs)',
+    'Septic shock',
+    'Recurrent ear infections leading to chronic hearing issues',
+    'Hemolytic uremic syndrome (rare)',
+    'Long-term developmental delays in meningitis survivors',
+    'Limb loss from severe sepsis (rare but devastating)',
+  ],
+  howItSpreads: 'Pneumococcus spreads through respiratory droplets from coughing, sneezing, or close contact with carriers. Many healthy people (20-40% of children) carry pneumococcus in their nose and throat without becoming ill but can still spread it to others. Young children in daycare settings are particularly efficient at spreading the bacteria. Transmission occurs year-round but peaks during late winter and early spring. Crowded living conditions, recent viral respiratory infections, and exposure to cigarette smoke increase transmission risk.',
+  whoIsAtRisk: [
+    'Children under 2 years of age (highest risk for invasive disease)',
+    'Children aged 2-5 years (still at elevated risk)',
+    'Children with sickle cell disease or functional asplenia',
+    'Children with HIV or other immunodeficiencies',
+    'Children with cochlear implants',
+    'Children with chronic heart, lung, liver, or kidney disease',
+    'Children with cerebrospinal fluid leaks',
+    'Children in group childcare settings',
+    'Children exposed to cigarette smoke',
+    'Native American and Alaska Native children (2-3x higher incidence)',
+  ],
+  vaccineSlug: 'pcv15',
+  historicalContext: 'Before the introduction of pneumococcal conjugate vaccine (PCV7) in 2000, Streptococcus pneumoniae caused approximately 63,000 cases of invasive disease in the US annually, including 3,300 meningitis cases and over 6,100 deaths across all ages. Among children under 5, there were approximately 17,000 cases of invasive disease annually. Since PCV introduction, invasive pneumococcal disease in children under 5 has declined by approximately 90%. The vaccine has also reduced disease in unvaccinated adults through herd immunity. Current PCV15 and PCV20 vaccines provide broader protection than earlier formulations.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Pneumococcal Disease: For Healthcare Providers.', url: 'https://www.cdc.gov/pneumococcal/hcp/index.html' },
+    { org: 'AAP', citation: 'AAP. Pneumococcal Infections. Red Book: Report of the Committee on Infectious Diseases.', url: 'https://publications.aap.org/redbook' },
+    { org: 'WHO', citation: 'WHO. Pneumococcal Vaccines: WHO Position Paper. 2019.', url: 'https://www.who.int/publications/i/item/who-wer9408' },
+  ],
+};

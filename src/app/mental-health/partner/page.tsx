@@ -2,6 +2,26 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { mentalHealthTopics } from "@/data/mental-health/topics";
 import TopicCard from "@/components/mental-health/TopicCard";
+import { getContentPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import BottomLine from "@/components/shared/BottomLine";
+import LastReviewed from "@/components/shared/LastReviewed";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+
+const contentSchema = getContentPageSchema({
+  name: "For Partners - Mental Health Resources",
+  description:
+    "Mental health resources for non-birthing parents and partners. Paternal depression, partner support, and relationship strain during the postpartum period.",
+  path: "/mental-health/partner",
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Mental Health", url: "/mental-health" },
+  { name: "Partner Support" },
+]);
 
 export const metadata: Metadata = {
   title: "For Partners - Mental Health Resources",
@@ -24,6 +44,14 @@ const partnerTopics = mentalHealthTopics.filter((t) =>
 export default function PartnerPage() {
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8 flex flex-col gap-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex items-center gap-3">
         <Link
           href="/mental-health"
@@ -37,8 +65,22 @@ export default function PartnerPage() {
         <div>
           <h1 className="text-xl font-bold text-foreground">For Partners</h1>
           <p className="text-sm text-muted">Resources for non-birthing parents and partners</p>
+          <div className="mt-2">
+            <LastReviewed date="2026-07-01" />
+          </div>
         </div>
       </div>
+
+      <MedicalReviewAttribution sources={['APA', 'PSI']} />
+
+      <KeyTakeaways
+        takeaways={[
+          "Paternal postpartum depression affects up to 10 percent of new fathers and is even higher when the birthing parent is also depressed.",
+          "Non-birthing parents can experience depression, anxiety, irritability, and withdrawal -- these are real conditions that deserve treatment.",
+          "Supporting your partner's mental health while ignoring your own is not sustainable. Both parents need to be well to care for their baby.",
+          "The PSI Warmline (1-800-944-4773) is for all parents, not just birthing parents.",
+        ]}
+      />
 
       <div className="card p-5">
         <p className="text-sm text-foreground leading-relaxed">
@@ -83,6 +125,15 @@ export default function PartnerPage() {
         </ul>
       </div>
 
+      <FAQSection
+        items={[
+          { question: "Can fathers and non-birthing partners get postpartum depression?", answer: "Yes. Research published by the American Psychological Association shows that up to 10 percent of new fathers experience paternal postpartum depression, and the rate is even higher when their partner is also affected. Symptoms may include irritability, anger, withdrawal, changes in sleep or appetite, and loss of interest in activities." },
+          { question: "How can I support my partner who has postpartum depression?", answer: "Listen without judgment, validate their feelings, encourage them to seek professional help, and take on more household and baby care tasks when possible. Avoid saying things like 'just be happy' or 'other parents manage fine.' Accompany them to appointments if they want you there, and learn about postpartum depression so you can recognize warning signs." },
+          { question: "What should I do if I think I am depressed as a new parent?", answer: "Talk to your primary care doctor or a mental health professional. You can also call the PSI Warmline at 1-800-944-4773 -- it is for all parents, not just birthing parents. Treatment options include therapy, medication, peer support groups, and lifestyle changes. Getting help is not a sign of weakness; it is an investment in your family." },
+          { question: "How does one partner's depression affect the other?", answer: "Parental depression can be contagious within a relationship. When one partner is depressed, the other is at significantly higher risk. This makes it important for both parents to monitor their mental health and seek help early. A strong partnership where both parents are supported leads to better outcomes for the whole family." },
+        ]}
+      />
+
       <div className="card-alt p-4 text-sm">
         <p className="font-bold text-foreground mb-1">PSI Warmline</p>
         <p className="text-muted">
@@ -92,6 +143,15 @@ export default function PartnerPage() {
           </a>{" "}
           (call or text)
         </p>
+      </div>
+
+      <BottomLine
+        summary="Your mental health matters just as much as your partner's. Paternal and partner postpartum depression is real, common, and treatable. You do not need to have given birth to struggle, and you do not need to struggle alone. Checking in on yourself is not selfish -- it is essential for your family."
+        supportiveMessage="If you are here reading this, you already care deeply. That matters more than you know. Reach out for help when you need it -- for your sake and your family's."
+      />
+
+      <div className="mt-6">
+        <EditorialTrustBanner variant="compact" />
       </div>
     </div>
   );

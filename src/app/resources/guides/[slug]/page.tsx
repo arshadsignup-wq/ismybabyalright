@@ -3,8 +3,16 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import SourceBadge from "@/components/shared/SourceBadge";
 import PrintButton from "@/components/shared/PrintButton";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+import LastReviewed from "@/components/shared/LastReviewed";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import AuthoritativeQuote from "@/components/shared/AuthoritativeQuote";
+import BottomLine from "@/components/shared/BottomLine";
+import { getQuotesForTopic } from "@/data/authoritative-quotes";
 import { allGuides, getGuideBySlug } from "@/data/guides";
-import { getBreadcrumbSchema } from "@/lib/seo";
+import { getBreadcrumbSchema, getContentPageSchema, getFAQPageSchema } from "@/lib/seo";
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
@@ -53,11 +61,38 @@ export default async function GuideSlugPage({ params }: GuidePageProps) {
     { name: guide.title },
   ]);
 
+  const contentPageSchema = getContentPageSchema({
+    name: guide.title,
+    description: guide.subtitle,
+    path: `/resources/guides/${slug}`,
+  });
+
+  const faqItems = [
+    { question: `What is ${guide.title.toLowerCase()}?`, answer: guide.whatHappened },
+    { question: `What should I do about ${guide.title.toLowerCase()}?`, answer: guide.actionPlan.slice(0, 3).join('. ') + '.' },
+    { question: `When should I worry about ${guide.title.toLowerCase()}?`, answer: guide.whenToWorry.slice(0, 3).join('. ') + '.' },
+  ];
+
+  const faqSchema = getFAQPageSchema(faqItems);
+
+  const topicQuotes = getQuotesForTopic(slug);
+
+  const topic = guide.title.toLowerCase();
+  const bottomLineSummary = `${guide.whatHappened.split('.')[0]}.${guide.whenToWorry.length > 0 ? ` Talk to your pediatrician if ${guide.whenToWorry[0].toLowerCase().replace(/\.$/, '')}.` : ''}`;
+
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Breadcrumbs
         items={[
@@ -72,7 +107,25 @@ export default async function GuideSlugPage({ params }: GuidePageProps) {
           <h1>{guide.title}</h1>
           <PrintButton />
         </div>
-        <p className="text-lg text-muted mb-8">{guide.subtitle}</p>
+        <p className="text-lg text-muted mb-4">{guide.subtitle}</p>
+
+        <div className="mb-8">
+          <MedicalReviewAttribution
+            sources={guide.sources.map(s => s.org)}
+          />
+          <LastReviewed date="2026-07-01" />
+        </div>
+
+        <KeyTakeaways takeaways={guide.keyFacts} />
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         {/* What Happened */}
         <section className="mb-8" aria-labelledby="what-happened-heading">
@@ -174,6 +227,11 @@ export default async function GuideSlugPage({ params }: GuidePageProps) {
           </ol>
         </section>
 
+        {/* FAQ */}
+        <div className="mb-8">
+          <FAQSection items={faqItems} />
+        </div>
+
         {/* Sources */}
         {guide.sources.length > 0 && (
           <section className="mt-10" aria-labelledby="guide-sources-heading">
@@ -195,7 +253,13 @@ export default async function GuideSlugPage({ params }: GuidePageProps) {
             </div>
           </section>
         )}
+
+        <BottomLine summary={bottomLineSummary} />
+
+        <div className="mt-8">
+          <EditorialTrustBanner variant="compact" />
+        </div>
       </div>
-    </div>
+    </article>
   );
 }

@@ -1,0 +1,53 @@
+# Is My Baby Alright?
+
+> Evidence-based baby health information for parents. Over 7,000 pages covering concerns, symptoms, milestones, tools, and triage guides. All content is reviewed against published clinical guidelines from the AAP, CDC, WHO, and ACOG.
+
+## Key Resources
+
+- [Tool Hub](/tools): 27 interactive calculators for baby health — dosage, sleep schedules, feeding amounts, growth tracking, and more
+- [Symptom Checker / Triage](/triage): Evidence-based decision trees for 11 common baby symptoms — fever, rash, vomiting, breathing, and more
+- [Concern Guides](/concerns): Over 2,500 searchable guides covering baby health concerns with age-specific information
+- [Milestone Tracker](/milestones): Developmental milestones from birth to 36 months based on CDC guidelines
+- [Vaccine Schedule](/vaccines): Complete infant and toddler immunization schedule
+- [Food & Nutrition Guide](/food): Baby-safe foods, allergen introduction, and meal planning
+- [Feeding Guide](/feeding): Breastfeeding, formula, and weaning guidance
+- [Sleep Guide](/sleep): Safe sleep practices, wake windows, and sleep schedules
+- [Conditions Library](/conditions): Common infant conditions with symptoms, causes, and treatment
+- [Symptoms Guide](/symptoms): Symptom lookup with when-to-call-the-doctor guidance
+- [Development by Month](/development): Month-by-month developmental guides from birth to 24 months
+- [Safety Hub](/safety): Baby-proofing, car seat safety, product safety recalls
+- [Pregnancy](/pregnancy): Week-by-week pregnancy tracking and guidance
+- [Newborn Guide](/newborn): First days and weeks with a newborn
+- [Postpartum](/postpartum): Recovery, mental health, and adjustment guidance
+- [Toddler Guide](/toddler): Development, behavior, and health for ages 1-3
+- [Glossary](/glossary): Medical terms explained in plain language
+
+## Popular Tools
+
+- [Medicine Dosage Calculator](/tools/medicine-dosage): Acetaminophen and ibuprofen dosing by weight
+- [Sleep Schedule Calculator](/tools/sleep-schedule): Wake windows, nap counts, and bedtime by age
+- [Feeding Amount Calculator](/tools/feeding-amount): How much formula or breast milk by age
+- [Growth Tracker](/tools/growth): WHO growth percentile charts
+- [Due Date Calculator](/tools/due-date): Estimated due date by last period or conception
+- [Breast Milk Storage Guide](/tools/breast-milk-storage): CDC-based storage guidelines
+- [Screen Time Guidelines](/tools/screen-time): AAP recommendations by age
+- [Diaper Size Guide](/tools/diaper-size): Size chart by weight with fit tips
+- [Car Seat Guide](/tools/car-seat): Stage recommendations by age, weight, and height
+- [Contraction Timer](/tools/contraction-timer): Track contractions for labor
+
+## Comparison Guides
+
+- [Breastfeeding vs Formula](/feeding/breastfeeding-vs-formula)
+- [Tylenol vs Motrin for Babies](/tools/tylenol-vs-motrin)
+- [Crib vs Bassinet](/sleep/crib-vs-bassinet)
+- [Purees vs Baby-Led Weaning](/feeding/purees-vs-baby-led-weaning)
+- [Rear-Facing vs Forward-Facing Car Seats](/safety/rear-facing-vs-forward-facing)
+- [Eczema vs Baby Acne](/concerns/eczema-vs-baby-acne)
+- [Cow's Milk vs Formula After 12 Months](/food/cow-milk-vs-formula)
+
+## Trust & Editorial
+
+- [Editorial Policy](/editorial-policy)
+- [Medical Review Process](/medical-review)
+- [Sources & References](/sources)
+- [About Us](/about)

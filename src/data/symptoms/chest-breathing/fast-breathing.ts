@@ -1,0 +1,71 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'fast-breathing',
+  title: 'Fast Breathing (Tachypnea) in Babies',
+  bodySystem: 'chest-breathing',
+  description: 'Fast breathing (tachypnea) in babies is defined by age: more than 60 breaths per minute in newborns (0-2 months), more than 50 in infants 2-12 months, and more than 40 in toddlers 1-3 years. Babies naturally breathe faster than adults, and brief episodes of rapid breathing are normal. However, sustained fast breathing can indicate respiratory distress and requires assessment.',
+  possibleCauses: [
+    { cause: 'Normal periodic breathing in newborns (brief fast episodes)', likelihood: 'common' },
+    { cause: 'Viral upper respiratory infection (cold, RSV)', likelihood: 'common' },
+    { cause: 'Fever (breathing rate increases with temperature)', likelihood: 'common' },
+    { cause: 'Bronchiolitis', likelihood: 'common' },
+    { cause: 'Pneumonia', likelihood: 'uncommon' },
+    { cause: 'Asthma or reactive airway disease', likelihood: 'uncommon' },
+    { cause: 'Dehydration or metabolic acidosis', likelihood: 'uncommon' },
+    { cause: 'Congenital heart disease', likelihood: 'rare' },
+    { cause: 'Foreign body aspiration', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Normal respiratory rate is 30-60 breaths per minute. Periodic breathing (pauses of up to 10 seconds followed by faster breaths) is normal in newborns, especially during sleep.', whenToWorry: 'Sustained respiratory rate above 60, breathing pauses longer than 20 seconds (apnea), grunting with each breath, nasal flaring, or visible rib retractions.' },
+    { ageRange: '2-12 months', normalVariation: 'Normal respiratory rate is 25-50 breaths per minute. Rate increases with crying, activity, or fever and should return to normal at rest.', whenToWorry: 'Resting respiratory rate consistently above 50-60, chest retractions, nasal flaring, head bobbing, or blue/gray color around lips.' },
+    { ageRange: '1-3 years', normalVariation: 'Normal respiratory rate is 20-40 breaths per minute. Temporarily faster with exertion, crying, or fever.', whenToWorry: 'Resting rate consistently above 40, belly breathing (abdomen moves significantly), inability to speak in full sentences (for talking toddlers), or refusal to lie flat.' },
+    { ageRange: 'Any age', normalVariation: 'Respiratory rate is best assessed when baby is calm and preferably sleeping. Count for a full 60 seconds.', whenToWorry: 'Fast breathing combined with: not feeding well, listlessness, blue or gray color, grunting, or progressively worsening over hours.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Blue or gray color around lips, tongue, or fingernails',
+      'Severe chest retractions (skin pulling in deeply between or under ribs)',
+      'Grunting with every breath',
+      'Baby is limp, unresponsive, or struggling to stay awake',
+      'Breathing pauses longer than 20 seconds',
+      'Fast breathing with drooling and inability to swallow (possible airway obstruction)',
+    ],
+    urgent: [
+      'Sustained respiratory rate more than 60/min in an infant at rest',
+      'Nasal flaring with each breath',
+      'Fast breathing with refusal to feed',
+      'Head bobbing with each breath',
+      'Fast breathing with fever in a baby under 3 months',
+    ],
+    sameDay: [
+      'Mild increase in respiratory rate with cold symptoms but baby still feeding well',
+      'Fast breathing during fever that slows when fever is treated',
+      'Slightly increased work of breathing with upper respiratory infection',
+    ],
+    monitor: [
+      'Brief episodes of periodic breathing in a healthy newborn',
+      'Temporarily fast breathing during or after crying',
+      'Mildly elevated rate during a cold with no other concerning signs',
+    ],
+  },
+  homeRemedies: [
+    'Count respiratory rate for a full 60 seconds when baby is calm or sleeping',
+    'Use a cool-mist humidifier to ease congestion contributing to fast breathing',
+    'Suction nasal passages gently with a bulb syringe or NoseFrida if congested',
+    'Keep baby upright or slightly elevated to ease breathing',
+    'Offer frequent small feeds to maintain hydration without tiring baby',
+    'Remove any tight clothing around chest and belly',
+    'Use saline drops before feeding if nasal congestion is present',
+    'Do NOT give cough or cold medicine to babies under age 2',
+  ],
+  triageSlug: 'fast-breathing',
+  relatedSymptomSlugs: ['wheezing', 'chest-retractions', 'barking-cough', 'fever'],
+  relatedIllnessSlugs: ['rsv', 'bronchiolitis', 'pneumonia', 'croup'],
+  relatedConcernSlugs: ['baby-breathing-fast', 'baby-breathing-hard', 'newborn-breathing-patterns'],
+  sources: [
+    { org: 'WHO', citation: 'World Health Organization. Pocket Book of Hospital Care for Children. Guidelines for Management of Common Childhood Illnesses. 2013.', url: 'https://www.who.int/publications/i/item/978-92-4-154837-3' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Breathing Problems. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/default.aspx' },
+    { org: 'NHS', citation: 'NHS. Breathing problems in children.', url: 'https://www.nhs.uk/conditions/shortness-of-breath-in-children/' },
+  ],
+};

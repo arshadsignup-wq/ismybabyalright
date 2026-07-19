@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'stridor',
+  title: 'Stridor (High-Pitched Breathing) in Babies & Toddlers',
+  bodySystem: 'chest-breathing',
+  description: 'Stridor is a high-pitched, musical breathing sound caused by turbulent airflow through a narrowed upper airway. It is most commonly heard during inspiration (breathing in) and indicates obstruction at or above the larynx (voice box). In infants, the most common cause of chronic stridor is laryngomalacia, while in toddlers acute stridor is most often caused by croup. Stridor is always an abnormal sound and warrants medical evaluation, though its urgency depends on severity, onset, and associated symptoms.',
+  possibleCauses: [
+    { cause: 'Croup (laryngotracheobronchitis) — acute onset in toddlers', likelihood: 'common' },
+    { cause: 'Laryngomalacia — chronic stridor from birth', likelihood: 'common' },
+    { cause: 'Post-extubation swelling (in NICU graduates)', likelihood: 'uncommon' },
+    { cause: 'Subglottic stenosis', likelihood: 'uncommon' },
+    { cause: 'Foreign body aspiration', likelihood: 'uncommon' },
+    { cause: 'Vocal cord paralysis', likelihood: 'uncommon' },
+    { cause: 'Hemangioma of the airway', likelihood: 'rare' },
+    { cause: 'Vascular ring compressing trachea', likelihood: 'rare' },
+    { cause: 'Epiglottitis (rare since Hib vaccine)', likelihood: 'rare' },
+    { cause: 'Anaphylaxis (allergic reaction with airway swelling)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Intermittent mild inspiratory stridor that worsens when baby is on back or feeding and improves when calm is typical of laryngomalacia. Baby should be feeding and gaining weight well.', whenToWorry: 'Stridor at rest with retractions, stridor present from birth that is severe and constant, feeding difficulty with weight loss, or episodes of apnea or cyanosis.' },
+    { ageRange: '2-6 months', normalVariation: 'Laryngomalacia typically worsens before improving (peaks 4-8 months). Stridor that is positional and intermittent without distress is usually benign.', whenToWorry: 'Progressive worsening stridor with failure to thrive, biphasic stridor (both in and out), associated skin hemangiomas with worsening stridor (possible airway hemangioma), or new stridor not present before.' },
+    { ageRange: '6-12 months', normalVariation: 'Laryngomalacia should begin improving. Brief mild stridor during agitation or upper respiratory infections may occur.', whenToWorry: 'Stridor persisting or worsening beyond 12 months. Sudden onset stridor (possible foreign body). Stridor with drooling and fever.' },
+    { ageRange: '1-3 years', normalVariation: 'Episodic stridor with croup (barking cough, worse at night) is common in this age group and usually self-limiting.', whenToWorry: 'Stridor at rest with severe retractions, inability to drink, drooling with high fever and toxic appearance, or stridor following possible choking event.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Stridor at rest with severe retractions, cyanosis, or altered consciousness',
+      'Sudden onset stridor suggesting foreign body aspiration or anaphylaxis',
+      'Stridor with drooling, high fever, and toxic appearance (possible epiglottitis or abscess)',
+      'Stridor with complete inability to swallow',
+      'Biphasic stridor (inspiratory and expiratory) with respiratory distress',
+    ],
+    urgent: [
+      'Croup with stridor at rest (even if child is otherwise alert)',
+      'Stridor worsening progressively over hours despite cool air and comfort',
+      'Stridor with moderate retractions and agitation',
+      'Recurrent croup episodes (more than 2 per year) needing evaluation for underlying cause',
+    ],
+    sameDay: [
+      'Chronic stridor with feeding difficulty or poor weight gain',
+      'New onset mild stridor without clear cause',
+      'Stridor that has changed in character from previous pattern',
+    ],
+    monitor: [
+      'Known laryngomalacia with mild stridor, good feeding, and weight gain',
+      'Mild croup with barking cough but no stridor at rest',
+      'Intermittent stridor only during crying or agitation in known laryngomalacia',
+    ],
+  },
+  homeRemedies: [
+    'For croup: take child outside into cool night air for 15-20 minutes',
+    'Run a hot shower and sit in the steamy bathroom (evidence is mixed but may help)',
+    'Keep the child calm — crying and agitation worsen stridor significantly',
+    'For croup: offer cold fluids if child can swallow safely',
+    'Use a cool-mist humidifier in the bedroom',
+    'Keep child upright or slightly reclined rather than flat',
+    'For known laryngomalacia: position on side or tummy during supervised awake time',
+    'Do NOT put anything in the mouth to examine the throat if epiglottitis is suspected',
+    'Do NOT give cough suppressants — they do not help and may mask worsening',
+    'Seek immediate help if child develops stridor at rest, looks blue, or becomes drowsy',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['noisy-breathing', 'dry-cough', 'grunting', 'blue-lips'],
+  relatedIllnessSlugs: ['croup', 'laryngomalacia', 'epiglottitis', 'foreign-body-aspiration'],
+  relatedConcernSlugs: ['baby-stridor', 'croup-cough-toddler'],
+  sources: [
+    { org: 'AAP', citation: 'Bjornson CL, Johnson DW. Croup in children. Canadian Medical Association Journal. 2013;185(15):1317-1323.', url: 'https://pubmed.ncbi.nlm.nih.gov/23939212/' },
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Croup Treatment. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/Croup-Treatment.aspx' },
+    { org: 'NIH', citation: 'Pfleger A, Eber E. Assessment and causes of stridor. Paediatric Respiratory Reviews. 2016;18:64-72.', url: 'https://pubmed.ncbi.nlm.nih.gov/26187717/' },
+  ],
+};

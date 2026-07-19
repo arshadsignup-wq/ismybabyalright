@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import DueDateCalculator from "@/components/tools/DueDateCalculator";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Due Date Calculator - Estimate Your Baby's Birthday",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Due Date Calculator',
+  description: 'Calculate your estimated due date based on your last period, conception date, IVF transfer, or ultrasound. See your pregnancy timeline and milestones.',
+  path: '/tools/due-date',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Due Date Calculator' },
+]);
+
 export default function DueDatePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function DueDatePage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A due date calculator estimates your baby&apos;s expected arrival date based on your last menstrual period (LMP) or conception date, using the standard 280-day (40-week) pregnancy calculation.</p>
         <DueDateCalculator />
       </div>
     </div>

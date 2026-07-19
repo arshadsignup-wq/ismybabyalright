@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { growthSpurts, generalTips } from "@/data/growth-spurts/data";
 
 export const metadata: Metadata = {
@@ -17,51 +24,41 @@ export const metadata: Metadata = {
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "When do babies have growth spurts?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Babies typically have growth spurts at 1-2 weeks, 3 weeks, 6 weeks, 3 months, 4 months, 6 months, and 9 months of age. These are averages  -  your baby may experience them a week or two earlier or later.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long do baby growth spurts last?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most growth spurts last between 2 and 7 days. Earlier spurts (1-6 weeks) tend to be shorter (1-3 days), while later spurts (3-9 months) may last 3-7 days.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the signs of a growth spurt in babies?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Common signs include increased feeding (cluster feeding), fussiness and irritability, disrupted sleep patterns, clinginess, and seeming hungrier than usual even after a full feed.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should I feed on demand during a growth spurt?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Feeding on demand during a growth spurt is recommended by the AAP. For breastfeeding mothers, increased feeding signals the body to produce more milk  -  supply typically adjusts within 24-48 hours.",
-      },
-    },
-  ],
-};
+const growthSpurtFaqItems = [
+  { question: "When do babies have growth spurts?", answer: "Babies typically have growth spurts at 1-2 weeks, 3 weeks, 6 weeks, 3 months, 4 months, 6 months, and 9 months of age. These are averages -- your baby may experience them a week or two earlier or later." },
+  { question: "How long do baby growth spurts last?", answer: "Most growth spurts last between 2 and 7 days. Earlier spurts (1-6 weeks) tend to be shorter (1-3 days), while later spurts (3-9 months) may last 3-7 days." },
+  { question: "What are the signs of a growth spurt in babies?", answer: "Common signs include increased feeding (cluster feeding), fussiness and irritability, disrupted sleep patterns, clinginess, and seeming hungrier than usual even after a full feed." },
+  { question: "Should I feed on demand during a growth spurt?", answer: "Yes. Feeding on demand during a growth spurt is recommended by the AAP. For breastfeeding mothers, increased feeding signals the body to produce more milk -- supply typically adjusts within 24-48 hours." },
+  { question: "Can a growth spurt affect my baby's sleep?", answer: "Yes. Babies often wake more frequently during growth spurts due to increased hunger. They may also nap longer as growth hormone is primarily released during sleep. This disruption is temporary and typically resolves within a few days." },
+];
+
+const contentSchema = getContentPageSchema({
+  name: 'Baby Growth Spurts: When They Happen & What to Expect',
+  description:
+    'Evidence-based guide to baby growth spurts from 1 week to 9 months. Learn the signs, how long they last, and what to do. Based on AAP guidelines.',
+  path: '/growth-spurts',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Growth Spurts' },
+]);
 
 export default function GrowthSpurtsPage() {
   return (
-    <>
+    <article>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQPageSchema(growthSpurtFaqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "Growth Spurts" }]} />
@@ -83,7 +80,20 @@ export default function GrowthSpurtsPage() {
               Evidence-based content
             </span>
           </div>
+          <LastReviewed date="2026-07-01" />
+          <div className="mt-3">
+            <MedicalReviewAttribution sources={['AAP', 'WHO']} />
+          </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Growth spurts typically occur at 1-2 weeks, 3 weeks, 6 weeks, 3 months, 4 months, 6 months, and 9 months of age.",
+            "Most growth spurts last 2 to 7 days and are marked by increased feeding, fussiness, and disrupted sleep.",
+            "Feed on demand during a growth spurt -- breastfeeding mothers' supply will adjust within 24-48 hours.",
+            "Growth spurts are completely normal and temporary; extra rest, patience, and responsiveness are the best strategies.",
+          ]}
+        />
 
         {/* Timeline */}
         <section aria-label="Growth spurts timeline" className="relative">
@@ -285,6 +295,18 @@ export default function GrowthSpurtsPage() {
           </div>
         </section>
 
+        <div className="mt-8">
+          <FAQSection items={growthSpurtFaqItems} />
+        </div>
+
+        <BottomLine
+          summary="Growth spurts are a normal part of your baby's development and typically last only a few days. Increased feeding, fussiness, and disrupted sleep are all expected signs. Feed on demand, offer extra comfort, and know that things will settle back to normal soon."
+        />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         {/* Sources / Disclaimer */}
         <footer className="mt-10 pt-6 border-t border-border">
           <p className="text-xs text-muted leading-relaxed">
@@ -299,6 +321,6 @@ export default function GrowthSpurtsPage() {
           </p>
         </footer>
       </div>
-    </>
+    </article>
   );
 }

@@ -4,11 +4,53 @@ import Link from "next/link";
 import { useEvents } from "@/lib/useStorage";
 import FairnessView from "@/components/fairness/FairnessView";
 
+const SITE_URL = "https://www.ismybabyalright.com";
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Fairness View",
+  description:
+    "See how caregiving tasks are split between caregivers. Track who does what and keep things balanced.",
+  url: `${SITE_URL}/fairness`,
+  publisher: {
+    "@type": "Organization",
+    name: "Is My Baby Alright?",
+    url: SITE_URL,
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      url: SITE_URL + "/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Fairness",
+    },
+  ],
+};
+
 export default function FairnessPage() {
   const { events } = useEvents();
 
   return (
     <div className="mx-auto max-w-lg px-4 py-6 sm:py-8 flex flex-col gap-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex items-center gap-3">
         <Link
           href="/mental-health"

@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'staring-spells',
+  title: 'Staring Spells in Babies & Toddlers',
+  bodySystem: 'neurological',
+  description: 'Staring spells — episodes where a child appears to "zone out," becomes unresponsive, and stares blankly — can be normal daydreaming or may represent absence seizures or other seizure types. The key distinction is whether the child can be interrupted: normal staring/daydreaming stops immediately with touch or calling their name, while true absence seizures cannot be interrupted and are followed by the child resuming activity as if nothing happened.',
+  possibleCauses: [
+    { cause: 'Normal daydreaming or visual fixation', likelihood: 'common' },
+    { cause: 'Fatigue or drowsiness', likelihood: 'common' },
+    { cause: 'Absence seizures (petit mal)', likelihood: 'uncommon' },
+    { cause: 'Complex partial seizures (focal seizures with impaired awareness)', likelihood: 'uncommon' },
+    { cause: 'Infantile spasms (subtle type)', likelihood: 'rare' },
+    { cause: 'Breath-holding spell (pallid type — staring before loss of tone)', likelihood: 'uncommon' },
+    { cause: 'Gastroesophageal reflux (Sandifer syndrome — staring/posturing)', likelihood: 'uncommon' },
+    { cause: 'Tics or stereotypies', likelihood: 'uncommon' },
+    { cause: 'Autism spectrum disorder (self-absorbed staring)', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Newborns have unfocused gazes and can appear to stare blankly — this is normal as visual processing develops. Brief fixation on faces, lights, or patterns is normal. Drowsy states with open eyes but vacant expression are normal.', whenToWorry: 'Staring with eye deviation (eyes rolling or turning to one side). Staring with rhythmic movements or color change. Staring that cannot be interrupted AND is accompanied by other subtle seizure signs (lip smacking, cycling). Episodes increasing in frequency.' },
+    { ageRange: '2-6 months', normalVariation: 'Babies may stare intently at new objects, faces, or patterns — this is normal visual exploration. Brief "tuning out" during overstimulation is common.', whenToWorry: 'Clusters of brief staring episodes with head drops (infantile spasms). Staring with eye fluttering. Staring associated with developmental regression (losing smiles, tracking). Staring with body stiffening or jerking. Episodes that always look identical (stereotyped).' },
+    { ageRange: '6-12 months', normalVariation: 'Babies may "zone out" briefly when tired, bored, or processing new information. Momentary staring during self-feeding or play is normal concentration.', whenToWorry: 'Repetitive brief staring episodes multiple times per day. Staring that cannot be interrupted by name, touch, or clapping. Staring followed by confusion or behavioral change. Staring with subtle mouth movements, hand automatisms, or eye blinking.' },
+    { ageRange: '1-3 years', normalVariation: 'Toddlers daydream and have short attention spans. Brief staring when watching TV or during quiet play is normal. "Tuning out" adults is typical toddler behavior (volitional ignoring).', whenToWorry: 'Episodes where child truly cannot be interrupted (touch them — no response). Staring episodes lasting 10-30 seconds with abrupt start and stop. Multiple episodes per day (absence seizures can occur 10-100+ times daily). Staring with eyelid fluttering, lip smacking, or hand movements. Associated learning difficulties or school problems.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Staring spell with generalized convulsion or prolonged unresponsiveness (>5 minutes)',
+      'Staring with loss of body tone and significant injury from fall',
+      'Staring episode with breathing difficulties or blue color',
+      'Prolonged altered consciousness that does not resolve',
+    ],
+    urgent: [
+      'Frequent brief staring episodes that cannot be interrupted (multiple per day)',
+      'Staring with developmental regression',
+      'Staring clusters in infant (infantile spasms concern)',
+      'Staring spells following head injury',
+    ],
+    sameDay: [
+      'Suspected staring seizures (unresponsive episodes with abrupt start/stop)',
+      'Recurrent staring episodes concerning to parents',
+      'Staring episodes with associated learning or behavioral concerns',
+      'Episodes you have captured on video for doctor review',
+    ],
+    monitor: [
+      'Brief daydreaming that child snaps out of when touched or called',
+      'Staring during fatigue that resolves with rest/sleep',
+      'Visual fixation on interesting objects in young infant (normal)',
+      'Occasional "tuning out" without other neurological concerns',
+    ],
+  },
+  homeRemedies: [
+    'Test if it is a seizure: gently touch the child or call their name during an episode — if they respond immediately, it is likely NOT a seizure',
+    'Video the episodes — this is the single most helpful thing for diagnosis',
+    'Note timing, duration, frequency, and what the child was doing before and after',
+    'Record any associated movements: eye blinking, lip smacking, hand fumbling',
+    'Note if child seems confused afterward or immediately resumes normal activity',
+    'Try to provoke the staring: hyperventilation (blowing on a pinwheel for 3 minutes) can trigger absence seizures — do this ONLY if doctor requests',
+    'Keep a diary of suspected episodes with times and duration',
+    'Do not shake or forcefully try to snap the child out of a spell',
+    'Normal staring: interruptible, variable duration, no stereotyped movements. Seizure staring: not interruptible, same duration each time, may have automatisms.',
+  ],
+  relatedSymptomSlugs: ['seizure', 'febrile-seizure', 'tremors', 'regression'],
+  relatedIllnessSlugs: ['absence-epilepsy', 'infantile-spasms', 'focal-epilepsy'],
+  relatedConcernSlugs: ['baby-staring-spells', 'toddler-zoning-out', 'baby-absence-seizure'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Seizures and Epilepsy in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/seizures/Pages/default.aspx' },
+    { org: 'NIH', citation: 'National Institute of Neurological Disorders and Stroke. Absence Seizures.', url: 'https://www.ninds.nih.gov/health-information/disorders/epilepsy-and-seizures' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Absence seizure — Symptoms and causes.', url: 'https://www.mayoclinic.org/diseases-conditions/absence-seizure/symptoms-causes/syc-20350175' },
+  ],
+};

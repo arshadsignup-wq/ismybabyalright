@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { allCheckpoints } from "@/data/milestones";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 
 export const metadata: Metadata = {
   title: "Baby Developmental Milestones by Age (1-36 Months)",
@@ -56,13 +57,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.ismybabyalright.com",
+      url: "https://www.ismybabyalright.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Milestones",
-      item: "https://www.ismybabyalright.com/milestones",
+      url: "https://www.ismybabyalright.com/milestones",
     },
   ],
 };
@@ -82,9 +83,12 @@ export default function MilestonesPage() {
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
         <h1>Milestones by Age</h1>
+        <p className="text-base text-muted leading-relaxed mb-6">Developmental milestones are skills and behaviors that most children reach by a certain age, as tracked by the CDC and AAP — including physical, cognitive, language, and social-emotional markers from birth to 36 months.</p>
+        <p className="text-muted text-lg mb-4 max-w-2xl">
+          Track your baby&apos;s developmental milestones from 1 to 36 months, covering gross motor, fine motor, language, social-emotional, and cognitive skills. All milestone ranges are based on CDC, WHO, and AAP guidelines.
+        </p>
         <p className="text-muted text-lg mb-8 max-w-2xl">
-          Select your child&apos;s age to see what to expect for gross motor,
-          fine motor, language, social-emotional, and cognitive development.
+          Select your child&apos;s age below to see what to expect at each stage and when to talk to your pediatrician.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -105,6 +109,10 @@ export default function MilestonesPage() {
               </span>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
         </div>
       </div>
     </div>

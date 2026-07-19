@@ -1,0 +1,45 @@
+import type { VaccineDisease } from '../../detail-types';
+
+export const disease: VaccineDisease = {
+  slug: 'whooping-cough',
+  name: 'Whooping Cough (Pertussis)',
+  description: 'Pertussis, commonly known as whooping cough, is a highly contagious respiratory infection caused by the bacterium Bordetella pertussis. It is characterized by severe, uncontrollable coughing fits that can last for weeks or months, often followed by a distinctive "whooping" sound as the person gasps for air. In infants, whooping cough is particularly dangerous because they may not develop the classic "whoop" and instead may stop breathing (apnea). Pertussis is sometimes called the "100-day cough" because of its prolonged course.',
+  symptoms: [
+    'Early stage (1-2 weeks): Mild cold-like symptoms — runny nose, mild cough, low-grade fever',
+    'Paroxysmal stage (1-6 weeks or longer): Severe, rapid coughing fits followed by "whooping" gasp for air',
+    'Vomiting after coughing episodes',
+    'Exhaustion after coughing fits',
+    'Turning blue or red during coughing episodes (especially in infants)',
+    'Apnea (pauses in breathing) — particularly dangerous in infants under 6 months',
+    'Coughing fits that worsen at night',
+    'Convalescent stage: Gradual recovery over 2-3 weeks, but cough may persist for months',
+  ],
+  complications: [
+    'Pneumonia (the most common cause of pertussis-related death)',
+    'Seizures (caused by decreased oxygen during coughing fits or by toxin effects)',
+    'Encephalopathy (brain damage from prolonged oxygen deprivation)',
+    'Apnea and cyanosis (particularly dangerous in young infants)',
+    'Rib fractures from violent coughing',
+    'Weight loss and dehydration from inability to keep food down',
+    'Death (primarily in infants under 3 months; about 1 in 100 infants who get pertussis dies)',
+    'Secondary bacterial infections',
+    'Pulmonary hypertension in severe infant cases',
+  ],
+  howItSpreads: 'Pertussis spreads through respiratory droplets produced when an infected person coughs, sneezes, or talks in close proximity to others. The bacteria attach to the cilia (tiny hair-like structures) lining the upper respiratory tract and release toxins that damage the cilia and cause inflammation. An infected person is most contagious during the early cold-like stage and the first 2 weeks of coughing. Without treatment, a person may be contagious for up to 3 weeks after cough onset.',
+  whoIsAtRisk: [
+    'Infants under 12 months (especially under 6 months who have not completed the primary vaccine series)',
+    'Premature infants',
+    'Unvaccinated or under-vaccinated children',
+    'Adolescents and adults whose vaccine protection has waned (immunity decreases 5-10 years after vaccination)',
+    'Pregnant women (can transmit to newborn)',
+    'Close household contacts of infected individuals',
+    'People in crowded living conditions',
+  ],
+  vaccineSlug: 'dtap',
+  historicalContext: 'Before the pertussis vaccine became widely used in the 1940s, pertussis was one of the most common childhood diseases in the US, causing approximately 200,000 cases and 9,000 deaths per year. After widespread vaccination, cases dropped by more than 80%. However, pertussis has been resurging since the 1980s, partly due to waning immunity from the acellular vaccine and partly due to improved detection. In 2012, the US experienced approximately 48,000 cases — the highest number since 1955. This resurgence highlights the importance of the full vaccine series plus adolescent and adult boosters.',
+  sources: [
+    { org: 'CDC', citation: 'CDC. Pertussis (Whooping Cough): Clinical Information.', url: 'https://www.cdc.gov/pertussis/clinical/index.html' },
+    { org: 'WHO', citation: 'WHO. Pertussis Fact Sheet.', url: 'https://www.who.int/health-topics/pertussis' },
+    { org: 'AAP', citation: 'AAP. Pertussis (Whooping Cough). Red Book: Report of the Committee on Infectious Diseases.', url: 'https://publications.aap.org/redbook' },
+  ],
+};

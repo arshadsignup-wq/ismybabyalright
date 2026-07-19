@@ -1,0 +1,175 @@
+# Is My Baby Alright?
+
+> Evidence-based baby health information for parents. Over 7,000 pages covering concerns, symptoms, milestones, tools, and triage guides. All content is reviewed against published clinical guidelines from the AAP, CDC, WHO, and ACOG.
+
+## Key Resources
+
+- [Tool Hub](/tools): 27 interactive calculators for baby health — dosage, sleep schedules, feeding amounts, growth tracking, and more
+- [Symptom Checker / Triage](/triage): Evidence-based decision trees for 11 common baby symptoms — fever, rash, vomiting, breathing, and more
+- [Concern Guides](/concerns): Over 2,500 searchable guides covering baby health concerns with age-specific information
+- [Milestone Tracker](/milestones): Developmental milestones from birth to 36 months based on CDC guidelines
+- [Vaccine Schedule](/vaccines): Complete infant and toddler immunization schedule
+- [Food & Nutrition Guide](/food): Baby-safe foods, allergen introduction, and meal planning
+- [Feeding Guide](/feeding): Breastfeeding, formula, and weaning guidance
+- [Sleep Guide](/sleep): Safe sleep practices, wake windows, and sleep schedules
+- [Conditions Library](/conditions): Common infant conditions with symptoms, causes, and treatment
+- [Symptoms Guide](/symptoms): Symptom lookup with when-to-call-the-doctor guidance
+- [Development by Month](/development): Month-by-month developmental guides from birth to 24 months
+- [Safety Hub](/safety): Baby-proofing, car seat safety, product safety recalls
+- [Pregnancy](/pregnancy): Week-by-week pregnancy tracking and guidance
+- [Newborn Guide](/newborn): First days and weeks with a newborn
+- [Postpartum](/postpartum): Recovery, mental health, and adjustment guidance
+- [Toddler Guide](/toddler): Development, behavior, and health for ages 1-3
+- [Glossary](/glossary): Medical terms explained in plain language
+
+## Popular Tools
+
+- [Medicine Dosage Calculator](/tools/medicine-dosage): Acetaminophen and ibuprofen dosing by weight
+- [Sleep Schedule Calculator](/tools/sleep-schedule): Wake windows, nap counts, and bedtime by age
+- [Feeding Amount Calculator](/tools/feeding-amount): How much formula or breast milk by age
+- [Growth Tracker](/tools/growth): WHO growth percentile charts
+- [Due Date Calculator](/tools/due-date): Estimated due date by last period or conception
+- [Breast Milk Storage Guide](/tools/breast-milk-storage): CDC-based storage guidelines
+- [Screen Time Guidelines](/tools/screen-time): AAP recommendations by age
+- [Diaper Size Guide](/tools/diaper-size): Size chart by weight with fit tips
+- [Car Seat Guide](/tools/car-seat): Stage recommendations by age, weight, and height
+- [Contraction Timer](/tools/contraction-timer): Track contractions for labor
+
+## Comparison Guides
+
+- [Breastfeeding vs Formula](/feeding/breastfeeding-vs-formula)
+- [Tylenol vs Motrin for Babies](/tools/tylenol-vs-motrin)
+- [Crib vs Bassinet](/sleep/crib-vs-bassinet)
+- [Purees vs Baby-Led Weaning](/feeding/purees-vs-baby-led-weaning)
+- [Rear-Facing vs Forward-Facing Car Seats](/safety/rear-facing-vs-forward-facing)
+- [Eczema vs Baby Acne](/concerns/eczema-vs-baby-acne)
+- [Cow's Milk vs Formula After 12 Months](/food/cow-milk-vs-formula)
+
+## Trust & Editorial
+
+- [Editorial Policy](/editorial-policy)
+- [Medical Review Process](/medical-review)
+- [Sources & References](/sources)
+- [About Us](/about)
+
+---
+
+## Data Tables
+
+### Medicine Dosing
+
+#### Acetaminophen (Tylenol) — Concentration: 160 mg / 5 mL
+
+Every 4-6 hours. Maximum 5 doses per 24 hours. Minimum age: 3 months.
+
+| Weight (lbs) | Dose (mg) | Volume (mL) |
+|---|---|---|
+| 6-11 | 40 | 1.25 |
+| 12-17 | 80 | 2.5 |
+| 18-23 | 120 | 3.75 |
+| 24-35 | 160 | 5 |
+| 36-47 | 240 | 7.5 |
+| 48-59 | 320 | 10 |
+| 60-71 | 400 | 12.5 |
+| 72-95 | 480 | 15 |
+| 96+ | 640 | 20 |
+
+#### Ibuprofen (Motrin/Advil) — Concentration: 100 mg / 5 mL
+
+Every 6-8 hours. Maximum 4 doses per 24 hours. Minimum age: 6 months.
+
+| Weight (lbs) | Dose (mg) | Volume (mL) |
+|---|---|---|
+| 12-17 | 50 | 2.5 |
+| 18-23 | 75 | 3.75 |
+| 24-35 | 100 | 5 |
+| 36-47 | 150 | 7.5 |
+| 48-59 | 200 | 10 |
+| 60-71 | 250 | 12.5 |
+| 72-95 | 300 | 15 |
+| 96+ | 400 | 20 |
+
+### Sleep Schedule by Age
+
+| Age | Total Sleep | Night | Day | Naps | Wake Window | Bedtime |
+|---|---|---|---|---|---|---|
+| 0-1 mo | 14-17h | 8-9h | 6-8h | 4-6 | 45-60 min | variable |
+| 1-2 mo | 14-17h | 8-10h | 5-7h | 4-5 | 60-90 min | 8-10pm |
+| 2-3 mo | 14-16h | 9-10h | 4-5h | 3-4 | 75-105 min | 7:30-9:30pm |
+| 3-4 mo | 14-16h | 10-11h | 3-4h | 3-4 | 90-120 min | 7-8:30pm |
+| 4-6 mo | 12-16h | 10-12h | 2.5-3.5h | 2-3 | 2-3h | 6:30-8pm |
+| 6-9 mo | 12-15h | 10-12h | 2-3h | 2 | 2.5-3.5h | 6-7:30pm |
+| 9-12 mo | 12-15h | 10-12h | 2-3h | 2 | 3-4h | 6-7:30pm |
+| 12-18 mo | 11-14h | 10-12h | 1.5-3h | 1-2 | 3.5-5h | 6:30-7:30pm |
+| 18-24 mo | 11-14h | 10-12h | 1.5-2.5h | 1 | 4-5.5h | 7-8pm |
+| 2-3 yr | 11-14h | 10-12h | 1-2h | 0-1 | 5-6h | 7-8pm |
+
+### Feeding Amounts by Age
+
+| Age | Per Feed (oz) | Feeds/Day | Daily Total (oz) | Breastfeeding | Solids |
+|---|---|---|---|---|---|
+| 0-2 wk | 1-2 | 8-12 | 12-20 | 10-15 min/side | None |
+| 2 wk-1 mo | 2-3 | 8-10 | 16-24 | 15-20 min/side | None |
+| 1-2 mo | 3-4 | 7-9 | 20-28 | 15-20 min/side | None |
+| 2-4 mo | 4-5 | 6-8 | 24-32 | 15-20 min/side | None |
+| 4-6 mo | 4-6 | 5-7 | 24-36 | 15-20 min/side | Starting |
+| 6-9 mo | 6-8 | 4-6 | 24-32 | 15-20 min/side | 2-3x daily |
+| 9-12 mo | 6-8 | 3-5 | 24-30 | 10-15 min/side | 3x daily |
+| 12-23 mo | — | — | 16-24 whole milk | Weaning | 3 meals + snacks |
+
+### Breast Milk Storage Guidelines (CDC)
+
+| Location | Temperature | Fresh Milk | Thawed Milk |
+|---|---|---|---|
+| Countertop | Up to 77°F (25°C) | Up to 4 hours | 1-2 hours |
+| Insulated cooler | With ice packs | Up to 24 hours | Do not store |
+| Refrigerator | 40°F (4°C) | Up to 4 days | Up to 24 hours |
+| Freezer | 0°F (-18°C) | 6-12 months (best within 6) | Never refreeze |
+| Deep freezer | -4°F (-20°C) | 6-12 months | Never refreeze |
+
+### Diaper Sizes
+
+| Size | Weight (lbs) | Age Range | Diapers/Day | Notes |
+|---|---|---|---|---|
+| Preemie | Up to 6 | Premature | — | Hospital use |
+| Newborn | Up to 10 | 0-1 mo | 8-12 | Umbilical cord cutout |
+| Size 1 | 8-14 | 0-4 mo | 8-10 | Most common starting size |
+| Size 2 | 12-18 | 3-8 mo | 8-10 | Most used size overall |
+| Size 3 | 16-28 | 5-17 mo | 6-8 | Longest-used size |
+| Size 4 | 22-37 | 18-36 mo | 6-8 | Toddler standard |
+| Size 5 | 27+ | 3+ yr | 5-7 | Overnight use |
+| Size 6 | 35+ | 4+ yr | 4-6 | Extended use |
+| Size 7 | 41+ | 4+ yr | 4-6 | Largest standard size |
+
+### Car Seat Stages
+
+| Stage | Type | Age Range | Weight Range | Height Limit | Direction |
+|---|---|---|---|---|---|
+| 1 | Rear-facing infant | Birth-2+ yr | 4-35 lbs | 30-35 in | Rear-facing only |
+| 2 | Rear-facing convertible | Birth-4+ yr | 5-50 lbs | 40-49 in | Rear-facing |
+| 3 | Forward-facing | 2-7 yr | 20-65 lbs | 49 in | Forward-facing |
+| 4 | Booster | 4-12 yr | 40-100 lbs | 57 in | Forward-facing |
+| 5 | Seat belt only | 8-12+ yr | 80+ lbs | 4'9"+ | Forward-facing |
+
+### Screen Time Limits (AAP Recommendations)
+
+| Age | Recommendation | Max Daily |
+|---|---|---|
+| Under 18 mo | No screens (except video calls) | 0 min |
+| 18-24 mo | Co-view educational content only | Limited |
+| 2-5 yr | High-quality educational content | 60 min |
+| 5-12 yr | Consistent limits, balance with activity | Varies |
+
+### WHO Growth Percentile Summary
+
+Weight-for-age percentiles (approximate):
+
+- **3rd percentile**: Underweight screening threshold
+- **15th percentile**: Below average
+- **50th percentile**: Average
+- **85th percentile**: Above average
+- **97th percentile**: Overweight screening threshold
+
+---
+
+For the most current data tables and interactive tools, visit https://www.ismybabyalright.com/tools

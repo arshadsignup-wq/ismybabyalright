@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import BabyBudgetPlanner from "@/components/tools/BabyBudgetPlanner";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Baby Budget Planner - Estimate First Year Costs",
@@ -47,9 +48,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Baby Budget Planner',
+  description: 'Plan your baby budget with realistic cost estimates across 8 categories. Compare budget, mid-range, and premium options. Adjust for feeding method and see monthly and first-year totals.',
+  path: '/tools/baby-budget',
+  applicationCategory: 'UtilityApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Budget Planner' },
+]);
+
 export default function BabyBudgetPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -63,6 +79,7 @@ export default function BabyBudgetPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A baby budget calculator estimates the first-year costs of raising an infant, covering categories like diapers, feeding, clothing, childcare, and healthcare to help new parents plan their finances.</p>
         <BabyBudgetPlanner />
       </div>
     </div>

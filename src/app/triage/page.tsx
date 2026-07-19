@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { allTriageTrees } from "@/data/triage";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 
 export const metadata: Metadata = {
   title: "Baby Symptom Checker: Fever, Rash, Vomiting & More",
@@ -55,13 +56,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.ismybabyalright.com",
+      url: "https://www.ismybabyalright.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Symptom Checker",
-      item: "https://www.ismybabyalright.com/triage",
+      url: "https://www.ismybabyalright.com/triage",
     },
   ],
 };
@@ -79,6 +80,7 @@ export default function TriagePage() {
       />
       <div className="text-center mb-8">
         <h1 className="text-foreground">Should I call the doctor?</h1>
+        <p className="text-base text-muted leading-relaxed mb-6">The symptom checker uses evidence-based decision trees to help parents determine whether a baby&apos;s symptom requires emergency care, a doctor&apos;s call, or safe home monitoring.</p>
         <p className="text-muted mt-2 leading-relaxed">
           Answer a few questions about your baby&apos;s symptoms and get clear
           guidance  -  including what to say when you call.
@@ -105,6 +107,10 @@ export default function TriagePage() {
         This tool is not a substitute for medical advice. When in doubt, always
         call your pediatrician or go to the emergency room.
       </p>
+
+      <div className="mt-6">
+        <EditorialTrustBanner variant="compact" />
+      </div>
     </div>
   );
 }

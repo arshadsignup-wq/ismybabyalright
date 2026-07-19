@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import LastReviewed from '@/components/shared/LastReviewed';
+import KeyTakeaways from '@/components/shared/KeyTakeaways';
+import FAQSection from '@/components/shared/FAQSection';
+import EditorialTrustBanner from '@/components/shared/EditorialTrustBanner';
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import AuthoritativeQuote from '@/components/shared/AuthoritativeQuote';
+import { getQuotesForTopic } from '@/data/authoritative-quotes';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { skinConditions } from "@/data/skin/data";
 
 export const metadata: Metadata = {
@@ -17,51 +26,43 @@ export const metadata: Metadata = {
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What are the most common baby skin conditions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The most common baby skin conditions include cradle cap, eczema (atopic dermatitis), baby acne, diaper rash, heat rash, hives, dry or peeling skin, and birthmarks. Most are harmless and resolve on their own or with simple treatment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is it normal for newborns to have peeling skin?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, peeling skin in newborns is completely normal, especially in babies born past their due date. In the womb, baby's skin was protected by vernix caseosa. Once exposed to air, the outer layer naturally dries and peels. It resolves on its own within 2-3 weeks without treatment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "When should I worry about a rash on my baby?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "See your pediatrician if a rash is accompanied by fever, spreads rapidly, has pus or blisters, does not improve with treatment after a few days, or if your baby seems unwell. Seek emergency care if a rash occurs with difficulty breathing, swelling of the lips or tongue, or if your baby is lethargic or inconsolable.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How can I tell the difference between eczema and baby acne?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Baby acne appears as small red or white bumps primarily on the face (cheeks, nose, forehead), is not itchy, and does not cause dry or scaly skin. Eczema causes red, dry, rough, scaly patches that are often itchy and can appear on the cheeks, arms, legs, and body creases. Baby acne typically resolves by 3-4 months; eczema may persist longer.",
-      },
-    },
-  ],
-};
+const skinFaqItems = [
+  { question: "What are the most common baby skin conditions?", answer: "The most common baby skin conditions include cradle cap, eczema (atopic dermatitis), baby acne, diaper rash, heat rash, hives, dry or peeling skin, and birthmarks. Most are harmless and resolve on their own or with simple treatment." },
+  { question: "Is it normal for newborns to have peeling skin?", answer: "Yes, peeling skin in newborns is completely normal, especially in babies born past their due date. In the womb, baby's skin was protected by vernix caseosa. Once exposed to air, the outer layer naturally dries and peels. It resolves on its own within 2-3 weeks." },
+  { question: "When should I worry about a rash on my baby?", answer: "See your pediatrician if a rash is accompanied by fever, spreads rapidly, has pus or blisters, does not improve with treatment after a few days, or if your baby seems unwell. Seek emergency care if a rash occurs with difficulty breathing or swelling of the lips or tongue." },
+  { question: "How can I tell the difference between eczema and baby acne?", answer: "Baby acne appears as small red or white bumps primarily on the face, is not itchy, and does not cause dry or scaly skin. Eczema causes red, dry, rough, scaly patches that are often itchy and can appear on the cheeks, arms, legs, and body creases." },
+  { question: "How often should I bathe my baby?", answer: "Babies do not need daily baths. Every 2-3 days is enough for most infants, with spot-cleaning in between. Overbathing strips natural skin oils and can worsen conditions like eczema. Always moisturize with a thick cream or ointment immediately after bathing." },
+];
+
+const contentSchema = getContentPageSchema({
+  name: 'Baby Skin Conditions Guide: Rashes, Eczema & More',
+  description:
+    'Evidence-based guide to common baby skin conditions including eczema, cradle cap, diaper rash, heat rash, baby acne, hives, birthmarks, and more. Based on AAP guidelines.',
+  path: '/skin-guide',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Skin Guide' },
+]);
 
 export default function SkinGuidePage() {
+  const topicQuotes = getQuotesForTopic('skin');
+
   return (
-    <>
+    <article>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQPageSchema(skinFaqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "Skin Guide" }]} />
@@ -84,7 +85,27 @@ export default function SkinGuidePage() {
               Evidence-based content
             </span>
           </div>
+          <MedicalReviewAttribution sources={['AAP', 'AAD']} />
+          <LastReviewed date="2026-07-01" />
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Most baby skin conditions like cradle cap, baby acne, and heat rash are harmless and resolve on their own without treatment.",
+            "Use fragrance-free products, bathe every 2-3 days, and moisturize with a thick cream after every bath to protect delicate baby skin.",
+            "See your pediatrician if a rash is accompanied by fever, spreads rapidly, has pus or blisters, or if your baby seems unwell.",
+            "Babies under 6 months should be kept out of direct sunlight; older babies need SPF 30+ sunscreen on exposed skin.",
+          ]}
+        />
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         {/* Quick Jump Navigation */}
         <nav aria-label="Skin conditions quick navigation" className="mb-8">
@@ -428,6 +449,16 @@ export default function SkinGuidePage() {
           </div>
         </section>
 
+        <div className="mt-8">
+          <FAQSection items={skinFaqItems} />
+        </div>
+
+        <BottomLine summary="Most baby skin conditions — including baby acne, cradle cap, milia, and mild eczema — are harmless and resolve on their own. Keeping skin moisturized, using gentle products, and avoiding harsh soaps are the best general approaches. See your pediatrician if a rash is accompanied by fever, spreading rapidly, or causing significant discomfort." />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         {/* Sources / Disclaimer */}
         <footer className="mt-10 pt-6 border-t border-border">
           <p className="text-xs text-muted leading-relaxed">
@@ -443,6 +474,6 @@ export default function SkinGuidePage() {
           </p>
         </footer>
       </div>
-    </>
+    </article>
   );
 }

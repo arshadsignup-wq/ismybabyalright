@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'gas-bloating',
+  title: 'Gas & Bloating in Babies',
+  bodySystem: 'abdomen',
+  description: 'Gas and bloating in babies is extremely common and is one of the most frequent reasons parents seek advice. All babies produce gas as part of normal digestion. Young infants are particularly prone to gassiness because their digestive systems are immature and they swallow air during feeding and crying. Gassy babies may pull up their legs, strain, grunt, become fussy, and pass gas frequently. While distressing for parents, gas in babies is almost always harmless and improves as the digestive system matures, typically by 3-4 months of age.',
+  possibleCauses: [
+    { cause: 'Swallowed air during feeding or crying (aerophagia)', likelihood: 'common' },
+    { cause: 'Immature digestive system (normal in young infants)', likelihood: 'common' },
+    { cause: 'Overfeeding or fast-flow bottle nipple', likelihood: 'common' },
+    { cause: 'Normal gut bacterial colonization', likelihood: 'common' },
+    { cause: 'Cow\'s milk protein sensitivity (in formula or through breast milk)', likelihood: 'uncommon' },
+    { cause: 'Lactose overload (foremilk/hindmilk imbalance)', likelihood: 'uncommon' },
+    { cause: 'Introduction of new foods producing gas (beans, broccoli, etc.)', likelihood: 'uncommon' },
+    { cause: 'Intestinal obstruction or volvulus (distension, not just gas)', likelihood: 'rare' },
+    { cause: 'Hirschsprung disease', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Gas and fussiness peak around 6-8 weeks ("peak crying period"). Grunting, straining, pulling up legs, and passing gas are normal as babies learn to coordinate abdominal muscles. This often improves dramatically by 3-4 months.', whenToWorry: 'Abdominal distension that is firm and tense (not just soft fullness). Gas with projectile vomiting. Gas with complete absence of stool passage in a newborn. Severe inconsolable crying for hours (evaluate for other causes).' },
+    { ageRange: '3-6 months', normalVariation: 'Gas typically improves significantly as digestive system matures. Some gassiness during introduction of new foods or formula changes.', whenToWorry: 'Abdominal distension with vomiting and no stool (possible obstruction). Gas with bloody stool. Progressive worsening rather than improvement of gas symptoms.' },
+    { ageRange: '6-12 months', normalVariation: 'Increased gas when introducing solid foods is normal, especially with legumes, cruciferous vegetables, and high-fiber foods. Gas usually resolves as baby adjusts to new foods.', whenToWorry: 'Severe abdominal distension with pain. Gas with chronic diarrhea and poor weight gain. Gas with specific food triggers causing allergic symptoms (rash, vomiting).' },
+    { ageRange: '1-3 years', normalVariation: 'Toddlers naturally produce more gas as diet diversifies. Fiber-rich foods, dairy, and beans are common gas producers. Passing gas 13-21 times per day is normal for children.', whenToWorry: 'Severe bloating with constipation and poor growth. Distension with visible bowel loops. Chronic excessive gas with foul-smelling stool and weight loss (possible malabsorption).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Firm, distended abdomen with bilious (green) vomiting (possible bowel obstruction)',
+      'Abdominal distension with severe pain, bloody stool, and lethargy (possible volvulus or intussusception)',
+      'Newborn with progressive abdominal distension and failure to pass meconium (possible Hirschsprung disease)',
+    ],
+    urgent: [
+      'Significant abdominal distension with vomiting and no stool output',
+      'Bloating with high fever and toxic appearance',
+      'Severe bloating with visible bowel loops through abdominal wall',
+    ],
+    sameDay: [
+      'Persistent significant bloating with poor feeding and weight loss',
+      'Gas with chronic bloody or mucousy stool (food allergy evaluation)',
+      'Excessive inconsolable crying with suspected severe colic not responding to any measures',
+    ],
+    monitor: [
+      'Normal infant fussiness with gas that improves with burping, bicycle legs, and time',
+      'Gassy baby who is feeding well, gaining weight, and settling between episodes',
+      'Mild increase in gas after introducing new foods that self-resolves',
+    ],
+  },
+  homeRemedies: [
+    'Burp baby thoroughly during and after feeds (every 2-3 ounces if bottle-fed)',
+    'Bicycle legs — gently pump baby\'s legs in a cycling motion to help move gas through',
+    'Tummy time during awake hours helps with gas passage',
+    'Ensure proper bottle feeding technique — hold bottle tilted so nipple is full of milk (no air)',
+    'Try paced bottle feeding to reduce air swallowing',
+    'Tummy massage — gentle clockwise circles around the navel',
+    'Warm bath can help relax abdominal muscles and relieve gas',
+    'If breastfeeding: latching properly reduces air swallowing (consult lactation support if needed)',
+    'For bottle-fed babies: consider anti-colic bottles designed to reduce air intake',
+    'Simethicone gas drops are safe but evidence of effectiveness is limited',
+    'Do NOT give gripe water with alcohol, sodium bicarbonate, or unregulated herbal ingredients',
+    'Do NOT restrict breastfeeding mother\'s diet unless clear pattern identified with medical guidance',
+  ],
+  triageSlug: undefined,
+  relatedSymptomSlugs: ['abdominal-pain', 'hiccups', 'spit-up', 'refusing-to-eat'],
+  relatedIllnessSlugs: ['colic', 'milk-protein-allergy', 'lactose-intolerance'],
+  relatedConcernSlugs: ['gassy-baby', 'baby-bloated-belly', 'baby-gas-pain-at-night'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Breaking Up Gas. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/diapers-clothing/Pages/Breaking-Up-Gas.aspx' },
+    { org: 'AAP', citation: 'Zeevenhooven J, et al. The New Rome IV Criteria for Functional Gastrointestinal Disorders in Infants and Toddlers. Pediatric Gastroenterology, Hepatology & Nutrition. 2017;20(1):1-13.', url: 'https://pubmed.ncbi.nlm.nih.gov/28401050/' },
+    { org: 'NIH', citation: 'National Institute of Diabetes and Digestive and Kidney Diseases. Gas in the Digestive Tract.', url: 'https://www.niddk.nih.gov/health-information/digestive-diseases/gas-digestive-tract' },
+  ],
+};

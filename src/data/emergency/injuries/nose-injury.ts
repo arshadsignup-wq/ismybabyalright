@@ -1,0 +1,72 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'nose-injury',
+  title: 'Nose Injury (Nosebleed or Broken Nose)',
+  category: 'injury',
+  callNineOneOne: false,
+  description: 'Nose injuries in children range from simple nosebleeds to fractures. Most nosebleeds from trauma stop with proper first aid. A broken nose needs medical evaluation but is rarely a surgical emergency in children.',
+  immediateActions: [
+    'Keep child calm and sitting upright, leaning slightly forward',
+    'Pinch the soft part of the nose firmly for 10-15 minutes without releasing',
+    'Apply a cold compress to the bridge of the nose',
+    'If bleeding does not stop after 20 minutes of continuous pressure, go to ER',
+  ],
+  doNotDo: [
+    'Do NOT tilt the head back — this causes blood to flow down the throat',
+    'Do NOT have the child lie down during a nosebleed',
+    'Do NOT stuff tissue or cotton into the nose',
+    'Do NOT let the child blow their nose for several hours after bleeding stops',
+    'Do NOT try to straighten a nose that appears crooked — let a doctor evaluate',
+    'Do NOT pick at clots forming in the nose',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Position the child', description: 'Sit the child upright and lean them slightly forward. This prevents blood from going down the throat and causing nausea or choking.' },
+    { step: 2, title: 'Pinch the nose', description: 'Using your thumb and index finger, pinch the soft, fleshy part of the nose (below the bony bridge) firmly. Maintain constant pressure for a full 10-15 minutes. Do NOT release to check.' },
+    { step: 3, title: 'Apply cold', description: 'Place a cold compress or ice pack wrapped in a cloth on the bridge of the nose. This helps constrict blood vessels.' },
+    { step: 4, title: 'After 15 minutes, release', description: 'Gently release pressure and check if bleeding has stopped. If still bleeding, reapply pressure for another 15 minutes.' },
+    { step: 5, title: 'Assess for fracture', description: 'After bleeding stops, look for: visible deformity, significant swelling, bruising around both eyes, clear fluid from nose, or inability to breathe through the nose.' },
+    { step: 6, title: 'Determine care level', description: 'Go to ER for: uncontrolled bleeding, suspected fracture with deformity, clear fluid leaking from nose (possible CSF), or associated head injury. Doctor visit within 3-5 days for: swelling with suspected break but no deformity.' },
+  ],
+  whenToCall911: [
+    'Heavy nosebleed that will not stop after 20+ minutes of direct pressure',
+    'Nose injury with loss of consciousness or suspected head/neck injury',
+    'Clear, watery fluid draining from the nose after head trauma (possible cerebrospinal fluid leak)',
+    'Difficulty breathing through both nostrils with significant facial swelling',
+    'Nosebleed with signs of significant blood loss (dizziness, paleness, rapid heartbeat)',
+  ],
+  whenToCallDoctor: [
+    'Nosebleed that stopped but child gets frequent recurrent nosebleeds',
+    'Mild swelling of the nose without obvious deformity',
+    'Nosebleed in a child on blood-thinning medication',
+    'Nose injury healing check after 3-5 days when swelling has reduced',
+  ],
+  whenToGoToER: [
+    'Nosebleed that will not stop after 20 minutes of correct pressure',
+    'Visible deformity of the nose',
+    'Bruising under both eyes after nose impact',
+    'Significant breathing difficulty through the nose after injury',
+    'Nose injury with suspected septal hematoma (one-sided swelling inside the nose)',
+    'Clear fluid from nose after any head trauma',
+  ],
+  prevention: [
+    'Ensure children wear face guards for contact sports',
+    'Teach children not to pick their nose — this causes most non-traumatic nosebleeds',
+    'Use a humidifier in dry climates to prevent nasal dryness and cracking',
+    'Apply petroleum jelly inside nostrils if child gets frequent dry-air nosebleeds',
+    'Supervise active play to prevent face-to-face collisions',
+    'Install padding on sharp corners at face height for small children',
+  ],
+  byAge: [
+    { ageRange: '0-2 years', context: 'Nosebleeds from trauma are less common at this age but can occur from falls when learning to walk. Any significant facial injury in a non-mobile infant warrants investigation.' },
+    { ageRange: '2-5 years', context: 'Nose-picking is the most common cause of nosebleeds. Trauma from falls and collisions with other children is frequent. Teach proper pinch technique to caregivers.' },
+    { ageRange: '5-12 years', context: 'Sports-related nose injuries become more common. Dry-air nosebleeds are frequent. Teach children proper first aid (sit up, lean forward, pinch). Broken noses should be evaluated within 7-10 days.' },
+  ],
+  relatedEmergencySlugs: ['head-injury-fall', 'cut-laceration', 'broken-bone'],
+  relatedConcernSlugs: ['nosebleed-baby', 'toddler-nosebleed'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Nosebleeds.', url: 'https://www.healthychildren.org/English/health-issues/conditions/ear-nose-throat/Pages/Nosebleeds.aspx' },
+    { org: 'ENT Health', citation: 'American Academy of Otolaryngology. Nosebleeds in Children.', url: 'https://www.enthealth.org/conditions/nosebleeds/' },
+    { org: 'Red Cross', citation: 'American Red Cross. First Aid for Nosebleeds.', url: 'https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/injury.html' },
+  ],
+};

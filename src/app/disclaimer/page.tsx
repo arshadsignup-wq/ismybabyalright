@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Medical Disclaimer - ismybabyalright",
+  title: "Medical Disclaimer",
   description:
     "Medical disclaimer for ismybabyalright. This site is an informational resource based on CDC, WHO, and AAP guidelines - not a substitute for medical advice.",
   alternates: {
@@ -15,9 +17,25 @@ export const metadata: Metadata = {
   },
 };
 
+const disclaimerSchema = getWebPageSchema({
+  name: 'Medical Disclaimer',
+  description:
+    'Medical disclaimer for ismybabyalright. This site is an informational resource based on CDC, WHO, and AAP guidelines - not a substitute for medical advice.',
+  path: '/disclaimer',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Disclaimer' },
+]);
+
 export default function DisclaimerPage() {
   return (
-    <main className="max-w-3xl mx-auto px-5 py-10">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(disclaimerSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <main className="max-w-3xl mx-auto px-5 py-10">
       <h1 className="text-2xl font-bold text-foreground mb-2">
         Medical Disclaimer
       </h1>
@@ -26,6 +44,8 @@ export default function DisclaimerPage() {
       </p>
 
       <div className="space-y-6">
+        <EditorialTrustBanner variant="compact" />
+
         <Section title="What this site is">
           <p>
             ismybabyalright is a free resource designed to help parents and
@@ -109,6 +129,26 @@ export default function DisclaimerPage() {
           </p>
         </Section>
 
+        <Section title="Our editorial standards">
+          <p>
+            For details about how we create, review, and update content, see our{" "}
+            <Link
+              href="/editorial-policy"
+              className="text-primary hover:underline font-semibold"
+            >
+              Editorial Policy
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/medical-review"
+              className="text-primary hover:underline font-semibold"
+            >
+              Medical Review Process
+            </Link>
+            .
+          </p>
+        </Section>
+
         <Section title="Changes to this disclaimer">
           <p>
             We may update this disclaimer periodically as the site evolves. Since
@@ -127,6 +167,7 @@ export default function DisclaimerPage() {
         </Link>
       </div>
     </main>
+    </>
   );
 }
 

@@ -4,6 +4,45 @@ import { useState, useMemo } from "react";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { stateContacts } from "@/data/early-intervention/states";
 
+const contentSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Early Intervention Directory by State",
+  description:
+    "Find your state's early intervention program. Contact information for all 50 states and DC to get your child evaluated for developmental delays.",
+  url: "https://www.ismybabyalright.com/resources/early-intervention",
+  audience: { "@type": "PeopleAudience", audienceType: "Parents" },
+  author: {
+    "@type": "Organization",
+    name: "Is My Baby Alright?",
+    url: "https://www.ismybabyalright.com",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      url: "https://www.ismybabyalright.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Resources",
+      url: "https://www.ismybabyalright.com/resources/guides",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Early Intervention",
+    },
+  ],
+};
+
 export default function EarlyInterventionPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState<string>("");
@@ -26,6 +65,14 @@ export default function EarlyInterventionPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Breadcrumbs
         items={[
           { label: "Resources", href: "/resources/mental-health" },

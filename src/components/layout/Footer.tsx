@@ -5,11 +5,13 @@ const footerNav = [
     heading: "Milestones & Development",
     links: [
       { href: "/milestones", label: "Milestones by Age" },
+      { href: "/development", label: "Development by Month" },
       { href: "/concerns", label: "Common Concerns" },
+      { href: "/conditions", label: "Conditions A-Z" },
       { href: "/triage", label: "Symptom Checker" },
+      { href: "/symptoms", label: "Symptom Index" },
       { href: "/developmental-activities", label: "Play Activities" },
       { href: "/growth-spurts", label: "Growth Spurts" },
-      { href: "/age-advice", label: "Age-Based Advice" },
     ],
   },
   {
@@ -27,27 +29,27 @@ const footerNav = [
   {
     heading: "Guides & Resources",
     links: [
+      { href: "/newborn", label: "Newborn Guide" },
+      { href: "/toddler", label: "Toddler Guide" },
       { href: "/food", label: "Food Introduction" },
       { href: "/sleep", label: "Sleep Guide" },
       { href: "/feeding", label: "Feeding Guide" },
-      { href: "/teething", label: "Teething Guide" },
-      { href: "/poop-guide", label: "Poop Guide" },
-      { href: "/skin-guide", label: "Skin Guide" },
-      { href: "/tummy-time", label: "Tummy Time" },
+      { href: "/safety", label: "Safety Guide" },
+      { href: "/potty-training", label: "Potty Training" },
       { href: "/first-aid", label: "First Aid" },
     ],
   },
   {
     heading: "Health & Support",
     links: [
+      { href: "/when-to-call-the-doctor", label: "When to Call the Doctor" },
       { href: "/vaccines", label: "Vaccine Tracker" },
       { href: "/doctor-visits", label: "Doctor Visit Prep" },
+      { href: "/pregnancy", label: "Pregnancy" },
+      { href: "/postpartum", label: "Postpartum Recovery" },
       { href: "/mental-health", label: "Mental Health" },
-      { href: "/mental-health/check-in", label: "Am I Okay? Check-in" },
       { href: "/resources/early-intervention", label: "Early Intervention" },
-      { href: "/resources/guides", label: "Condition Guides" },
-      { href: "/checklists", label: "Checklists" },
-      { href: "/baby-names", label: "Baby Names" },
+      { href: "/glossary", label: "Medical Glossary" },
     ],
   },
 ];
@@ -66,9 +68,9 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {footerNav.map((section) => (
               <div key={section.heading}>
-                <h2 className="text-xs font-bold text-foreground uppercase tracking-wider mb-3">
+                <p className="text-xs font-bold text-foreground uppercase tracking-wider mb-3" aria-hidden="true">
                   {section.heading}
-                </h2>
+                </p>
                 <ul className="space-y-2" role="list">
                   {section.links.map((link) => (
                     <li key={link.href}>
@@ -171,6 +173,24 @@ export default function Footer() {
               className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
             >
               About
+            </Link>
+            <Link
+              href="/editorial-policy"
+              className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
+            >
+              Editorial Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/contact"
+              className="text-xs text-muted hover:text-primary transition-colors min-h-[44px] flex items-center"
+            >
+              Contact
             </Link>
           </div>
         </div>

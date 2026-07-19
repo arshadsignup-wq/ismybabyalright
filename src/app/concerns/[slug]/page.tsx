@@ -7,11 +7,19 @@ import ActionTiers from "@/components/concerns/ActionTiers";
 import RelatedConcerns from "@/components/concerns/RelatedConcerns";
 import InternalLinks from "@/components/concerns/InternalLinks";
 import ReassuranceBanner from "@/components/concerns/ReassuranceBanner";
-import SupportiveClosing from "@/components/concerns/SupportiveClosing";
 import SelfReferralBox from "@/components/shared/SelfReferralBox";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+import LastReviewed from "@/components/shared/LastReviewed";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import BottomLine from "@/components/shared/BottomLine";
 import SourceBadge from "@/components/shared/SourceBadge";
+import AuthoritativeQuote from "@/components/shared/AuthoritativeQuote";
+import { getQuotesForTopic } from "@/data/authoritative-quotes";
 import { allConcerns, getConcernBySlug } from "@/data/concerns";
 import { getConcernMeta, getFAQSchema, getMedicalWebPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import { generateConcernFAQ } from "@/lib/concern-faq";
 import { getInternalLinks } from "@/lib/concern-links";
 import type { ConcernCategory } from "@/data/concerns/types";
 
@@ -83,6 +91,7 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
     notFound();
   }
 
+  const faqItems = generateConcernFAQ(concern);
   const faqSchema = getFAQSchema(concern);
   const medicalSchema = getMedicalWebPageSchema(concern, `/concerns/${slug}`);
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -93,8 +102,28 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
 
   const color = categoryColors[concern.category];
 
+  // Auto-generate key takeaways from existing data
+  const takeaways: string[] = [concern.quickAnswer];
+  if (concern.whenNormal.length > 0) {
+    takeaways.push(`Usually normal when: ${concern.whenNormal[0]}`);
+  }
+  if (concern.whenToActNow.length > 0) {
+    takeaways.push(`Call your doctor if: ${concern.whenToActNow[0]}`);
+  }
+  if (concern.byAge.length > 2) {
+    takeaways.push('Varies by age — see the age-by-age breakdown below');
+  }
+
+  // Auto-generate bottom line summary
+  const topic = concern.title.toLowerCase().replace(/^my baby('s)?\s+/i, '').replace(/\?$/, '');
+  const bottomLineSummary = `Most cases of ${topic} are normal.${concern.whenToActNow.length > 0 ? ` Talk to your pediatrician if ${concern.whenToActNow[0].toLowerCase().replace(/\.$/, '')}.` : ''}`;
+
+  const topicQuotes = getQuotesForTopic(concern.slug).length > 0
+    ? getQuotesForTopic(concern.slug)
+    : getQuotesForTopic(concern.category);
+
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -114,7 +143,7 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
         ]}
       />
 
-      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+      <div className="concern-content mx-auto max-w-3xl px-4 py-8 sm:px-6">
         {/* Category badge */}
         <span
           className="inline-block rounded-full px-3 py-1 text-xs font-bold mb-4"
@@ -128,16 +157,30 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
 
         <h1>{concern.title}</h1>
 
-        <div className="flex items-center gap-2 mt-2 mb-4 text-xs text-muted">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg>
-          <span>Editorially reviewed | Sources: {concern.sources.map(s => s.org).join(', ')}</span>
-          <span className="text-muted/50">|</span>
-          <span>Updated June 2026</span>
+        <div className="mt-2 mb-2">
+          <MedicalReviewAttribution
+            sources={concern.sources.map(s => s.org)}
+          />
+        </div>
+
+        <div className="mb-4">
+          <LastReviewed date="2026-07-01" />
         </div>
 
         <QuickAnswer answer={concern.quickAnswer} />
+
+        <div className="mt-4">
+          <KeyTakeaways takeaways={takeaways} />
+        </div>
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         <ReassuranceBanner slug={concern.slug} popular={concern.popular} />
 
@@ -154,6 +197,10 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
             whenToActNow={concern.whenToActNow}
           />
         </section>
+
+        <div className="mt-10">
+          <FAQSection items={faqItems} />
+        </div>
 
         {concern.showSelfReferral && (
           <div className="mt-10">
@@ -174,9 +221,13 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
           </section>
         )}
 
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
+
         <InternalLinks links={getInternalLinks(concern)} />
 
-        <SupportiveClosing />
+        <BottomLine summary={bottomLineSummary} />
 
         <RelatedConcerns
           currentSlug={concern.slug}
@@ -184,6 +235,6 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
           curatedSlugs={concern.relatedConcernSlugs}
         />
       </div>
-    </div>
+    </article>
   );
 }

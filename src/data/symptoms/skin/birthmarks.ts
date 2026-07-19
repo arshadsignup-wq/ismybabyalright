@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'birthmarks',
+  title: 'Birthmarks in Babies',
+  bodySystem: 'skin',
+  description: 'Birthmarks are colored skin marks present at birth or appearing shortly after. They are extremely common — over 80% of babies have at least one. Most birthmarks are harmless and many fade over time. They are categorized as vascular (caused by blood vessels) or pigmented (caused by melanin). While most require no treatment, certain types warrant monitoring or medical evaluation.',
+  possibleCauses: [
+    { cause: 'Salmon patch / stork bite / angel kiss (capillary malformation)', likelihood: 'common' },
+    { cause: 'Mongolian spot (congenital dermal melanocytosis)', likelihood: 'common' },
+    { cause: 'Infantile hemangioma (strawberry mark)', likelihood: 'common' },
+    { cause: 'Cafe-au-lait spots (light brown flat patches)', likelihood: 'common' },
+    { cause: 'Port wine stain (capillary malformation)', likelihood: 'uncommon' },
+    { cause: 'Congenital melanocytic nevus (mole present at birth)', likelihood: 'uncommon' },
+    { cause: 'Sebaceous nevus (yellow-orange waxy patch on scalp)', likelihood: 'uncommon' },
+    { cause: 'Neurofibromatosis (multiple cafe-au-lait spots)', likelihood: 'rare' },
+    { cause: 'Sturge-Weber syndrome (port wine stain with neurological involvement)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Salmon patches (pink flat marks on eyelids, forehead, nape of neck) are present in up to 50% of babies. Mongolian spots (blue-grey patches on buttocks/back) are normal, especially in babies with darker skin tones. Infantile hemangiomas may begin as faint red marks and grow rapidly in first weeks.', whenToWorry: 'Hemangioma near eye, nose, mouth, or airway. Large hemangioma growing rapidly. Port wine stain on face (especially forehead/eyelid — Sturge-Weber concern). More than 5 cafe-au-lait spots. Large congenital mole (>6cm) or many congenital moles.' },
+    { ageRange: '2-6 months', normalVariation: 'Infantile hemangiomas typically grow most rapidly during months 1-5 (proliferative phase). Salmon patches on forehead may still be visible. Mongolian spots remain stable.', whenToWorry: 'Hemangioma that is ulcerating (developing sore/wound on surface). Hemangioma obstructing vision, breathing, or feeding. Multiple (5+) hemangiomas (possible liver hemangiomas). Rapidly enlarging or unusually deep hemangioma.' },
+    { ageRange: '6-12 months', normalVariation: 'Hemangioma growth typically slows and plateaus. Salmon patches on eyelids usually fade. Mongolian spots may begin to lighten slightly.', whenToWorry: 'Hemangioma not beginning to plateau by 9-12 months. Any birthmark that is changing color, becoming irregular, or bleeding spontaneously. New pigmented lesions that look irregular.' },
+    { ageRange: '1-3 years', normalVariation: 'Infantile hemangiomas begin involuting (shrinking) — 50% resolve by age 5, 90% by age 9. Salmon patches on nape of neck often persist into adulthood. Mongolian spots gradually fade during childhood.', whenToWorry: 'Birthmark that changes significantly in appearance. Development of new concerning features (irregular borders, multiple colors). Residual skin changes from hemangioma causing functional or cosmetic concern. New cafe-au-lait spots appearing (count >6 with large size suggests neurofibromatosis).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Birthmark or hemangioma causing airway obstruction or breathing difficulty',
+      'Bleeding from a birthmark that will not stop with pressure',
+      'Large segmental hemangioma with stridor (noisy breathing)',
+    ],
+    urgent: [
+      'Hemangioma near the eye obstructing vision',
+      'Hemangioma that has ulcerated (open wound) causing pain',
+      'Port wine stain on forehead/eyelid in newborn (Sturge-Weber evaluation needed)',
+      'Large hemangioma growing extremely rapidly in first weeks',
+      'Hemangioma on lip/nose affecting feeding',
+    ],
+    sameDay: [
+      'Hemangioma that appears to be growing — needs assessment for possible treatment',
+      'Multiple cafe-au-lait spots (6+) needing evaluation',
+      'Birthmark that has changed appearance',
+      'Large congenital mole needing monitoring plan',
+    ],
+    monitor: [
+      'Salmon patch (stork bite/angel kiss) — fades on its own',
+      'Mongolian spots — fade gradually through childhood',
+      'Small infantile hemangioma in non-critical location',
+      'Small (under 1.5cm) cafe-au-lait spots — note if more appear',
+      'Small congenital moles with regular borders',
+    ],
+  },
+  homeRemedies: [
+    'Most birthmarks require no treatment — reassurance is the main "management"',
+    'Photograph birthmarks periodically to document any changes over time',
+    'Protect port wine stains and hemangiomas from trauma to prevent bleeding',
+    'For ulcerated hemangiomas: keep clean, apply petroleum jelly, and cover with non-stick dressing until seen by doctor',
+    'Mongolian spots: document with photos in case they are mistaken for bruising',
+    'Do not apply pressure, ice, or home remedies to hemangiomas',
+    'Sun protection for all birthmarks (shade, clothing, sunscreen for babies 6+ months)',
+    'Know that most infantile hemangiomas resolve without treatment by age 5-9 years',
+  ],
+  relatedSymptomSlugs: ['bruising', 'red-rash', 'mottling'],
+  relatedIllnessSlugs: ['infantile-hemangioma', 'port-wine-stain', 'neurofibromatosis'],
+  relatedConcernSlugs: ['mongolian-spots-vs-bruises', 'strawberry-birthmark', 'baby-birthmark-growing'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Birthmarks in Infants. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Birthmarks.aspx' },
+    { org: 'NIH', citation: 'National Institutes of Health. Infantile Hemangiomas: Clinical Practice Guidelines. Pediatrics. 2019;143(1).', url: 'https://publications.aap.org/pediatrics/article/143/1/e20183475/37048' },
+    { org: 'NHS', citation: 'NHS. Birthmarks.', url: 'https://www.nhs.uk/conditions/birthmarks/' },
+  ],
+};

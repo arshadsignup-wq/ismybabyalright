@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'blistering-rash',
+  title: 'Blistering Rash in Babies & Toddlers',
+  bodySystem: 'skin',
+  description: 'Blisters (vesicles or bullae) are fluid-filled raised areas on the skin. In babies, blistering rashes can range from benign conditions like sucking blisters in newborns to more serious infections such as herpes simplex or impetigo. Any blistering rash in a newborn under 4 weeks warrants prompt medical evaluation.',
+  possibleCauses: [
+    { cause: 'Hand, foot, and mouth disease (HFMD)', likelihood: 'common' },
+    { cause: 'Impetigo (bullous or non-bullous)', likelihood: 'common' },
+    { cause: 'Chickenpox (varicella)', likelihood: 'uncommon' },
+    { cause: 'Friction blisters (shoes, thumb-sucking)', likelihood: 'common' },
+    { cause: 'Burns (thermal, chemical, or sunburn)', likelihood: 'uncommon' },
+    { cause: 'Herpes simplex virus (HSV)', likelihood: 'uncommon' },
+    { cause: 'Sucking blisters in newborns', likelihood: 'common' },
+    { cause: 'Contact dermatitis (poison ivy, irritants)', likelihood: 'uncommon' },
+    { cause: 'Staphylococcal scalded skin syndrome (SSSS)', likelihood: 'rare' },
+    { cause: 'Stevens-Johnson syndrome / Toxic epidermal necrolysis', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Sucking blisters on lips, hands, or wrists are benign and formed in utero. Small transient blisters from friction are common. Erythema toxicum can occasionally have small vesicles.', whenToWorry: 'Any grouped blisters on an erythematous base (herpes simplex concern). Widespread blistering or peeling skin (SSSS). Blisters with fever, poor feeding, or lethargy. Blisters around eyes or genitals.' },
+    { ageRange: '2-6 months', normalVariation: 'Friction blisters from thumb-sucking or pacifier use. Mild drool-associated vesicles around the mouth. Brief transient blisters that do not spread.', whenToWorry: 'Honey-crusted blisters suggesting impetigo. Blisters that are rapidly spreading. Grouped vesicles concerning for HSV. Blisters associated with fever in young infant.' },
+    { ageRange: '6-12 months', normalVariation: 'Hand, foot, and mouth disease is common at this age with small blisters on palms, soles, and mouth. Minor friction blisters from crawling (knees, hands). Brief isolated blisters from minor trauma.', whenToWorry: 'Large blisters or bullae without clear cause. Blisters with surrounding red streaks. Blisters near the eyes. Widespread blistering with skin that peels easily when rubbed (Nikolsky sign positive).' },
+    { ageRange: '1-3 years', normalVariation: 'HFMD is extremely common in toddlers. Chickenpox (if unvaccinated) causes crops of blisters at different stages. Friction blisters from new shoes. Contact dermatitis from plants.', whenToWorry: 'Blisters following medication use (Stevens-Johnson syndrome). Blisters with high fever and ill appearance. Blisters involving mucous membranes (mouth, eyes, genitals simultaneously). Burns or blisters in unusual patterns (concern for non-accidental injury).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Widespread blistering with skin peeling in sheets (SSSS or TEN)',
+      'Blisters with difficulty breathing, drooling, or inability to swallow',
+      'Blistering rash in newborn under 4 weeks with fever',
+      'Blisters involving eyes with swelling or discharge',
+      'Burns causing blisters over large body surface area',
+    ],
+    urgent: [
+      'Grouped blisters on red base in young infant (possible herpes simplex)',
+      'Blisters with high fever and child appearing very unwell',
+      'Rapidly spreading blistering rash',
+      'Blisters involving mouth, eyes, AND genitals (Stevens-Johnson)',
+      'Blisters with red streaks or spreading warmth (secondary infection)',
+    ],
+    sameDay: [
+      'Honey-crusted blisters suggesting impetigo (needs antibiotics)',
+      'Blisters with moderate discomfort affecting feeding or sleep',
+      'Suspected chickenpox for confirmation and management advice',
+      'Blisters from suspected allergic contact dermatitis',
+    ],
+    monitor: [
+      'Hand, foot, and mouth disease in well-appearing child with adequate fluid intake',
+      'Sucking blisters in a well newborn',
+      'Small friction blisters from shoes or crawling',
+      'Known chickenpox with mild symptoms and no complications',
+    ],
+  },
+  homeRemedies: [
+    'Do NOT pop or break blisters intentionally as the intact skin protects against infection',
+    'Keep blistered areas clean with gentle soap and water',
+    'For HFMD mouth blisters: offer cold foods, ice pops, and ensure adequate hydration',
+    'Apply petroleum jelly or non-stick gauze to protect broken blisters',
+    'Use age-appropriate pain relief (acetaminophen) for discomfort',
+    'For itchy blisters (chickenpox): oatmeal baths, cool compresses, and keep nails short',
+    'Avoid sharing towels, cups, or utensils during infectious blistering illnesses',
+    'Monitor for signs of secondary infection: increasing redness, warmth, pus, or red streaks',
+  ],
+  triageSlug: 'rash',
+  relatedSymptomSlugs: ['red-rash', 'bumpy-rash', 'fever'],
+  relatedIllnessSlugs: ['hand-foot-mouth', 'chickenpox', 'impetigo', 'herpes-simplex'],
+  relatedConcernSlugs: ['baby-blisters-on-skin', 'baby-rash-with-fever', 'newborn-rash-normal'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Blisters. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/skin/Pages/Blisters.aspx' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Hand, Foot, and Mouth Disease.', url: 'https://www.cdc.gov/hand-foot-mouth/index.html' },
+    { org: 'NHS', citation: 'NHS. Blisters.', url: 'https://www.nhs.uk/conditions/blisters/' },
+  ],
+};

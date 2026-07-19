@@ -1,0 +1,73 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'burn-chemical',
+  title: 'Chemical Burn in a Child',
+  category: 'injury',
+  callNineOneOne: true,
+  description: 'Chemical burns occur when a child contacts caustic substances such as drain cleaners, oven cleaners, bleach, or battery acid. The chemical continues to burn until completely removed. Immediate and thorough flushing with water is critical.',
+  immediateActions: [
+    'Remove the child from the source of the chemical immediately',
+    'Remove contaminated clothing and jewelry while flushing',
+    'Flush the burned area with large amounts of cool running water for at least 20 minutes',
+    'Call Poison Control (1-800-222-1222) and/or 911',
+  ],
+  doNotDo: [
+    'Do NOT apply butter, ointment, or home remedies to chemical burns',
+    'Do NOT use neutralizing agents (e.g., vinegar for alkali burns) — this can cause a heat reaction',
+    'Do NOT try to wipe the chemical off dry — flush with water',
+    'Do NOT break blisters',
+    'Do NOT delay flushing to call for help — start water immediately',
+    'Do NOT remove clothing stuck to the burn — cut around it',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Protect yourself', description: 'Put on gloves if available. Do not touch the chemical with bare hands. Move child away from the chemical source.' },
+    { step: 2, title: 'Remove contaminated items', description: 'Carefully remove clothing, shoes, and jewelry that contacted the chemical. Cut clothing off rather than pulling over the head.' },
+    { step: 3, title: 'Flush with water', description: 'Run large amounts of cool (not cold) water over the burn for at least 20 minutes. Use a shower, hose, or faucet. Ensure water runs off the body and does not pool.' },
+    { step: 4, title: 'Call for help', description: 'Call Poison Control at 1-800-222-1222 for guidance. Call 911 if the burn is large, involves the face/eyes/genitals, or the child is in significant distress.' },
+    { step: 5, title: 'Identify the chemical', description: 'If safe to do so, bring the container or label to share with medical providers. Note the name, concentration, and how long it was in contact.' },
+    { step: 6, title: 'Cover the burn', description: 'After thorough flushing, cover with a clean, dry, non-fluffy dressing or cling film. Do not wrap tightly.' },
+    { step: 7, title: 'Monitor for shock', description: 'Watch for pale/clammy skin, rapid breathing, and confusion. Keep child warm and lying down with legs elevated if shock is suspected.' },
+  ],
+  whenToCall911: [
+    'Chemical burn covers a large area of the body',
+    'Burns to the face, eyes, hands, feet, or genitals',
+    'Child swallowed the chemical',
+    'Child is having difficulty breathing (chemical inhalation)',
+    'Child shows signs of shock',
+    'Deep burns where skin appears white, brown, or charred',
+  ],
+  whenToCallDoctor: [
+    'Small, superficial chemical burn (minor redness) after thorough flushing',
+    'Follow-up care after ER visit for a chemical burn',
+    'Signs of infection developing days after burn (increased redness, warmth, pus)',
+  ],
+  whenToGoToER: [
+    'Any chemical burn in a child — even if it appears minor after flushing',
+    'Burns from strong acids or alkalis (drain cleaner, oven cleaner, battery acid)',
+    'Chemical contact with eyes',
+    'Any burn that blisters or goes deeper than surface redness',
+    'Child ingested or inhaled the chemical',
+  ],
+  prevention: [
+    'Store all cleaning products and chemicals in locked cabinets out of reach',
+    'Keep products in original containers with labels intact',
+    'Install child-safety locks on cabinets containing chemicals',
+    'Never transfer chemicals to food/drink containers',
+    'Keep batteries (especially button batteries) secured and out of reach',
+    'Supervise children during crafts involving glue, paint removers, or solvents',
+    'Post Poison Control number (1-800-222-1222) visibly in your home',
+  ],
+  byAge: [
+    { ageRange: '0-1 year', context: 'Babies may contact chemicals from improperly stored cleaning products, diaper rash creams containing harsh chemicals in eyes, or battery acid from leaking toys. Always flush immediately with water.' },
+    { ageRange: '1-3 years', context: 'Toddlers are the highest risk group as they explore by touching and tasting. Common exposures: drain cleaner, dish detergent pods, bleach, and toilet bowl cleaner. Childproof all cabinets.' },
+    { ageRange: '3-8 years', context: 'Children may access garage chemicals (pool chemicals, pesticides, car products) or school art supplies. Teach children to never touch containers with warning labels and to tell an adult immediately.' },
+  ],
+  relatedEmergencySlugs: ['burn-thermal', 'household-chemical', 'eye-injury'],
+  relatedConcernSlugs: ['baby-burned-skin'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Treating and Preventing Burns.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Treating-and-Preventing-Burns.aspx' },
+    { org: 'ABA', citation: 'American Burn Association. Chemical Burns First Aid.', url: 'https://ameriburn.org/prevention/prevention-resources/' },
+    { org: 'Poison Control', citation: 'National Capital Poison Center. Chemical Burns.', url: 'https://www.poison.org/articles/chemical-burns' },
+  ],
+};

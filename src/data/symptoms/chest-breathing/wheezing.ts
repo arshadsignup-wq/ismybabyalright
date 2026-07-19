@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'wheezing',
+  title: 'Wheezing in Babies & Toddlers',
+  bodySystem: 'chest-breathing',
+  description: 'Wheezing is a high-pitched whistling sound heard during breathing, usually on exhalation (breathing out). It occurs when airways are narrowed by swelling, mucus, or constriction. In infants, bronchiolitis (often caused by RSV) is the most common cause. In toddlers, recurrent wheezing may indicate asthma. Wheezing is different from congestion or noisy upper airway breathing.',
+  possibleCauses: [
+    { cause: 'Bronchiolitis (RSV or other viral)', likelihood: 'common' },
+    { cause: 'Viral-induced wheeze (with colds)', likelihood: 'common' },
+    { cause: 'Asthma or reactive airway disease', likelihood: 'common' },
+    { cause: 'Allergic reaction', likelihood: 'uncommon' },
+    { cause: 'Foreign body aspiration', likelihood: 'uncommon' },
+    { cause: 'Pneumonia', likelihood: 'uncommon' },
+    { cause: 'Tracheomalacia or bronchomalacia (floppy airway)', likelihood: 'uncommon' },
+    { cause: 'Cystic fibrosis', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-6 months', normalVariation: 'Some noisy breathing from nasal congestion or small airways is common and is NOT true wheezing. True wheezing (expiratory whistling from the chest) at this age usually indicates bronchiolitis.', whenToWorry: 'True wheezing (whistling from chest) in a baby under 6 months, especially with fast breathing, poor feeding, or chest retractions. Premature babies are at higher risk for severe illness.' },
+    { ageRange: '6-12 months', normalVariation: 'First episodes of viral-induced wheeze are common at this age as babies encounter their first respiratory viruses. Mild wheezing with normal feeding may resolve on its own.', whenToWorry: 'Wheezing with respiratory distress (fast breathing, retractions, nasal flaring), poor feeding, or worsening over hours rather than improving.' },
+    { ageRange: '1-3 years', normalVariation: 'Recurrent wheezing with viral colds is common in toddlers. Many children wheeze with infections and do not develop asthma.', whenToWorry: 'Sudden onset wheezing without cold symptoms (possible foreign body or allergic reaction), wheezing not responding to prescribed inhaler, wheezing with inability to speak or drink.' },
+    { ageRange: 'Any age', normalVariation: 'Mild wheezing at the end of a cold that resolves on its own within a few days.', whenToWorry: 'Wheezing combined with: blue lips, severe difficulty breathing, baby becomes silent (may indicate airways are too tight to make sound), or progressive worsening.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Wheezing with blue or gray lips/fingernails',
+      'Severe breathing difficulty \u2014 cannot cry, talk, or feed',
+      'Sudden onset wheezing with choking (possible foreign body)',
+      'Silent chest \u2014 previously wheezing but now no air movement heard',
+      'Baby is limp or losing consciousness',
+      'Severe allergic reaction with wheezing and facial swelling',
+    ],
+    urgent: [
+      'First episode of wheezing in a baby under 6 months',
+      'Wheezing with significant chest retractions',
+      'Wheezing not improving with prescribed rescue inhaler after 20 minutes',
+      'Wheezing with inability to feed or drink',
+      'Wheezing with fever above 104\u00b0F (40\u00b0C)',
+    ],
+    sameDay: [
+      'Recurrent wheezing with cold needing new or refill prescription',
+      'Mild wheezing responding to inhaler but returning within 4 hours',
+      'Wheezing with moderate cold symptoms and baby still feeding reasonably',
+    ],
+    monitor: [
+      'Very mild end-expiratory wheeze at the tail end of a cold with baby feeding and playing normally',
+      'Known asthma with mild wheezing responding to treatment plan',
+      'Brief wheezing episode that resolved completely on its own',
+    ],
+  },
+  homeRemedies: [
+    'Keep baby upright or with head slightly elevated',
+    'Run a cool-mist humidifier in the room',
+    'Use nasal saline drops and gentle suctioning to clear congestion',
+    'Offer frequent small feeds to maintain hydration',
+    'If prescribed, use rescue inhaler (albuterol) with spacer and mask as directed',
+    'Keep baby away from cigarette smoke, strong perfumes, and other irritants',
+    'Monitor breathing rate and watch for worsening signs',
+    'Do NOT give cough suppressants or decongestants to babies',
+  ],
+  triageSlug: 'wheezing',
+  relatedSymptomSlugs: ['fast-breathing', 'chest-retractions', 'barking-cough'],
+  relatedIllnessSlugs: ['rsv', 'bronchiolitis', 'asthma', 'pneumonia'],
+  relatedConcernSlugs: ['baby-wheezing', 'baby-chest-noise', 'toddler-breathing-problems'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Wheezing in Infants. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/Wheezing.aspx' },
+    { org: 'NHLBI', citation: 'National Heart, Lung, and Blood Institute. Expert Panel Report 3: Guidelines for the Diagnosis and Management of Asthma.', url: 'https://www.nhlbi.nih.gov/health-topics/guidelines-for-diagnosis-management-of-asthma' },
+    { org: 'AAP', citation: 'AAP Clinical Practice Guideline. Management of Bronchiolitis in Infants and Children. Pediatrics. 2014.', url: 'https://publications.aap.org/pediatrics/article/134/5/e1474/33202' },
+  ],
+};

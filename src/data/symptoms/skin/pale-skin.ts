@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'pale-skin',
+  title: 'Pale Skin (Pallor) in Babies & Toddlers',
+  bodySystem: 'skin',
+  description: 'Pallor refers to skin that looks lighter or less pink than usual. In babies, the best places to check for true pallor are the inner eyelids (conjunctivae), lips, tongue, nail beds, and palms. Pale skin can be a normal complexion variation or may indicate anemia, poor circulation, or illness. Sudden pallor in an unwell baby requires prompt evaluation.',
+  possibleCauses: [
+    { cause: 'Normal light complexion (constitutional)', likelihood: 'common' },
+    { cause: 'Iron deficiency anemia', likelihood: 'common' },
+    { cause: 'Viral illness causing temporary pallor', likelihood: 'common' },
+    { cause: 'Cold environment causing peripheral vasoconstriction', likelihood: 'common' },
+    { cause: 'Transient erythroblastopenia of childhood (TEC)', likelihood: 'uncommon' },
+    { cause: 'Breath-holding spell (pallid type)', likelihood: 'uncommon' },
+    { cause: 'Significant bleeding (internal or external)', likelihood: 'uncommon' },
+    { cause: 'Leukemia or bone marrow disorder', likelihood: 'rare' },
+    { cause: 'Hemolytic anemia (red blood cell destruction)', likelihood: 'rare' },
+    { cause: 'Shock (from any cause)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Newborns may appear pale briefly during physiologic adjustment. Pallor when sleeping or cold is common. Skin color varies significantly with room temperature in young infants.', whenToWorry: 'Persistent pallor with rapid breathing, poor feeding, or lethargy. Grey or ashen color (circulatory concern). Pallor with jaundice (hemolytic disease). Pale baby who appears floppy or unresponsive.' },
+    { ageRange: '2-6 months', normalVariation: 'Some babies naturally have fairer complexions. Brief pallor during or after feeding is common. Mild pallor during viral illness.', whenToWorry: 'Progressive pallor developing over days/weeks (anemia). Pallor with rapid heart rate or fast breathing. Pale inner eyelids and tongue. Pallor with new bruising or petechiae. Baby tiring during feeds (anemia causing reduced exercise tolerance).' },
+    { ageRange: '6-12 months', normalVariation: 'Iron deficiency can develop as iron stores from birth deplete, especially if weaning is delayed. Mild pallor during minor illness. Brief pallor during pallid breath-holding spells.', whenToWorry: 'Increasing pallor over weeks with reduced activity or appetite. Pale lips and nail beds. Pallor with pica (eating non-food items). Rapid onset pallor with jaundice (hemolytic crisis). Pallor with fever and bone pain.' },
+    { ageRange: '1-3 years', normalVariation: 'Iron deficiency anemia is common in toddlers who drink excessive cow\'s milk and eat limited iron-rich foods. Mild pallor during viral illness. Pallid breath-holding spells peak at 12-18 months.', whenToWorry: 'Pallor with fatigue, irritability, and poor appetite persisting more than 2 weeks. Pallor with unusual bruising or bleeding. Pallor with weight loss or persistent fever. Sudden severe pallor with lethargy (acute anemia).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Sudden severe pallor with lethargy, fast breathing, or unresponsiveness',
+      'Grey or ashen color with cold extremities and rapid heart rate (shock)',
+      'Pallor with active bleeding that is not stopping',
+      'Pale and floppy baby who is difficult to rouse',
+      'Pallor with severe difficulty breathing',
+    ],
+    urgent: [
+      'Progressive pallor with rapid heart rate and breathlessness',
+      'Pallor with new bruising, petechiae, or bleeding',
+      'Pallor with fever and bone/joint pain',
+      'Pallor with jaundice (yellow skin/eyes)',
+      'Pallor with swollen abdomen (splenomegaly)',
+    ],
+    sameDay: [
+      'Child looking increasingly pale over days/weeks',
+      'Pale inner eyelids and nail beds suggesting anemia',
+      'Pallor with fatigue, reduced activity, and poor appetite',
+      'Toddler with pallor and excessive milk intake (iron deficiency risk)',
+    ],
+    monitor: [
+      'Naturally fair complexion with pink lips, tongue, and nail beds',
+      'Brief pallor during minor viral illness in otherwise well child',
+      'Transient pallor from cold environment that resolves with warming',
+      'Known iron deficiency under treatment and improving',
+    ],
+  },
+  homeRemedies: [
+    'Check for true pallor: look at inner eyelids, tongue, palms, and nail beds — not just overall skin tone',
+    'If iron deficiency is confirmed: give iron-rich foods (fortified cereals, pureed meats, lentils, dark leafy greens)',
+    'Limit cow\'s milk to no more than 16-24oz (500-700ml) per day in toddlers',
+    'Offer vitamin C-rich foods alongside iron-rich foods to enhance absorption',
+    'Avoid giving iron supplements with milk or calcium (interferes with absorption)',
+    'If prescribed iron supplements: give on empty stomach with juice if tolerated',
+    'Ensure adequate intake of iron-fortified formula or breast milk with appropriate complementary foods from 6 months',
+    'Pallor alone without other symptoms may be normal — compare to child\'s baseline color, not other children',
+  ],
+  relatedSymptomSlugs: ['petechiae', 'bruising', 'mottling', 'irritability'],
+  relatedIllnessSlugs: ['iron-deficiency-anemia', 'leukemia', 'hemolytic-anemia'],
+  relatedConcernSlugs: ['baby-looks-pale', 'toddler-anemia', 'baby-grey-color'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Anemia in Children and Teens. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/chronic/Pages/Anemia-and-Your-Child.aspx' },
+    { org: 'NIH', citation: 'National Heart, Lung, and Blood Institute. Iron-Deficiency Anemia.', url: 'https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia' },
+    { org: 'CDC', citation: 'Centers for Disease Control and Prevention. Iron Deficiency in Young Children.', url: 'https://www.cdc.gov/nutrition/infantandtoddlernutrition/vitamins-minerals/iron.html' },
+  ],
+};

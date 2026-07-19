@@ -1,0 +1,72 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'tremors',
+  title: 'Tremors & Jitteriness in Babies',
+  bodySystem: 'neurological',
+  description: 'Tremors (jitteriness) in babies are rhythmic, involuntary shaking movements of the limbs, chin, or body. Jitteriness is extremely common in normal newborns and is usually benign — it is distinguished from seizures because it can be stopped by gently holding or flexing the affected limb. While most neonatal jitteriness resolves by 2-3 months, persistent or severe tremors, or tremors that cannot be stopped with gentle restraint, warrant evaluation.',
+  possibleCauses: [
+    { cause: 'Normal neonatal jitteriness (benign, very common)', likelihood: 'common' },
+    { cause: 'Cold stress or temperature change', likelihood: 'common' },
+    { cause: 'Hunger or feeding cue', likelihood: 'common' },
+    { cause: 'Crying-related tremor (chin quivering)', likelihood: 'common' },
+    { cause: 'Hypoglycemia (low blood sugar)', likelihood: 'uncommon' },
+    { cause: 'Hypocalcemia (low calcium)', likelihood: 'uncommon' },
+    { cause: 'Neonatal abstinence syndrome (NAS — drug withdrawal)', likelihood: 'uncommon' },
+    { cause: 'Seizure activity (if cannot be stopped by holding)', likelihood: 'uncommon' },
+    { cause: 'Hypoxic-ischemic encephalopathy', likelihood: 'rare' },
+    { cause: 'Benign shuddering attacks', likelihood: 'uncommon' },
+    { cause: 'Hypomagnesemia (low magnesium)', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Jitteriness in the first days-weeks of life is extremely common (up to 44% of healthy newborns). Chin quivering during crying is normal. Trembling when cold, hungry, or during bowel movements is normal. These stop when the limb is gently held still.', whenToWorry: 'Tremors that CANNOT be stopped by gentle restraint (may be seizure). Tremors with abnormal eye movements. Tremors with lethargy or poor feeding. Tremors with color changes (blue or grey). Persistent severe jitteriness beyond the first few days. Tremors in infant of mother with diabetes (hypoglycemia risk).' },
+    { ageRange: '2-6 months', normalVariation: 'Shuddering attacks (brief whole-body shiver lasting 5-15 seconds, child fully alert during and after) are a benign condition. Chin quivering gradually resolves. Brief trembling with excitement or effort is normal.', whenToWorry: 'Persistent rhythmic tremors at rest. Tremors with developmental delay. Episodes that alter consciousness. Progressive worsening of tremors. Tremors associated with other abnormal movements. Tremors with poor head control or abnormal tone.' },
+    { ageRange: '6-12 months', normalVariation: 'Shuddering attacks can persist and are benign. Brief hand tremor when reaching for objects is normal. Trembling with excitement (hands shaking when offered food/toy).', whenToWorry: 'New onset tremor at this age. Tremor with loss of milestones or regression. Head bobbing/nodding (spasmus nutans — needs evaluation). Tremor affecting only one side. Persistent intentional tremor (shaking when reaching for things).' },
+    { ageRange: '1-3 years', normalVariation: 'Brief shuddering or shivering episodes (benign shuddering attacks) can continue and are outgrown. Mild hand tremor during fine motor tasks when concentrating hard.', whenToWorry: 'New onset tremor in previously non-tremulous child. Head nodding or tremor (spasmus nutans). Tremor with ataxia (uncoordinated movement). Action tremor interfering with eating or play. Tremor following illness or medication.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Rhythmic movements that CANNOT be stopped by holding the limb (likely seizure)',
+      'Tremors with color change, apnea, or loss of consciousness',
+      'Tremors with lethargy, poor feeding, and baby difficult to rouse (hypoglycemia or sepsis)',
+      'Severe persistent jitteriness in newborn (metabolic emergency or withdrawal)',
+    ],
+    urgent: [
+      'Persistent non-stop jitteriness in newborn beyond first 24 hours',
+      'Tremors with abnormal tone (stiffness or floppiness)',
+      'New onset tremor with developmental regression',
+      'Head nodding/bobbing with abnormal eye movements (spasmus nutans)',
+    ],
+    sameDay: [
+      'Jitteriness concerning to parents that is not clearly settling',
+      'Tremors in infant of diabetic mother (blood sugar check needed)',
+      'Recurrent shuddering episodes — needs assessment to confirm benign',
+      'Tremor interfering with feeding or activities',
+    ],
+    monitor: [
+      'Normal neonatal jitteriness that stops when limb is held and baby is otherwise well',
+      'Chin quivering only during crying in newborn',
+      'Known benign shuddering attacks (already diagnosed)',
+      'Brief trembling with cold, hunger, or excitement that resolves quickly',
+    ],
+  },
+  homeRemedies: [
+    'Test if it is jitteriness vs seizure: gently hold the shaking limb — if it STOPS, it is likely benign jitteriness',
+    'Keep baby warm — cold stress commonly triggers neonatal jitteriness',
+    'Feed on cue — hunger can cause trembling; try a feed if baby is due',
+    'Swaddle baby snugly — this often resolves jitteriness immediately',
+    'Note timing: is it with crying? Cold? Hunger? Feeding? Or unprovoked at rest?',
+    'Video the episodes to show your doctor — the quality of the movement helps diagnosis',
+    'Chin quivering during crying in newborns is extremely common and always benign — it resolves by 2-3 months',
+    'Benign shuddering attacks: child is fully alert during episode, no treatment needed, outgrown by age 2-3',
+    'If concerned: note duration, frequency, associated feeding/consciousness changes, and what stops it',
+  ],
+  relatedSymptomSlugs: ['seizure', 'febrile-seizure', 'stiffness', 'staring-spells'],
+  relatedIllnessSlugs: ['neonatal-jitteriness', 'benign-shuddering-attacks', 'neonatal-hypoglycemia'],
+  relatedConcernSlugs: ['baby-shaking-hands', 'baby-chin-quivering', 'newborn-jittery', 'baby-shuddering'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Neonatal Jitteriness and Tremors. NeoReviews.', url: 'https://publications.aap.org/neoreviews' },
+    { org: 'NIH', citation: 'National Library of Medicine. Neonatal Jitteriness. StatPearls.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK559061/' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Benign shuddering attacks in infancy.', url: 'https://www.mayoclinic.org/diseases-conditions/essential-tremor/symptoms-causes/syc-20350534' },
+  ],
+};

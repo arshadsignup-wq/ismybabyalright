@@ -1,0 +1,70 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'not-using-arm',
+  title: 'Not Using Arm (Nursemaid\'s Elbow & Arm Injuries) in Babies & Toddlers',
+  bodySystem: 'limbs-joints',
+  description: 'When a baby or toddler suddenly stops using one arm, the most common cause is nursemaid\'s elbow (radial head subluxation) — a partial dislocation of the elbow joint that occurs when the arm is pulled or jerked. It is extremely common in children under 5 and is easily treated with a quick reduction maneuver by a healthcare provider. Other causes include fractures, soft tissue injuries, or rarely infections.',
+  possibleCauses: [
+    { cause: 'Nursemaid\'s elbow (radial head subluxation)', likelihood: 'common' },
+    { cause: 'Clavicle (collarbone) fracture', likelihood: 'uncommon' },
+    { cause: 'Forearm or wrist fracture (buckle/greenstick)', likelihood: 'uncommon' },
+    { cause: 'Soft tissue injury (bruise, strain)', likelihood: 'common' },
+    { cause: 'Shoulder injury', likelihood: 'uncommon' },
+    { cause: 'Septic arthritis (joint infection)', likelihood: 'rare' },
+    { cause: 'Osteomyelitis (bone infection)', likelihood: 'rare' },
+    { cause: 'Erb\'s palsy (brachial plexus birth injury)', likelihood: 'uncommon' },
+    { cause: 'Non-accidental injury', likelihood: 'uncommon' },
+  ],
+  byAge: [
+    { ageRange: '0-2 months', normalVariation: 'Newborns typically move both arms symmetrically. Brief periods of one arm resting is normal during sleep.', whenToWorry: 'Persistent inability to move one arm since birth (Erb\'s palsy from birth injury). Swelling of arm, shoulder, or collarbone. Crying when arm is moved. Asymmetric Moro reflex (arm does not extend equally).' },
+    { ageRange: '2-6 months', normalVariation: 'Babies should be reaching with both hands by 4-5 months. Brief hand preference is not expected at this age.', whenToWorry: 'Sudden onset of not using arm after being lifted/pulled. Arm held still at side with elbow slightly bent (nursemaid\'s elbow position). Swelling or deformity. Crying with any movement of the limb.' },
+    { ageRange: '6-12 months', normalVariation: 'Babies should be using both hands for grasping and transferring objects. Both arms should reach equally.', whenToWorry: 'Sudden refusal to use arm (especially after being swung or pulled by arm). Unable to lift arm above shoulder. Swelling or warmth of arm or shoulder. Fever with arm disuse (infection concern).' },
+    { ageRange: '1-3 years', normalVariation: 'Toddlers should use both arms equally. Mild hand preference may begin to emerge around age 2-3 but both arms should function well.', whenToWorry: 'Sudden onset arm disuse — classic nursemaid\'s elbow scenario (arm pulled, child won\'t use it). Arm swelling after fall. Child holding arm against body and refusing to move it. Fever with arm symptoms (septic joint/osteomyelitis).' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Obvious deformity of arm with severe pain',
+      'Arm that is pale, cold, or has no pulse below injury',
+      'Open wound with bone visible',
+      'Arm disuse with high fever and severely unwell child',
+    ],
+    urgent: [
+      'Suspected nursemaid\'s elbow (arm pulled and now not being used) — needs reduction',
+      'Significant swelling or deformity suggesting fracture',
+      'Fever with arm disuse or joint swelling (infection concern)',
+      'Arm not used since birth (brachial plexus injury assessment needed)',
+      'Not using arm with no clear mechanism of injury',
+    ],
+    sameDay: [
+      'Arm disuse after minor injury without significant swelling or deformity',
+      'Mild swelling of arm or hand after fall',
+      'Previously treated nursemaid\'s elbow with recurrence',
+      'Child not using arm but otherwise well — unclear cause',
+    ],
+    monitor: [
+      'Brief guarding of arm after minor bump that resolves within 30-60 minutes',
+      'Child using arm normally again after brief period of rest',
+    ],
+  },
+  homeRemedies: [
+    'Do NOT try to "pop" the elbow back in yourself — nursemaid\'s elbow needs professional reduction',
+    'Keep the arm supported and do not force movement',
+    'Apply ice wrapped in cloth to any swelling',
+    'Offer age-appropriate pain relief (acetaminophen or ibuprofen)',
+    'Do not pull, lift, or swing children by one arm or by the hands — this is the main cause of nursemaid\'s elbow',
+    'When lifting a toddler, lift under the armpits rather than by the wrists/hands',
+    'After nursemaid\'s elbow reduction, child typically uses arm normally within 10-30 minutes',
+    'Nursemaid\'s elbow can recur — prevention through proper lifting technique is key',
+    'If the child is not using the arm normally within 24 hours of injury, seek evaluation',
+  ],
+  triageSlug: 'arm-injury',
+  relatedSymptomSlugs: ['limping', 'swollen-joint', 'bruising'],
+  relatedIllnessSlugs: ['nursemaids-elbow', 'fracture', 'erbs-palsy'],
+  relatedConcernSlugs: ['toddler-not-using-arm', 'nursemaids-elbow', 'baby-arm-injury'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Nursemaid\'s Elbow (Pulled Elbow). HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/orthopedic/Pages/Nursemaids-Elbow.aspx' },
+    { org: 'Mayo Clinic', citation: 'Mayo Clinic. Nursemaid\'s elbow — Symptoms and causes.', url: 'https://www.mayoclinic.org/diseases-conditions/nursemaids-elbow/symptoms-causes/syc-20378808' },
+    { org: 'NIH', citation: 'National Library of Medicine. Radial Head Subluxation. StatPearls.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK459168/' },
+  ],
+};

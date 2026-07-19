@@ -1,0 +1,73 @@
+import type { SymptomGuide } from '../types';
+
+export const symptom: SymptomGuide = {
+  slug: 'diarrhea',
+  title: 'Diarrhea in Babies & Toddlers',
+  bodySystem: 'abdomen',
+  description: 'Diarrhea is defined as an increase in the frequency and looseness of stools compared to the baby\'s normal pattern. Breastfed newborns normally have very loose, seedy, yellow stools multiple times per day \u2014 this is NOT diarrhea. True diarrhea in babies is watery, occurs more frequently than usual, and often indicates a viral infection. The main risk is dehydration, which is the primary concern to monitor.',
+  possibleCauses: [
+    { cause: 'Viral gastroenteritis (rotavirus, norovirus, adenovirus)', likelihood: 'common' },
+    { cause: 'Dietary changes or new foods', likelihood: 'common' },
+    { cause: 'Antibiotic use', likelihood: 'common' },
+    { cause: 'Teething (mild loose stools \u2014 debated)', likelihood: 'common' },
+    { cause: 'Food intolerance or allergy (milk protein, soy)', likelihood: 'uncommon' },
+    { cause: 'Bacterial gastroenteritis (Salmonella, E. coli)', likelihood: 'uncommon' },
+    { cause: 'Parasitic infection (Giardia)', likelihood: 'uncommon' },
+    { cause: 'Toddler\'s diarrhea (functional, chronic loose stools in well child)', likelihood: 'common' },
+    { cause: 'Celiac disease', likelihood: 'rare' },
+  ],
+  byAge: [
+    { ageRange: '0-3 months', normalVariation: 'Breastfed babies often have 6-12 loose, seedy, yellow stools per day in the first weeks. This decreases over time. Formula-fed babies have fewer, firmer stools. A change from baby\'s baseline is more important than stool consistency alone.', whenToWorry: 'Truly watery stools (no substance) more frequently than usual, blood or mucus in stool, fever with diarrhea in baby under 3 months, or decreased wet diapers suggesting dehydration.' },
+    { ageRange: '3-12 months', normalVariation: 'Stool patterns change with introduction of solids. Brief bouts of looser stool with dietary changes or mild viruses are common. Stool color changes with new foods are normal.', whenToWorry: 'Watery diarrhea lasting more than 5-7 days, blood in stool, fever above 102\u00b0F with diarrhea, signs of dehydration, or baby refusing fluids and having reduced wet diapers.' },
+    { ageRange: '1-3 years', normalVariation: 'Toddler\'s diarrhea (3-6 loose stools per day in a well, growing child) is the most common cause of chronic diarrhea in toddlers. Child thrives despite loose stools.', whenToWorry: 'Diarrhea with blood, severe abdominal pain, high fever, weight loss, diarrhea lasting more than 2 weeks without improvement, or signs of dehydration at any point.' },
+    { ageRange: 'Any age', normalVariation: 'Brief viral gastroenteritis (1-5 days of loose stools) is extremely common and usually self-limiting.', whenToWorry: 'More than 8-10 watery stools per day, inability to keep fluids down, no wet diaper for 6-8 hours, sunken eyes or fontanelle, or child appears very ill.' },
+  ],
+  urgencyLevels: {
+    emergency: [
+      'Diarrhea with bloody stools and severe abdominal pain (possible intussusception or HUS)',
+      'Severe dehydration: lethargic, sunken eyes, no tears, very dry mouth, no urine for 8+ hours',
+      'Diarrhea with high fever and infant under 3 months',
+      'Diarrhea with altered consciousness or extreme lethargy',
+    ],
+    urgent: [
+      'Moderate dehydration: fewer than 3 wet diapers in 24 hours, dry mouth, no tears when crying',
+      'Bloody diarrhea (more than streaks)',
+      'Diarrhea with persistent vomiting (unable to keep oral rehydration down)',
+      'Diarrhea with high fever above 104\u00b0F at any age',
+      'Severe abdominal pain between loose stools',
+    ],
+    sameDay: [
+      'Diarrhea lasting more than 5-7 days without improvement',
+      'Mild blood streaks or mucus in stool',
+      'Diarrhea with mild dehydration but child still accepting some fluids',
+      'Chronic diarrhea with poor weight gain',
+    ],
+    monitor: [
+      'Acute watery diarrhea less than 3 days with child maintaining hydration',
+      'Loose stools after dietary changes or new foods',
+      'Toddler\'s diarrhea in a well, growing child',
+      'Loose stools while on antibiotics (if no blood or fever)',
+    ],
+  },
+  homeRemedies: [
+    'Continue breastfeeding \u2014 breast milk is the best fluid for a breastfed baby with diarrhea',
+    'Offer oral rehydration solution (Pedialyte) for bottle-fed babies and toddlers',
+    'Give small, frequent sips rather than large amounts at once',
+    'Continue regular diet (age-appropriate foods) \u2014 restriction of food is no longer recommended',
+    'BRAT diet (bananas, rice, applesauce, toast) may help firm stools but is not required',
+    'Avoid fruit juice, which can worsen diarrhea (osmotic effect)',
+    'Protect diaper area with barrier cream (zinc oxide) to prevent severe diaper rash',
+    'Probiotics (Lactobacillus) may reduce duration by about 1 day per some evidence',
+    'Track number of wet diapers to monitor hydration status',
+    'Do NOT give anti-diarrheal medications (Imodium) to children under 6',
+  ],
+  triageSlug: 'diarrhea',
+  relatedSymptomSlugs: ['vomiting', 'dehydration', 'fever', 'blood-in-stool', 'diaper-rash'],
+  relatedIllnessSlugs: ['gastroenteritis', 'rotavirus', 'food-allergy'],
+  relatedConcernSlugs: ['baby-diarrhea-teething', 'toddler-diarrhea-daycare', 'baby-green-poop'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Diarrhea in Children. HealthyChildren.org.', url: 'https://www.healthychildren.org/English/health-issues/conditions/abdominal/Pages/Diarrhea.aspx' },
+    { org: 'WHO', citation: 'WHO/UNICEF. Clinical Management of Acute Diarrhoea. Joint Statement.', url: 'https://www.who.int/publications/i/item/WHO-FCH-CAH-04.7' },
+    { org: 'ESPGHAN', citation: 'Guarino A, et al. European Society for Paediatric Gastroenterology. Evidence-based Guidelines for the Management of Acute Gastroenteritis in Children in Europe. JPGN. 2014.', url: 'https://journals.lww.com/jpgn/fulltext/2014/07000/european_society_for_pediatric_gastroenterology,.22.aspx' },
+  ],
+};

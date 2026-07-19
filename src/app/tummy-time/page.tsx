@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import RelatedGuides from "@/components/guides/RelatedGuides";
+import LastReviewed from "@/components/shared/LastReviewed";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import BottomLine from '@/components/shared/BottomLine';
+import MedicalReviewAttribution from '@/components/shared/MedicalReviewAttribution';
+import AuthoritativeQuote from '@/components/shared/AuthoritativeQuote';
+import { getQuotesForTopic } from '@/data/authoritative-quotes';
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import { tummyTimeByAge, troubleshooting, benefits } from "@/data/tummy-time/data";
 
 export const metadata: Metadata = {
@@ -50,25 +59,37 @@ const faqItems = [
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
+const contentSchema = getContentPageSchema({
+  name: 'Tummy Time Guide by Age: How Much, Positions & Tips',
+  description:
+    'Evidence-based tummy time guide from newborn to 6 months. Daily goals, positions, troubleshooting for babies who hate tummy time, and safety tips based on AAP guidelines.',
+  path: '/tummy-time',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tummy Time' },
+]);
+
+const faqJsonLd = getFAQPageSchema(faqItems);
 
 export default function TummyTimePage() {
+  const topicQuotes = getQuotesForTopic('tummy-time');
+
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "Tummy Time Guide" }]} />
@@ -77,6 +98,8 @@ export default function TummyTimePage() {
         {/* Hero */}
         <section className="mb-10">
           <h1 className="text-foreground">Tummy Time Guide</h1>
+          <MedicalReviewAttribution sources={['AAP']} />
+          <LastReviewed date="2026-07-01" />
           <p className="text-lg text-muted leading-relaxed mt-2 max-w-2xl">
             Tummy time is one of the most important activities for your baby's
             physical development. The{" "}
@@ -87,6 +110,25 @@ export default function TummyTimePage() {
             Here is everything you need to know, by age.
           </p>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            "Start tummy time from day one -- even 1-2 minutes on your chest during skin-to-skin counts.",
+            "Aim for 15-30 minutes total per day by 7 weeks, building up to 60-90 minutes by 3-4 months.",
+            "Always supervise tummy time on a firm, flat surface -- if baby falls asleep, roll them onto their back.",
+            "Many babies fuss at first; try shorter sessions, different positions, and face-to-face interaction to help.",
+            "Tummy time builds the neck, shoulder, arm, and core strength needed for rolling, crawling, and sitting.",
+          ]}
+        />
+
+        {topicQuotes.length > 0 && (
+          <AuthoritativeQuote
+            quote={topicQuotes[0].quote}
+            source={topicQuotes[0].source}
+            sourceUrl={topicQuotes[0].sourceUrl}
+            organization={topicQuotes[0].organization}
+          />
+        )}
 
         {/* Benefits */}
         <section className="mb-10">
@@ -334,42 +376,10 @@ export default function TummyTimePage() {
           </div>
         </section>
 
-        {/* FAQ Section (visible, matches JSON-LD) */}
-        <section className="mb-10">
-          <h2 className="text-foreground mb-4">Frequently Asked Questions</h2>
-          <div className="flex flex-col gap-3">
-            {faqItems.map((faq, index) => (
-              <details
-                key={index}
-                className="rounded-xl border border-[#E8E2D9] bg-white group"
-              >
-                <summary className="cursor-pointer p-5 text-sm font-bold text-foreground list-none flex items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
-                  <span>{faq.question}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="shrink-0 mt-0.5 text-muted transition-transform group-open:rotate-180"
-                    aria-hidden="true"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </summary>
-                <div className="px-5 pb-5 -mt-1">
-                  <p className="text-sm text-muted leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
+        {/* FAQ Section */}
+        <div className="mb-10">
+          <FAQSection items={faqItems} />
+        </div>
 
         {/* Sources */}
         <section className="mb-4">
@@ -411,7 +421,11 @@ export default function TummyTimePage() {
           premature or has medical conditions, ask your doctor about modified
           tummy time approaches.
         </p>
+
+        <BottomLine summary="Tummy time is one of the most important activities for your baby's physical development. Start with short sessions from day one and gradually increase as your baby gets stronger. If your baby fusses during tummy time, try different positions and keep sessions short — even a few minutes at a time counts." />
+
+        <div className="mt-6"><EditorialTrustBanner variant="compact" /></div>
       </div>
-    </div>
+    </article>
   );
 }

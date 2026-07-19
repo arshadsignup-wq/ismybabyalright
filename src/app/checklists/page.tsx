@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { allChecklists } from "@/data/checklists/checklists";
+import { getCollectionPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 
 export const metadata: Metadata = {
   title: "Parenting Checklists",
@@ -16,12 +18,31 @@ export const metadata: Metadata = {
 };
 
 export default function ChecklistsPage() {
+  const collectionSchema = getCollectionPageSchema({
+    name: "Parenting Checklists",
+    description:
+      "Printable checklists for common parenting situations  -  first fever, leaving the house, blowouts, and more.",
+    path: "/checklists",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Checklists" },
+  ]);
+
   return (
     <div className="mx-auto max-w-lg px-4 py-8 sm:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([collectionSchema, breadcrumbSchema]),
+        }}
+      />
       <div className="text-center mb-8">
         <h1 className="text-foreground">Parenting Checklists</h1>
+        <p className="text-base text-muted leading-relaxed mb-6">Printable baby checklists covering hospital bag essentials, newborn supplies, baby-proofing tasks, developmental milestones, and routine care schedules to help new parents stay organized.</p>
         <p className="text-muted mt-2 leading-relaxed">
-          Printable, one-tap checklists for the moments when you need a plan.
+          Printable, evidence-based checklists for common parenting situations -- from handling a first fever to leaving the house with a newborn. Each checklist gives you a step-by-step plan so you can act with confidence.
         </p>
       </div>
 
@@ -39,6 +60,10 @@ export default function ChecklistsPage() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="mt-6">
+        <EditorialTrustBanner variant="compact" />
       </div>
     </div>
   );

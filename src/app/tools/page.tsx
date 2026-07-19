@@ -80,8 +80,8 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.ismybabyalright.com" },
-    { "@type": "ListItem", position: 2, name: "Tools", item: "https://www.ismybabyalright.com/tools" },
+    { "@type": "ListItem", position: 1, name: "Home", url: "https://www.ismybabyalright.com" },
+    { "@type": "ListItem", position: 2, name: "Tools", url: "https://www.ismybabyalright.com/tools" },
   ],
 };
 
@@ -116,6 +116,7 @@ export default function ToolsPage() {
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             Baby &amp; Pregnancy Tools
           </h1>
+          <p className="text-base text-muted leading-relaxed mb-6">Is My Baby Alright? offers 27 free, evidence-based calculators and tools covering baby health topics from medicine dosing and sleep schedules to growth tracking and feeding amounts.</p>
           <p className="mx-auto mt-3 max-w-2xl text-muted text-base sm:text-lg">
             27 free calculators, trackers, and guides to help you through pregnancy
             and your baby&apos;s first years. All based on CDC, WHO, and AAP guidelines.

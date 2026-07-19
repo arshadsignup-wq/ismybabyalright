@@ -1,0 +1,72 @@
+import type { EmergencyGuide } from '../types';
+
+export const guide: EmergencyGuide = {
+  slug: 'choking-infant',
+  title: 'Choking in an Infant (Under 1 Year)',
+  category: 'medical',
+  callNineOneOne: true,
+  description: 'A choking infant cannot cry, cough, or breathe. This is a life-threatening emergency that requires immediate action with back blows and chest thrusts.',
+  immediateActions: [
+    'If baby cannot cry, cough, or breathe — start back blows immediately',
+    'Call 911 or have someone else call while you begin first aid',
+    'Do NOT perform blind finger sweeps',
+    'Do NOT perform abdominal thrusts (Heimlich) on infants under 1',
+  ],
+  doNotDo: [
+    'Do NOT perform the Heimlich maneuver on babies under 1 year',
+    'Do NOT do blind finger sweeps — you may push the object deeper',
+    'Do NOT hold baby upside down by the feet',
+    'Do NOT slap baby on the back while they are upright',
+    'If baby is coughing forcefully, do NOT interfere — let them try to clear it',
+  ],
+  stepByStep: [
+    { step: 1, title: 'Assess the situation', description: 'If baby is coughing forcefully, let them try to clear it. If baby cannot cry, cough, or breathe, or is turning blue, proceed immediately.' },
+    { step: 2, title: 'Position for back blows', description: 'Place baby face-down along your forearm, supporting the jaw with your hand. Keep baby\'s head lower than chest. Rest your forearm on your thigh.' },
+    { step: 3, title: 'Give 5 back blows', description: 'Using the heel of your free hand, give 5 firm back blows between the shoulder blades. Each blow should be a distinct, forceful strike.' },
+    { step: 4, title: 'Turn baby over', description: 'Supporting the head, turn baby face-up on your forearm. Keep head lower than chest.' },
+    { step: 5, title: 'Give 5 chest thrusts', description: 'Place 2 fingers on the breastbone just below the nipple line. Give 5 quick downward chest thrusts (about 1.5 inches deep).' },
+    { step: 6, title: 'Check mouth', description: 'Look in baby\'s mouth. If you can SEE the object, carefully remove it with a finger sweep. Do NOT do blind sweeps.' },
+    { step: 7, title: 'Repeat', description: 'Continue alternating 5 back blows and 5 chest thrusts until object is expelled, baby starts breathing/crying, or baby becomes unresponsive.' },
+    { step: 8, title: 'If baby becomes unresponsive', description: 'Begin infant CPR immediately. Call 911 if not already done. After 30 compressions, look in the mouth before giving breaths — remove visible objects.' },
+  ],
+  whenToCall911: [
+    'Baby cannot breathe, cry, or cough',
+    'Baby is turning blue',
+    'Baby becomes unresponsive',
+    'Object is not cleared after multiple rounds of back blows and chest thrusts',
+    'Baby was choking and now appears to be breathing but is lethargic or drooling',
+  ],
+  whenToCallDoctor: [
+    'After any choking episode, even if baby seems fine — to ensure nothing remains lodged',
+    'Baby has persistent cough after choking episode',
+    'You suspect baby swallowed something but is currently breathing normally',
+    'Baby has noisy breathing or wheezing after the episode',
+  ],
+  whenToGoToER: [
+    'Baby was choking and is now having difficulty breathing',
+    'Object was partially cleared but baby is still distressed',
+    'Baby was choking on a battery or magnet',
+    'Baby is drooling excessively and refusing to swallow after the episode',
+  ],
+  prevention: [
+    'Cut food into pieces smaller than a pea for babies under 1',
+    'Avoid high-risk foods: whole grapes, hot dogs, popcorn, nuts, hard candy, raw carrots, chunks of meat',
+    'Always supervise eating — baby should be seated upright in a high chair',
+    'Keep small objects out of reach (coins, buttons, batteries, balloons, pen caps)',
+    'Get down on the floor at baby\'s level to spot hazards',
+    'All caregivers should learn infant choking first aid',
+    'Check under furniture and between cushions regularly for small items',
+  ],
+  byAge: [
+    { ageRange: '0-6 months', context: 'Choking at this age is usually from liquids (breast milk, formula) during feeding. Keep baby in proper feeding position. Reflux can also cause choking episodes.' },
+    { ageRange: '6-12 months', context: 'Starting solids is a high-risk time. Babies are learning to chew and may not handle textures well. Keep pieces small and soft. Supervise closely during meals.' },
+    { ageRange: '1-3 years', context: 'Toddlers put everything in their mouths and may not chew food thoroughly. High-risk foods include grapes, hot dogs, popcorn, and nuts. Cut round foods lengthwise.' },
+  ],
+  relatedEmergencySlugs: ['cpr-infant', 'breathing-emergency'],
+  relatedConcernSlugs: ['baby-choking-on-food'],
+  sources: [
+    { org: 'AAP', citation: 'American Academy of Pediatrics. Choking Prevention and First Aid for Infants and Children.', url: 'https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/Choking-Prevention.aspx' },
+    { org: 'AHA', citation: 'American Heart Association. Infant Choking.', url: 'https://www.heart.org/en/health-topics/first-aid/first-aid-for-cardiac-arrest/infant-choking' },
+    { org: 'Red Cross', citation: 'American Red Cross. Conscious Choking — Infant.', url: 'https://www.redcross.org/take-a-class/cpr/performing-cpr/child-baby-cpr' },
+  ],
+};

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import WonderWeeksCalculator from "@/components/tools/WonderWeeksCalculator";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Wonder Weeks Calculator - Is My Baby in a Developmental Leap?",
@@ -39,9 +40,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Wonder Weeks Calculator',
+  description: 'Find out if your baby is going through a developmental leap. Track all 10 Wonder Weeks leaps with signs, new abilities, and timing for babies 0-20 months.',
+  path: '/tools/wonder-weeks',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Wonder Weeks' },
+]);
+
 export default function WonderWeeksPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,6 +71,7 @@ export default function WonderWeeksPage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">A Wonder Weeks calculator identifies the 10 developmental leaps that babies experience in their first 20 months, predicting fussy periods that often accompany major cognitive growth spurts.</p>
         <WonderWeeksCalculator />
       </div>
     </div>

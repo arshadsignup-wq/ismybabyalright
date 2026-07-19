@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ScreenTimeCalculator from "@/components/tools/ScreenTimeCalculator";
+import ComparisonTable from "@/components/shared/ComparisonTable";
+import { SCREEN_TIME_GUIDELINES } from "@/data/screen-time/data";
+import { getWebApplicationSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Screen Time Guidelines by Age - How Much Is Too Much?",
@@ -39,9 +42,24 @@ const faqJsonLd = {
   ],
 };
 
+const webAppSchema = getWebApplicationSchema({
+  name: 'Screen Time Guidelines',
+  description: 'Age-specific screen time recommendations from the AAP and WHO. Find out how much screen time is appropriate for your child and get tips for healthy media habits.',
+  path: '/tools/screen-time',
+  applicationCategory: 'HealthApplication',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Screen Time Guidelines' },
+]);
+
 export default function ScreenTimePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -55,7 +73,28 @@ export default function ScreenTimePage() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <p className="text-base text-muted leading-relaxed mb-6">
+          Screen time guidelines provide age-specific recommendations from the AAP and WHO on how much screen time is appropriate for children, along with tips for healthy media habits and alternatives to screen use.
+        </p>
+
         <ScreenTimeCalculator />
+
+        <section className="mt-12 border-t border-[#E8E2D9] pt-8">
+          <h2 className="text-lg font-bold text-foreground mb-4">
+            Screen Time Recommendations by Age
+          </h2>
+          <ComparisonTable
+            caption="Screen Time Recommendations by Age"
+            headers={["Age", "Recommendation", "Max Daily", "Details"]}
+            rows={SCREEN_TIME_GUIDELINES.map((g) => [
+              g.label,
+              g.recommendation,
+              g.maxMinutesPerDay === 0 ? "None" : g.maxMinutesPerDay == null ? "Varies" : `${g.maxMinutesPerDay} min`,
+              g.details,
+            ])}
+            sourceNote="Based on American Academy of Pediatrics (AAP) media use recommendations."
+          />
+        </section>
       </div>
     </div>
   );

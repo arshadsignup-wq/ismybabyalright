@@ -7,6 +7,12 @@ import {
   milkStorage,
   pumpingTips,
 } from "@/data/feeding/pumping";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import LastReviewed from "@/components/shared/LastReviewed";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+import BottomLine from "@/components/shared/BottomLine";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import { getContentPageSchema, getBreadcrumbSchema } from "@/lib/seo";
 
 /* ==========================================================================
    Metadata
@@ -27,6 +33,22 @@ export const metadata: Metadata = {
     type: "article",
   },
 };
+
+/* ==========================================================================
+   JSON-LD: MedicalWebPage + BreadcrumbList
+   ========================================================================== */
+
+const contentJsonLd = getContentPageSchema({
+  name: "Breastfeeding & Pumping Guide",
+  description:
+    "Evidence-based breastfeeding and pumping guide covering latch issues, low supply, engorgement, mastitis, clogged ducts, nipple pain, cluster feeding, pumping schedules, and milk storage. Free, no paywall.",
+  path: "/feeding",
+});
+
+const breadcrumbJsonLd = getBreadcrumbSchema([
+  { name: "Home", url: "/" },
+  { name: "Breastfeeding & Pumping Guide" },
+]);
 
 /* ==========================================================================
    JSON-LD: FAQPage
@@ -55,6 +77,14 @@ export default function FeedingPage() {
       {/* JSON-LD */}
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
@@ -76,17 +106,25 @@ export default function FeedingPage() {
             challenges. Whether you&apos;re nursing, pumping, or both  -  you&apos;re
             doing a great job.
           </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            <span className="source-badge source-badge-aap">AAP</span>
-            <span className="source-badge source-badge-who">WHO</span>
-            <span className="source-badge" style={{ backgroundColor: "#7C3AED" }}>
-              La Leche League
-            </span>
-            <span className="source-badge" style={{ backgroundColor: "#0891B2" }}>
-              ABM
-            </span>
+          <div className="mt-3">
+            <MedicalReviewAttribution
+              sources={['AAP', 'WHO', 'La Leche League', 'ABM', 'CDC']}
+            />
+          </div>
+          <div className="mt-1">
+            <LastReviewed date="2026-07-01" />
           </div>
         </header>
+
+        <KeyTakeaways
+          takeaways={[
+            "Breastfeeding challenges like latch issues, low supply, and engorgement are common and usually treatable with the right support.",
+            "The AAP and WHO recommend exclusive breastfeeding for the first 6 months, but any amount of breastfeeding is beneficial.",
+            "A board-certified lactation consultant (IBCLC) can help with everything from establishing a latch to complex issues months later.",
+            "Pumping schedules vary by situation — exclusive pumpers, working parents, and nursing parents who pump occasionally all have different needs.",
+            "However you feed your baby — breastfeeding, pumping, combo feeding, or formula — your baby is getting what they need.",
+          ]}
+        />
 
         {/* Quick jump nav */}
         <nav
@@ -606,6 +644,12 @@ export default function FeedingPage() {
             device.
           </p>
         </footer>
+
+        <BottomLine summary="However you feed your baby — exclusively breastfeeding, pumping, combo feeding, or formula — you are giving your baby exactly what they need. If breastfeeding is causing significant distress, it's okay to adjust your approach. A board-certified lactation consultant (IBCLC) can help at any stage." />
+
+        <div className="mt-6">
+          <EditorialTrustBanner variant="compact" />
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import LastReviewed from "@/components/shared/LastReviewed";
+import KeyTakeaways from "@/components/shared/KeyTakeaways";
+import FAQSection from "@/components/shared/FAQSection";
+import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
+import BottomLine from "@/components/shared/BottomLine";
+import MedicalReviewAttribution from "@/components/shared/MedicalReviewAttribution";
+import { getContentPageSchema, getBreadcrumbSchema, getFAQPageSchema } from "@/lib/seo";
 import {
   RECALL_CATEGORIES,
   SAFETY_RESOURCES,
@@ -20,6 +27,19 @@ export const metadata: Metadata = {
   },
 };
 
+const contentSchema = getContentPageSchema({
+  name: 'Baby Product Safety Recalls Guide - Check Cribs, Car Seats & More',
+  description:
+    'Check if your baby products have been recalled. Search cribs, car seats, strollers, high chairs, toys, and more. Includes CPSC recall links, safety tips, and step-by-step instructions for checking recalls.',
+  path: '/product-safety',
+  lastModified: '2026-07-01',
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Product Safety' },
+]);
+
 const howToJsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -33,40 +53,34 @@ const howToJsonLd = {
   })),
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How do I check if my baby product has been recalled?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Visit cpsc.gov/Recalls and search by product name, brand, or model number. For car seats, use nhtsa.gov/recalls. For infant formula and baby food, check fda.gov/safety/recalls. You can also sign up for free email alerts at cpsc.gov to be notified of new recalls.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What should I do if my baby's product is recalled?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Stop using the product immediately. Follow the recall instructions, which may include returning it for a refund, receiving a repair kit, or getting a replacement. Never try to fix a recalled product yourself. Contact the manufacturer using the details in the recall notice.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the most commonly recalled baby products?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The most commonly recalled baby products include cribs, car seats, strollers, high chairs, toys, infant swings and bouncers, play yards, bassinets, baby monitors, and children's clothing. Toys are the single most frequently recalled category.",
-      },
-    },
-  ],
-};
+const productSafetyFaqItems = [
+  {
+    question: "How do I check if my baby product has been recalled?",
+    answer:
+      "Visit cpsc.gov/Recalls and search by product name, brand, or model number. For car seats, use nhtsa.gov/recalls. For infant formula and baby food, check fda.gov/safety/recalls. You can also sign up for free email alerts at cpsc.gov to be notified of new recalls.",
+  },
+  {
+    question: "What should I do if my baby's product is recalled?",
+    answer:
+      "Stop using the product immediately. Follow the recall instructions, which may include returning it for a refund, receiving a repair kit, or getting a replacement. Never try to fix a recalled product yourself. Contact the manufacturer using the details in the recall notice.",
+  },
+  {
+    question: "What are the most commonly recalled baby products?",
+    answer:
+      "The most commonly recalled baby products include cribs, car seats, strollers, high chairs, toys, infant swings and bouncers, play yards, bassinets, baby monitors, and children's clothing. Toys are the single most frequently recalled category.",
+  },
+  {
+    question: "How do I register baby products for recall alerts?",
+    answer:
+      "Fill out the registration card included with your product or visit the manufacturer's website. Under the CPSIA, all makers of durable infant and toddler products must offer free registration. This ensures you are contacted directly if a recall is issued for your specific product.",
+  },
+];
+
+const faqJsonLd = getFAQPageSchema(productSafetyFaqItems);
 
 export default function ProductSafetyPage() {
   return (
-    <div>
+    <article>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
@@ -74,6 +88,14 @@ export default function ProductSafetyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <Breadcrumbs items={[{ label: "Product Safety Recalls" }]} />
@@ -84,6 +106,10 @@ export default function ProductSafetyPage() {
           <h1 className="text-2xl font-bold text-foreground sm:text-3xl">
             Baby Product Safety Recalls Guide
           </h1>
+          <LastReviewed date="2026-07-01" />
+          <div className="mt-3">
+            <MedicalReviewAttribution sources={['CPSC', 'AAP']} />
+          </div>
           <p className="mt-3 text-muted leading-relaxed">
             Every year, millions of baby and children's products are recalled
             due to safety hazards including choking, strangulation, falls,
@@ -100,6 +126,15 @@ export default function ProductSafetyPage() {
             recall is announced.
           </p>
         </div>
+
+        <KeyTakeaways
+          takeaways={[
+            "If a product has been recalled, stop using it immediately and follow the manufacturer's recall instructions.",
+            "Check cpsc.gov/Recalls for most baby products, nhtsa.gov for car seats, and fda.gov for formula and baby food.",
+            "Register every durable baby product you own so you are notified directly if a recall is issued.",
+            "An estimated 60,000 children under age 5 are treated in ERs each year for injuries related to nursery products.",
+          ]}
+        />
 
         {/* Urgent Notice */}
         <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 px-4 py-4 dark:border-amber-500/40 dark:bg-amber-950/30">
@@ -299,6 +334,9 @@ export default function ProductSafetyPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FAQSection items={productSafetyFaqItems} />
+
         {/* Sources / Disclaimer */}
         <div className="text-xs text-muted space-y-3">
           <div>
@@ -383,7 +421,14 @@ export default function ProductSafetyPage() {
             or call the CPSC at 1-800-638-2772.
           </p>
         </div>
+
+        <BottomLine
+          summary="Checking for product recalls takes only a few minutes but can prevent serious injuries. Register every durable baby product you own, bookmark cpsc.gov/Recalls, and stop using any recalled product immediately. Staying informed is one of the simplest ways to keep your child safe."
+          supportiveMessage="You are doing the right thing by checking. Staying on top of recalls shows how much you care about your child's safety."
+        />
+
+        <div className="mt-6"><EditorialTrustBanner variant="compact" /></div>
       </div>
-    </div>
+    </article>
   );
 }
