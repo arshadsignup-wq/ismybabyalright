@@ -14,11 +14,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/growth",
-        destination: "/tools/growth",
-        permanent: true,
-      },
-      {
         source: "/early-intervention",
         destination: "/resources/early-intervention",
         permanent: true,
