@@ -6,20 +6,29 @@ import { illness as asthma } from './respiratory/asthma';
 import { illness as bronchiolitis } from './respiratory/bronchiolitis';
 import { illness as bronchitis } from './respiratory/bronchitis';
 import { illness as commonCold } from './respiratory/common-cold';
+import { illness as covid19 } from './respiratory/covid-19';
 import { illness as croup } from './respiratory/croup';
+import { illness as enterovirusD68 } from './respiratory/enterovirus-d68';
 import { illness as flu } from './respiratory/flu';
 import { illness as hmpv } from './respiratory/hmpv';
+import { illness as parainfluenza } from './respiratory/parainfluenza';
 import { illness as pneumonia } from './respiratory/pneumonia';
+import { illness as reactiveAirway } from './respiratory/reactive-airway';
 import { illness as rsv } from './respiratory/rsv';
 import { illness as whoopingCough } from './respiratory/whooping-cough';
 // Gastrointestinal
+import { illness as cDiff } from './gastrointestinal/c-diff';
+import { illness as celiacDisease } from './gastrointestinal/celiac-disease';
+import { illness as cmpa } from './gastrointestinal/cmpa';
 import { illness as foodPoisoning } from './gastrointestinal/food-poisoning';
 import { illness as gastroenteritis } from './gastrointestinal/gastroenteritis';
+import { illness as giardia } from './gastrointestinal/giardia';
 import { illness as intussusception } from './gastrointestinal/intussusception';
 import { illness as norovirus } from './gastrointestinal/norovirus';
 import { illness as pyloricStenosis } from './gastrointestinal/pyloric-stenosis';
 import { illness as rotavirus } from './gastrointestinal/rotavirus';
 // ENT
+import { illness as adenoidInfection } from './ent/adenoid-infection';
 import { illness as earInfection } from './ent/ear-infection';
 import { illness as gingivostomatitis } from './ent/gingivostomatitis';
 import { illness as handFootMouth } from './ent/hand-foot-mouth';
@@ -33,15 +42,26 @@ import { illness as tonsillitis } from './ent/tonsillitis';
 import { illness as cellulitis } from './skin/cellulitis';
 import { illness as fungalDiaperRash } from './skin/fungal-diaper-rash';
 import { illness as headLice } from './skin/head-lice';
+import { illness as herpesSimplex } from './skin/herpes-simplex';
 import { illness as impetigo } from './skin/impetigo';
 import { illness as molluscum } from './skin/molluscum';
+import { illness as mrsa } from './skin/mrsa';
 import { illness as ringworm } from './skin/ringworm';
 import { illness as scabies } from './skin/scabies';
+import { illness as staphInfection } from './skin/staph-infection';
+import { illness as warts } from './skin/warts';
 // Serious
 import { illness as bacterialMeningitis } from './serious/bacterial-meningitis';
+import { illness as groupBStrep } from './serious/group-b-strep';
+import { illness as hsp } from './serious/hsp';
+import { illness as invasiveGas } from './serious/invasive-gas';
+import { illness as itp } from './serious/itp';
 import { illness as kawasaki } from './serious/kawasaki';
 import { illness as misC } from './serious/mis-c';
+import { illness as nec } from './serious/nec';
+import { illness as neonatalSepsis } from './serious/neonatal-sepsis';
 import { illness as sepsis } from './serious/sepsis';
+import { illness as viralMeningitis } from './serious/viral-meningitis';
 // Chronic
 import { illness as eczemaComprehensive } from './chronic/eczema-comprehensive';
 import { illness as foodAllergies } from './chronic/food-allergies';
@@ -64,15 +84,15 @@ import { illness as viralExanthem } from './viral-rash/viral-exanthem';
 
 export const allIllnesses: IllnessGuide[] = [
   // Respiratory
-  adenovirus, asthma, bronchiolitis, bronchitis, commonCold, croup, flu, hmpv, pneumonia, rsv, whoopingCough,
+  adenovirus, asthma, bronchiolitis, bronchitis, commonCold, covid19, croup, enterovirusD68, flu, hmpv, parainfluenza, pneumonia, reactiveAirway, rsv, whoopingCough,
   // Gastrointestinal
-  foodPoisoning, gastroenteritis, intussusception, norovirus, pyloricStenosis, rotavirus,
+  cDiff, celiacDisease, cmpa, foodPoisoning, gastroenteritis, giardia, intussusception, norovirus, pyloricStenosis, rotavirus,
   // ENT
-  earInfection, gingivostomatitis, handFootMouth, laryngitis, peritonsillarAbscess, sinusitis, strepThroat, swimmersEar, tonsillitis,
+  adenoidInfection, earInfection, gingivostomatitis, handFootMouth, laryngitis, peritonsillarAbscess, sinusitis, strepThroat, swimmersEar, tonsillitis,
   // Skin
-  cellulitis, fungalDiaperRash, headLice, impetigo, molluscum, ringworm, scabies,
+  cellulitis, fungalDiaperRash, headLice, herpesSimplex, impetigo, molluscum, mrsa, ringworm, scabies, staphInfection, warts,
   // Serious
-  bacterialMeningitis, kawasaki, misC, sepsis,
+  bacterialMeningitis, groupBStrep, hsp, invasiveGas, itp, kawasaki, misC, nec, neonatalSepsis, sepsis, viralMeningitis,
   // Chronic
   eczemaComprehensive, foodAllergies, gerd, ironDeficiencyAnemia,
   // Urinary
