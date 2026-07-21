@@ -13,6 +13,7 @@ import { allVaccineDetails, allVaccineDiseases } from "@/data/vaccines/details";
 import { newbornWeeks } from "@/data/newborn-weeks";
 import { postpartumWeeks } from "@/data/postpartum-weeks";
 import { pregnancyWeeks, trimesterGuides } from "@/data/pregnancy-weeks";
+import { getReviewDate } from "@/lib/concern-content";
 
 const BASE_URL = "https://www.ismybabyalright.com";
 
@@ -32,10 +33,10 @@ export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
   const now = new Date().toISOString().split("T")[0];
 
   if (id === 1) {
-    // Concerns sitemap
+    // Concerns sitemap — individualized review dates per page
     return allConcerns.map((c) => ({
       url: `${BASE_URL}/concerns/${c.slug}`,
-      lastModified: "2026-06-05",
+      lastModified: c.lastReviewed ?? getReviewDate(c.slug),
       changeFrequency: "monthly",
       priority: 0.8,
     }));

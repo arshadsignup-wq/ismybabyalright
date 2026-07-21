@@ -14,5 +14,6 @@ export interface ConcernPage {
   showSelfReferral: boolean;
   relatedConcernSlugs?: string[];
   popular?: boolean;
+  lastReviewed?: string;
   sources: { org: string; citation: string; url: string }[];
 }

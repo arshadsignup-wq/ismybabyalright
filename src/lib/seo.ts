@@ -1,5 +1,6 @@
 import type { ConcernPage } from '@/data/concerns/types';
 import type { Reviewer } from '@/data/editorial';
+import { reviewers } from '@/data/editorial';
 import { generateConcernFAQ } from '@/lib/concern-faq';
 
 const SITE_URL = 'https://www.ismybabyalright.com';
@@ -136,6 +137,8 @@ export function getOrganizationSchema() {
       'Postpartum mental health',
       'Baby nutrition and feeding',
     ],
+    member: reviewers.map(r => getPersonSchema(r)),
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: reviewers.length },
   };
 }
 

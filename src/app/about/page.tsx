@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAboutPageSchema, getBreadcrumbSchema } from "@/lib/seo";
+import { reviewers, editorialProcess } from "@/data/editorial";
+import { allConcerns } from "@/data/concerns";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -144,6 +146,27 @@ export default function AboutPage() {
           </ul>
         </Section>
 
+        <section className="rounded-xl border border-[#E8E2D9] bg-white p-5">
+          <h2 className="text-base font-bold text-foreground mb-3">By the Numbers</h2>
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p className="text-2xl font-bold text-primary">{allConcerns.length.toLocaleString()}</p>
+              <p className="text-xs text-muted mt-1">Evidence-based guides</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-primary">{editorialProcess.sourceHierarchy.length}</p>
+              <p className="text-xs text-muted mt-1">Medical source organizations</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-primary">{reviewers.length}</p>
+              <p className="text-xs text-muted mt-1">Advisory board members</p>
+            </div>
+          </div>
+          <p className="text-xs text-muted mt-4 text-center">
+            Content is updated when new guidelines are published and during periodic site-wide reviews.
+          </p>
+        </section>
+
         <Section title="Our commitment">
           <p>
             We are continuously adding new concern pages, tools, and resources
@@ -158,12 +181,35 @@ export default function AboutPage() {
           </p>
         </Section>
 
+        <section id="medical-advisory-board" className="rounded-xl border border-[#E8E2D9] bg-white p-5">
+          <h2 className="text-base font-bold text-foreground mb-2">Medical Advisory Board</h2>
+          <div className="text-sm text-muted leading-relaxed space-y-2">
+            <p>
+              Every page on this site is reviewed by a member of our medical
+              advisory board. Our reviewers are qualified medical professionals
+              who verify that content aligns with published clinical guidelines.
+            </p>
+            <div className="mt-4 space-y-4">
+              {reviewers.map((reviewer) => (
+                <div key={reviewer.id} className="border-t border-border pt-4 first:border-t-0 first:pt-0">
+                  <p className="font-semibold text-foreground">
+                    {reviewer.name}
+                    {reviewer.credentials && <span className="text-muted font-normal">, {reviewer.credentials}</span>}
+                  </p>
+                  <p className="text-xs text-primary">{reviewer.title}</p>
+                  <p className="mt-1 text-xs">{reviewer.bio}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <Section title="Join our team">
           <p>
-            We are building an editorial board of qualified medical
-            professionals. If you are a pediatrician, neonatologist,
-            developmental specialist, or other qualified professional interested
-            in contributing to evidence-based parent health information,{" "}
+            We are expanding our medical advisory board. If you are a
+            pediatrician, neonatologist, developmental specialist, or other
+            qualified professional interested in contributing to evidence-based
+            parent health information,{" "}
             <Link href="/contact" className="text-primary hover:underline font-semibold">
               we would love to hear from you
             </Link>

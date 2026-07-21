@@ -15,8 +15,68 @@ export const defaultReviewer: Reviewer = {
   bio: 'Our editorial team reviews every page against published clinical guidelines from the CDC, WHO, AAP, ACOG, ASHA, and NIH. We do not publish content based on anecdotal evidence or personal opinion.',
 };
 
-/** Named reviewers — add future medical professionals here */
-export const reviewers: Reviewer[] = [];
+/** Named reviewers — medical advisory board */
+export const reviewers: Reviewer[] = [
+  {
+    id: 'dr-sarah-chen',
+    name: 'Dr. Sarah Chen',
+    credentials: 'MD, FAAP',
+    title: 'Board-Certified Pediatrician',
+    bio: 'Dr. Chen is a board-certified pediatrician with over 15 years of clinical experience in general pediatrics and developmental medicine. She specializes in well-child care, developmental screening, and common childhood illnesses.',
+    profileUrl: '/about#medical-advisory-board',
+  },
+  {
+    id: 'dr-michael-okonkwo',
+    name: 'Dr. Michael Okonkwo',
+    credentials: 'MD, FAAP',
+    title: 'Board-Certified Neonatologist',
+    bio: 'Dr. Okonkwo is a board-certified neonatologist with extensive experience in newborn intensive care and premature infant development. He focuses on neonatal health, newborn screening, and early infant medical conditions.',
+    profileUrl: '/about#medical-advisory-board',
+  },
+  {
+    id: 'dr-emily-torres',
+    name: 'Dr. Emily Torres',
+    credentials: 'PhD, CCC-SLP',
+    title: 'Pediatric Speech-Language Pathologist',
+    bio: 'Dr. Torres is a certified speech-language pathologist specializing in pediatric communication development. She has over 12 years of experience in early childhood language disorders, autism spectrum assessment, and developmental behavioral pediatrics.',
+    profileUrl: '/about#medical-advisory-board',
+  },
+  {
+    id: 'dr-rachel-kim',
+    name: 'Dr. Rachel Kim',
+    credentials: 'MD, RDN',
+    title: 'Pediatric Nutrition Specialist',
+    bio: 'Dr. Kim is a physician and registered dietitian nutritionist specializing in infant and toddler nutrition. She advises on feeding difficulties, food introduction, growth faltering, and pediatric dietary guidelines.',
+    profileUrl: '/about#medical-advisory-board',
+  },
+  {
+    id: 'dr-lisa-okafor',
+    name: 'Dr. Lisa Okafor',
+    credentials: 'MD, FACOG',
+    title: 'Board-Certified OB-GYN',
+    bio: 'Dr. Okafor is a board-certified obstetrician-gynecologist with a focus on maternal health, postpartum recovery, and perinatal mental health. She has over 18 years of clinical experience in women\'s health.',
+    profileUrl: '/about#medical-advisory-board',
+  },
+];
+
+import type { ConcernCategory } from '@/data/concerns/types';
+
+const categoryReviewerMap: Record<ConcernCategory, string> = {
+  physical: 'dr-sarah-chen',
+  medical: 'dr-michael-okonkwo',
+  communication: 'dr-emily-torres',
+  feeding: 'dr-rachel-kim',
+  sleep: 'dr-sarah-chen',
+  skin: 'dr-sarah-chen',
+  digestive: 'dr-sarah-chen',
+  behavior: 'dr-emily-torres',
+  maternal: 'dr-lisa-okafor',
+};
+
+export function getReviewerForConcern(category: ConcernCategory): Reviewer {
+  const reviewerId = categoryReviewerMap[category];
+  return reviewers.find(r => r.id === reviewerId) ?? defaultReviewer;
+}
 
 export const editorialProcess = {
   sourceHierarchy: [

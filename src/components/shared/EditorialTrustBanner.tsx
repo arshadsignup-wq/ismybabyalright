@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { allConcerns } from '@/data/concerns';
+import { reviewers, editorialProcess } from '@/data/editorial';
 
 interface EditorialTrustBannerProps {
   variant?: 'compact' | 'full';
@@ -17,6 +19,11 @@ export default function EditorialTrustBanner({
           </Link>{' '}
           and is reviewed against published clinical guidelines.
         </p>
+        <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+          <span>{allConcerns.length.toLocaleString()} evidence-based guides</span>
+          <span>{editorialProcess.sourceHierarchy.length} authoritative medical sources</span>
+          <span>{reviewers.length} medical advisory board members</span>
+        </p>
       </div>
     );
   }
@@ -30,6 +37,11 @@ export default function EditorialTrustBanner({
         <p>
           Every page is reviewed against published guidelines from authoritative
           medical organizations including the CDC, WHO, AAP, ACOG, ASHA, and NIH.
+        </p>
+        <p className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium">
+          <span>{allConcerns.length.toLocaleString()} evidence-based guides</span>
+          <span>{editorialProcess.sourceHierarchy.length} authoritative medical sources</span>
+          <span>{reviewers.length} medical advisory board members</span>
         </p>
         <div className="flex flex-wrap gap-2">
           <Link

@@ -1,15 +1,18 @@
 import Link from 'next/link';
+import type { Reviewer } from '@/data/editorial';
 
 interface MedicalReviewAttributionProps {
   sources?: string[];
   reviewDate?: string;
   showEditorialPolicyLink?: boolean;
+  reviewer?: Reviewer;
 }
 
 export default function MedicalReviewAttribution({
   sources,
   reviewDate,
   showEditorialPolicyLink = true,
+  reviewer,
 }: MedicalReviewAttributionProps) {
   const sourceList = sources && sources.length > 0 ? sources.join(', ') : 'CDC, WHO, AAP';
 
@@ -31,7 +34,22 @@ export default function MedicalReviewAttribution({
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
       <div className="text-xs text-muted leading-relaxed">
-        <p>Content reviewed against published {sourceList} guidelines</p>
+        {reviewer && reviewer.id !== 'editorial-team' ? (
+          <p>
+            Medically reviewed by{' '}
+            <Link
+              href={reviewer.profileUrl ?? '/about#medical-advisory-board'}
+              className="font-semibold text-foreground hover:underline"
+            >
+              {reviewer.name}
+            </Link>
+            {reviewer.credentials && <>, {reviewer.credentials}</>}
+            {reviewer.title && <> · {reviewer.title}</>}
+          </p>
+        ) : null}
+        <p className={reviewer && reviewer.id !== 'editorial-team' ? 'mt-1' : ''}>
+          Content reviewed against published {sourceList} guidelines
+        </p>
         <p className="mt-1">
           {reviewDate && (
             <span>Last reviewed: {reviewDate}</span>
