@@ -16,6 +16,7 @@ import FAQSection from "@/components/shared/FAQSection";
 import EditorialTrustBanner from "@/components/shared/EditorialTrustBanner";
 import BottomLine from "@/components/shared/BottomLine";
 import SourceBadge from "@/components/shared/SourceBadge";
+import SourcesCited from "@/components/shared/SourcesCited";
 import AuthoritativeQuote from "@/components/shared/AuthoritativeQuote";
 import ShareButtons from "@/components/shared/ShareButtons";
 import FeedbackWidget from "@/components/shared/FeedbackWidget";
@@ -30,8 +31,12 @@ import {
   generateRedFlagsComparison,
   generateDoctorTalkingPoints,
   generateRelatedConditions,
+  generateHomeManagement,
+  generateCrossContentLinks,
   getReviewDate,
 } from "@/lib/concern-content";
+import CrossContentLinks from "@/components/shared/CrossContentLinks";
+import DoctorVisitPrep from "@/components/shared/DoctorVisitPrep";
 import type { ConcernCategory } from "@/data/concerns/types";
 
 interface ConcernPageProps {
@@ -147,11 +152,19 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
     ? getQuotesForTopic(concern.slug)
     : getQuotesForTopic(concern.category);
 
+  // Inline citation reference string
+  const sourceOrgs = [...new Set(concern.sources.map(s => s.org))];
+  const citationRef = sourceOrgs.length > 0
+    ? `According to ${sourceOrgs.join(', ')} guidelines`
+    : 'According to published guidelines';
+
   // Content expansion data
   const parentNarrative = generateParentNarrative(concern);
   const redFlagsComparison = generateRedFlagsComparison(concern);
   const doctorTalkingPoints = generateDoctorTalkingPoints(concern);
   const relatedConditions = generateRelatedConditions(concern);
+  const homeManagementTips = generateHomeManagement(concern);
+  const crossContentLinks = generateCrossContentLinks(concern);
 
   // Category-specific intro
   const categoryIntro = categoryIntros[concern.category];
@@ -239,11 +252,21 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
 
         <ReassuranceBanner slug={concern.slug} popular={concern.popular} />
 
-        {/* "What Parents Should Know" — narrative expansion */}
+        {/* "What Parents Should Know" — narrative expansion with inline citations */}
         <section className="mt-10" aria-labelledby="parent-narrative-heading">
           <h2 id="parent-narrative-heading">What Parents Should Know</h2>
-          <div className="rounded-xl border border-[#E8E2D9] bg-white p-5 text-sm text-muted leading-relaxed">
-            <p>{parentNarrative}</p>
+          <div className="rounded-xl border border-[#E8E2D9] bg-white p-5 text-sm text-muted leading-relaxed space-y-3">
+            <p>{citationRef}, {parentNarrative.charAt(0).toLowerCase()}{parentNarrative.slice(1)}</p>
+            {concern.sources.length > 0 && (
+              <p className="text-xs italic">
+                Sources: {concern.sources.map((s, i) => (
+                  <span key={i}>
+                    {i > 0 && ', '}
+                    <a href={`#references-heading`} className="text-primary hover:underline">[{i + 1}]</a>
+                  </span>
+                ))}
+              </p>
+            )}
           </div>
         </section>
 
@@ -314,6 +337,23 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
           />
         </section>
 
+        {/* "What You Can Do at Home" */}
+        {homeManagementTips.length > 0 && (
+          <section className="mt-10" aria-labelledby="home-management-heading">
+            <h2 id="home-management-heading">What You Can Do at Home</h2>
+            <div className="rounded-xl border border-[#E8E2D9] bg-white p-5">
+              <ul className="space-y-3">
+                {homeManagementTips.map((tip, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-muted">
+                    <span className="mt-0.5 flex-shrink-0 flex h-5 w-5 items-center justify-center rounded-full bg-green-50 text-xs font-bold text-green-700" aria-hidden="true">{i + 1}</span>
+                    {tip}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
         {/* Related Conditions */}
         {relatedConditions.length > 0 && (
           <section className="mt-10" aria-labelledby="related-conditions-heading">
@@ -335,6 +375,8 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
           </section>
         )}
 
+        <CrossContentLinks links={crossContentLinks} />
+
         <div className="mt-10">
           <FAQSection items={faqItems} />
         </div>
@@ -346,22 +388,22 @@ export default async function ConcernSlugPage({ params }: ConcernPageProps) {
         )}
 
         {concern.sources.length > 0 && (
-          <section className="mt-10" aria-labelledby="sources-heading">
-            <h3 id="sources-heading" className="text-sm font-semibold text-muted mb-3">
-              Sources
-            </h3>
-            <div className="flex flex-wrap gap-2">
+          <>
+            <div className="mt-10 flex flex-wrap gap-2">
               {concern.sources.map((source, index) => (
                 <SourceBadge key={index} org={source.org} url={source.url} />
               ))}
             </div>
-            {concern.sources.length >= 4 && (
-              <p className="mt-3 text-xs text-muted">
-                This page references {concern.sources.length} published clinical sources. All citations link directly to the original guideline or publication.
-              </p>
-            )}
-          </section>
+            <SourcesCited sources={concern.sources} />
+          </>
         )}
+
+        <DoctorVisitPrep
+          title={concern.title}
+          talkingPoints={doctorTalkingPoints}
+          whenToMention={concern.whenToMention}
+          whenToActNow={concern.whenToActNow}
+        />
 
         <div className="mt-6">
           <EditorialTrustBanner variant="compact" />

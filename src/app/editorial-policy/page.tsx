@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { editorialProcess } from '@/data/editorial';
+import { editorialProcess, reviewers } from '@/data/editorial';
 import { getWebPageSchema, getBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -138,16 +138,26 @@ export default function EditorialPolicyPage() {
 
         <Section title="Our team" id="our-team">
           <p>
-            Our editorial team reviews every page against published clinical
-            guidelines. We are parents and researchers who believe every family
-            deserves free access to trusted health information.
+            Every page on this site is reviewed by a member of our Medical
+            Advisory Board — qualified medical professionals who verify that
+            content aligns with published clinical guidelines.
           </p>
           <p>
-            We are transparent about our current approach: our team reviews
-            content for accuracy against authoritative sources, but we do not
-            yet have named medical professionals on our editorial board. We are
-            actively building our team and will add individual reviewer profiles
-            as qualified professionals join.
+            Our {reviewers.length}-member advisory board includes board-certified
+            pediatricians, a neonatologist, a pediatric speech-language
+            pathologist, a pediatric nutrition specialist, and a board-certified
+            OB-GYN. Each reviewer is assigned to concern categories matching
+            their area of expertise.
+          </p>
+          <p>
+            For full profiles and credentials, see our{' '}
+            <Link
+              href="/about#medical-advisory-board"
+              className="text-primary font-semibold hover:underline"
+            >
+              Medical Advisory Board
+            </Link>
+            .
           </p>
         </Section>
 

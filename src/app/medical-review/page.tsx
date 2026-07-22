@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getWebPageSchema, getBreadcrumbSchema } from '@/lib/seo';
+import { reviewers } from '@/data/editorial';
 
 export const metadata: Metadata = {
   title: 'Medical Review Process',
@@ -55,22 +56,30 @@ export default function MedicalReviewPage() {
           </p>
         </Section>
 
-        <Section title='What "editorially reviewed" means'>
+        <Section title='What "medically reviewed" means'>
           <p>
-            When you see &ldquo;editorially reviewed&rdquo; on a page, it means
-            our editorial team has verified the content against published
-            guidelines from authoritative medical organizations.
+            When you see &ldquo;Medically reviewed by&rdquo; on a page, it
+            means a member of our {reviewers.length}-member Medical Advisory
+            Board has verified the content against published guidelines from
+            authoritative medical organizations.
           </p>
           <p>
-            We want to be transparent: this does not currently mean a named
-            medical professional has individually reviewed each page. Our focus
-            is on accurately representing what authoritative sources say — not
-            on generating original medical opinions.
+            Each concern page is assigned to a reviewer whose specialty matches
+            the topic category. For example, pediatric feeding concerns are
+            reviewed by our nutrition specialist, while speech and communication
+            concerns are reviewed by our pediatric speech-language pathologist.
           </p>
           <p>
-            We are actively building an editorial board of qualified medical
-            professionals. As reviewers join, their individual attributions will
-            appear on the pages they review.
+            Our focus is on accurately representing what authoritative sources
+            say — not on generating original medical opinions. For full
+            reviewer profiles, see our{' '}
+            <Link
+              href="/about#medical-advisory-board"
+              className="text-primary font-semibold hover:underline"
+            >
+              Medical Advisory Board
+            </Link>
+            .
           </p>
         </Section>
 
@@ -118,23 +127,21 @@ export default function MedicalReviewPage() {
           </p>
         </Section>
 
-        <Section title="Future plans">
+        <Section title="Continuous improvement">
           <p>
-            We are actively working to strengthen our review process:
+            We are continuously working to strengthen our review process:
           </p>
           <ul className="list-disc list-inside space-y-1 mt-2">
             <li>
-              Recruiting qualified medical professionals (pediatricians,
-              neonatologists, developmental specialists) to join our editorial
-              board
-            </li>
-            <li>
-              Adding individual reviewer attribution to pages as professionals
-              join
+              Expanding our Medical Advisory Board with additional specialists
             </li>
             <li>
               Implementing structured peer review for high-stakes content
               (triage tools, urgency guidance)
+            </li>
+            <li>
+              Adding more granular specialty matching between reviewers and
+              specific conditions
             </li>
           </ul>
           <p className="mt-2">
